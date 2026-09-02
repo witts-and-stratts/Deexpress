@@ -1,0 +1,11 @@
+import type { Metadata } from 'next'
+import { NewContactPage } from '@/components/pages/NewContactPage'
+
+export const metadata: Metadata = {
+  title: 'Contact',
+  description: 'Contact DEExpress Logistics GmbH in Berlin — by form, phone, email or WhatsApp. We answer in English, German and French.',
+}
+
+export default function Page() {
+  return <NewContactPage />
+}

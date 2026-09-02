@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" role="img" aria-label="Germany">
+  <defs><clipPath id="c"><circle cx="20" cy="20" r="20"/></clipPath></defs>
+  <g clip-path="url(#c)"><path fill="#000" d="M0 0h40v13.34H0z"/><path fill="#d00" d="M0 13.34h40v13.33H0z"/><path fill="#ffce00" d="M0 26.67h40V40H0z"/></g>
+</svg>

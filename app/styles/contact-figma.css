@@ -1,0 +1,381 @@
+/* Contact page from Figma. SiteHeader and SiteFooter remain the shared shell. */
+.figma-contact {
+  @apply bg-[#fff] text-[#12100e];
+  @apply [font-family:'Saans',_var(--font-inter),_Arial,_sans-serif]; 
+  @apply overflow-clip;
+}
+.figma-contact-hero {
+  @apply relative min-h-[648px] text-white;
+  @apply [background:#163442_url('/images/contact-figma/hero.webp')_50%_72%_/_cover_no-repeat]; 
+}
+.figma-contact-hero-shade {
+  @apply absolute inset-[0];
+  @apply [background:linear-gradient(_90deg,_rgba(4,_23,_35,_0.62),_rgba(4,_23,_35,_0.12)_70%_)]; 
+}
+.figma-contact-hero-content {
+  @apply relative z-1 w-[min(1380px,_calc(100%_-_96px))] m-[0_auto] pt-[209px];
+}
+.figma-contact-hero h1 {
+  @apply max-w-[940px] m-0 text-[clamp(3.75rem,_5.56vw,_5rem)] font-[380] leading-[0.85] tracking-[-0.04em];
+}
+.figma-contact-hero p {
+  @apply w-[min(575px,_100%)] m-[36px_0_0] text-[24px] font-[380] leading-[1.15] tracking-[-0.02em];
+}
+.figma-contact-options {
+  @apply p-[48px_max(3.34%,_calc((100%_-_1344px)_/_2))];
+}
+.figma-contact-option-intro {
+  @apply grid grid-cols-[1.12fr_0.85fr_1.5fr] gap-[32px] items-start pb-[31px] border-b-[1px_solid_#8f8a85];
+}
+.figma-contact-option-intro h2,
+.figma-contact-option-intro p {
+  @apply m-0 font-[380] tracking-[-0.025em];
+}
+.figma-contact-option-intro h2 {
+  @apply text-[36px] leading-[1];
+}
+.figma-contact-option-intro p {
+  @apply pt-[5px] text-[21px];
+}
+.figma-contact-option-intro div {
+  @apply grid gap-[20px] text-[rgba(0,_0,_0,_0.6)] text-[16px] leading-[1.38] tracking-[-0.0125em];
+}
+.figma-contact-option-intro a {
+  @apply [display:inline-flex] items-center gap-[10px] text-[#231aa8] font-[670] no-underline;
+}
+.figma-contact-option-grid {
+  @apply grid grid-cols-[repeat(4,_1fr)] gap-[1px] mt-[14px] bg-[#fff];
+}
+.figma-contact-option {
+  @apply flex min-h-[309px] flex-col [align-items:flex-start] p-[44px_36px] bg-[#ece8e3];
+}
+.figma-contact-option svg {
+  @apply text-[#231aa8];
+}
+.figma-contact-option p {
+  @apply max-w-[245px] m-[16px_0_0] text-[16px] leading-[1.375] tracking-[-0.0125em];
+}
+.figma-contact-option a,
+.figma-contact-option strong {
+  @apply mt-[auto] text-[#12100e] text-[24px] font-[380] leading-[1.05] tracking-[-0.015em] no-underline;
+}
+.figma-contact-form-section {
+  @apply grid grid-cols-[minmax(280px,_0.76fr)_minmax(550px,_1.24fr)] gap-[80px] p-[94px_max(3.34%,_calc((100%_-_1344px)_/_2))_88px] bg-[rgba(170,_168,_196,_0.15)];
+}
+.figma-contact-form-copy {
+  @apply max-w-[420px];
+}
+.figma-contact-form-copy h2 {
+  @apply max-w-[570px] m-0 text-[#231aa8] text-[46px] font-[380] leading-[1.08] tracking-[-0.03em];
+}
+.figma-contact-form-copy p {
+  @apply m-[62px_0_0] text-[rgba(0,_0,_0,_0.6)] text-[16px] leading-[1.375] tracking-[-0.0125em];
+}
+.figma-contact-form-copy p + p {
+  @apply mt-[22px];
+}
+.figma-contact-form-copy strong {
+  @apply text-[#2d2928] font-[670];
+}
+.figma-contact-form .form-card {
+  @apply grid gap-[24px] p-0 border-0 rounded-[0] bg-transparent shadow-[none];
+}
+.figma-contact-form .form-card > div {
+  @apply gap-[24px];
+}
+.figma-contact-form .form-field {
+  @apply gap-[8px] text-[#142033];
+  @apply [font-family:var(--font-inter),_sans-serif]; 
+  @apply text-[13px] font-[500] leading-[20px];
+}
+.figma-contact-form .form-control {
+  @apply min-h-[50px] border-[1px_solid_#b8aea4] rounded-[0] bg-[#fff] text-[#142033] shadow-[none];
+}
+.figma-contact-form textarea.form-control {
+  @apply min-h-[146px] [resize:vertical];
+}
+.figma-contact-form button[type='submit'] {
+  @apply min-h-[48px] justify-center rounded-[0] bg-[#231aa8];
+  @apply [font-family:var(--font-inter),_sans-serif]; 
+  @apply shadow-[none];
+}
+.figma-contact-form button[type='submit']:hover {
+  @apply bg-[#352cc0] transform-[none];
+}
+.figma-contact-form .form-hint {
+  @apply text-[#526276];
+  @apply [font-family:'Saans',_var(--font-inter),_sans-serif]; 
+  @apply text-[12.8px];
+}
+.figma-contact-location {
+  @apply grid grid-cols-[minmax(260px,_0.53fr)_minmax(480px,_1.47fr)] gap-[80px] items-start p-[100px_max(3.34%,_calc((100%_-_1344px)_/_2))];
+}
+.figma-contact-location h2 {
+  @apply m-[0_0_24px] text-[24px] font-[380] leading-[1] tracking-[-0.015em];
+}
+.figma-contact-location address {
+  @apply m-[0_0_22px] text-[rgba(0,_0,_0,_0.6)] text-[16px] [font-style:normal] leading-[1.375] tracking-[-0.0125em];
+}
+.figma-contact-location a {
+  @apply flex w-[fit-content] items-center gap-[7px] mt-[10px] text-[#231aa8] text-[14px] no-underline;
+}
+.figma-contact-map {
+  @apply min-h-[558px] rounded-[8px];
+  @apply [background:#eee_url('/images/contact-figma/map.webp')_center_/_cover_no-repeat]; 
+}
+@media (max-width: 900px) {
+  .figma-contact-hero-content {
+    @apply w-[calc(100%_-_64px)];
+  }
+  .figma-contact-option-intro,
+  .figma-contact-form-section,
+  .figma-contact-location {
+    @apply grid-cols-[1fr] gap-[36px];
+  }
+  .figma-contact-option-grid {
+    @apply grid-cols-[repeat(2,_1fr)];
+  }
+  .figma-contact-form-copy p {
+    @apply mt-[32px];
+  }
+  .figma-contact-map {
+    @apply min-h-[420px];
+  }
+}
+@media (max-width: 620px) {
+  .figma-contact-hero {
+    @apply min-h-[590px];
+  }
+  .figma-contact-hero-content {
+    @apply w-[calc(100%_-_48px)] pt-[170px];
+  }
+  .figma-contact-hero h1 {
+    @apply text-[58px];
+  }
+  .figma-contact-hero p {
+    @apply mt-[28px] text-[18px];
+  }
+  .figma-contact-options {
+    @apply p-[40px_24px];
+  }
+  .figma-contact-option-intro {
+    @apply gap-[22px] pb-[24px];
+  }
+  .figma-contact-option-intro h2 {
+    @apply text-[32px];
+  }
+  .figma-contact-option-intro p {
+    @apply pt-[0] text-[20px];
+  }
+  .figma-contact-option-grid {
+    @apply grid-cols-[1fr] mt-[12px];
+  }
+  .figma-contact-option {
+    @apply min-h-[225px] p-[30px_26px];
+  }
+  .figma-contact-option a,
+  .figma-contact-option strong {
+    @apply mt-[28px] text-[21px];
+  }
+  .figma-contact-form-section,
+  .figma-contact-location {
+    @apply gap-[38px] p-[66px_24px];
+  }
+  .figma-contact-form-copy h2 {
+    @apply text-[39px];
+  }
+  .figma-contact-form .form-card > div {
+    @apply grid-cols-[1fr] gap-[18px];
+  }
+  .figma-contact-location {
+    @apply pt-[68px];
+  }
+  .figma-contact-map {
+    @apply min-h-[310px];
+  }
+}
+
+/* Shared editorial layout roles for the Figma homepage and contact surface. */
+:root {
+  @apply [--figma-page-gutter:clamp(24px,_6.94vw,_100px)]; 
+  @apply [--figma-section-space:clamp(64px,_8vw,_112px)]; 
+  @apply [--figma-copy:#5d5a58]; 
+}
+
+/* Page gutters are shared across both routes; media is deliberately full bleed. */
+.new-home .new-intro {
+  @apply min-h-[0];
+  @apply [padding:var(--figma-section-space)_var(--figma-page-gutter)_clamp(48px,_6vw,_88px)]; 
+}
+.new-home .new-intro p {
+  @apply w-[min(971px,_100%)];
+}
+.new-home .new-section {
+  @apply pb-[clamp(48px,_5vw,_72px)];
+}
+.new-home .new-section h2 {
+  @apply [margin-inline:var(--figma-page-gutter)]; 
+  @apply mb-[clamp(32px,_4vw,_60px)];
+}
+.new-home .preference-section {
+  @apply h-auto;
+  @apply [margin:0_var(--figma-page-gutter)_clamp(48px,_6vw,_88px)]; 
+  @apply p-[clamp(28px,_3vw,_43px)_clamp(22px,_4vw,_54px)_clamp(34px,_4vw,_56px)];
+}
+.new-home .preference-section p {
+  @apply w-[min(420px,_100%)];
+}
+.new-home .coverage-section {
+  @apply h-auto min-h-[min(1103px,_76vw)];
+  @apply [padding:clamp(56px,_5.7vw,_82px)_var(--figma-page-gutter)]; 
+}
+.new-home .trust-section {
+  @apply [padding-inline:var(--figma-page-gutter)]; 
+}
+.new-home .tracking-wrap {
+  @apply h-auto;
+  @apply [padding:clamp(32px,_4vw,_53px)_var(--figma-page-gutter)]; 
+}
+.new-home .industries-section h2,
+.new-home .industries-section > p {
+  @apply [margin-left:var(--figma-page-gutter)]; 
+  @apply [margin-right:var(--figma-page-gutter)]; 
+}
+.new-home .testimonial {
+  @apply [width:min(1344px,_calc(100%_-_(var(--figma-page-gutter)_*_2)))]; 
+}
+.new-home .new-footer {
+  @apply [padding-inline:var(--figma-page-gutter)]; 
+}
+
+/* Keep hero copy anchored to the same horizontal rhythm without desktop-only offsets. */
+.new-home .hero-copy {
+  @apply [inset:auto_var(--figma-page-gutter)_clamp(42px,_8.39vh,_86px)]; 
+}
+.new-home .hero-copy h1.text-h1 {
+  @apply w-[min(939px,_74%)] m-[0_0_clamp(24px,_7vw,_72px)];
+}
+.new-home .hero-copy p.site-lead {
+  @apply w-[min(575px,_48%)];
+}
+
+/* Contact reuses the same gutter and role scale instead of route-specific values. */
+.figma-contact-hero-content {
+  @apply [box-sizing:border-box] w-full max-w-[1544px];
+  @apply [padding-inline:var(--figma-page-gutter)]; 
+}
+.figma-contact .figma-contact-options,
+.figma-contact .figma-contact-form-section,
+.figma-contact .figma-contact-location {
+  @apply [padding-inline:var(--figma-page-gutter)]; 
+}
+.figma-contact .figma-contact-hero h1.text-h1 {
+  @apply text-[clamp(3rem,_5.55vw,_5rem)];
+}
+.figma-contact .figma-contact-hero p.site-lead {
+  @apply text-[clamp(1.0625rem,_1.67vw,_1.5rem)];
+}
+.figma-contact .figma-contact-option-intro h2.text-h3,
+.figma-contact .figma-contact-location h2.text-h3 {
+  @apply text-[clamp(1.75rem,_2.5vw,_2.25rem)];
+}
+.figma-contact .figma-contact-option-intro p.site-lead {
+  @apply text-[clamp(1.125rem,_1.46vw,_1.3125rem)];
+}
+.figma-contact .figma-contact-form-copy h2.text-h2 {
+  @apply text-[clamp(2.125rem,_3.2vw,_2.875rem)];
+}
+
+.new-nav-toggle {
+  @apply hidden;
+}
+
+@media (max-width: 1080px) {
+  .new-home .coverage-section {
+    @apply min-h-[0];
+  }
+  .new-home .coverage-globe-canvas {
+    @apply relative left-[50%] top-[auto] w-[min(950px,_130%)] h-auto aspect-[1] m-[32px_0_0] transform-[translateX(-50%)];
+  }
+  .new-home .coverage-card {
+    @apply relative right-[auto] bottom-[auto] w-[min(397px,_100%)] min-h-[0] m-[28px_0_0_auto];
+  }
+  .new-home .coverage-copy p,
+  .new-home .pills {
+    @apply w-[min(619px,_100%)];
+  }
+  .new-home .preference-stats > div + div,
+  .new-home .preference-stats > div:last-child {
+    @apply pl-[clamp(24px,_5vw,_56px)];
+  }
+  .new-home .preference-stats {
+    @apply px-[0];
+  }
+}
+
+@media (max-width: 800px) {
+  .new-nav {
+    @apply top-[max(14px,_env(safe-area-inset-top))] pr-[12px];
+  }
+  .new-nav-toggle {
+    @apply grid w-[44px] h-[44px] place-items-center ml-[auto] border-0 rounded-[4px] bg-transparent text-[#2d2928] cursor-pointer;
+  }
+  .new-nav nav {
+    @apply hidden;
+  }
+  .new-nav.is-open nav {
+    @apply absolute top-[calc(100%_+_10px)] right-[0] flex w-[min(320px,_calc(100vw_-_28px))] flex-col items-stretch gap-[0] p-[12px] rounded-[4px] bg-[rgba(255,_255,_255,_0.98)] shadow-[0_18px_42px_rgba(18,_16,_14,_0.16)];
+  }
+  .new-nav.is-open nav a {
+    @apply p-[13px_10px] border-b-[1px_solid_rgba(45,_41,_40,_0.12)] text-[13px];
+  }
+  .new-nav.is-open nav .language-selector {
+    @apply [align-self:flex-start] m-[12px_10px_4px];
+  }
+  .new-home .hero-copy h1.text-h1 {
+    @apply w-auto mb-[0];
+  }
+  .new-home .hero-copy p.site-lead {
+    @apply w-auto;
+  }
+  .new-home .preference-stats {
+    @apply h-auto grid-cols-[1fr];
+  }
+  .new-home .preference-stats > div,
+  .new-home .preference-stats > div + div,
+  .new-home .preference-stats > div:last-child {
+    @apply min-h-[0] p-[18px_0] border-r-[0] border-b-[1px_solid_#b8aea4];
+  }
+  .new-home .preference-stats > div:last-child {
+    @apply border-b-[0];
+  }
+  .new-home .coverage-card {
+    @apply mr-[0] p-[26px];
+  }
+  .new-home .testimonial {
+    @apply w-[calc(100%_-(var(--figma-page-gutter)_*_2))] p-[clamp(28px,_7vw,_48px)];
+  }
+  .figma-contact-hero-content {
+    @apply pt-[clamp(150px,_28vw,_209px)];
+  }
+  .figma-contact .figma-contact-options,
+  .figma-contact .figma-contact-form-section,
+  .figma-contact .figma-contact-location {
+    @apply px-[var(--figma-page-gutter)];
+  }
+}
+
+@media (max-width: 620px) {
+  .new-home .new-service-grid,
+  .new-home .trust-grid {
+    @apply grid-cols-[1fr];
+  }
+  .new-home .trust-principles div,
+  .new-home .trust-metrics div {
+    @apply min-h-[0] p-[24px];
+  }
+  .figma-contact .figma-contact-option {
+    @apply px-[clamp(24px,_7vw,_36px)];
+  }
+}
+

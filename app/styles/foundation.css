@@ -1,0 +1,190 @@
+/* These at-rules define browser primitives and Tailwind tokens, so @apply is not applicable. */
+@font-face {
+  font-family: 'Saans';
+  src: url('/fonts/saans-variable-normal.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* Shared editorial design tokens. Page styles consume these before local values. */
+  --animate-marquee: marquee 36s linear infinite;
+  --animate-arc-flow: arc-flow 1.2s linear infinite;
+  --animate-dm-ping: dm-ping 1.8s ease-out infinite;
+  --animate-menu-rise: menu-rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes arc-flow {
+    to {
+      stroke-dashoffset: -24;
+    }
+  }
+  @keyframes dm-ping {
+    0% {
+      transform: scale(0.45);
+      opacity: 0.9;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+  @keyframes menu-rise {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-surface font-sans text-base leading-relaxed text-ink [font-synthesis:none]  [text-rendering:optimizeLegibility];
+  }
+  button,
+  input,
+  select,
+  textarea {
+    @apply font-[inherit];
+  }
+  input::placeholder,
+  textarea::placeholder {
+    @apply text-[color-mix(in_srgb,var(--color-ink-muted)_78%,transparent)];
+  }
+  :focus-visible {
+    @apply outline-[2px_solid_var(--color-focus)] outline-offset-[3px] rounded-[4px];
+  }
+  ::selection {
+    @apply bg-orange text-white;
+  }
+}
+
+/* Remaining legacy interface primitives. New work lives in styles/primitives.css. */
+@layer components {
+  .ui-card {
+    @apply rounded-2xl border border-border bg-surface;
+  }
+  .ui-status-card {
+    @apply grid justify-items-center gap-3.5 rounded-2xl border border-border bg-surface p-10 text-center shadow-xl shadow-navy-900/10 sm:p-16;
+  }
+}
+
+/* RouteShell composes the shared editorial chrome directly; no page-state selectors. */
+.track-home {
+  @apply overflow-clip bg-white text-editorial-ink font-['Saans',var(--font-inter),Arial,sans-serif];
+}
+.track-hero {
+  @apply relative overflow-hidden bg-editorial-accent text-white;
+}
+.track-hero::before {
+  @apply content-[''] absolute inset-0 bg-[linear-gradient(100deg,rgba(15,50,115,.98)_16%,rgba(15,50,115,.73)_55%,rgba(15,50,115,.35)),url('/images/home-hero.webp')_center/cover] saturate-[.7];
+}
+.track-hero-inner {
+  @apply relative z-1 grid grid-cols-[minmax(0,.88fr)_minmax(430px,.92fr)] items-end gap-20 m-[220px_auto_0] p-[0_0_76px];
+}
+.track-hero-copy p {
+  @apply m-[0_0_21px] text-gold text-[12px] tracking-[.13em] uppercase;
+}
+.track-hero-copy h1 {
+  @apply max-w-[560px] m-0 text-[clamp(58px,6.2vw,88px)] font-[380] leading-[.89] tracking-[-.055em];
+}
+.track-hero-copy > span {
+  @apply block max-w-[470px] mt-[34px] text-[19px] leading-[1.35] text-[rgba(255,255,255,.8)];
+}
+.track-interface {
+  @apply self-start;
+}
+.track-home .track-widget {
+  @apply p-[32px] border-0 rounded-[0] bg-[#f1efed] text-[#2d2928] shadow-[0_16px_40px_rgba(3,16,48,.24)] backdrop-filter-none;
+}
+.track-home .track-form > div {
+  @apply gap-[10px] border-[1px_solid_#b8aea4] rounded-[0] bg-[#fff] p-[7px_7px_7px_16px];
+}
+.track-home .track-form svg {
+  @apply text-[#231aa8];
+}
+.track-home .track-form input {
+  @apply text-[#2d2928] font-[var(--font-inter),sans-serif] text-[15px] outline-none;
+}
+.track-home .track-form input::placeholder {
+  @apply text-[#969290];
+}
+.track-home .track-form button {
+  @apply rounded-[0] bg-[#231aa8] text-white font-[var(--font-inter),sans-serif] shadow-none;
+}
+.track-home .track-form button:hover {
+  @apply transform-none bg-[#352cc0];
+}
+.track-home .track-widget [aria-live='polite'] {
+  @apply mt-[28px];
+}
+.track-home .track-widget [aria-live='polite'] > div {
+  @apply mb-[18px] font-[var(--font-inter),sans-serif] text-[14px] text-[#2d2928];
+}
+.track-home .track-widget [aria-live='polite'] > div span:last-child {
+  @apply border-[1px_solid_#231aa8] rounded-[999px] bg-[transparent] text-[#231aa8] font-[var(--font-inter),sans-serif];
+}
+.track-home .track-widget ol {
+  @apply border-t-[1px_solid_#b8aea4];
+}
+.track-home .track-widget ol li {
+  @apply p-[9px_0] font-[var(--font-inter),sans-serif] text-[14px];
+}
+.track-home .track-widget ol li.text-white\/85,
+.track-home .track-widget ol li.text-white {
+  @apply text-[#2d2928];
+}
+.track-home .track-widget ol li.text-white\/40 {
+  @apply text-[#969290];
+}
+.track-home .track-widget ol li span:first-child {
+  @apply border-[#231aa8] bg-[transparent] text-[#231aa8];
+}
+.track-home .track-widget ol li span:first-child:has(svg) {
+  @apply bg-[#231aa8] text-white;
+}
+.track-home .track-widget > p {
+  @apply mt-[28px] mb-[14px] font-[var(--font-inter),sans-serif] text-[12px] leading-[1.45] text-[#736f6a];
+}
+.track-home .track-widget > a {
+  @apply text-[#231aa8] font-[var(--font-inter),sans-serif] text-[13px];
+}
+.track-note {
+  @apply grid grid-cols-[1.2fr_.8fr] gap-[80px] p-[116px_max(7.35%,calc((100%_-_1228px)/2))] bg-[#fff];
+}
+.track-note > div > p {
+  @apply m-[0_0_18px] text-[#231aa8] text-[12px] tracking-[.13em] uppercase;
+}
+.track-note h2 {
+  @apply max-w-[700px] m-0 text-[clamp(36px,4vw,58px)] font-[380] leading-[1] tracking-[-.045em];
+}
+.track-note > p {
+  @apply self-end max-w-[440px] m-0 text-[17px] leading-[1.45] text-[#736f6a];
+}
+.track-support {
+  @apply flex items-center justify-between gap-[32px] m-[0_48px_100px] p-[47px_54px] bg-[#231aa8] text-white;
+}
+.track-support > p {
+  @apply max-w-[420px] m-0 text-[clamp(27px,3vw,42px)] leading-[1.04] tracking-[-.035em];
+}
+.track-support > div {
+  @apply flex flex-wrap gap-[13px];
+}
+.track-support a {
+  @apply inline-flex items-center gap-[9px] p-[13px_16px] border-[1px_solid_rgba(255,255,255,.58)] text-white font-[var(--font-inter),sans-serif] text-[14px] no-underline transition-[background_.2s];
+}
+.track-support a:hover {
+  @apply bg-[rgba(255,255,255,.12)];
+}

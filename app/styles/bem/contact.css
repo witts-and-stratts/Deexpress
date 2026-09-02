@@ -1,0 +1,26 @@
+/* Contact page. */
+@layer components {
+  .contact-page { @apply overflow-clip bg-white font-sans text-editorial-ink; }
+  .contact-page__hero { @apply relative min-h-[648px] text-white [background:#163442_url('/images/contact-figma/hero.webp')_50%_72%_/_cover_no-repeat]; }
+  .contact-page__hero-shade { @apply absolute inset-0 bg-[linear-gradient(90deg,rgba(4,23,35,.62),rgba(4,23,35,.12)_70%)]; }
+  .contact-page__hero-content { @apply relative z-10 mx-auto max-w-[1544px] px-[var(--spacing-page)] pt-[209px]; }
+  .contact-page__hero-content h1 { @apply text-white; }
+  .contact-page__hero-content p { @apply mt-9 max-w-[36rem] text-white/85; }
+  .contact-page__options { @apply px-[var(--spacing-page)] py-12; }
+  .contact-page__options-intro { @apply grid grid-cols-12 items-start gap-8 border-b border-editorial-line pb-8; }
+  .contact-page__options-intro > :nth-child(1) { @apply col-span-4; }
+  .contact-page__options-intro > :nth-child(2) { @apply col-span-3; }
+  .contact-page__options-intro > :nth-child(3) { @apply col-span-5 grid gap-5 text-editorial-muted; }
+  .contact-page__option-grid { @apply mt-3.5 grid grid-cols-12 gap-px; }
+  .contact-page__option { @apply col-span-3 flex min-h-[309px] flex-col bg-editorial-surface p-9; }
+  .contact-page__option svg { @apply text-editorial-accent; }
+  .contact-page__option p { @apply mt-4 max-w-[15rem] text-base leading-[1.375]; }
+  .contact-page__option a, .contact-page__option strong { @apply mt-auto font-['Saans',var(--font-inter),Arial,sans-serif] text-[clamp(1.375rem,2.5vw,2.25rem)] font-[380] leading-[1.05] tracking-[-0.04em] text-editorial-ink no-underline; }
+  .contact-page__form-section { @apply grid grid-cols-12 gap-8 bg-editorial-surface/70 px-[var(--spacing-page)] py-[clamp(4rem,7vw,6rem)]; }
+  .contact-page__form-copy { @apply col-span-5 max-w-[26rem]; }
+  .contact-page__form-copy p { @apply mt-8 text-editorial-muted; }
+  .contact-page__form { @apply col-span-7; }
+  .contact-page__location { @apply grid grid-cols-12 items-start gap-8 px-[var(--spacing-page)] py-[clamp(4rem,7vw,6rem)]; }
+  .contact-page__location > div:first-child { @apply col-span-4; }
+  .contact-page__map { @apply col-span-8 min-h-[558px] bg-[url('/images/contact-figma/map.webp')] bg-cover bg-center; }
+}

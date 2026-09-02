@@ -1,0 +1,91 @@
+/* Home page sections. */
+@layer components {
+  .home-page { @apply overflow-clip bg-white font-sans text-editorial-ink; }
+  .home-page__hero { @apply relative min-h-[640px] h-[100svh] overflow-hidden bg-navy-950 text-white; }
+  .home-page__hero > .motion-parallax { @apply h-[calc(100%_+_36px)] w-full -mt-[18px] object-cover; }
+  .home-page__hero-copy { @apply absolute inset-x-[var(--spacing-page)] bottom-[clamp(2.625rem,8.39vh,5.375rem)]; }
+  .home-page__hero-copy h1 { @apply mb-[clamp(1.5rem,7vw,4.5rem)] w-[min(939px,74%)] text-white; }
+  .home-page__hero-copy p { @apply ml-auto w-[min(575px,48%)] text-white/85; }
+  .home-page__intro { @apply px-[var(--spacing-page)] pt-[var(--spacing-section)] pb-[clamp(3rem,6vw,5.5rem)]; }
+  .home-page__intro p { @apply max-w-[971px] text-editorial-subtle; }
+  .home-page__intro strong { @apply font-[400] text-editorial-ink; }
+  .home-page__section { @apply pb-[clamp(3rem,5vw,4.5rem)]; }
+
+  .service-showcase { @apply relative isolate z-0; }
+  .service-showcase__visual { @apply sticky top-0 z-0 -mb-[100svh] h-[100svh] overflow-hidden bg-editorial-ink; }
+  .service-showcase__visual::after { @apply absolute inset-0 bg-[linear-gradient(90deg,rgba(18,16,14,.68),rgba(18,16,14,.24)_58%,rgba(18,16,14,.04))] content-['']; }
+  .service-showcase__heading { @apply absolute left-[var(--spacing-page)] top-[clamp(1.75rem,4.2vw,4rem)] z-10 max-w-[min(700px,70vw)] text-white; }
+  .service-showcase__heading span { @apply text-white; }
+  .service-showcase__image { @apply absolute inset-0 size-full object-cover opacity-0; }
+  .service-showcase__image:first-of-type { @apply opacity-100; }
+  .service-showcase__panels { @apply relative z-10; }
+  .service-showcase__panel { @apply grid min-h-[100svh] grid-cols-12 items-center px-[var(--spacing-page)] py-[clamp(2.5rem,7vw,7rem)]; }
+  .service-showcase__copy { @apply col-start-7 col-span-6 grid max-w-[560px] gap-4 text-white no-underline; }
+  .service-showcase__copy strong { @apply font-['Saans',var(--font-inter),Arial,sans-serif] text-[clamp(2.5rem,5.1vw,4.625rem)] font-[380] leading-[.92] tracking-[-0.04em]; }
+  .service-showcase__description { @apply max-w-[37ch] text-[clamp(1rem,1.35vw,1.25rem)] leading-[1.35]; }
+  .service-showcase__link { @apply text-[0.6875rem] font-[570] leading-[1.5] tracking-[0.1em] text-white uppercase; }
+
+  .preference { @apply mx-[var(--spacing-page)] mb-[clamp(3rem,6vw,5.5rem)] bg-editorial-surface px-[clamp(1.375rem,4vw,3.375rem)] py-[clamp(1.75rem,3vw,2.75rem)]; }
+  .preference > p { @apply mt-3 mb-9 max-w-[52ch]; }
+  .preference__transport { @apply grid grid-cols-12 gap-8 border-b border-editorial-line pb-7; }
+  .preference__transport-item { @apply col-span-3 flex flex-col-reverse items-center gap-3 text-center text-[clamp(1rem,1.39vw,1.25rem)]; }
+  .preference__transport-item img { @apply h-12 w-[85%] object-contain; }
+  .preference__stats { @apply grid grid-cols-12 pt-6; }
+  .preference__stats > div { @apply col-span-4 grid grid-cols-[48px_1fr] grid-rows-[auto_1fr] items-center gap-x-5 border-r border-editorial-line py-4; }
+  .preference__stats > div + div { @apply pl-[clamp(1.5rem,5vw,3.5rem)]; }
+  .preference__stats > div:last-child { @apply border-r-0; }
+  .preference__stats img { @apply row-span-2 w-12; }
+  .preference__stats span { @apply font-['Saans',var(--font-inter),Arial,sans-serif] text-[clamp(2rem,3.2vw,2.875rem)] font-[380] leading-none tracking-[-0.02em] text-editorial-ink; }
+  .preference__stats small { @apply text-[0.875rem] leading-[1.15] text-editorial-muted; }
+
+  .coverage { @apply relative grid min-h-[min(1103px,76vw)] grid-cols-12 overflow-hidden bg-editorial-accent px-[var(--spacing-page)] py-[clamp(3.5rem,5.7vw,5.125rem)] text-white; }
+  .coverage__copy { @apply relative z-10 col-span-7; }
+  .coverage__copy h2 { @apply text-white; }
+  .coverage__copy h2 span { @apply text-white/55; }
+  .coverage__copy p { @apply mt-3 max-w-[42rem] text-white/85; }
+  .coverage__tabs { @apply mt-7 flex max-w-[619px] flex-wrap gap-2; }
+  .coverage__tabs button { @apply border-white/30 bg-white/10 text-white hover:border-orange hover:bg-orange; }
+  .coverage__card { @apply relative z-10 col-start-9 col-span-4 self-end bg-white/85 p-8 text-editorial-ink backdrop-blur-sm; }
+  .coverage__card b { @apply text-[0.6875rem] font-[570] leading-[1.5] tracking-[0.1em] text-orange uppercase; }
+  .coverage__card h3 { @apply mt-6 mb-2; }
+  .coverage__card a { @apply mt-7 inline-flex text-editorial-accent no-underline; }
+  .coverage .coverage-globe-canvas { @apply pointer-events-none absolute left-1/2 top-[25%] z-0 w-[min(1410px,98vw)] -translate-x-1/2; }
+
+  .trust { @apply px-[var(--spacing-page)] pt-[var(--spacing-section)]; }
+  .trust__grid { @apply mt-12 grid grid-cols-12 gap-px border border-editorial-line bg-editorial-line; }
+  .trust__item { @apply col-span-3 flex min-h-[154px] flex-col bg-editorial-surface p-9; }
+  .trust__grid--principles .trust__item { @apply min-h-[242px] pt-[4.5rem]; }
+  .trust__grid--metrics { @apply mt-2.5 border-0 bg-[#b6b6b6]; }
+
+  .shipment-tracking { @apply mt-[var(--spacing-section)] bg-editorial-surface px-[var(--spacing-page)] py-[clamp(2rem,4vw,3.5rem)]; }
+  .shipment-tracking__panel { @apply mx-auto grid max-w-[1312px] grid-cols-12 items-end gap-6; }
+  .shipment-tracking__panel > div { @apply col-span-5; }
+  .shipment-tracking__form { @apply col-span-7 flex gap-3; }
+  .shipment-tracking__field { @apply flex h-14 min-w-0 flex-1 items-center gap-3 border border-editorial-line/50 px-4 text-editorial-muted; }
+  .shipment-tracking__field input { @apply min-w-0 flex-1 border-0 bg-transparent outline-none; }
+
+  .industries { @apply pt-[var(--spacing-section)]; }
+  .industries > h2, .industries > p { @apply mx-[var(--spacing-page)]; }
+  .industries > p { @apply mt-3 mb-12; }
+  .industries__grid { @apply grid grid-cols-12 gap-0.5; }
+  .industries__item { @apply relative col-span-6 h-[537px] overflow-hidden bg-editorial-ink; }
+  .industries__item > img { @apply h-full w-full object-cover; }
+  .industries__item::after { @apply absolute inset-0 bg-[linear-gradient(180deg,transparent_45%,rgba(0,0,0,.7))] content-['']; }
+  .industries__item-copy { @apply absolute bottom-16 left-10 z-10 flex max-w-[27rem] flex-col gap-4 text-white; }
+  .industries__item-copy strong, .industries__item-copy span { @apply text-white; }
+
+  .testimonials { @apply relative bg-center bg-cover px-[var(--spacing-page)] py-[clamp(5rem,17vw,15.375rem)]; }
+  .testimonials::before { @apply absolute inset-0 bg-white/65 content-['']; }
+  .testimonials__carousel { @apply relative z-10 mx-auto flex min-h-[429px] max-w-[1344px] flex-col gap-10 bg-editorial-surface p-[clamp(1.75rem,4vw,4rem)]; }
+  .testimonials__splide { @apply flex min-h-[301px] flex-1 flex-col; }
+  .testimonials__splide .splide__track { @apply flex-1 overflow-hidden; }
+  .testimonials__splide .splide__list, .testimonials__splide .splide__slide { @apply h-full; }
+  .testimonials__splide .splide__slide { @apply flex flex-col gap-10; }
+  .testimonials__carousel blockquote { @apply m-0 max-w-none text-[clamp(1.5rem,2.22vw,2rem)] leading-[1.31] tracking-[-0.02em]; }
+  .testimonials__author { @apply flex flex-col gap-1; }
+  .testimonials__controls { @apply flex items-center justify-between; }
+  .testimonials__arrows, .testimonials__indicators { @apply flex items-center gap-3; }
+  .testimonials__arrows button { @apply size-12 rounded-full border-editorial-line/50 bg-white text-editorial-ink; }
+  .testimonials__indicators button { @apply size-2 rounded-full bg-editorial-subtle/40 p-0; }
+  .testimonials__indicators button.is-active { @apply w-6 bg-editorial-accent; }
+}

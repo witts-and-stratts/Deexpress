@@ -1,0 +1,38 @@
+@layer components {
+  .site-header {
+    @apply font-sans tracking-[-0.04em] text-editorial-ink;
+  }
+  .site-lead {
+    @apply font-sans text-[clamp(1.0625rem,1.67vw,1.5rem)] leading-[1.2] tracking-[-0.02em] text-editorial-muted;
+  }
+  .site-body {
+    @apply font-sans text-base leading-7 text-editorial-muted;
+  }
+  .site-label {
+    @apply font-sans text-[0.6875rem] font-semibold leading-4 tracking-[0.12em] uppercase;
+  }
+  .text-label {
+    @apply font-sans text-[0.6875rem] font-[570] leading-normal tracking-widest uppercase;
+  }
+  .text-h1 {
+    @apply font-sans text-[clamp(3rem,5.55vw,4.5rem)] leading-[0.9] tracking-tighter text-editorial-ink text-balance;
+  }
+  .text-h2 {
+    @apply font-sans text-[clamp(2.125rem,3.2vw,2.875rem)] leading-[1.08] tracking-[-0.04em] text-editorial-ink text-balance;
+  }
+  .text-h3 {
+    @apply font-sans text-[clamp(1.375rem,2.5vw,2.25rem)] leading-[1.05] tracking-[-0.04em] text-editorial-ink text-balance;
+  }
+  .text-card-title {
+    @apply font-sans text-[clamp(1.125rem,1.6vw,1.3125rem)] font-[570] leading-[1.15] tracking-[-0.015em] text-editorial-ink;
+  }
+  .text-metric {
+    @apply font-sans text-[clamp(2rem,3.2vw,2.875rem)] leading-none tracking-[-0.02em] text-editorial-ink;
+  }
+  .type-data {
+    @apply [font-variant-numeric:tabular-nums];
+  }
+  .section-label {
+    @apply block text-editorial-accent text-[12px] uppercase tracking-widest;
+  }
+}

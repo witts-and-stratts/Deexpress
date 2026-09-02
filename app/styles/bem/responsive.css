@@ -1,0 +1,44 @@
+/* Responsive overrides for shared chrome and page sections. */
+@media (max-width: 800px) {
+  .site-nav { @apply top-[max(0.875rem,env(safe-area-inset-top))] h-[58px] w-[calc(100%_-_28px)]; }
+  .site-nav__brand img { @apply h-12 w-[82px]; }
+  .site-nav__toggle { @apply ml-auto grid size-11 place-items-center; }
+  .site-nav__links { @apply hidden; }
+  .site-nav--open .site-nav__links { @apply absolute right-0 top-[calc(100%_+_10px)] flex w-[min(320px,calc(100vw_-_28px))] flex-col items-stretch gap-0 bg-white p-3 shadow-xl; }
+  .site-nav--open .site-nav__links > a { @apply border-b border-editorial-line/30 px-2.5 py-3; }
+  .site-footer { @apply py-14; }
+  .site-footer__main > div, .site-footer__brand { @apply col-span-6!; }
+  .site-footer__brand { @apply col-span-12!; }
+  .site-footer__bottom { @apply block leading-7; }
+  .site-footer__bottom span { @apply block; }
+
+  .home-page__hero-copy h1, .home-page__hero-copy p { @apply w-auto; }
+  .home-page__hero-copy p { @apply mt-6; }
+  .service-showcase__panel { @apply items-end; }
+  .service-showcase__copy { @apply col-start-1 col-span-12; }
+  .preference__transport-item { @apply col-span-6; }
+  .preference__stats > div { @apply col-span-12 border-r-0 border-b; }
+  .preference__stats > div + div { @apply pl-0; }
+  .coverage__copy, .coverage__card, .tracking-page__hero-copy, .tracking-page__interface, .tracking-page__note-copy, .tracking-page__note-detail, .contact-page__options-intro > :nth-child(n), .contact-page__option, .contact-page__form-copy, .contact-page__form, .contact-page__location > div:first-child, .contact-page__map { @apply col-span-12; }
+  .coverage__card { @apply mt-8; }
+  .trust__item { @apply col-span-6 min-h-[120px] p-6; }
+  .shipment-tracking__panel > div, .shipment-tracking__form { @apply col-span-12; }
+  .shipment-tracking__form { @apply flex-col; }
+  .industries__item { @apply col-span-12 h-[300px]; }
+  .testimonials { @apply py-20; }
+
+  .tracking-page__hero-grid { @apply mt-[155px] gap-12 pb-0; }
+  .tracking-page__support { @apply block; }
+  .tracking-page__support-actions { @apply mt-7; }
+
+  .contact-page__hero { @apply min-h-[590px]; }
+  .contact-page__hero-content { @apply pt-[170px]; }
+  .contact-page__option-grid { @apply gap-0.5; }
+  .contact-page__option { @apply min-h-[225px] p-7; }
+  .contact-page__map { @apply min-h-[310px]; }
+}
+
+@media (max-width: 620px) {
+  .trust__item { @apply col-span-12; }
+  .testimonials__carousel { @apply min-h-0; }
+}

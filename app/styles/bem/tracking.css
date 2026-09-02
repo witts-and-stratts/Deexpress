@@ -1,0 +1,20 @@
+/* Shipment tracking page. */
+@layer components {
+  .tracking-page { @apply overflow-clip bg-white font-sans text-editorial-ink; }
+  .tracking-page__hero { @apply relative overflow-hidden bg-editorial-accent text-white; }
+  .tracking-page__hero::before { @apply absolute inset-0 bg-[linear-gradient(100deg,rgba(35,26,168,.94),rgba(35,26,168,.74),rgba(35,26,168,.28)),url('/images/home-hero.webp')_center/cover]; content: ''; }
+  .tracking-page__hero-grid { @apply relative z-10 mx-auto mt-[220px] grid max-w-[1544px] grid-cols-12 items-end gap-8 px-[var(--spacing-page)] pb-20; }
+  .tracking-page__hero-copy { @apply col-span-6; }
+  .tracking-page__hero-copy > p { @apply mb-5 text-[0.6875rem] font-[570] leading-[1.5] tracking-[0.1em] text-orange uppercase; }
+  .tracking-page__hero-copy h1 { @apply font-['Saans',var(--font-inter),Arial,sans-serif] text-[clamp(3rem,5.55vw,5rem)] font-[380] leading-[0.9] tracking-[-0.04em] text-white text-balance; }
+  .tracking-page__hero-copy > span { @apply mt-8 block max-w-[30rem] text-lg leading-[1.35] text-white/80; }
+  .tracking-page__interface { @apply col-span-6; }
+  .tracking-page__note { @apply grid grid-cols-12 gap-8 px-[var(--spacing-page)] py-[clamp(4.5rem,8vw,7.25rem)]; }
+  .tracking-page__note-copy { @apply col-span-8; }
+  .tracking-page__note-copy > p { @apply mb-4 text-[0.6875rem] font-[570] leading-[1.5] tracking-[0.1em] text-editorial-accent uppercase; }
+  .tracking-page__note-detail { @apply col-span-4 self-end; }
+  .tracking-page__support { @apply mx-[var(--spacing-page)] mb-[var(--spacing-section)] flex items-center justify-between gap-8 bg-editorial-accent p-[clamp(2rem,4vw,3.375rem)] text-white; }
+  .tracking-page__support > p { @apply text-white; }
+  .tracking-page__support-actions { @apply flex flex-wrap gap-3; }
+  .tracking-page__support-actions a { @apply inline-flex items-center gap-2 border border-white/60 px-4 py-3 text-white no-underline hover:bg-white/10; }
+}
