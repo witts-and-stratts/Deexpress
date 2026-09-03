@@ -1,6 +1,0 @@
-/* BEM stylesheet manifest. Rules live with the interface role they serve. */
-@import './bem/shared.css';
-@import './bem/home.css';
-@import './bem/tracking.css';
-@import './bem/contact.css';
-@import './bem/responsive.css';

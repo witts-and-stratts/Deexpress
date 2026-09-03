@@ -1,89 +1,68 @@
 'use client'
 
-import { ArrowUpRight, Clock, Mail, MapPin, MessageCircle, Phone } from 'lucide-react'
-import { Reveal } from '@/components/Reveal'
+import Link from 'next/link'
+import { ArrowUpRight, Clock3, MessageCircle, Phone } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
 import { InquiryForm } from '@/components/InquiryForm'
-import { useLang } from '@/lib/i18n'
-import { CONTACT_PERSONS, SITE, WHATSAPP_URL } from '@/lib/site'
-import { BtnLink, Eyebrow, PageHero, container, section } from '@/components/ui'
+import { SITE, WHATSAPP_URL } from '@/lib/site'
+import { HomeFooter, HomeHeader } from '@/components/pages/HomePage'
+
+const contactOptions: { title: string; value: string; href?: string; icon: LucideIcon }[] = [
+  { title: 'Hotline for shipment, tracking and other urgent information', value: '+49 (0)152 29939834', href: 'tel:+4915229939834', icon: Phone },
+  { title: 'Partnerships, vehicle procurement and sourcing', value: '+49 (0)152 29939834', href: 'tel:+4915229939834', icon: Phone },
+  { title: 'Instant customer support via call or WhatsApp message', value: '+49 221 98232-601', href: WHATSAPP_URL, icon: MessageCircle },
+  { title: 'Office hours', value: 'Mon – Fri · 9:00 – 17:00', icon: Clock3 },
+]
 
 export function ContactPage() {
-  const { t } = useLang()
   return (
-    <main>
-      <PageHero eyebrow={t.contact.eyebrow} title={t.contact.title} sub={t.contact.intro} />
-
-      <section className={section}>
-        <div className={`${container} grid items-start gap-9 lg:grid-cols-12 lg:gap-18`}>
-          <Reveal className="lg:col-span-5">
-            <div className="grid gap-4.5">
-              <div className="rounded-3xl border border-slate-200 bg-white p-6.5">
-                <h3 className="mb-3.5 flex items-center gap-2.5 font-display text-[1.05rem] font-semibold">
-                  <MapPin size={18} className="text-royal" /> {t.contact.office}
-                </h3>
-                <p className="flex items-start gap-2.5 py-1.5 text-[0.92rem] leading-relaxed text-slate-500">
-                  <MapPin size={16} className="mt-1 shrink-0 text-royal" />
-                  {SITE.legalName}<br />{SITE.street}<br />{SITE.city}, {SITE.country}
-                </p>
-                <p className="flex items-start gap-2.5 py-1.5 text-[0.92rem] text-slate-500">
-                  <Clock size={16} className="mt-1 shrink-0 text-royal" /> {t.contact.hours}: {SITE.hours}
-                </p>
-                <p className="flex items-start gap-2.5 py-1.5 text-[0.92rem] text-slate-500">
-                  <Mail size={16} className="mt-1 shrink-0 text-royal" />
-                  <a href={`mailto:${SITE.email}`} className="hover:text-royal">{SITE.email}</a>
-                </p>
-              </div>
-
-              <div className="rounded-3xl border border-slate-200 bg-white p-6.5">
-                <h3 className="mb-3.5 flex items-center gap-2.5 font-display text-[1.05rem] font-semibold">
-                  <Phone size={18} className="text-royal" /> {t.contact.directTitle}
-                </h3>
-                {CONTACT_PERSONS.map((p) => (
-                  <div key={p.name} className="flex items-center gap-4 border-t border-slate-200 py-3.5 first:border-t-0">
-                    <span
-                      className="size-13.5 shrink-0 rounded-2xl bg-cover bg-top"
-                      style={{ backgroundImage: `url(${p.photo})` }}
-                      role="img"
-                      aria-label={p.name}
-                    />
-                    <div>
-                      <strong className="block text-[0.95rem]">{p.name}</strong>
-                      <span className="mt-0.5 block text-[0.82rem] text-slate-500">{p.languages}</span>
-                      <a href={p.phoneHref} className="text-[0.9rem] font-semibold text-royal">{p.phone}</a>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="rounded-3xl border border-slate-200 bg-white p-6.5">
-                <h3 className="mb-3.5 flex items-center gap-2.5 font-display text-[1.05rem] font-semibold">
-                  <MessageCircle size={18} className="text-royal" /> {t.contact.whatsappTitle}
-                </h3>
-                <p className="text-[0.92rem] leading-relaxed text-slate-500">{t.contact.whatsappText}</p>
-                <BtnLink href={WHATSAPP_URL} className="mt-3.5" target="_blank" rel="noopener noreferrer">
-                  {t.common.whatsappChat} <ArrowUpRight size={16} />
-                </BtnLink>
-              </div>
-
-              <div className="rounded-3xl border border-slate-200 bg-white p-6.5">
-                <p className="text-[0.92rem] leading-relaxed text-slate-500">{t.contact.partnership}</p>
-              </div>
-            </div>
-          </Reveal>
-
-          <Reveal delay={140} className="lg:col-span-7">
-            <div>
-              <div className="mb-7">
-                <Eyebrow>{t.contact.eyebrow}</Eyebrow>
-                <h2 className="mt-4 font-display text-[clamp(1.6rem,2.6vw,2.2rem)] font-semibold tracking-tight">
-                  {t.contact.formTitle}
-                </h2>
-              </div>
-              <InquiryForm kind="contact" />
-            </div>
-          </Reveal>
+    <main className="contact-page">
+      <section className="contact-page__hero" aria-labelledby="contact-title">
+        <HomeHeader />
+        <div className="contact-page__hero-shade" />
+        <div className="contact-page__hero-content">
+          <h1 id="contact-title" className="text-h1">Talk to us</h1>
+          <p className="site-lead">Whether you need a custom freight quote, shipment updates, or want to discuss a partnership—our teams in Berlin and across Africa are here to assist.</p>
         </div>
       </section>
+
+      <section className="contact-page__options" aria-labelledby="contact-options-title">
+        <div className="contact-page__options-intro">
+          <h2 id="contact-options-title" className="text-h3">Contact Options</h2>
+          <p className="site-lead">Shipping Request</p>
+          <div>
+            <span>For shipping request, please use our special shipping request form. This gives us all the necessary details to offer you a tailor-made solution.</span>
+            <Link href="/quote">Shipping request form <ArrowUpRight size={13} aria-hidden="true" /></Link>
+          </div>
+        </div>
+        <div className="contact-page__option-grid">
+          {contactOptions.map(({ title, value, href, icon: Icon }) => (
+            <article key={title} className="contact-page__option">
+              <Icon size={42} strokeWidth={1.15} aria-hidden="true" />
+              <p>{title}</p>
+              {href ? <a href={href} target={href === WHATSAPP_URL ? '_blank' : undefined} rel={href === WHATSAPP_URL ? 'noopener noreferrer' : undefined}>{value}</a> : <strong>{value}</strong>}
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="contact-page__form-section" aria-labelledby="contact-form-title">
+        <div className="contact-page__form-copy">
+          <h2 id="contact-form-title" className="text-h2">How can we assist your business?</h2>
+          <p>Tell us what you need and we’ll get back to you with a tailored solution. <strong>Whether you need a freight quote, shipment updates, or want to discuss a partnership — our team is here to help.</strong></p>
+          <p>We typically respond within 2 business hours.</p>
+        </div>
+        <div className="contact-page__form"><InquiryForm kind="contact" /></div>
+      </section>
+
+      <section className="contact-page__location" aria-labelledby="find-us-title">
+        <div>
+          <h2 id="find-us-title" className="text-h3">Find us in Berlin</h2>
+          <address>{SITE.legalName}<br />{SITE.street}<br />{SITE.city}, {SITE.country}</address>
+        </div>
+        <div className="contact-page__map" role="img" aria-label="Map showing the Berlin office location" />
+      </section>
+      <HomeFooter />
     </main>
   )
 }

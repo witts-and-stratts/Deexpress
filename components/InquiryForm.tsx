@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react'
 import { useLang } from '@/lib/i18n'
 import { SERVICES } from '@/lib/site'
@@ -9,9 +10,18 @@ import { FormField, FormHint } from '@/components/ui/form-field'
 
 const fieldClass = 'form-control'
 
-export function InquiryForm({ kind }: { kind: 'contact' | 'quote' }) {
+export function QuoteInquiryForm() {
+  const searchParams = useSearchParams()
+  const requestedService = searchParams.get('service') ?? ''
+  const initialService = SERVICES.some((service) => service.slug === requestedService) ? requestedService : ''
+
+  return <InquiryForm key={initialService} kind="quote" initialService={initialService} />
+}
+
+export function InquiryForm({ kind, initialService = '' }: { kind: 'contact' | 'quote'; initialService?: string }) {
   const { t } = useLang()
   const [sent, setSent] = useState(false)
+  const [selectedService, setSelectedService] = useState(initialService)
   const f = t.form
 
   if (sent) {
@@ -67,7 +77,7 @@ export function InquiryForm({ kind }: { kind: 'contact' | 'quote' }) {
               <input type="tel" name="phone" autoComplete="tel" className={fieldClass} />
             </FormField>
             <FormField label={f.service} required>
-              <select required defaultValue="" className={fieldClass}>
+              <select required value={selectedService} onChange={(event) => setSelectedService(event.target.value)} className={fieldClass}>
                 <option value="" disabled>{f.selectService}</option>
                 {SERVICES.map((s) => <option key={s.slug} value={s.slug}>{t.services.details[s.slug].title}</option>)}
               </select>

@@ -6,7 +6,7 @@ import { ArrowUpRight } from 'lucide-react'
 import { Reveal } from '@/components/Reveal'
 import { TrackingWidget } from '@/components/TrackingWidget'
 import { useLang } from '@/lib/i18n'
-import { HomeFooter, HomeHeader } from '@/components/pages/NewHomePage'
+import { HomeFooter, HomeHeader } from '@/components/pages/HomePage'
 
 export function TrackPage() {
   const { t } = useLang()

@@ -1,384 +1,801 @@
-'use client'
+'use client';
 
-import { useRouter } from 'next/navigation'
-import Link from 'next/link'
+import { GlobalCoverage } from '@/components/GlobalCoverage';
+import { ParallaxImage, Reveal } from '@/components/motion/Motion';
+import { Button, buttonVariants } from '@/components/ui/button';
 import {
-  ArrowRight, ArrowUpRight, Check, CreditCard, Headphones, Luggage, Package, Plane,
-  Radar, Search, Ship, CarFront, Warehouse, Zap,
-} from 'lucide-react'
-import { Reveal } from '@/components/Reveal'
-import { Counter } from '@/components/Counter'
-import { CoverageSection } from '@/components/CoverageSection'
-import { TrackingWidget } from '@/components/TrackingWidget'
-import { useLang } from '@/lib/i18n'
-import { HERO_IMAGE, SERVICES } from '@/lib/site'
-import { BtnLink, Eyebrow, container, section, sectionHead, sectionHeadSub, sectionHeadTitle, sectionSm, sectionTint, textLink } from '@/components/ui'
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { useLang, type Lang } from '@/lib/i18n';
+import { Input } from '@base-ui/react';
+import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
+import '@splidejs/react-splide/css';
+import {
+    ArrowUpRight,
+    ChevronDown,
+    Hash,
+    Menu,
+    Search,
+    X
+} from 'lucide-react';
+import { AnimatePresence, motion, useInView, useReducedMotion, useScroll, useSpring, useTransform, type MotionValue } from 'motion/react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRef, useState } from 'react';
+import AnimatedText from '../AnimatedText';
 
-const SERVICE_ICONS = { 'air-freight': Plane, 'sea-freight': Ship, 'vehicle-shipping': CarFront, 'commercial-cargo': Package, 'personal-effects': Luggage, 'vehicle-sourcing': Search, storage: Warehouse } as const
-const WHY_ICONS = [Zap, Radar, CreditCard, Headphones]
-const INDUSTRY_ICONS = [CarFront, Package, Ship, Warehouse]
+const MotionLink = motion.create(Link);
 
-export function HomePage() {
-  const { t } = useLang()
-  const router = useRouter()
+const assets = {
+  hero: '/images/home-hero.webp',
+  logo: '/images/logo.webp',
+  footerLogo: '/images/footer-logo.webp',
+  air: '/images/service-air.jpg',
+  sea: '/images/service-sea.jpg',
+  vehicle: '/images/service-vehicle.jpg',
+  cargo: '/images/service-cargo.jpg',
+  personal: '/images/service-personal.webp',
+  sourcing: '/images/service-sourcing.jpg',
+  plane: '/images/plane.webp',
+  ship: '/images/ship.webp',
+  train: '/images/train.webp',
+  truck: '/images/truck.webp',
+  car: '/images/car.webp',
+  coverage: '/images/coverage-figma.webp',
+  industry1: '/images/industry1.webp',
+  industry2: '/images/industry2.webp',
+  industry3: '/images/industry3.webp',
+  industry4: '/images/industry4.webp',
+  pattern: '/images/wavy-background.svg',
+  globeIcon: '/images/icons/globe-icon.svg',
+  multimodalIcon: '/images/icons/multimodal-icon.svg',
+  regionsIcon: '/images/icons/regions-icon.svg',
+};
+
+const services = [
+  [
+    'Air freight',
+    assets.air,
+    'Time-sensitive shipments, coordinated from collection to arrival.',
+  ],
+  [
+    'Sea freight',
+    assets.sea,
+    'Cost-effective ocean freight for larger loads and long-distance routes.',
+  ],
+  [
+    'Vehicle shipping',
+    assets.vehicle,
+    'Vehicle purchase and shipping coordinated through one logistics partner.',
+  ],
+  [
+    'Commercial cargo',
+    assets.cargo,
+    'Freight planned around your business requirements and destination.',
+  ],
+  [
+    'Personal effects shipping',
+    assets.personal,
+    'Careful coordination for the belongings that move with you.',
+  ],
+  [
+    'Procurement and vehicle sourcing',
+    assets.sourcing,
+    'Support with sourcing and purchasing vehicles in Europe.',
+  ],
+] as const;
+
+function LanguageSelector({ footer = false }: { footer?: boolean }) {
+  const { lang, setLang } = useLang();
+  const language = lang.toUpperCase();
+  const flag = lang === 'de' ? '/flags/de.svg' : '/flags/gb.svg';
+  const selectLanguage = (value: Lang) => setLang(value);
 
   return (
-    <main>
-      <section className="relative overflow-hidden bg-navy-950 pt-36 pb-14 text-white sm:pt-44 lg:pt-52 lg:pb-20">
-        <div
-          aria-hidden
-          className="absolute inset-0 bg-[radial-gradient(720px_480px_at_12%_8%,rgba(30,94,255,0.32),transparent_65%),radial-gradient(640px_420px_at_88%_92%,rgba(255,122,26,0.16),transparent_60%),radial-gradient(900px_500px_at_70%_10%,rgba(24,73,201,0.18),transparent_65%)]"
-        />
-        <div
-          aria-hidden
-          className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:56px_56px] [mask-image:radial-gradient(ellipse_90%_80%_at_50%_20%,black_30%,transparent_75%)]"
-        />
-        <div className={container}>
-          <div className="relative max-w-[900px]">
-            <Reveal>
-              <span className="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/6 px-4.5 py-2 text-[0.8rem] font-semibold tracking-[0.08em] uppercase text-white/85">
-                <span className="relative flex size-2 motion-reduce:hidden">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange opacity-60" />
-                  <span className="relative inline-flex size-2 rounded-full bg-orange" />
-                </span>
-                {t.home.heroBadge}
-              </span>
-            </Reveal>
-            <Reveal delay={100}>
-              <h1 className="mt-6 mb-5 font-display text-[clamp(2.6rem,5.4vw,4.6rem)] leading-[1.05] font-semibold tracking-tight">
-                {t.home.heroTitle1}
-                <br />
-                <span className="bg-linear-to-br from-orange to-gold bg-clip-text text-transparent">{t.home.heroTitle2}</span>
-              </h1>
-            </Reveal>
-            <Reveal delay={200}>
-              <p className="max-w-[640px] text-[1.12rem] leading-relaxed text-white/78">{t.home.heroSub}</p>
-            </Reveal>
-            <Reveal delay={300}>
-              <div className="mt-9 flex flex-wrap items-center gap-4">
-                <BtnLink href="/quote" size="lg">
-                  {t.common.getQuote} <ArrowUpRight size={18} />
-                </BtnLink>
-                <form
-                  className="flex min-w-[300px] flex-1 max-w-[460px] gap-2.5"
-                  onSubmit={(e) => {
-                    e.preventDefault()
-                    const value = new FormData(e.currentTarget).get('ref') as string
-                    router.push(value?.trim() ? `/track?ref=${encodeURIComponent(value.trim())}` : '/track')
-                  }}
-                >
-                  <input
-                    name="ref"
-                    placeholder={t.home.heroTrackLabel}
-                    aria-label={t.home.heroTrackLabel}
-                    className="min-w-0 flex-1 rounded-xl border border-white/22 bg-white/7 px-4.5 py-3.5 text-white outline-none transition-colors placeholder:text-white/45 focus:border-orange"
-                  />
-                  <button
-                    type="submit"
-                    className="inline-flex shrink-0 items-center justify-center gap-2.5 rounded-xl border border-white/35 bg-white/5 px-6 py-3.5 text-[0.93rem] font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-white/12 [&_svg]:transition-transform hover:[&_svg]:translate-x-0.5"
-                  >
-                    {t.home.heroTrackBtn} <ArrowRight size={16} />
-                  </button>
-                </form>
-              </div>
-            </Reveal>
-          </div>
-          <Reveal delay={400}>
-            <div className="relative mt-14 grid grid-cols-2 border-t border-white/14 lg:mt-20 lg:grid-cols-4">
-              {t.home.stats.map((s, i) => (
-                <div
-                  key={s.label}
-                  className={`flex flex-col gap-1.5 pt-6 pb-6 ${i % 2 === 1 ? 'border-l border-white/14 pl-6' : ''} ${
-                    i > 1 ? 'border-t border-white/14 lg:border-t-0' : ''
-                  } ${i > 0 ? 'lg:border-l lg:border-white/14 lg:pl-6' : ''} lg:pr-6`}
-                >
-                  <span className="font-display text-[clamp(2.2rem,4vw,3.4rem)] leading-none font-bold tracking-tight">
-                    <Counter value={s.value} />
-                  </span>
-                  <span className="text-[0.82rem] leading-snug text-white/62">{s.label}</span>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-      </section>
+    <DropdownMenu>
+      <DropdownMenuTrigger
+        className={footer ? 'site-footer__language' : 'site-nav__language'}
+        aria-label='Choose language'
+      >
+        <img src={flag} alt='' /> <span>{language}</span>{' '}
+        <ChevronDown size={12} aria-hidden='true' />
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align='end' className='language-menu'>
+        <DropdownMenuItem
+          onClick={() => selectLanguage('de')}
+          className='language-menu__item'
+        >
+          <img src='/flags/de.svg' alt='' /> Deutsch
+        </DropdownMenuItem>
+        <DropdownMenuItem
+          onClick={() => selectLanguage('en')}
+          className='language-menu__item'
+        >
+          <img src='/flags/gb.svg' alt='' /> English
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
 
-      <div className="overflow-hidden border-y border-slate-200 bg-white" aria-hidden="true">
-        <div className="flex w-max animate-marquee motion-reduce:animate-none hover:[animation-play-state:paused]">
-          {[...t.home.marquee, ...t.home.marquee].map((item, i) => (
-            <span
-              key={i}
-              className="inline-flex items-center gap-12 py-4.5 pr-12 pl-12 text-[0.82rem] font-bold tracking-[0.14em] whitespace-nowrap text-slate-500 uppercase after:ml-12 after:size-[7px] after:rounded-full after:bg-orange after:content-['']"
+export function HomeHeader() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <header className={`site-nav${open ? ' site-nav--open' : ''}`}>
+        <Link className='site-nav__brand' href='/' aria-label='DEexpress home'>
+          <img src={assets.logo} alt='DEexpress' />
+        </Link>
+        <button
+          className='site-nav__toggle md:hidden'
+          type='button'
+          onClick={() => setOpen(!open)}
+          aria-expanded={open}
+          aria-controls='home-navigation'
+          aria-label={open ? 'Close navigation' : 'Open navigation'}
+        >
+          <motion.span
+            className='site-nav__toggle-line'
+            animate={open ? { rotate: 45, y: 6.5 } : { rotate: 0, y: 0 }}
+            transition={{ duration: 0.26, ease: [0.16, 1, 0.3, 1] }}
+          />
+          <motion.span
+            className='site-nav__toggle-line'
+            animate={open ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
+            transition={{ duration: 0.2 }}
+          />
+          <motion.span
+            className='site-nav__toggle-line'
+            animate={open ? { rotate: -45, y: -6.5 } : { rotate: 0, y: 0 }}
+            transition={{ duration: 0.26, ease: [0.16, 1, 0.3, 1] }}
+          />
+        </button>
+        <nav className='site-nav__links' id='home-navigation'>
+          <div className='site-nav__menu-links'>
+            <Link href='/about' onClick={() => setOpen(false)}>
+              About
+            </Link>
+            <Link href='/services' onClick={() => setOpen(false)}>
+              Shipping
+            </Link>
+            <Link href='/track' onClick={() => setOpen(false)}>
+              Track
+            </Link>
+            <Link href='/destinations' onClick={() => setOpen(false)}>
+              Destinations
+            </Link>
+            <Link href='/contact' onClick={() => setOpen(false)}>
+              Contact
+            </Link>
+          </div>
+          <div className='site-nav__bottom-actions'>
+            <LanguageSelector />
+            <Link
+              href='/quote'
+              className={buttonVariants({ variant: 'default', size: 'default' })}
+              onClick={() => setOpen(false)}
             >
-              {item}
-            </span>
-          ))}
+              Get a quote
+            </Link>
+          </div>
+        </nav>
+      </header>
+
+      {/* Mobile Dropdown Panel rendered outside header backdrop-filter with orchestrated motion animation */}
+      <AnimatePresence>
+        {open && (
+          <motion.nav
+            className='site-nav-mobile md:hidden'
+            id='home-navigation-mobile'
+            aria-label='Mobile navigation'
+            initial={{ opacity: 0, y: -16, scale: 0.98 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              transition: {
+                duration: 0.35,
+                ease: [0.16, 1, 0.3, 1],
+                staggerChildren: 0.05,
+                delayChildren: 0.08,
+              },
+            }}
+            exit={{
+              opacity: 0,
+              y: -12,
+              scale: 0.98,
+              transition: {
+                duration: 0.22,
+                ease: [0.4, 0, 0.2, 1],
+                staggerChildren: 0.03,
+                staggerDirection: -1,
+              },
+            }}
+          >
+            <motion.div
+              className='site-nav__menu-links'
+              variants={{
+                open: { transition: { staggerChildren: 0.05 } },
+                closed: { transition: { staggerChildren: 0.03, staggerDirection: -1 } },
+              }}
+            >
+              {[
+                { href: '/about', label: 'About' },
+                { href: '/services', label: 'Shipping' },
+                { href: '/track', label: 'Track' },
+                { href: '/destinations', label: 'Destinations' },
+                { href: '/contact', label: 'Contact' },
+              ].map((item) => (
+                <MotionLink
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  variants={{
+                    initial: { opacity: 0, x: -14, y: 6 },
+                    animate: {
+                      opacity: 1,
+                      x: 0,
+                      y: 0,
+                      transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] },
+                    },
+                    exit: {
+                      opacity: 0,
+                      x: -8,
+                      y: -4,
+                      transition: { duration: 0.18, ease: 'easeIn' },
+                    },
+                  }}
+                  initial='initial'
+                  animate='animate'
+                  exit='exit'
+                >
+                  {item.label}
+                </MotionLink>
+              ))}
+            </motion.div>
+            <motion.div
+              className='site-nav__bottom-actions'
+              variants={{
+                initial: { opacity: 0, y: 14 },
+                animate: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.4, delay: 0.28, ease: [0.16, 1, 0.3, 1] },
+                },
+                exit: {
+                  opacity: 0,
+                  y: 8,
+                  transition: { duration: 0.15, ease: 'easeIn' },
+                },
+              }}
+              initial='initial'
+              animate='animate'
+              exit='exit'
+            >
+              <LanguageSelector />
+              <Link
+                href='/quote'
+                className={buttonVariants({ variant: 'default', size: 'default' })}
+                onClick={() => setOpen(false)}
+              >
+                Get a quote
+              </Link>
+            </motion.div>
+          </motion.nav>
+        )}
+      </AnimatePresence>
+    </>
+  );
+}
+
+export function HomeFooter() {
+  return (
+    <footer className='site-footer'>
+      <div className='site-footer__main'>
+        <div className='site-footer__brand'>
+          <img src={assets.footerLogo} alt='DEexpress' />
+          <small>Logistics GmbH · Berlin</small>
+          <p>
+            International freight, storage and vehicle logistics from Berlin to
+            26 countries across Africa and the Middle East.
+          </p>
+          <strong>
+            Move across borders.
+            <br />
+            Move with confidence.
+          </strong>
+        </div>
+        <div>
+          <b>Services</b>
+          <Link href='/services'>Air freight</Link>
+          <Link href='/services'>Sea freight</Link>
+          <Link href='/services'>Vehicle shipping</Link>
+          <Link href='/services'>Commercial cargo</Link>
+          <Link href='/services'>Personal effects</Link>
+          <Link href='/services'>Vehicle sourcing</Link>
+          <Link href='/services'>Storage</Link>
+        </div>
+        <div>
+          <b>Company</b>
+          <Link href='/about'>About us</Link>
+          <Link href='/destinations'>Destinations</Link>
+          <Link href='/track'>Track shipment</Link>
+          <Link href='/quote'>Get a quote</Link>
+          <Link href='/contact'>Contact</Link>
+        </div>
+        <div>
+          <b>Contact</b>
+          <a href='mailto:service@deexpress-logistics.eu'>
+            service@deexpress-logistics.eu
+          </a>
+          <span>+49 152 29939834</span>
+          <span>
+            Lichtenauer Str. 51, 13055 Berlin, Germany
+            <br />
+            <small>Mon – Fri · 9:00 – 17:00</small>
+          </span>
         </div>
       </div>
-
-      <section className={section}>
-        <div className={`${container} grid items-center gap-10 lg:grid-cols-12 lg:gap-24`}>
-          <Reveal className="lg:col-span-7">
-            <Eyebrow>{t.home.introEyebrow}</Eyebrow>
-            <h2 className={`${sectionHeadTitle} mb-5`}>{t.home.introTitle}</h2>
-            <p className="mb-4 leading-relaxed text-slate-500">{t.home.introP1}</p>
-            <p className="mb-4 leading-relaxed text-slate-500">{t.home.introP2}</p>
-            <BtnLink href="/about" variant="ghost" className="mt-2">
-              {t.nav.about} <ArrowRight size={16} />
-            </BtnLink>
-          </Reveal>
-          <Reveal delay={150} className="lg:col-span-5">
-            <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-navy-900 to-royal-600 p-8 text-white sm:p-11">
-              <div
-                aria-hidden
-                className="absolute inset-0 bg-[radial-gradient(360px_240px_at_85%_10%,rgba(255,122,26,0.3),transparent_65%)]"
-              />
-              <ul className="relative z-1 m-0 grid list-none gap-4 p-0">
-                {t.about.values.map((v) => (
-                  <li key={v.title} className="flex items-start gap-3 text-[0.95rem] leading-normal">
-                    <Check size={18} className="mt-0.5 shrink-0 text-orange-light" />
-                    <span><strong>{v.title}.</strong> {v.text}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className={`${section} ${sectionTint}`}>
-        <div className={container}>
-          <Reveal>
-            <div className={sectionHead}>
-              <Eyebrow>{t.home.servicesEyebrow}</Eyebrow>
-              <h2 className={sectionHeadTitle}>{t.home.servicesTitle}</h2>
-              <p className={sectionHeadSub}>{t.home.servicesSub}</p>
-            </div>
-          </Reveal>
-          <ServiceCards />
-        </div>
-      </section>
-
-      <section className={section}>
-        <div className={container}>
-          <Reveal>
-            <div className={sectionHead}>
-              <Eyebrow>{t.home.coverageEyebrow}</Eyebrow>
-              <h2 className={sectionHeadTitle}>{t.home.coverageTitle}</h2>
-              <p className={sectionHeadSub}>{t.home.coverageSub}</p>
-            </div>
-          </Reveal>
-          <Reveal delay={120}>
-            <CoverageSection ctaHref="/quote" />
-          </Reveal>
-        </div>
-      </section>
-
-      <section className={`${section} ${sectionTint}`}>
-        <div className={container}>
-          <Reveal>
-            <div className={sectionHead}>
-              <Eyebrow>{t.home.whyEyebrow}</Eyebrow>
-              <h2 className={sectionHeadTitle}>{t.home.whyTitle}</h2>
-            </div>
-          </Reveal>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {t.home.why.map((w, i) => {
-              const Icon = WHY_ICONS[i % WHY_ICONS.length]
-              return (
-                <Reveal key={w.title} delay={i * 90}>
-                  <div className="rounded-3xl border border-slate-200 bg-white p-7 transition duration-300 hover:-translate-y-1.5 hover:shadow-xl shadow-navy-900/10">
-                    <span className="mb-5 grid size-12.5 place-items-center rounded-2xl bg-linear-to-br from-royal/12 to-royal/5 text-royal">
-                      <Icon size={24} strokeWidth={1.8} />
-                    </span>
-                    <h3 className="mb-2.5 font-display text-[1.15rem] font-semibold">{w.title}</h3>
-                    <p className="text-[0.92rem] leading-relaxed text-slate-500">{w.text}</p>
-                  </div>
-                </Reveal>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      <section className={section}>
-        <div className={container}>
-          <Reveal>
-            <div className={sectionHead}>
-              <Eyebrow>{t.home.processEyebrow}</Eyebrow>
-              <h2 className={sectionHeadTitle}>{t.home.processTitle}</h2>
-              <p className={sectionHeadSub}>{t.home.processSub}</p>
-            </div>
-          </Reveal>
-          <ProcessSteps />
-        </div>
-      </section>
-
-      <section className={`${section} relative overflow-hidden bg-navy-950 text-white`}>
-        <div
-          aria-hidden
-          className="absolute inset-0 bg-[radial-gradient(620px_420px_at_85%_30%,rgba(30,94,255,0.25),transparent_65%),radial-gradient(480px_320px_at_10%_90%,rgba(255,122,26,0.12),transparent_60%)]"
-        />
-        <div className={`${container} relative grid items-center gap-10 lg:grid-cols-12 lg:gap-20`}>
-          <Reveal className="lg:col-span-5">
-            <div>
-              <Eyebrow className="text-[#9db8e8]">{t.home.trackingEyebrow}</Eyebrow>
-              <h2 className="mt-4 mb-4 font-display text-[clamp(2rem,3.8vw,3.1rem)] leading-[1.08] font-semibold tracking-tight">
-                {t.home.trackingTitle}
-              </h2>
-              <p className="leading-relaxed text-white/72">{t.home.trackingSub}</p>
-              <Link href="/track" className={`${textLink} mt-2.5`}>
-                {t.nav.track} <ArrowUpRight size={15} />
-              </Link>
-            </div>
-          </Reveal>
-          <Reveal delay={150} className="lg:col-span-7">
-            <TrackingWidget />
-          </Reveal>
-        </div>
-      </section>
-
-      <section className={`${section} ${sectionTint}`}>
-        <div className={container}>
-          <Reveal>
-            <div className={sectionHead}>
-              <Eyebrow>{t.home.industriesEyebrow}</Eyebrow>
-              <h2 className={sectionHeadTitle}>{t.home.industriesTitle}</h2>
-              <p className={sectionHeadSub}>{t.home.industriesSub}</p>
-            </div>
-          </Reveal>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {t.home.industries.map((ind, i) => {
-              const Icon = INDUSTRY_ICONS[i % INDUSTRY_ICONS.length]
-              return (
-                <Reveal key={ind.title} delay={i * 90}>
-                  <div className="group rounded-3xl border border-slate-200 bg-slate-50 p-7 transition duration-300 hover:-translate-y-1.5 hover:border-navy-900 hover:bg-navy-900 hover:text-white">
-                    <span className="grid size-12.5 place-items-center rounded-2xl bg-linear-to-br from-royal/12 to-royal/5 text-royal transition-colors group-hover:from-white/15 group-hover:to-white/5 group-hover:text-white">
-                      <Icon size={24} strokeWidth={1.8} />
-                    </span>
-                    <h3 className="mt-4.5 mb-2.5 font-display text-[1.12rem] font-semibold transition-colors group-hover:text-white">
-                      {ind.title}
-                    </h3>
-                    <p className="text-[0.9rem] leading-relaxed text-slate-500 transition-colors group-hover:text-white/70">{ind.text}</p>
-                  </div>
-                </Reveal>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      <section className={section}>
-        <div className={`${container} grid items-center gap-10 lg:grid-cols-2 lg:gap-24`}>
-          <Reveal>
-            <div
-              className="relative min-h-[440px] overflow-hidden rounded-3xl shadow-xl shadow-navy-900/20 max-lg:min-h-[300px]"
-              style={{ backgroundImage: `url(${HERO_IMAGE})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-              role="img"
-              aria-label={t.home.sourcingTitle}
-            >
-              <div aria-hidden className="absolute inset-0 bg-linear-to-tr from-navy-950/50 to-transparent" />
-            </div>
-          </Reveal>
-          <Reveal delay={140}>
-            <div>
-              <Eyebrow>{t.services.details['vehicle-sourcing'].title}</Eyebrow>
-              <h2 className={`${sectionHeadTitle} mt-4 mb-5`}>{t.home.sourcingTitle}</h2>
-              <p className="mb-4 leading-relaxed text-slate-500">{t.home.sourcingText}</p>
-              <BtnLink href="/services/vehicle-sourcing" variant="dark">
-                {t.home.sourcingCta} <ArrowUpRight size={16} />
-              </BtnLink>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className={sectionSm}>
-        <div className={container}>
-          <Reveal>
-            <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-navy-900 to-royal-600 p-10 text-white sm:p-16 lg:p-20">
-              <div
-                aria-hidden
-                className="absolute inset-0 bg-[radial-gradient(520px_320px_at_88%_20%,rgba(255,122,26,0.35),transparent_60%),radial-gradient(420px_300px_at_8%_100%,rgba(255,255,255,0.12),transparent_60%)]"
-              />
-              <div className="relative z-1 flex flex-wrap items-center justify-between gap-7 max-sm:flex-col max-sm:items-start">
-                <div>
-                  <h2 className="max-w-[560px] font-display text-[clamp(2rem,3.8vw,3.1rem)] leading-[1.08] font-semibold tracking-tight">
-                    {t.home.ctaTitle}
-                  </h2>
-                  <p className="mt-3 max-w-[520px] text-white/78">{t.home.ctaText}</p>
-                </div>
-                <div className="flex flex-wrap gap-3.5">
-                  <BtnLink href="/quote" size="lg">
-                    {t.common.getQuote} <ArrowUpRight size={18} />
-                  </BtnLink>
-                  <BtnLink href="/contact" variant="outline" size="lg">
-                    {t.common.contactTeam}
-                  </BtnLink>
-                </div>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-    </main>
-  )
+      <LanguageSelector footer />
+      <div className='site-footer__bottom'>
+        <span>Legal notice　 Data policy</span>
+        <span>© 2026 DEexpress Logistics GmbH. All rights reserved.</span>
+      </div>
+    </footer>
+  );
 }
 
-export function ServiceCards() {
-  const { t } = useLang()
+function AnimatedExploreIcon() {
+  const ref = useRef<HTMLSpanElement | null>(null);
+  const isInView = useInView(ref);
+
   return (
-    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {SERVICES.map((s, i) => {
-        const d = t.services.details[s.slug]
-        const Icon = SERVICE_ICONS[s.slug]
-        return (
-          <Reveal key={s.slug} delay={(i % 3) * 100}>
-            <Link
-              href={`/services/${s.slug}`}
-              className="group flex flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white transition duration-300 hover:-translate-y-2 hover:border-royal/35 hover:shadow-xl shadow-navy-900/10"
-            >
-              <div
-                className="relative h-50 overflow-hidden"
-                style={{ backgroundImage: `url(${s.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-                role="img"
-                aria-label={d.title}
+    <motion.span
+      ref={ref}
+      aria-hidden='true'
+      initial={{ opacity: 0 }}
+      animate={{ opacity: isInView ? 1 : 0 }}
+      transition={{ duration: 0.3, delay: 0.8 }}
+    >
+      <ArrowUpRight className='mb-0.5' size={20} />
+    </motion.span>
+  );
+}
+
+function ShowcaseImage({
+  image,
+  index,
+  sceneCount,
+  progress,
+  reduceMotion,
+}: {
+  image: string;
+  index: number;
+  sceneCount: number;
+  progress: MotionValue<number>;
+  reduceMotion: boolean | null;
+}) {
+  const scrollSteps = Math.max(1, sceneCount - 1);
+  const start = index === 0 ? 0 : Math.max(0, (index - 0.5) / scrollSteps);
+  const end = Math.min(1, start + 0.35 / scrollSteps);
+  const opacity = useTransform(progress, [start, end], [0, 1]);
+  const scale = useTransform(progress, [start, end], [1.045, 1]);
+
+  return (
+    <motion.div
+      className='absolute inset-0'
+      style={{ opacity: index === 0 ? 1 : opacity, scale: reduceMotion ? 1 : scale, willChange: 'opacity, transform' }}
+    >
+      <Image
+        src={image}
+        alt=''
+        fill
+        sizes='100vw'
+        loading='eager'
+        className='service-showcase__image'
+        style={{ opacity: 1 }}
+      />
+    </motion.div>
+  );
+}
+
+function ServiceGrid() {
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const reduceMotion = useReducedMotion();
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start start', 'end end'],
+  });
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 700,
+    damping: 45,
+    mass: 0.08,
+  });
+
+  return (
+    <div className='service-showcase home-service-showcase' ref={sectionRef}>
+      <div className='service-showcase__visual'>
+        <h2 className='service-showcase__heading text-h4'>
+          <span>One system.</span>
+          <span> Multiple effects</span>
+        </h2>
+        {services.map(([, image], index) => (
+          <ShowcaseImage
+            key={image}
+            image={image}
+            index={index}
+            sceneCount={services.length}
+            progress={smoothProgress}
+            reduceMotion={reduceMotion}
+          />
+        ))}
+      </div>
+      <div className='service-showcase__panels'>
+        {services.map(([title, , description]) => (
+          <section key={title} className='service-showcase__panel'>
+            <Link href='/services' className='service-showcase__copy'>
+              <AnimatedText
+                trigger='inView'
+                delay={0.2}
+                from={{
+                  opacity: 0,
+                }}
+                transition={{
+                  duration: 0.6,
+                }}
               >
-                <div aria-hidden className="absolute inset-0 bg-linear-to-t from-navy-950/45 to-transparent transition-transform duration-600 group-hover:scale-107" />
-                <span className="absolute bottom-[-22px] left-5 z-1 grid size-13 place-items-center rounded-2xl border border-slate-200 bg-white text-royal shadow-xl shadow-navy-900/15">
-                  <Icon size={22} strokeWidth={1.8} />
+                <strong className='text-h2 text-white'>{title}</strong>
+              </AnimatedText>
+              <AnimatedText
+                trigger='inView'
+                delay={0.4}
+                from={{
+                  opacity: 0,
+                }}
+                transition={{
+                  duration: 0.3,
+                }}
+              >
+                <span className='service-showcase__description'>
+                  {description}
                 </span>
-              </div>
-              <div className="flex flex-1 flex-col gap-2.5 px-6 pt-9 pb-6">
-                <h3 className="font-display text-[1.3rem] font-semibold">{d.title}</h3>
-                <p className="flex-1 text-[0.93rem] text-slate-500">{d.tagline}</p>
-                <span className={`${textLink} mt-2`}>
-                  {t.common.learnMore} <ArrowUpRight size={15} />
+              </AnimatedText>
+              <AnimatedText
+                delay={0.6}
+                trigger='inView'
+                from={{ opacity: 0 }}
+                transition={{ duration: 0.6 }}
+                className='flex w-full'
+              >
+                <span className='service-showcase__link gap-2'>
+                  Explore
+                  <AnimatedExploreIcon />
                 </span>
-              </div>
+              </AnimatedText>
             </Link>
-          </Reveal>
-        )
-      })}
+          </section>
+        ))}
+      </div>
     </div>
-  )
+  );
 }
 
-export function ProcessSteps() {
-  const { t } = useLang()
+function TransportRow() {
+  const modes = [
+    ['Airplane', assets.plane],
+    ['Ship', assets.ship],
+    ['Train', assets.train],
+    ['Truck', assets.truck],
+  ] as const;
   return (
-    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      {t.home.steps.map((s, i) => (
-        <Reveal key={s.title} delay={i * 90}>
-          <div className="relative h-full rounded-3xl border border-slate-200 bg-white p-7 transition duration-300 hover:-translate-y-1.5 hover:shadow-xl shadow-navy-900/10">
-            <span className="mb-4.5 inline-grid size-11 place-items-center rounded-xl bg-linear-to-br from-navy-900 to-royal-600 font-display text-base font-bold text-white">
-              {String(i + 1).padStart(2, '0')}
-            </span>
-            <h3 className="mb-2.5 font-display text-[1.12rem] font-semibold">{s.title}</h3>
-            <p className="text-[0.9rem] leading-relaxed text-slate-500">{s.text}</p>
-          </div>
-        </Reveal>
+    <div className='preference__transport'>
+      {modes.map(([name, image]) => (
+        <div className='preference__transport-item' key={name}>
+          <img src={image} alt='' />
+          <span>{name}</span>
+        </div>
       ))}
     </div>
-  )
+  );
+}
+
+const testimonial = {
+  quote:
+    '"DEexpress transformed our supply chain. Their real-time tracking and dedicated team reduced our transit times by 40% on the Berlin-Lagos corridor."',
+  name: 'Marcus Weber',
+  role: 'Head of Logistics, AutoTech GmbH',
+};
+
+type SplideHandle = { splide: { go: (control: string | number) => void } };
+
+function TestimonialCarousel() {
+  const [activeSlide, setActiveSlide] = useState(0);
+  const splideRef = useRef<SplideHandle | null>(null);
+
+  return (
+    <section className='testimonials__carousel'>
+      <Splide
+        ref={splideRef}
+        className='testimonials__splide'
+        hasTrack={false}
+        options={{
+          type: 'loop',
+          perPage: 1,
+          arrows: false,
+          pagination: false,
+          drag: true,
+          keyboard: 'global',
+          speed: 600,
+        }}
+        onMoved={(_, nextIndex) => setActiveSlide(nextIndex)}
+        aria-label='Customer testimonials'
+      >
+        <SplideTrack>
+          {[testimonial, testimonial, testimonial].map((item, index) => (
+            <SplideSlide key={index}>
+              <span className='section-label'>Testimonials</span>
+              <blockquote>{item.quote}</blockquote>
+              <div className='testimonials__author'>
+                <strong>{item.name}</strong>
+                <small>{item.role}</small>
+              </div>
+            </SplideSlide>
+          ))}
+        </SplideTrack>
+        <div className='testimonials__controls'>
+          <div className='testimonials__arrows'>
+            <Button
+              variant='secondary'
+              size='icon'
+              type='button'
+              onClick={() => splideRef.current?.splide.go('<')}
+              aria-label='Previous testimonial'
+            >
+              ←
+            </Button>
+            <Button
+              variant='secondary'
+              size='icon'
+              type='button'
+              onClick={() => splideRef.current?.splide.go('>')}
+              aria-label='Next testimonial'
+            >
+              →
+            </Button>
+          </div>
+          <div
+            className='testimonials__indicators'
+            aria-label={`Testimonial ${activeSlide + 1} of 3`}
+          >
+            {[0, 1, 2].map((index) => (
+              <Button
+                key={index}
+                variant='ghost'
+                className={activeSlide === index ? 'is-active' : ''}
+                type='button'
+                onClick={() => splideRef.current?.splide.go(index)}
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      </Splide>
+    </section>
+  );
+}
+
+export function HomePage() {
+  return (
+    <main className='home-page'>
+      <section className='home-page__hero'>
+        <ParallaxImage
+          src={assets.hero}
+          alt='Cargo ship in a harbor'
+          strength={18}
+        />
+        <HomeHeader />
+        <div className='home-page__hero-copy'>
+          <Reveal delay={80}>
+            <h1 className='text-h1 text-white'>
+              Move what matters
+              <br />
+              with confidence
+            </h1>
+          </Reveal>
+          <Reveal delay={220}>
+            <p className='site-lead text-white'>
+              Tailor-made logistics services from Europe to Africa by road, air,
+              water or rail – we deliver your cargo safely to its destination
+              with efficiency and care
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className='home-page__intro'>
+        <AnimatedText
+          trigger='inView'
+          splitBy={['words']}
+          stagger={0.04}
+          className='text-h3 max-w-[52ch]'
+        >
+          <strong>
+            DEExpress coordinates air, sea and vehicle shipping from Europe to
+            destinations across 26 African countries and the Middle East —
+          </strong>{' '}
+          <span className='text-gray-500'>helping individuals and businesses move internationally with greater
+          clarity and control.</span>
+        </AnimatedText>
+      </section>
+
+      <section className='home-page__section services-section'>
+        <ServiceGrid />
+      </section>
+
+      <section className='preference'>
+        <h2 className='text-h2 text-editorial-accent'>Ship your preference</h2>
+        <p className='site-body'>
+          From origin to destination, we follow your preference in means, cost
+          and handling.
+        </p>
+        <TransportRow />
+        <div className='preference__stats'>
+          <div>
+            <img src={assets.globeIcon} alt='' />
+            <span>26+</span>
+            <small>
+              Destinations
+              <br />
+              across Africa &amp; the
+              <br />
+              Middle East
+            </small>
+          </div>
+          <div>
+            <img src={assets.multimodalIcon} alt='' />
+            <span>4</span>
+            <small>
+              Multi-modal
+              <br />
+              shipping methods
+            </small>
+          </div>
+          <div>
+            <img src={assets.regionsIcon} alt='' />
+            <span>3</span>
+            <small>Regions served</small>
+          </div>
+        </div>
+      </section>
+
+      <GlobalCoverage />
+
+      <section className='trust'>
+        <h2 className='text-h2 text-editorial-accent'>
+          Built on speed, transparency and trust.
+        </h2>
+        <div className='trust__grid trust__grid--principles'>
+          {[
+            [
+              'Speed',
+              'We are fast and effective — from the first inquiry to the final delivery of your cargo.',
+            ],
+            [
+              'Tracking',
+              'Up-to-date status details for your customers, from the point of shipment until arrival.',
+            ],
+            [
+              'Flexible payment',
+              'Payment should not be a barrier. Contact us — we will find an option that works for you.',
+            ],
+            [
+              'Service',
+              'A customer service team that is ready to assist quickly, in English, German or French.',
+            ],
+          ].map(([title, copy]) => (
+            <div className='trust__item' key={title}>
+              <strong className='text-card-title'>{title}</strong>
+              <span className='site-body mt-4 max-w-[32ch] leading-[1.375]'>
+                {copy}
+              </span>
+            </div>
+          ))}
+        </div>
+        <div className='trust__grid trust__grid--metrics'>
+          {[
+            ['10M+', 'Interactions / month'],
+            ['70%+', 'Autonomous resolution'],
+            ['75%', 'Cost reduction'],
+            ['10X', 'Capacity increase'],
+          ].map(([value, label]) => (
+            <div className='trust__item' key={label}>
+              <strong className='text-metric'>{value}</strong>
+              <span className='text-label'>{label}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className='shipment-tracking'>
+        <section className='shipment-tracking__panel site-panel'>
+          <div>
+            <h2 className='text-h2 text-editorial-accent'>
+              Track your shipment
+            </h2>
+            <p className='site-body mt-3 mb-6'>
+              Enter your tracking number to see the latest status and estimated
+              delivery date.
+            </p>
+          </div>
+          <form className='shipment-tracking__form' action='/track'>
+            <label className='shipment-tracking__field'>
+              <Hash size={20} />
+              <Input
+                name='ref'
+                placeholder='Enter tracking number'
+                aria-label='Enter tracking number'
+              />
+            </label>
+            <Button type='submit'>
+              <Search size={18} /> Track
+            </Button>
+          </form>
+        </section>
+      </section>
+
+      <section className='industries'>
+        <h2 className='text-h2 text-editorial-accent'>
+          Trusted across industries
+        </h2>
+        <p className='site-body'>
+          Different cargo, different requirements — the same dependable
+          handling.
+        </p>
+        <div className='industries__grid'>
+          {[
+            [
+              assets.industry1,
+              'Automotive',
+              'Ensure your tracking number to see the latest status and estimated delivery date.',
+            ],
+            [
+              assets.industry2,
+              'Retail',
+              'Fast and reliable delivery of consumer goods to stores and customers.',
+            ],
+            [
+              assets.industry3,
+              'Food',
+              'Temperature-controlled logistics for perishable goods and ingredients.',
+            ],
+            [
+              assets.industry4,
+              'Hardware',
+              'Specialized handling for heavy machinery and sensitive electronic equipment.',
+            ],
+          ].map(([image, title, copy]) => (
+            <article className='industries__item' key={title}>
+              <Image src={ image } alt={ title} fill />
+              <div className='industries__item-copy'>
+                <strong className='text-card-title text-white'>{title}</strong>
+                <span className='site-body text-white/70'>{copy}</span>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section
+        className='testimonials'
+        style={{ backgroundImage: `url(${assets.pattern})` }}
+      >
+        <TestimonialCarousel />
+      </section>
+      <HomeFooter />
+    </main>
+  );
 }

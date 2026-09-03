@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { NewContactPage } from '@/components/pages/NewContactPage'
+import { ContactPage } from '@/components/pages/ContactPage'
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -7,5 +7,5 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <NewContactPage />
+  return <ContactPage />
 }

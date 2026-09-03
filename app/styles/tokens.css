@@ -30,11 +30,23 @@
   --font-display: 'Saans', ui-sans-serif, system-ui, sans-serif;
   --radius-control: 0.5rem;
   --radius-panel: 0.25rem;
-  --spacing-page: clamp(1.5rem, 6.94vw, 6.25rem);
+  --spacing-page: clamp(1.5rem, 3.94vw, 5rem);
   --spacing-section: clamp(3rem, 8vw, 7rem);
 }
 
 :root {
+  /* Shadcn menu primitives use these semantic surface tokens. */
+  --popover: #ffffff;
+  --popover-foreground: #2d2928;
+  --accent: #efeeed;
+  --accent-foreground: #2d2928;
   --site-page-gutter: var(--spacing-page);
   --site-section-space: var(--spacing-section);
+}
+
+@theme inline {
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
 }

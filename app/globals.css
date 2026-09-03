@@ -2,9 +2,10 @@
 @import './styles/tokens.css';
 @import './styles/primitives.css';
 @import './styles/typography.css';
-@import './styles/bem.css';
+@import './styles/site.css';
+@import './styles/tracking.css';
+@import './styles/contact.css';
 @import './styles/foundation.css';
-@import './styles/home-legacy.css';
-@import './styles/home-figma.css';
+@import './styles/home.css';
+@import './styles/services.css';
 @import './styles/motion-services.css';
-@import './styles/contact-figma.css';

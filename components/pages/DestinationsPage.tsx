@@ -1,7 +1,7 @@
 'use client'
 
 import { Reveal } from '@/components/Reveal'
-import { CoverageSection } from '@/components/CoverageSection'
+import { GlobalCoverage } from '@/components/GlobalCoverage'
 import { useLang } from '@/lib/i18n'
 import { REGIONS } from '@/lib/site'
 import { BtnLink, Eyebrow, PageHero, container, section, sectionHeadTitle, sectionSm } from '@/components/ui'
@@ -15,51 +15,10 @@ export function DestinationsPage() {
   const { t } = useLang()
   return (
     <main>
-      <PageHero eyebrow={t.destinations.eyebrow} title={t.destinations.title} sub={t.destinations.intro} />
-
-      <section className={section}>
-        <div className={container}>
-          <Reveal>
-            <div className="mb-10 max-w-2xl lg:mb-14">
-              <Eyebrow>{t.destinations.mapTitle}</Eyebrow>
-              <h2 className={sectionHeadTitle}>{t.destinations.mapTitle}</h2>
-              <p className="text-[1.05rem] leading-relaxed text-slate-500">{t.destinations.mapSub}</p>
-            </div>
-          </Reveal>
-          <Reveal delay={120}>
-            <CoverageSection ctaHref="/quote" />
-          </Reveal>
-        </div>
-      </section>
+      <GlobalCoverage subtitle="One network. 26 destinations." searchable className="coverage--destinations" />
 
       <section className={`${section} bg-white`}>
         <div className={`${container} grid items-start gap-10 lg:grid-cols-12 lg:gap-24`}>
-          <div className="lg:col-span-7">
-            <Reveal>
-              <div className="mb-10 max-w-2xl lg:mb-14">
-                <Eyebrow>{t.destinations.eyebrow}</Eyebrow>
-                <h2 className={sectionHeadTitle}>{t.destinations.listTitle}</h2>
-              </div>
-            </Reveal>
-            <div className="grid gap-3.5">
-              {REGIONS.map((r, i) => (
-                <Reveal key={r.id} delay={i * 60}>
-                  <div className="group grid grid-cols-12 cursor-pointer items-start gap-4.5 rounded-2xl border border-slate-200 bg-white px-6 py-5.5 transition duration-300 hover:translate-x-1 hover:border-royal/40">
-                    <span className="col-span-2 grid size-11 place-items-center rounded-xl bg-linear-to-br from-royal/12 to-orange/10 font-display font-bold text-royal">
-                      {String(i + 1).padStart(2, '0')}
-                    </span>
-                    <div className="col-span-10">
-                      <h3 className="font-display text-[1.1rem] font-semibold">{t.regions[r.id].name}</h3>
-                      <span className="my-0.5 mb-2 block text-[0.72rem] font-bold tracking-[0.12em] uppercase text-orange">
-                        {t.regions[r.id].tag}
-                      </span>
-                      <p className="text-[0.92rem] leading-relaxed text-slate-500">{t.regions[r.id].text}</p>
-                    </div>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
           <Reveal delay={140} className="lg:col-span-5">
             <div>
               <div className="rounded-3xl border border-orange/30 bg-orange/8 p-7 leading-relaxed sm:p-8">

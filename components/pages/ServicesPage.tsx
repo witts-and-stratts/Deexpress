@@ -2,18 +2,42 @@
 
 import { Reveal } from '@/components/Reveal'
 import { useLang } from '@/lib/i18n'
+import type { ServiceSlug } from '@/lib/site'
 import { BtnLink, Eyebrow, PageHero, container, section, sectionHead, sectionHeadSub, sectionHeadTitle, sectionSm } from '@/components/ui'
-import { ProcessSteps, ServiceCards } from '@/components/pages/HomePage'
+import { ProcessSteps, ServiceCards } from '@/components/pages/HomeSections'
 
 export function ServicesPage() {
-  const { t } = useLang()
+  const { lang, t } = useLang()
+  const pathways: { title: string; text: string; services: ServiceSlug[] }[] = lang === 'de'
+    ? [
+        { title: 'Fracht bewegen', text: 'Für Sendungen, bei denen Geschwindigkeit, Volumen oder der geschäftliche Bedarf die Route bestimmen.', services: ['air-freight', 'sea-freight', 'commercial-cargo'] },
+        { title: 'Fahrzeuge bewegen', text: 'Von der Suche in Europa bis zum internationalen Transport über Grenzen hinweg.', services: ['vehicle-sourcing', 'vehicle-shipping'] },
+        { title: 'Persönliches und Lagerung', text: 'Für Umzugsgut und Waren, die vor der nächsten Bewegung Raum und Planung brauchen.', services: ['personal-effects', 'storage'] },
+      ]
+    : [
+        { title: 'Move freight', text: 'For shipments where speed, volume or the commercial need shapes the route.', services: ['air-freight', 'sea-freight', 'commercial-cargo'] },
+        { title: 'Move vehicles', text: 'From finding a vehicle in Europe to moving it internationally across borders.', services: ['vehicle-sourcing', 'vehicle-shipping'] },
+        { title: 'Personal goods & storage', text: 'For belongings and goods that need space and planning before their next movement.', services: ['personal-effects', 'storage'] },
+      ]
   return (
     <main>
       <PageHero eyebrow={t.services.eyebrow} title={t.services.title} sub={t.services.intro} />
 
       <section className={section}>
         <div className={container}>
-          <ServiceCards />
+          <div className="grid gap-20">
+            {pathways.map((pathway) => (
+              <section key={pathway.title} className="border-t border-editorial-line/60 pt-7 first:border-t-0 first:pt-0">
+                <Reveal>
+                  <div className="mb-9 max-w-2xl lg:mb-12">
+                    <h2 className={sectionHeadTitle}>{pathway.title}</h2>
+                    <p className={sectionHeadSub}>{pathway.text}</p>
+                  </div>
+                </Reveal>
+                <ServiceCards serviceSlugs={pathway.services} />
+              </section>
+            ))}
+          </div>
         </div>
       </section>
 

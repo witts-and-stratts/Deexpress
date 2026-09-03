@@ -139,7 +139,7 @@ const en = {
     details: {
       'air-freight': {
         title: 'Air freight',
-        tagline: 'Speed for time-critical cargo.',
+        tagline: 'Time-critical air freight services from Europe to Africa and beyond – we deliver your cargo safely to its destination with speed, efficiency and care.',
         summary: 'When every day counts, we coordinate air freight from European airports to destinations across our network — with careful handling and clear communication from take-off to arrival.',
         features: ['Time-critical and priority shipments', 'Airport-to-door coordination', 'Export documentation support', 'Careful handling of high-value cargo'],
       },
@@ -188,6 +188,8 @@ const en = {
     mapTitle: 'Interactive coverage',
     mapSub: 'Select a region to see how we move freight between Europe and your destination.',
     listTitle: 'Regions we serve',
+    searchPlaceholder: 'Search countries we serve',
+    searchNoResults: 'No matching destination. Ask our team about your route.',
     note: 'Our full country list is being finalised for this new website. Ask us directly about your destination — if it is within our network, we will confirm the best route for your cargo.',
     askCta: 'Ask about your destination',
   },
@@ -430,6 +432,8 @@ const de: Dict = {
     mapTitle: 'Interaktive Abdeckung',
     mapSub: 'Wählen Sie eine Region, um zu sehen, wie wir Fracht zwischen Europa und Ihrem Ziel bewegen.',
     listTitle: 'Regionen, die wir bedienen',
+    searchPlaceholder: 'Länder durchsuchen, die wir bedienen',
+    searchNoResults: 'Kein passendes Ziel. Fragen Sie unser Team nach Ihrer Route.',
     note: 'Unsere vollständige Länderliste wird gerade für die neue Website finalisiert. Fragen Sie uns direkt nach Ihrem Zielort — wenn er in unserem Netzwerk liegt, bestätigen wir die beste Route für Ihre Fracht.',
     askCta: 'Nach Ihrem Zielort fragen',
   },

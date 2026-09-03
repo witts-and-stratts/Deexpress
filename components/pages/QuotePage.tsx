@@ -1,9 +1,10 @@
 'use client'
 
 import Link from 'next/link'
+import { Suspense } from 'react'
 import { Mail, Phone } from 'lucide-react'
 import { Reveal } from '@/components/Reveal'
-import { InquiryForm } from '@/components/InquiryForm'
+import { QuoteInquiryForm } from '@/components/InquiryForm'
 import { useLang } from '@/lib/i18n'
 import { SITE, WHATSAPP_URL } from '@/lib/site'
 import { Eyebrow, PageHero, container, section, textLink } from '@/components/ui'
@@ -63,7 +64,9 @@ export function QuotePage() {
                   {t.quote.title}
                 </h2>
               </div>
-              <InquiryForm kind="quote" />
+              <Suspense fallback={null}>
+                <QuoteInquiryForm />
+              </Suspense>
             </div>
           </Reveal>
         </div>

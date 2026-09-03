@@ -62,6 +62,42 @@ export const REGIONS: { id: RegionId; col: number; row: number }[] = [
   { id: 'middle-east', col: 31, row: 8 },
 ]
 
+export type DestinationCountry = { name: string; region: Exclude<RegionId, 'europe'> }
+
+// Curated regional coverage assumptions used by the destination search. Keep this list configurable as confirmed country coverage evolves.
+export const DESTINATION_COUNTRIES: DestinationCountry[] = [
+  { name: 'Algeria', region: 'north-africa' },
+  { name: 'Egypt', region: 'north-africa' },
+  { name: 'Morocco', region: 'north-africa' },
+  { name: 'Tunisia', region: 'north-africa' },
+  { name: 'Benin', region: 'west-africa' },
+  { name: 'Côte d’Ivoire', region: 'west-africa' },
+  { name: 'Ghana', region: 'west-africa' },
+  { name: 'Guinea', region: 'west-africa' },
+  { name: 'Liberia', region: 'west-africa' },
+  { name: 'Nigeria', region: 'west-africa' },
+  { name: 'Senegal', region: 'west-africa' },
+  { name: 'Sierra Leone', region: 'west-africa' },
+  { name: 'Cameroon', region: 'central-africa' },
+  { name: 'Chad', region: 'central-africa' },
+  { name: 'Equatorial Guinea', region: 'central-africa' },
+  { name: 'Gabon', region: 'central-africa' },
+  { name: 'Republic of the Congo', region: 'central-africa' },
+  { name: 'Ethiopia', region: 'east-africa' },
+  { name: 'Kenya', region: 'east-africa' },
+  { name: 'Rwanda', region: 'east-africa' },
+  { name: 'Tanzania', region: 'east-africa' },
+  { name: 'Uganda', region: 'east-africa' },
+  { name: 'Angola', region: 'southern-africa' },
+  { name: 'Namibia', region: 'southern-africa' },
+  { name: 'South Africa', region: 'southern-africa' },
+  { name: 'Zambia', region: 'southern-africa' },
+  { name: 'Oman', region: 'middle-east' },
+  { name: 'Qatar', region: 'middle-east' },
+  { name: 'Saudi Arabia', region: 'middle-east' },
+  { name: 'United Arab Emirates', region: 'middle-east' },
+]
+
 export const HERO_IMAGE = 'https://images.unsplash.com/photo-1565610222536-ef125c59da2e?auto=format&fit=crop&w=2400&q=90'
 export const BREAK_IMAGE = 'https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?auto=format&fit=crop&w=2200&q=88'
 export const PORT_IMAGE = 'https://images.unsplash.com/photo-1494412685616-a5d310fbb07d?auto=format&fit=crop&w=2000&q=85'

@@ -1,7 +1,7 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import { HomeFooter, HomeHeader } from '@/components/pages/NewHomePage'
+import { HomeFooter, HomeHeader } from '@/components/pages/HomePage'
 
 const figmaShellRoutes = new Set(['/', '/contact', '/track'])
 

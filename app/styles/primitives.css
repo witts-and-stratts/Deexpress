@@ -1,6 +1,6 @@
 @layer components {
   .site-container {
-    @apply mx-auto w-full max-w-[1544px] px-page;
+    @apply mx-auto w-full max-w-200 px-page;
   }
   .site-section {
     @apply py-section;
