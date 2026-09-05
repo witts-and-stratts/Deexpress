@@ -1,0 +1,37 @@
+{
+  "eyebrow": "About us",
+  "title": "German precision. African reach.",
+  "intro": "DEexpress Logistics GmbH is an international logistics and freight forwarding company based in Berlin, coordinating air, sea and land freight from Europe to 26 countries across Africa and the Middle East.",
+  "storyTitle": "Our story",
+  "story": [
+    "DEexpress Logistics GmbH was founded in Berlin with a clear purpose: to make shipping between Europe, Africa and the Middle East simple, transparent and dependable.",
+    "What began as a focused freight service has grown into a full logistics operation — coordinating shipments by air, sea, rail and road, with storage solutions in Berlin and a team that speaks the languages of our customers: English, German and French.",
+    "Today we serve individuals moving personal belongings and vehicles as well as businesses across the automotive, retail, food and hardware industries."
+  ],
+  "missionTitle": "Our mission",
+  "mission": "To simplify international shipping for individuals and businesses through reliable coordination, honest communication and personal service.",
+  "visionTitle": "Our vision",
+  "vision": "To be the most trusted bridge between Europe, Africa and the Middle East — the first name that comes to mind when cargo needs to cross borders.",
+  "valuesTitle": "Our values",
+  "values": [
+    {
+      "title": "Reliability",
+      "text": "We do what we promise — on schedule and with care."
+    },
+    {
+      "title": "Transparency",
+      "text": "Clear prices, clear processes, clear answers. No surprises."
+    },
+    {
+      "title": "Speed",
+      "text": "We move fast, because your time matters."
+    },
+    {
+      "title": "Personal service",
+      "text": "You always have a name and a number — not a ticket queue."
+    }
+  ],
+  "leadershipTitle": "Leadership",
+  "leadershipSub": "DEexpress Logistics GmbH is led by its founders, who remain personally involved in every shipment.",
+  "managingDirector": "Managing Director"
+}

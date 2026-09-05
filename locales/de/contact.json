@@ -1,0 +1,22 @@
+{
+  "eyebrow": "Kontakt",
+  "title": "Wir freuen uns auf Ihre Nachricht.",
+  "intro": "Fragen zu einer Sendung, einem Zielort oder einer Partnerschaft? Schreiben Sie uns oder rufen Sie direkt an — auf Englisch, Deutsch oder Französisch.",
+  "formTitle": "Schreiben Sie uns",
+  "subjects": [
+    "Angebotsanfrage",
+    "Sendungsanfrage",
+    "Fahrzeugbeschaffung & Transport",
+    "Lagerung",
+    "Partnerschaft",
+    "Sonstiges"
+  ],
+  "office": "Büro",
+  "hours": "Öffnungszeiten",
+  "directTitle": "Direkter Kontakt",
+  "languagesLabel": "Sprachen",
+  "whatsappTitle": "Lieber WhatsApp?",
+  "whatsappText": "Schreiben Sie uns direkt — wir antworten in der Regel während der Öffnungszeiten.",
+  "partnership": "Partnerschaftsanfragen: Agenturen, Frachtführer und gewerbliche Kooperationen erreichen uns per E-Mail oder über das Formular.",
+  "success": "Vielen Dank — Ihre Nachricht ist eingegangen. Unser Team meldet sich innerhalb eines Werktages bei Ihnen."
+}

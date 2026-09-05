@@ -1,0 +1,117 @@
+{
+  "heroBadge": "Europe → Africa & Middle East",
+  "heroTitle1": "We move what matters,",
+  "heroTitle2": "across continents.",
+  "heroSub": "DEexpress Logistics GmbH coordinates air, sea and land freight from Berlin to 26 countries across Africa and the Middle East — for individuals and businesses.",
+  "heroTrackLabel": "Tracking number",
+  "heroTrackBtn": "Track",
+  "stats": [
+    {
+      "value": 26,
+      "label": "Destination countries"
+    },
+    {
+      "value": 6,
+      "label": "Core logistics services"
+    },
+    {
+      "value": 3,
+      "label": "Regions served"
+    },
+    {
+      "value": 1,
+      "label": "Point of contact for your shipment"
+    }
+  ],
+  "marquee": [
+    "Air freight",
+    "Sea freight",
+    "Rail freight",
+    "Road freight",
+    "Vehicle sourcing & shipping",
+    "Commercial cargo",
+    "Personal effects",
+    "Storage"
+  ],
+  "introEyebrow": "Who we are",
+  "introTitle": "A Berlin logistics partner for two continents.",
+  "introP1": "From our base in Berlin, DEexpress Logistics coordinates international freight by air, sea, rail and road — serving individuals and businesses across Europe, Africa and the Middle East.",
+  "introP2": "Automotive, retail, food or hardware: whatever you move, one team plans the route, handles the paperwork and keeps you informed until your cargo arrives.",
+  "servicesEyebrow": "Our services",
+  "servicesTitle": "One partner. Every mode of transport.",
+  "servicesSub": "From time-critical air freight to cost-efficient sea freight, vehicles, commercial cargo and secure storage — choose the service, we plan the route.",
+  "coverageEyebrow": "Global coverage",
+  "coverageTitle": "From Europe to 26 destinations.",
+  "coverageSub": "Our network connects European origins with destinations across Africa and the Middle East. Select a region to see how we move your freight.",
+  "mapHint": "Select a region",
+  "whyEyebrow": "Why DEexpress",
+  "whyTitle": "Built on speed, transparency and trust.",
+  "why": [
+    {
+      "title": "Speed",
+      "text": "We are fast and effective — from the first inquiry to the final delivery of your cargo."
+    },
+    {
+      "title": "Tracking",
+      "text": "Up-to-date status details for your customers, from the point of shipment until arrival."
+    },
+    {
+      "title": "Flexible payment",
+      "text": "Payment should not be a barrier. Contact us — we will find an option that works for you."
+    },
+    {
+      "title": "Service",
+      "text": "A customer service team that is ready to assist quickly, in English, German or French."
+    }
+  ],
+  "processEyebrow": "Our process",
+  "processTitle": "Your shipment in four steps.",
+  "processSub": "A simple, transparent process — the same for a single box or a full commercial load.",
+  "steps": [
+    {
+      "title": "Contact us",
+      "text": "Tell us what you are shipping — by form, phone or WhatsApp."
+    },
+    {
+      "title": "Get a free estimate",
+      "text": "We review your requirement and send you a free, no-obligation offer."
+    },
+    {
+      "title": "Packing",
+      "text": "You prepare your cargo for shipment or storage — we advise you on how."
+    },
+    {
+      "title": "Collection & shipping",
+      "text": "Within Berlin we collect your cargo. From there, we coordinate the journey to its destination."
+    }
+  ],
+  "trackingEyebrow": "Shipment tracking",
+  "trackingTitle": "Know where your shipment stands.",
+  "trackingSub": "Enter your reference and see the latest available status — from booking to arrival.",
+  "industriesEyebrow": "Industries",
+  "industriesTitle": "Trusted across industries.",
+  "industriesSub": "Different cargo, different requirements — the same dependable handling.",
+  "industries": [
+    {
+      "title": "Automotive",
+      "text": "We are experts in shipping for the automotive industry: cars, trucks, buses and special equipment."
+    },
+    {
+      "title": "Retail",
+      "text": "We ship and store cargo for the retail industry. Reliable and fast service makes us an ideal partner."
+    },
+    {
+      "title": "Food",
+      "text": "We understand the special hygiene and temperature requirements involved in food shipment."
+    },
+    {
+      "title": "Hardware",
+      "text": "We routinely ship electronics and hardware across borders — safely and effectively."
+    }
+  ],
+  "sourcingTitle": "Looking for a vehicle in Europe?",
+  "sourcingText": "We find, inspect and purchase vehicles on your behalf — then connect the process directly to international vehicle shipping. One team, one contact, from search to delivery.",
+  "sourcingCta": "Vehicle sourcing",
+  "ctaTitle": "Ready to move?",
+  "ctaText": "Tell us what you are shipping and where it needs to go — we will send you a free, no-obligation estimate."
+}

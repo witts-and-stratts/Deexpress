@@ -9,7 +9,7 @@ export function ServiceContact({ title, text, callLabel, quoteHref, quoteLabel, 
     return (
       <section className="service-contact service-contact--air-freight">
         <div className="service-contact__air-copy"><h2>{title}</h2><p>{text}</p></div>
-        <img className="service-contact__air-portrait" src="/images/air-contact-micheal.png" alt={contact.name} />
+        <img className="service-contact__air-portrait" src="/images/air-contact-micheal.webp" alt={contact.name} />
         <div className="service-contact__air-person">
           <strong>{contact.name}</strong>
           <span>{contact.languages}</span>

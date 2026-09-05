@@ -1,0 +1,37 @@
+{
+  "europe": {
+    "name": "Europe",
+    "tag": "Origin & consolidation",
+    "text": "Our home base. Cargo is collected, consolidated and dispatched from Berlin and across Europe."
+  },
+  "north-africa": {
+    "name": "North Africa",
+    "tag": "Destination region",
+    "text": "Direct corridors from Europe to the North African coast — among the shortest sea routes in our network."
+  },
+  "west-africa": {
+    "name": "West Africa",
+    "tag": "Destination region",
+    "text": "One of our strongest corridors, connecting European ports and airports with West African trade hubs."
+  },
+  "central-africa": {
+    "name": "Central Africa",
+    "tag": "Destination region",
+    "text": "Freight coordination into Central African markets, planned around reliable routing and careful handovers."
+  },
+  "east-africa": {
+    "name": "East Africa",
+    "tag": "Destination region",
+    "text": "Air and sea freight into East African gateways, with connections continuing to inland destinations."
+  },
+  "southern-africa": {
+    "name": "Southern Africa",
+    "tag": "Destination region",
+    "text": "Containerised vehicle and commercial cargo routes into the southern corridor of the continent."
+  },
+  "middle-east": {
+    "name": "Middle East",
+    "tag": "Destination region",
+    "text": "Connecting European exporters with Gulf and Levant markets through dependable air and sea routes."
+  }
+}

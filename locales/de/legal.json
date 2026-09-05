@@ -1,0 +1,50 @@
+{
+  "notice": {
+    "title": "Impressum",
+    "intro": "Angaben gemäß § 5 TMG.",
+    "sections": [
+      {
+        "h": "Unternehmen",
+        "p": "DEexpress Logistics GmbH\nLichtenauer Str. 51\n13055 Berlin, Deutschland"
+      },
+      {
+        "h": "Vertreten durch",
+        "p": "Adedapo Adediran · Olagunju Olamilekan"
+      },
+      {
+        "h": "Kontakt",
+        "p": "service@deexpress-logistics.eu · +49 (0)176 87132767 · +49 (0)152 29939834"
+      },
+      {
+        "h": "Handelsregister",
+        "p": "HRB 229599 — Amtsgericht Charlottenburg"
+      },
+      {
+        "h": "Umsatzsteuer-ID",
+        "p": "DE17362750943"
+      }
+    ]
+  },
+  "policy": {
+    "title": "Datenschutzerklärung",
+    "intro": "Zusammenfassung, wie die DEexpress Logistics GmbH mit Ihren personenbezogenen Daten umgeht.",
+    "sections": [
+      {
+        "h": "Verantwortliche Stelle",
+        "p": "DEexpress Logistics GmbH, Lichtenauer Str. 51, 13055 Berlin, Deutschland. Kontakt: service@deexpress-logistics.eu."
+      },
+      {
+        "h": "Welche Daten wir erheben",
+        "p": "Wenn Sie unsere Kontakt- oder Angebotsformulare nutzen, erheben wir die von Ihnen angegebenen Daten: Name, E-Mail-Adresse, Telefonnummer und Versandinformationen. Diese Daten verwenden wir ausschließlich zur Bearbeitung Ihrer Anfrage."
+      },
+      {
+        "h": "Ihre Rechte",
+        "p": "Sie haben nach der DSGVO das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten. Wenden Sie sich zur Ausübung dieser Rechte oder bei Fragen zum Datenschutz an die oben genannte Adresse."
+      },
+      {
+        "h": "Cookies & Analyse",
+        "p": "Diese Website setzt keine Marketing-Cookies und verwendet kein Drittanbieter-Tracking. Eine Spracheinstellung kann lokal in Ihrem Browser gespeichert werden."
+      }
+    ]
+  }
+}

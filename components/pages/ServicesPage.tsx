@@ -7,18 +7,8 @@ import { BtnLink, Eyebrow, PageHero, container, section, sectionHead, sectionHea
 import { ProcessSteps, ServiceCards } from '@/components/pages/HomeSections'
 
 export function ServicesPage() {
-  const { lang, t } = useLang()
-  const pathways: { title: string; text: string; services: ServiceSlug[] }[] = lang === 'de'
-    ? [
-        { title: 'Fracht bewegen', text: 'Für Sendungen, bei denen Geschwindigkeit, Volumen oder der geschäftliche Bedarf die Route bestimmen.', services: ['air-freight', 'sea-freight', 'commercial-cargo'] },
-        { title: 'Fahrzeuge bewegen', text: 'Von der Suche in Europa bis zum internationalen Transport über Grenzen hinweg.', services: ['vehicle-sourcing', 'vehicle-shipping'] },
-        { title: 'Persönliches und Lagerung', text: 'Für Umzugsgut und Waren, die vor der nächsten Bewegung Raum und Planung brauchen.', services: ['personal-effects', 'storage'] },
-      ]
-    : [
-        { title: 'Move freight', text: 'For shipments where speed, volume or the commercial need shapes the route.', services: ['air-freight', 'sea-freight', 'commercial-cargo'] },
-        { title: 'Move vehicles', text: 'From finding a vehicle in Europe to moving it internationally across borders.', services: ['vehicle-sourcing', 'vehicle-shipping'] },
-        { title: 'Personal goods & storage', text: 'For belongings and goods that need space and planning before their next movement.', services: ['personal-effects', 'storage'] },
-      ]
+  const { t } = useLang()
+  const pathways = t.services.pathways as { title: string; text: string; services: ServiceSlug[] }[]
   return (
     <main>
       <PageHero eyebrow={t.services.eyebrow} title={t.services.title} sub={t.services.intro} />

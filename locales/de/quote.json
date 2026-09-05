@@ -1,0 +1,112 @@
+{
+  "eyebrow": "Angebot",
+  "title": "Ihr kostenloses Angebot.",
+  "intro": "Sagen Sie uns, was Sie versenden und wohin. Wir prüfen Ihre Anfrage und senden Ihnen ein kostenloses, unverbindliches Angebot.",
+  "cargoLabel": "Was versenden Sie?",
+  "detailsLabel": "Weitere Angaben",
+  "detailsPlaceholder": "Volumen, Gewicht, Fahrzeugmodell, Zeitplan — alles, was uns bei der Planung hilft.",
+  "submit": "Kostenloses Angebot anfordern",
+  "success": "Vielen Dank — wir haben Ihre Anfrage erhalten und senden Ihnen innerhalb eines Werktages ein kostenloses, unverbindliches Angebot.",
+  "multi": {
+    "steps": {
+      "client": "Kunde",
+      "recipient": "Empfänger",
+      "loading": "Fracht",
+      "review": "Senden"
+    },
+    "headings": [
+      "Angaben zum Kunden",
+      "Empfängerangaben",
+      "Ladeposition",
+      "Prüfen und senden"
+    ],
+    "descriptions": [
+      "Sagen Sie uns, wen wir zu dieser Frachtanfrage kontaktieren dürfen.",
+      "Ergänzen Sie Empfänger und Lieferadresse.",
+      "Erfassen Sie jede Ladeposition, damit wir die Sendung genau einschätzen können.",
+      "Prüfen Sie Ihre Anfrage und akzeptieren Sie die Datenschutzerklärung vor dem Absenden."
+    ],
+    "progress": "Schritt {current} von {total}",
+    "progressLabel": "Fortschritt der Angebotsanfrage",
+    "next": "Weiter",
+    "back": "Zurück",
+    "reviewHint": "Mit dem Absenden stimmen Sie zu, dass wir diese Angaben zur Erstellung Ihres Angebots verwenden dürfen.",
+    "contactPerson": "Ansprechperson",
+    "salutation": "Anrede",
+    "select": "Auswählen",
+    "salutations": {
+      "mr": "Herr",
+      "ms": "Frau",
+      "diverse": "Divers"
+    },
+    "address": "Adresse",
+    "company": "Firmenname",
+    "zip": "Postleitzahl",
+    "location": "Ort",
+    "country": "Land",
+    "street": "Straße",
+    "houseNumber": "Hausnummer",
+    "namePlaceholder": "Vor- und Nachname",
+    "emailPlaceholder": "name@unternehmen.de",
+    "phonePlaceholder": "+49 123 456 789",
+    "companyPlaceholder": "Firmenname",
+    "zipPlaceholder": "Postleitzahl eingeben",
+    "locationPlaceholder": "Ort eingeben",
+    "countryPlaceholder": "Land auswählen oder eingeben",
+    "streetPlaceholder": "Straßenname",
+    "houseNumberPlaceholder": "Hausnummer",
+    "recipientType": "Empfängerart",
+    "companyRecipient": "Firmenempfänger",
+    "privateRecipient": "Privater Empfänger",
+    "loadingPosition": "Ladeposition",
+    "number": "Anzahl",
+    "shipmentType": "Sendungsart",
+    "content": "Inhalt",
+    "shipmentDate": "Versanddaten",
+    "incoterms": "Lieferbedingungen / Incoterms",
+    "length": "Länge",
+    "width": "Breite",
+    "height": "Höhe",
+    "weight": "Gewicht",
+    "otherInformation": "Weitere Angaben",
+    "stackable": "Stapelfähig",
+    "dangerousGoods": "Gefahrgut",
+    "addPosition": "Ladeposition hinzufügen",
+    "removePosition": "Entfernen",
+    "shipmentTypes": [
+      "Vollladung (FCL)",
+      "Teilladung (LCL)",
+      "Paket"
+    ],
+    "shippingDates": [
+      "Palette",
+      "Paket",
+      "20GP",
+      "40HC",
+      "Fass"
+    ],
+    "incotermOptions": [
+      "FCA – Frei Frachtführer (benannter Abgangsort)",
+      "CPT – Frachtfrei (benannter Bestimmungsort)",
+      "CIP – Frachtfrei versichert (benannter Bestimmungsort)",
+      "DPU – Geliefert benannter Ort entladen",
+      "DAP – Geliefert benannter Ort",
+      "DDP – Geliefert verzollt (benannter Bestimmungsort)",
+      "FAS – Frei Längsseite Schiff (benannter Verschiffungshafen)",
+      "FOB – Frei an Bord",
+      "CFR – Kosten und Fracht (benannter Bestimmungsort)",
+      "CIF – Kosten, Versicherung und Fracht (benannter Bestimmungsort)"
+    ],
+    "privacyBefore": "Ich stimme der Verarbeitung meiner Daten gemäß den ",
+    "privacyLink": "Datenschutzhinweisen",
+    "privacyAfter": " zu.",
+    "summary": {
+      "client": "Kunde",
+      "recipient": "Empfänger",
+      "loading": "Ladepositionen",
+      "name": "Name",
+      "email": "E-Mail",
+      "address": "Adresse"
+    }
+  }
+}

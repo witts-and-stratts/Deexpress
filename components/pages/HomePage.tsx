@@ -4,28 +4,32 @@ import { GlobalCoverage } from '@/components/GlobalCoverage';
 import { ParallaxImage, Reveal } from '@/components/motion/Motion';
 import { Button, buttonVariants } from '@/components/ui/button';
 import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { useLang, type Lang } from '@/lib/i18n';
 import { Input } from '@base-ui/react';
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
+import { ArrowUpRight, ChevronDown, Hash, Menu, Search, X } from 'lucide-react';
 import {
-    ArrowUpRight,
-    ChevronDown,
-    Hash,
-    Menu,
-    Search,
-    X
-} from 'lucide-react';
-import { AnimatePresence, motion, useInView, useReducedMotion, useScroll, useSpring, useTransform, type MotionValue } from 'motion/react';
+  AnimatePresence,
+  motion,
+  useInView,
+  useReducedMotion,
+  useScroll,
+  useSpring,
+  useTransform,
+  type MotionValue,
+} from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { useEffect, useRef, useState } from 'react';
 import AnimatedText from '../AnimatedText';
+import { cn } from '@/lib/utils';
 
 const MotionLink = motion.create(Link);
 
@@ -33,12 +37,12 @@ const assets = {
   hero: '/images/home-hero.webp',
   logo: '/images/logo.webp',
   footerLogo: '/images/footer-logo.webp',
-  air: '/images/service-air.jpg',
-  sea: '/images/service-sea.jpg',
-  vehicle: '/images/service-vehicle.jpg',
+  air: '/images/service-air.webp',
+  sea: '/images/service-sea.webp',
+  vehicle: '/images/service-vehicle.webp',
   cargo: '/images/service-cargo.jpg',
   personal: '/images/service-personal.webp',
-  sourcing: '/images/service-sourcing.jpg',
+  sourcing: '/images/service-sourcing.webp',
   plane: '/images/plane.webp',
   ship: '/images/ship.webp',
   train: '/images/train.webp',
@@ -67,9 +71,9 @@ const services = [
     'Cost-effective ocean freight for larger loads and long-distance routes.',
   ],
   [
-    'Vehicle shipping',
+    'Vehicle sourcing & shipping',
     assets.vehicle,
-    'Vehicle purchase and shipping coordinated through one logistics partner.',
+    'From finding a vehicle in Europe to international shipping, coordinated through one team.',
   ],
   [
     'Commercial cargo',
@@ -82,9 +86,9 @@ const services = [
     'Careful coordination for the belongings that move with you.',
   ],
   [
-    'Procurement and vehicle sourcing',
-    assets.sourcing,
-    'Support with sourcing and purchasing vehicles in Europe.',
+    'Storage & warehousing',
+    assets.cargo,
+    'Secure storage connected to the next stage of your shipment.',
   ],
 ] as const;
 
@@ -123,10 +127,76 @@ function LanguageSelector({ footer = false }: { footer?: boolean }) {
 
 export function HomeHeader() {
   const [open, setOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const header = headerRef.current;
+    if (!header) return;
+    let frame = 0;
+    let previousScroll = Math.max(0, window.scrollY);
+    let downwardTravel = 0;
+    header.dataset.scrollHidden = 'false';
+
+    const updateSurface = () => {
+      frame = 0;
+      // Clamp elastic overscroll so bouncing at either end cannot flip direction.
+      const scroll = Math.max(0, Math.min(window.scrollY,
+        document.documentElement.scrollHeight - window.innerHeight));
+      const delta = scroll - previousScroll;
+      previousScroll = scroll;
+      if (scroll <= header.offsetHeight + 16 || delta < 0) {
+        header.dataset.scrollHidden = 'false';
+        downwardTravel = 0;
+      } else if (delta > 0) {
+        downwardTravel += delta;
+        if (downwardTravel >= 8) header.dataset.scrollHidden = 'true';
+      }
+      const controls = header.querySelector<HTMLElement>(
+        window.matchMedia('(min-width: 768px)').matches
+          ? '.site-nav__links'
+          : '.site-nav__toggle',
+      );
+      const bounds = (controls ?? header).getBoundingClientRect();
+      const headerBounds = header.getBoundingClientRect();
+      const headerStyle = getComputedStyle(header);
+      // Keep sampling the resting position even while the header slides offscreen.
+      const sampleY = bounds.top - headerBounds.top + bounds.height / 2
+        + (parseFloat(headerStyle.top) || 0) + (parseFloat(headerStyle.marginTop) || 0);
+      // Sample beneath the controls, excluding the fixed navigation itself.
+      const surface = document.elementsFromPoint(
+        bounds.left + bounds.width / 2,
+        sampleY,
+      ).find((element) => !header.contains(element)
+        && !element.closest('.site-nav-mobile')
+        && element.closest('main, footer'));
+      header.dataset.surface = surface
+        ? getComputedStyle(surface).getPropertyValue('--header-surface').trim() || 'light'
+        : 'light';
+    };
+    const scheduleUpdate = () => {
+      if (!frame) frame = requestAnimationFrame(updateSurface);
+    };
+
+    scheduleUpdate();
+    window.addEventListener('scroll', scheduleUpdate, { passive: true });
+    window.addEventListener('resize', scheduleUpdate);
+    const resizeObserver = new ResizeObserver(scheduleUpdate);
+    resizeObserver.observe(document.body);
+    const mutationObserver = new MutationObserver(scheduleUpdate);
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener('scroll', scheduleUpdate);
+      window.removeEventListener('resize', scheduleUpdate);
+      resizeObserver.disconnect();
+      mutationObserver.disconnect();
+    };
+  }, [pathname]);
 
   return (
     <>
-      <header className={`site-nav${open ? ' site-nav--open' : ''}`}>
+      <header ref={headerRef} className={`site-nav${open ? ' site-nav--open' : ''}`}>
         <Link className='site-nav__brand' href='/' aria-label='DEexpress home'>
           <img src={assets.logo} alt='DEexpress' />
         </Link>
@@ -145,7 +215,9 @@ export function HomeHeader() {
           />
           <motion.span
             className='site-nav__toggle-line'
-            animate={open ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
+            animate={
+              open ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }
+            }
             transition={{ duration: 0.2 }}
           />
           <motion.span
@@ -176,7 +248,10 @@ export function HomeHeader() {
             <LanguageSelector />
             <Link
               href='/quote'
-              className={buttonVariants({ variant: 'default', size: 'default' })}
+              className={cn(
+                buttonVariants({ variant: 'outline', size: 'sm' }),
+                'site-nav__quote rounded-full bg-transparent backdrop-blur-3xl border font-medium',
+              )}
               onClick={() => setOpen(false)}
             >
               Get a quote
@@ -220,7 +295,9 @@ export function HomeHeader() {
               className='site-nav__menu-links'
               variants={{
                 open: { transition: { staggerChildren: 0.05 } },
-                closed: { transition: { staggerChildren: 0.03, staggerDirection: -1 } },
+                closed: {
+                  transition: { staggerChildren: 0.03, staggerDirection: -1 },
+                },
               }}
             >
               {[
@@ -264,7 +341,11 @@ export function HomeHeader() {
                 animate: {
                   opacity: 1,
                   y: 0,
-                  transition: { duration: 0.4, delay: 0.28, ease: [0.16, 1, 0.3, 1] },
+                  transition: {
+                    duration: 0.4,
+                    delay: 0.28,
+                    ease: [0.16, 1, 0.3, 1],
+                  },
                 },
                 exit: {
                   opacity: 0,
@@ -279,7 +360,10 @@ export function HomeHeader() {
               <LanguageSelector />
               <Link
                 href='/quote'
-                className={buttonVariants({ variant: 'default', size: 'default' })}
+                className={buttonVariants({
+                  variant: 'default',
+                  size: 'default',
+                })}
                 onClick={() => setOpen(false)}
               >
                 Get a quote
@@ -316,7 +400,6 @@ export function HomeFooter() {
           <Link href='/services'>Vehicle shipping</Link>
           <Link href='/services'>Commercial cargo</Link>
           <Link href='/services'>Personal effects</Link>
-          <Link href='/services'>Vehicle sourcing</Link>
           <Link href='/services'>Storage</Link>
         </div>
         <div>
@@ -388,7 +471,11 @@ function ShowcaseImage({
   return (
     <motion.div
       className='absolute inset-0'
-      style={{ opacity: index === 0 ? 1 : opacity, scale: reduceMotion ? 1 : scale, willChange: 'opacity, transform' }}
+      style={{
+        opacity: index === 0 ? 1 : opacity,
+        scale: reduceMotion ? 1 : scale,
+        willChange: 'opacity, transform',
+      }}
     >
       <Image
         src={image}
@@ -627,8 +714,10 @@ export function HomePage() {
             DEExpress coordinates air, sea and vehicle shipping from Europe to
             destinations across 26 African countries and the Middle East —
           </strong>{' '}
-          <span className='text-gray-500'>helping individuals and businesses move internationally with greater
-          clarity and control.</span>
+          <span className='text-gray-500'>
+            helping individuals and businesses move internationally with greater
+            clarity and control.
+          </span>
         </AnimatedText>
       </section>
 
@@ -779,7 +868,7 @@ export function HomePage() {
             ],
           ].map(([image, title, copy]) => (
             <article className='industries__item' key={title}>
-              <Image src={ image } alt={ title} fill />
+              <Image src={image} alt={title} fill />
               <div className='industries__item-copy'>
                 <strong className='text-card-title text-white'>{title}</strong>
                 <span className='site-body text-white/70'>{copy}</span>

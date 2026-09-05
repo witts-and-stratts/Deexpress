@@ -1,0 +1,112 @@
+{
+  "eyebrow": "Quote",
+  "title": "Get your free estimate",
+  "intro": "Tell us what you are shipping and where it needs to go. We will review your requirement and send you a free, no-obligation offer.",
+  "cargoLabel": "What are you shipping?",
+  "detailsLabel": "Additional details",
+  "detailsPlaceholder": "Volume, weight, vehicle model, timeline — anything that helps us plan your shipment.",
+  "submit": "Request free estimate",
+  "success": "Thank you — we received your request and will send you a free, no-obligation estimate within one business day.",
+  "multi": {
+    "steps": {
+      "client": "Client",
+      "recipient": "Recipient",
+      "loading": "Cargo",
+      "review": "Send"
+    },
+    "headings": [
+      "Client information",
+      "Recipient information",
+      "Loading position",
+      "Review and send"
+    ],
+    "descriptions": [
+      "Tell us who we should contact about this freight request.",
+      "Add the delivery recipient and address details.",
+      "Add each loading position so we can assess the shipment accurately.",
+      "Review your request and accept the privacy policy before sending."
+    ],
+    "progress": "Step {current} of {total}",
+    "progressLabel": "Quote request progress",
+    "next": "Continue",
+    "back": "Back",
+    "reviewHint": "By sending this request, you agree that we may use these details to prepare your estimate.",
+    "contactPerson": "Contact person",
+    "salutation": "Salutation",
+    "select": "Select",
+    "salutations": {
+      "mr": "Mr",
+      "ms": "Ms",
+      "diverse": "Diverse"
+    },
+    "address": "Address",
+    "company": "Company name",
+    "zip": "Zip code",
+    "location": "Location",
+    "country": "Country",
+    "street": "Street",
+    "houseNumber": "House number",
+    "namePlaceholder": "First & last name",
+    "emailPlaceholder": "name@company.com",
+    "phonePlaceholder": "+49 123 456 789",
+    "companyPlaceholder": "Company name",
+    "zipPlaceholder": "Enter zip code",
+    "locationPlaceholder": "Enter city",
+    "countryPlaceholder": "Select or enter country",
+    "streetPlaceholder": "Street name",
+    "houseNumberPlaceholder": "House number",
+    "recipientType": "Recipient type",
+    "companyRecipient": "Company recipient",
+    "privateRecipient": "Private recipient",
+    "loadingPosition": "Loading position",
+    "number": "Number",
+    "shipmentType": "Type of shipment",
+    "content": "Content",
+    "shipmentDate": "Shipment dates",
+    "incoterms": "Delivery terms / Incoterms",
+    "length": "Length",
+    "width": "Width",
+    "height": "Height",
+    "weight": "Weight",
+    "otherInformation": "Other information",
+    "stackable": "Stackable",
+    "dangerousGoods": "Dangerous goods",
+    "addPosition": "Add loading position",
+    "removePosition": "Remove",
+    "shipmentTypes": [
+      "Full load (FCL)",
+      "Subpart (LCL)",
+      "Parcel"
+    ],
+    "shippingDates": [
+      "Pallet",
+      "Parcel",
+      "20GP",
+      "40HC",
+      "Cask"
+    ],
+    "incotermOptions": [
+      "FCA – Free Carrier (at named place of departure)",
+      "CPT – Carriage Paid To (named place of destination)",
+      "CIP – Carriage and Insurance Paid To (named place of destination)",
+      "DPU – Delivered at Place Unloaded (named place of destination)",
+      "DAP – Delivered at Place (to named place)",
+      "DDP – Delivered Duty Paid (to named place of destination)",
+      "FAS – Free Alongside Ship (at named port of shipment)",
+      "FOB – Free on Board (at named port of shipment)",
+      "CFR – Cost and Freight (to named place of destination)",
+      "CIF – Cost, Insurance and Freight (to named place of destination)"
+    ],
+    "privacyBefore": "I agree to the processing of my data in accordance with the ",
+    "privacyLink": "Privacy statements",
+    "privacyAfter": ".",
+    "summary": {
+      "client": "Client",
+      "recipient": "Recipient",
+      "loading": "Loading positions",
+      "name": "Name",
+      "email": "Email",
+      "address": "Address"
+    }
+  }
+}

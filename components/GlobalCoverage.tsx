@@ -52,7 +52,7 @@ export function GlobalCoverage({ subtitle = 'From Europe to 26 destinations', se
         <b>{region.tag}</b>
         <h3 className='text-card-title'>{region.name}</h3>
         <p className='site-body'>{region.text}</p>
-        <Link href='/destinations' className='gap-2 flex items-center hover:scale-125 transition-transform duration-600 ease-out'>
+        <Link href='/destinations' className='gap-2 flex items-center hover:scale-105 transition-transform duration-300 ease-out mt-auto min-h-0 origin-left'>
           Learn More <ArrowUpRight aria-hidden='true' size={20} className='mb-0' />
         </Link>
       </aside>

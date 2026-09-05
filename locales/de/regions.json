@@ -1,0 +1,37 @@
+{
+  "europe": {
+    "name": "Europa",
+    "tag": "Startpunkt & Sammelung",
+    "text": "Unser Heimatmarkt. Fracht wird in Berlin und ganz Europa abgeholt, gebündelt und verschickt."
+  },
+  "north-africa": {
+    "name": "Nordafrika",
+    "tag": "Zielregion",
+    "text": "Direkte Korridore von Europa an die nordafrikanische Küste — eine der kürzesten Seerouten in unserem Netzwerk."
+  },
+  "west-africa": {
+    "name": "Westafrika",
+    "tag": "Zielregion",
+    "text": "Einer unserer stärksten Korridore — europäische Häfen und Flughäfen verbunden mit westafrikanischen Handelszentren."
+  },
+  "central-africa": {
+    "name": "Zentralafrika",
+    "tag": "Zielregion",
+    "text": "Frachtkoordination in zentralafrikanische Märkte — geplant um verlässliche Routen und sorgfältige Übergaben."
+  },
+  "east-africa": {
+    "name": "Ostafrika",
+    "tag": "Zielregion",
+    "text": "Luft- und Seefracht zu Torhäfen Ostafrikas, mit Anschlüssen ins Landesinnere."
+  },
+  "southern-africa": {
+    "name": "Südliches Afrika",
+    "tag": "Zielregion",
+    "text": "Container- und Fahrzeugrouten in den südlichen Korridor des Kontinents."
+  },
+  "middle-east": {
+    "name": "Naher Osten",
+    "tag": "Zielregion",
+    "text": "Wir verbinden europäische Exporteure mit den Märkten am Golf und in der Levante — per Luft und See."
+  }
+}

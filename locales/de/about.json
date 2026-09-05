@@ -1,0 +1,37 @@
+{
+  "eyebrow": "Über uns",
+  "title": "Deutsche Gründlichkeit. Afrikanische Reichweite.",
+  "intro": "Die DEexpress Logistics GmbH ist ein internationales Logistik- und Speditionsunternehmen mit Sitz in Berlin. Wir koordinieren Luft-, See- und Landfracht von Europa aus in 26 Länder Afrikas und des Nahen Ostens.",
+  "storyTitle": "Unsere Geschichte",
+  "story": [
+    "Die DEexpress Logistics GmbH wurde in Berlin mit einem klaren Ziel gegründet: den Versand zwischen Europa, Afrika und dem Nahen Osten einfach, transparent und verlässlich zu machen.",
+    "Aus einem fokussierten Frachtdienst ist ein umfassender Logistikbetrieb geworden — mit Transporten per Luft, See, Schiene und Straße, Lagerlösungen in Berlin und einem Team, das die Sprachen unserer Kunden spricht: Englisch, Deutsch und Französisch.",
+    "Heute betreuen wir Privatpersonen beim Versand persönlicher Gegenstände und Fahrzeuge ebenso wie Unternehmen aus den Branchen Automobil, Handel, Lebensmittel und Hardware."
+  ],
+  "missionTitle": "Unsere Mission",
+  "mission": "Internationale Versandlösungen für Privat- und Geschäftskunden zu vereinfachen — durch verlässliche Koordination, ehrliche Kommunikation und persönlichen Service.",
+  "visionTitle": "Unsere Vision",
+  "vision": "Die vertrauenswürdigste Brücke zwischen Europa, Afrika und dem Nahen Osten zu sein — die erste Adresse, wenn Fracht Grenzen überqueren soll.",
+  "valuesTitle": "Unsere Werte",
+  "values": [
+    {
+      "title": "Zuverlässigkeit",
+      "text": "Wir halten, was wir versprechen — termingerecht und mit Sorgfalt."
+    },
+    {
+      "title": "Transparenz",
+      "text": "Klare Preise, klare Prozesse, klare Antworten. Keine Überraschungen."
+    },
+    {
+      "title": "Tempo",
+      "text": "Wir sind schnell, denn Ihre Zeit ist wertvoll."
+    },
+    {
+      "title": "Persönlicher Service",
+      "text": "Sie haben immer einen Namen und eine Nummer — kein Ticket-Queue."
+    }
+  ],
+  "leadershipTitle": "Führung",
+  "leadershipSub": "Die DEexpress Logistics GmbH wird von ihren Gründern geführt, die persönlich in jede Sendung eingebunden sind.",
+  "managingDirector": "Geschäftsführer"
+}

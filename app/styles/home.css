@@ -135,13 +135,13 @@
     @apply border-white/30 bg-white/10 text-white hover:border-orange hover:bg-orange;
   }
   .coverage__card {
-    @apply relative z-10 col-span-12 mt-8 self-end rounded-md bg-white/65 p-8 pt-6 text-editorial-ink backdrop-blur-sm md:col-span-4 md:col-start-9 md:mt-0;
+    @apply relative z-10 col-span-12 mt-8 self-end rounded-md bg-white/80 p-8 pt-6 text-editorial-ink backdrop-blur-2xl md:col-span-4 md:col-start-9 md:mt-0 md:min-h-100 flex flex-col;
   }
   .coverage__search {
     @apply relative z-10 col-span-12 col-start-1 mt-4 self-start md:col-span-4 md:col-start-9;
   }
   .coverage__card b {
-    @apply text-[0.6875rem] font-[570] leading-normal tracking-widest text-orange uppercase;
+    @apply text-[0.6875rem] font-[570] leading-normal tracking-widest text-red-600 uppercase;
   }
   .coverage__card h3 {
     @apply mt-6 mb-2;

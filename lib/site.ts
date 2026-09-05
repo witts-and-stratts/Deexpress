@@ -46,7 +46,6 @@ export const SERVICES: { slug: ServiceSlug; image: string }[] = [
   { slug: 'vehicle-shipping', image: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=1600&q=85' },
   { slug: 'commercial-cargo', image: 'https://images.unsplash.com/photo-1586528116493-a029325540fa?auto=format&fit=crop&w=1600&q=85' },
   { slug: 'personal-effects', image: 'https://images.unsplash.com/photo-1600518464441-9154a4dea21b?auto=format&fit=crop&w=1600&q=85' },
-  { slug: 'vehicle-sourcing', image: 'https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=1600&q=85' },
   { slug: 'storage', image: 'https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1600&q=85' },
 ]
 

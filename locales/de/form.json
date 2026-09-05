@@ -1,0 +1,13 @@
+{
+  "name": "Vollständiger Name",
+  "email": "E-Mail-Adresse",
+  "phone": "Telefonnummer",
+  "from": "Startort (Stadt, Land)",
+  "to": "Zielort (Stadt, Land)",
+  "service": "Leistung",
+  "subject": "Betreff",
+  "message": "Nachricht",
+  "selectService": "Leistung auswählen",
+  "selectSubject": "Betreff auswählen",
+  "required": "Pflichtfelder sind mit einem Sternchen markiert."
+}

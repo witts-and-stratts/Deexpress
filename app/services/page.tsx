@@ -1,10 +1,13 @@
 import type { Metadata } from 'next'
 import { ServicesPage } from '@/components/pages/ServicesPage'
+import { pageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Services',
-  description: 'Air freight, sea freight, vehicle shipping, commercial cargo, personal effects, vehicle sourcing and storage from Berlin to Africa and the Middle East.',
-}
+  description: 'Air freight, sea freight, vehicle sourcing and shipping, commercial cargo, personal effects and storage from Berlin to Africa and the Middle East.',
+  pathname: '/services',
+  image: '/images/service-cargo.jpg',
+})
 
 export default function Page() {
   return <ServicesPage />

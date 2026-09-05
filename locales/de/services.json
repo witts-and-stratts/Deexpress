@@ -1,0 +1,104 @@
+{
+  "eyebrow": "Unsere Leistungen",
+  "title": "Die richtige Route für Ihre Fracht.",
+  "intro": "Sechs Kernleistungen, ein Standard: sorgfältige Abwicklung, klare Kommunikation und ein Team, das Ihre Fracht wie die eigene behandelt. Wählen Sie eine Leistung, um mehr zu erfahren.",
+  "howTitle": "So funktioniert es",
+  "detailCta": "Kostenloses Angebot anfordern",
+  "pathways": [
+    {
+      "title": "Fracht bewegen",
+      "text": "Für Sendungen, bei denen Geschwindigkeit, Volumen oder der geschäftliche Bedarf die Route bestimmen.",
+      "services": ["air-freight", "sea-freight", "commercial-cargo"]
+    },
+    {
+      "title": "Fahrzeuge bewegen",
+      "text": "Von der Suche in Europa bis zum internationalen Transport über Grenzen hinweg.",
+      "services": ["vehicle-shipping"]
+    },
+    {
+      "title": "Persönliches und Lagerung",
+      "text": "Für Umzugsgut und Waren, die vor der nächsten Bewegung Raum und Planung brauchen.",
+      "services": ["personal-effects", "storage"]
+    }
+  ],
+  "details": {
+    "air-freight": {
+      "title": "Luftfracht",
+      "tagline": "Tempo für zeitkritische Fracht.",
+      "summary": "Wenn jeder Tag zählt, koordinieren wir Luftfracht von europäischen Flughäfen zu Zielen in unserem Netzwerk — mit sorgfältiger Abwicklung und klarer Kommunikation vom Start bis zur Ankunft.",
+      "features": [
+        "Zeitkritische und prioritäre Sendungen",
+        "Koordinierung vom Flughafen bis zur Tür",
+        "Unterstützung bei Exportdokumenten",
+        "Sorgfältige Behandlung hochwertiger Fracht"
+      ]
+    },
+    "sea-freight": {
+      "title": "Seefracht",
+      "tagline": "Kapazität für große Sendungen.",
+      "summary": "Für schwere, sperrige oder weniger zeitkritische Fracht ist die Seefracht der kosteneffiziente Weg. Wir koordinieren Container- und Sammelladungen von europäischen Häfen zu Zielen in unserem Netzwerk.",
+      "features": [
+        "Container- und Sammelladung",
+        "Koordinierung vom Hafen bis zur Tür",
+        "Kosteneffizient für schwere und sperrige Güter",
+        "Regelmäßige Abfahrtszeiten"
+      ]
+    },
+    "vehicle-shipping": {
+      "title": "Fahrzeugbeschaffung & Transport",
+      "tagline": "Finden, kaufen, versenden.",
+      "summary": "Von der Suche nach einem Fahrzeug in Europa bis zum internationalen Versand koordinieren wir die gesamte Reise mit einem Team.",
+      "features": [
+        "Fahrzeugsuche, Kauf und Abstimmung mit Verkäufern",
+        "Pkw, Lkw, Busse und Sonderfahrzeuge",
+        "Container- und RoRo-Optionen, wo verfügbar",
+        "Unterstützung bei Kauf- und Exportformalitäten",
+        "Koordinierung der Übergabe am Zielort"
+      ]
+    },
+    "commercial-cargo": {
+      "title": "Kommerzielle Fracht",
+      "tagline": "Fracht, die Geschäfte in Bewegung hält.",
+      "summary": "Handel, Großhandel oder Industrie — wir koordinieren wiederkehrende und einmalige gewerbliche Sendungen, damit Ihre Waren dort ankommen, wo Ihr Geschäft sie braucht.",
+      "features": [
+        "Palettierte und lose Fracht",
+        "Wiederkehrende Geschäftssendungen",
+        "Unterstützung bei Zolldokumenten",
+        "Luft-, See- und Landoptionen"
+      ]
+    },
+    "personal-effects": {
+      "title": "Umzugsgut & Persönliches",
+      "tagline": "Wir bewegen, was Ihnen wichtig ist.",
+      "summary": "Kartons, Gepäck, Haushaltsgegenstände oder ein kompletter Umzug — wir helfen Privatkunden, persönliche Gegenstände aus Europa zu versenden, mit klarer Anleitung in jedem Schritt.",
+      "features": [
+        "Kartons, Gepäck und Haushaltsgüter",
+        "Flexible Sendungsgrößen",
+        "Sorgfältige Behandlungsstandards",
+        "Persönliche Begleitung durch unser Team"
+      ]
+    },
+    "vehicle-sourcing": {
+      "title": "Fahrzeugbeschaffung",
+      "tagline": "Finden, kaufen, versenden.",
+      "summary": "Suchen Sie ein Fahrzeug in Europa? Wir unterstützen bei der Suche und dem Kauf — und verbinden den Prozess direkt mit dem internationalen Fahrzeugtransport.",
+      "features": [
+        "Fahrzeugsuche in ganz Europa",
+        "Unterstützung beim Kauf und bei der Verhandlung",
+        "Unterstützung bei Prüfung und Formalitäten",
+        "Nahtloser Übergang zum Fahrzeugtransport"
+      ]
+    },
+    "storage": {
+      "title": "Lagerung & Warehousing",
+      "tagline": "Sicherer Raum zwischen den Reisen.",
+      "summary": "Kurz- oder langfristig: Wir lagern Ihre Waren sicher in Berlin — und verbinden die Lagerung direkt mit Ihrem Versandzeitplan.",
+      "features": [
+        "Kurz- und langfristige Lagerung",
+        "Lagerhaus in Berlin",
+        "Lagerung für Handel und Privatkunden",
+        "Direkte Anbindung an Versandpläne"
+      ]
+    }
+  }
+}

@@ -1,20 +1,150 @@
-/* Shipment tracking page layout. */
+/* Shipment tracking, adapted from the supplied Figma result state. */
 @layer components {
-  .tracking-page { @apply overflow-clip bg-white font-sans text-editorial-ink; }
-  .tracking-page__hero { @apply relative overflow-hidden bg-editorial-accent text-white; }
-  .tracking-page__hero::before { @apply absolute inset-0 bg-[linear-gradient(100deg,rgba(35,26,168,.94),rgba(35,26,168,.74),rgba(35,26,168,.28)),url('/images/home-hero.webp')_center/cover]; content: ''; }
-  .tracking-page__hero-grid { @apply relative z-10 mx-auto mt-[155px] grid max-w-[1544px] grid-cols-12 items-end gap-12 px-[var(--spacing-page)] pb-0 md:mt-[220px] md:gap-8 md:pb-20; }
-  .tracking-page__hero-copy { @apply col-span-12 md:col-span-6; }
-  .tracking-page__hero-copy > p { @apply mb-5 text-[0.6875rem] font-[570] leading-[1.5] tracking-[0.1em] text-orange uppercase; }
-  .tracking-page__hero-copy h1 { @apply font-['Saans',var(--font-inter),Arial,sans-serif] text-[clamp(3rem,5.55vw,5rem)] font-[380] leading-[0.9] tracking-[-0.04em] text-white text-balance; }
-  .tracking-page__hero-copy > span { @apply mt-8 block max-w-[30rem] text-lg leading-[1.35] text-white/80; }
-  .tracking-page__interface { @apply col-span-12 md:col-span-6; }
-  .tracking-page__note { @apply grid grid-cols-12 gap-8 px-[var(--spacing-page)] py-[clamp(4.5rem,8vw,7.25rem)]; }
-  .tracking-page__note-copy { @apply col-span-12 md:col-span-8; }
-  .tracking-page__note-copy > p { @apply mb-4 text-[0.6875rem] font-[570] leading-[1.5] tracking-[0.1em] text-editorial-accent uppercase; }
-  .tracking-page__note-detail { @apply col-span-12 self-end md:col-span-4; }
-  .tracking-page__support { @apply mx-[var(--spacing-page)] mb-[var(--spacing-section)] block bg-editorial-accent p-[clamp(2rem,4vw,3.375rem)] text-white md:flex md:items-center md:justify-between md:gap-8; }
-  .tracking-page__support > p { @apply text-white; }
-  .tracking-page__support-actions { @apply mt-7 flex flex-wrap gap-3 md:mt-0; }
-  .tracking-page__support-actions a { @apply inline-flex items-center gap-2 border border-white/60 px-4 py-3 text-white no-underline hover:bg-white/10; }
+  .tracking-page {
+    @apply bg-white font-sans text-editorial-ink;
+  }
+  .tracking-page__content {
+    @apply relative z-10 mx-auto -mt-18 w-full px-page pt-0 pb-[clamp(3.5rem,8vw,7rem)] md:-mt-40;
+  }
+  .tracking-page__panel {
+    @apply w-full;
+  }
+  .tracking-widget {
+    @apply w-full border border-editorial-line/20 bg-white/50 backdrop-blur-2xl p-page rounded-md isolate;
+  }
+  .tracking-widget__header {
+    @apply grid gap-3;
+  }
+  .tracking-widget__header h2 {
+    @apply font-sans text-h3 text-editorial-accent;
+  }
+  .tracking-widget__header p {
+    @apply text-sm leading-snug text-editorial-ink;
+  }
+  .tracking-widget__form {
+    @apply mt-6 flex flex-col gap-3 sm:flex-row;
+  }
+  .tracking-widget__input {
+    @apply flex h-14 min-w-0 flex-1 items-center gap-3 rounded-lg border border-editorial-line/70 bg-white px-4 text-editorial-muted focus-within:border-editorial-accent focus-within:ring-4 focus-within:ring-editorial-accent/10;
+  }
+  .tracking-widget__input input {
+    @apply min-w-0 flex-1 bg-transparent text-base text-editorial-ink outline-none placeholder:text-editorial-muted;
+  }
+  .tracking-widget__submit {
+    @apply h-14 shrink-0 rounded-lg px-6 sm:w-[13.5rem];
+  }
+  .tracking-widget__error {
+    @apply mt-3 text-sm text-red-700;
+  }
+  .tracking-widget__result {
+    @apply mt-5 grid gap-5 rounded-lg border border-editorial-line/70 bg-[#ece8e3] p-[clamp(1.25rem,3vw,1.5rem)];
+  }
+  .tracking-widget__reveal .tracking-widget__result {
+    animation: tracking-panel-in 360ms cubic-bezier(0.2, 0, 0, 1) both;
+  }
+  .tracking-widget__reveal .tracking-widget__meta {
+    animation: tracking-item-in 300ms cubic-bezier(0.2, 0, 0, 1) 90ms both;
+  }
+  .tracking-widget__reveal .tracking-widget__details {
+    animation: tracking-item-in 300ms cubic-bezier(0.2, 0, 0, 1) 160ms both;
+  }
+  .tracking-widget__reveal .tracking-widget__progress {
+    animation: tracking-item-in 300ms cubic-bezier(0.2, 0, 0, 1) 230ms both;
+  }
+  .tracking-widget__reveal .tracking-widget__note {
+    animation: tracking-item-in 260ms cubic-bezier(0.2, 0, 0, 1) 300ms both;
+  }
+  .tracking-widget__meta {
+    @apply flex flex-wrap items-start justify-between gap-4;
+  }
+  .tracking-widget__meta span,
+  .tracking-widget__details dt,
+  .tracking-widget__progress > span {
+    @apply block text-[0.6875rem] font-medium leading-[1.5] tracking-[0.12em] text-editorial-ink uppercase;
+  }
+  .tracking-widget__meta strong {
+    @apply mt-1.5 block text-xl font-normal tracking-[-0.02em] text-black;
+  }
+  .tracking-widget__current {
+    @apply text-right;
+  }
+  .tracking-widget__current p {
+    @apply mt-1.5 inline-flex items-center gap-2 rounded-full border border-editorial-line/70 bg-white px-2.5 py-1 text-sm text-black;
+  }
+  .tracking-widget__current i {
+    @apply size-2 rounded-full bg-editorial-accent;
+  }
+  .tracking-widget__details {
+    @apply grid gap-5 sm:grid-cols-3;
+  }
+  .tracking-widget__details dd {
+    @apply mt-1.5 text-sm font-semibold leading-[1.375] text-black;
+  }
+  .tracking-widget__progress {
+    @apply grid gap-3;
+  }
+  .tracking-widget__progress ol {
+    @apply grid gap-5 sm:grid-cols-5 sm:gap-4;
+  }
+  .tracking-widget__progress li {
+    @apply min-w-0 text-editorial-muted;
+  }
+  .tracking-widget__track {
+    @apply flex items-center gap-2;
+  }
+  .tracking-widget__track i {
+    @apply block size-3 shrink-0 rounded-full bg-editorial-line;
+  }
+  .tracking-widget__track b {
+    @apply block h-0.5 flex-1 bg-editorial-line;
+  }
+  .tracking-widget__progress li:last-child .tracking-widget__track b {
+    @apply hidden;
+  }
+  .tracking-widget__progress li.is-complete .tracking-widget__track i,
+  .tracking-widget__progress li.is-current .tracking-widget__track i {
+    @apply bg-editorial-accent;
+  }
+  .tracking-widget__progress li.is-complete .tracking-widget__track b {
+    @apply bg-editorial-accent;
+  }
+  .tracking-widget__progress li strong {
+    @apply mt-2 block text-sm font-normal leading-[1.375] text-editorial-ink;
+  }
+  .tracking-widget__progress li.is-current strong {
+    @apply text-editorial-accent;
+  }
+  .tracking-widget__progress li small {
+    @apply mt-0.5 block text-sm leading-[1.375];
+  }
+  .tracking-widget__note {
+    @apply mt-5 max-w-3xl text-sm leading-relaxed text-editorial-muted;
+  }
+  .tracking-page__support {
+    @apply mx-[var(--spacing-page)] mb-[var(--spacing-section)] block bg-editorial-accent p-[clamp(2rem,4vw,3.375rem)] text-white md:flex md:items-center md:justify-between md:gap-8;
+  }
+  .tracking-page__support > p {
+    @apply text-white;
+  }
+  .tracking-page__support-actions {
+    @apply mt-7 flex flex-wrap gap-3 md:mt-0;
+  }
+  .tracking-page__support-actions a {
+    @apply inline-flex items-center gap-2 border border-white/60 px-4 py-3 text-white no-underline hover:bg-white/10;
+  }
+  @keyframes tracking-panel-in {
+    from { opacity: 0; transform: translateY(18px) scale(.985); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  @keyframes tracking-item-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tracking-widget__reveal .tracking-widget__result,
+    .tracking-widget__reveal .tracking-widget__meta,
+    .tracking-widget__reveal .tracking-widget__details,
+    .tracking-widget__reveal .tracking-widget__progress,
+    .tracking-widget__reveal .tracking-widget__note { animation: none; }
+  }
 }

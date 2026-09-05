@@ -1,0 +1,13 @@
+{
+  "name": "Full name",
+  "email": "Email address",
+  "phone": "Phone number",
+  "from": "Origin (city, country)",
+  "to": "Destination (city, country)",
+  "service": "Service",
+  "subject": "Subject",
+  "message": "Message",
+  "selectService": "Select a service",
+  "selectSubject": "Select a subject",
+  "required": "Required fields are marked with an asterisk."
+}

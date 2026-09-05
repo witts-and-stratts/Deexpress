@@ -1,0 +1,50 @@
+{
+  "notice": {
+    "title": "Legal notice",
+    "intro": "Information pursuant to Sect. 5 German Telemedia Act (TMG).",
+    "sections": [
+      {
+        "h": "Company",
+        "p": "DEexpress Logistics GmbH\nLichtenauer Str. 51\n13055 Berlin, Germany"
+      },
+      {
+        "h": "Represented by",
+        "p": "Adedapo Adediran · Olagunju Olamilekan"
+      },
+      {
+        "h": "Contact",
+        "p": "service@deexpress-logistics.eu · +49 (0)176 87132767 · +49 (0)152 29939834"
+      },
+      {
+        "h": "Commercial register",
+        "p": "HRB 229599 — Amtsgericht Charlottenburg"
+      },
+      {
+        "h": "VAT ID",
+        "p": "DE17362750943"
+      }
+    ]
+  },
+  "policy": {
+    "title": "Data policy",
+    "intro": "Summary of how DEexpress Logistics GmbH handles your personal data.",
+    "sections": [
+      {
+        "h": "Responsible party",
+        "p": "DEexpress Logistics GmbH, Lichtenauer Str. 51, 13055 Berlin, Germany. Contact: service@deexpress-logistics.eu."
+      },
+      {
+        "h": "What we collect",
+        "p": "When you use our contact or quote forms, we collect the details you provide: name, email address, phone number and shipment information. We use this data exclusively to process your inquiry."
+      },
+      {
+        "h": "Your rights",
+        "p": "Under the GDPR you have the right to access, correct, delete and restrict the processing of your personal data. To exercise these rights or if you have questions about data protection, contact us at the address above."
+      },
+      {
+        "h": "Cookies & analytics",
+        "p": "This website does not set marketing cookies and does not use third-party tracking. A language preference may be stored locally in your browser."
+      }
+    ]
+  }
+}

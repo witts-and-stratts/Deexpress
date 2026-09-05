@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation'
 import { HomeFooter, HomeHeader } from '@/components/pages/HomePage'
 
-const figmaShellRoutes = new Set(['/', '/contact', '/track'])
+const figmaShellRoutes = new Set(['/', '/contact'])
 
 export function RouteShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()

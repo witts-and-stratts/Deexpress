@@ -33,4 +33,35 @@
   .form-hint {
     @apply text-[0.8rem] leading-5 text-editorial-muted;
   }
+
+  /* Quote request: deliberately spare, document-like fields. */
+  .quote-form {
+    @apply border-0 bg-transparent p-0 shadow-none;
+  }
+  .quote-form .form-field,
+  .contact-form .form-field {
+    @apply gap-3;
+  }
+  .quote-form .form-label,
+  .contact-form .form-label {
+    @apply text-[0.775rem] font-medium text-editorial-ink;
+  }
+  .quote-form .form-control,
+  .contact-form .form-control {
+    @apply rounded-none border-x-0 border-t-0 border-b border-editorial-line/70 bg-transparent px-0 py-2.5 text-sm shadow-none placeholder:text-editorial-muted/55 focus:border-editorial-accent focus:ring-0;
+  }
+  .quote-form select.form-control,
+  .contact-form select.form-control {
+    @apply pr-8;
+  }
+  .quote-form textarea.form-control,
+  .contact-form textarea.form-control {
+    @apply min-h-28;
+  }
+  .quote-form__group-title {
+    @apply font-sans text-h4 font-[380] leading-[1.1] tracking-[-0.035em] text-editorial-ink/80;
+  }
+  .quote-form__position + .quote-form__position {
+    @apply mt-8 border-t border-editorial-line/70 pt-8;
+  }
 }

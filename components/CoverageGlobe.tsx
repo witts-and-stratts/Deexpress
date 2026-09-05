@@ -10,6 +10,12 @@ const Globe = dynamic(() => import('react-globe.gl'), { ssr: false });
 
 type City = { city: string; country: string; lat: number; lng: number };
 type CityRoute = { source: City; destination: City; region: Exclude<RegionId, 'europe'>; altitude?: number };
+type GlobePoint = City & {
+  kind: 'city' | 'stardust';
+  radius?: number;
+  altitude?: number;
+  color?: string;
+};
 
 const REGION_CAMERAS: Record<
   RegionId,
@@ -128,7 +134,52 @@ const CITY_ROUTES: CityRoute[] = AFRICAN_CITIES.map((destination) => ({
   destination,
   region: CITY_REGIONS[destination.city],
 }));
-const COVERAGE_CITIES = [BERLIN, ...AFRICAN_CITIES];
+const COVERAGE_CITIES: GlobePoint[] = [BERLIN, ...AFRICAN_CITIES].map((city) => ({
+  ...city,
+  kind: 'city',
+}));
+
+// A stable scatter keeps the selection marker from jumping when the globe rerenders.
+// These points deliberately sit around existing destinations: they read as a regional
+// constellation, without suggesting additional, unconfirmed service locations.
+function createStarDust(active: RegionId): GlobePoint[] {
+  const anchors =
+    active === 'europe'
+      ? [BERLIN]
+      : AFRICAN_CITIES.filter((city) => CITY_REGIONS[city.city] === active).slice(0, 8);
+  const fallbackAnchors: Record<RegionId, City[]> = {
+    europe: [BERLIN],
+    'north-africa': [AFRICAN_CITIES[0]],
+    'west-africa': [AFRICAN_CITIES[8]],
+    'central-africa': [AFRICAN_CITIES[20]],
+    'east-africa': [AFRICAN_CITIES[26]],
+    'southern-africa': [AFRICAN_CITIES[34]],
+    'middle-east': [
+      { city: 'Muscat', country: 'Oman', lat: 23.588, lng: 58.382 },
+      { city: 'Doha', country: 'Qatar', lat: 25.285, lng: 51.531 },
+      { city: 'Riyadh', country: 'Saudi Arabia', lat: 24.714, lng: 46.675 },
+      { city: 'Dubai', country: 'United Arab Emirates', lat: 25.205, lng: 55.271 },
+    ],
+  };
+  const selectedAnchors = anchors.length ? anchors : fallbackAnchors[active];
+
+  return selectedAnchors.flatMap((anchor, anchorIndex) =>
+    Array.from({ length: 7 }, (_, particleIndex) => {
+      const angle = (particleIndex / 7) * Math.PI * 2 + anchorIndex * 0.7;
+      const distance = 0.24 + ((particleIndex + anchorIndex) % 3) * 0.11;
+      return {
+        ...anchor,
+        city: `${anchor.city}-dust-${particleIndex}`,
+        lat: anchor.lat + Math.sin(angle) * distance,
+        lng: anchor.lng + Math.cos(angle) * distance,
+        kind: 'stardust' as const,
+        radius: particleIndex % 3 === 0 ? 0.04 : 0.019,
+        altitude: particleIndex % 3 === 0 ? 0.028 : 0.016,
+        color: particleIndex % 3 === 0 ? '#ffd978' : '#d99a20',
+      };
+    }),
+  );
+}
 
 // The route data and visual configuration are intentionally the official Globe.gl airline-routes example.
 export function CoverageGlobe({
@@ -207,7 +258,6 @@ export function CoverageGlobe({
     () => ['rgba(0, 255, 0, 0.32)', 'rgba(255, 0, 0, 0.32)'],
     [],
   );
-  const pointColor = useCallback(() => 'orange', []);
   const activeRoutes = useMemo(
     () =>
       CITY_ROUTES.flatMap((route) =>
@@ -217,6 +267,22 @@ export function CoverageGlobe({
         })),
       ),
     [active],
+  );
+  const globePoints = useMemo(
+    () => [...COVERAGE_CITIES, ...createStarDust(active)],
+    [active],
+  );
+  const pointColor = useCallback(
+    (point: object) => (point as GlobePoint).color ?? 'orange',
+    [],
+  );
+  const pointRadius = useCallback(
+    (point: object) => (point as GlobePoint).radius ?? 0.035,
+    [],
+  );
+  const pointAltitude = useCallback(
+    (point: object) => (point as GlobePoint).altitude ?? 0.01,
+    [],
   );
 
   return (
@@ -248,11 +314,12 @@ export function CoverageGlobe({
           arcDashAnimateTime={4000}
           arcColor={arcColor}
           arcsTransitionDuration={0}
-          pointsData={COVERAGE_CITIES}
+          pointsData={globePoints}
           pointColor={pointColor}
-          pointAltitude={0.01}
-          pointRadius={0.035}
+          pointAltitude={pointAltitude}
+          pointRadius={pointRadius}
           pointsMerge
+          pointsTransitionDuration={0}
           labelsData={COVERAGE_CITIES}
           labelText={(city: object) => (city as City).city}
           labelSize={0.55}

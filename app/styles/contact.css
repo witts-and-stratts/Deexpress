@@ -1,26 +1,79 @@
 /* Contact page layout. */
 @layer components {
-  .contact-page { @apply overflow-clip bg-white font-sans text-editorial-ink; }
-  .contact-page__hero { @apply relative min-h-[590px] text-white [background:#163442_url('/images/contact-figma/hero.webp')_50%_72%_/_cover_no-repeat] md:min-h-[648px]; }
-  .contact-page__hero-shade { @apply absolute inset-0 bg-[linear-gradient(90deg,rgba(4,23,35,.62),rgba(4,23,35,.12)_70%)]; }
-  .contact-page__hero-content { @apply relative z-10 mx-auto max-w-[1544px] px-[var(--spacing-page)] pt-[170px] md:pt-[209px]; }
-  .contact-page__hero-content h1 { @apply text-white; }
-  .contact-page__hero-content p { @apply mt-9 max-w-[36rem] text-white/85; }
-  .contact-page__options { @apply px-[var(--spacing-page)] py-12; }
-  .contact-page__options-intro { @apply grid grid-cols-12 items-start gap-8 border-b border-editorial-line pb-8; }
-  .contact-page__options-intro > :nth-child(1) { @apply col-span-12 md:col-span-4; }
-  .contact-page__options-intro > :nth-child(2) { @apply col-span-12 md:col-span-3; }
-  .contact-page__options-intro > :nth-child(3) { @apply col-span-12 grid gap-5 text-editorial-muted md:col-span-5; }
-  .contact-page__option-grid { @apply mt-3.5 grid grid-cols-12 gap-0.5 md:gap-px; }
-  .contact-page__option { @apply col-span-12 flex min-h-[225px] flex-col bg-editorial-surface p-7 md:col-span-3 md:min-h-[309px] md:p-9; }
-  .contact-page__option svg { @apply text-editorial-accent; }
-  .contact-page__option p { @apply mt-4 max-w-[15rem] text-base leading-[1.375]; }
-  .contact-page__option a, .contact-page__option strong { @apply mt-auto font-['Saans',var(--font-inter),Arial,sans-serif] text-[clamp(1.375rem,2.5vw,2.25rem)] font-[380] leading-[1.05] tracking-[-0.04em] text-editorial-ink no-underline; }
-  .contact-page__form-section { @apply grid grid-cols-12 gap-8 bg-editorial-surface/70 px-[var(--spacing-page)] py-[clamp(4rem,7vw,6rem)]; }
-  .contact-page__form-copy { @apply col-span-12 max-w-[26rem] md:col-span-5; }
-  .contact-page__form-copy p { @apply mt-8 text-editorial-muted; }
-  .contact-page__form { @apply col-span-12 md:col-span-7; }
-  .contact-page__location { @apply grid grid-cols-12 items-start gap-8 px-[var(--spacing-page)] py-[clamp(4rem,7vw,6rem)]; }
-  .contact-page__location > div:first-child { @apply col-span-12 md:col-span-4; }
-  .contact-page__map { @apply col-span-12 min-h-[310px] bg-[url('/images/contact-figma/map.webp')] bg-cover bg-center md:col-span-8 md:min-h-[558px]; }
+  .contact-page {
+    @apply overflow-clip bg-white font-sans text-editorial-ink;
+  }
+  .contact-page__hero {
+    @apply relative min-h-147.5 text-white [background:#163442_url('/images/contact-figma/hero.webp')_50%_50%/cover_no-repeat] md:min-h-162;
+  }
+  .quote-page__hero {
+    @apply [background:#163442_url('/images/blue-stacked-container.jpg')_50%_50%/cover_no-repeat] portrait:[background:#163442_url('/images/blue-stacked-container-portrait.jpg')_50%_50%/cover_no-repeat];
+  }
+  .track-page__hero {
+    @apply [background:#163442_url('/images/transport-logistics-products.jpg')_50%_50%/cover_no-repeat];
+  }
+  .contact-page__hero-shade {
+    @apply absolute inset-0 bg-[linear-gradient(90deg,rgba(4,23,35,.62),rgba(4,23,35,.12)_70%)];
+  }
+  .contact-page__hero-content {
+    @apply relative z-10 mx-auto max-w-[1544px] px-page pt-42.5 md:pt-52;
+  }
+  .contact-page__hero-content h1 {
+    @apply text-white;
+  }
+  .contact-page__hero-content p {
+    @apply mt-9 max-w-xl text-white/85;
+  }
+  .contact-page__options {
+    @apply px-page py-12;
+  }
+  .contact-page__options-intro {
+    @apply grid grid-cols-12 items-start gap-8 border-b border-editorial-line pb-8;
+  }
+  .contact-page__options-intro > :nth-child(1) {
+    @apply col-span-12 md:col-span-4;
+  }
+  .contact-page__options-intro > :nth-child(2) {
+    @apply col-span-12 md:col-span-3;
+  }
+  .contact-page__options-intro > :nth-child(3) {
+    @apply col-span-12 grid gap-5 text-editorial-muted md:col-span-5;
+  }
+  .contact-page__option-grid {
+    @apply mt-3.5 grid grid-cols-12 gap-0.5 md:gap-px;
+  }
+  .contact-page__option {
+    @apply col-span-12 flex min-h-56.25 flex-col bg-editorial-surface p-7 md:col-span-3 md:min-h-77.25 md:p-9;
+  }
+  .contact-page__option-icon {
+    @apply block size-8 shrink-0 text-editorial-accent;
+  }
+  .contact-page__option p {
+    @apply mt-4 max-w-60 text-base leading-snug;
+  }
+  .contact-page__option a,
+  .contact-page__option strong {
+    @apply mt-auto font-['Saans',var(--font-inter),Arial,sans-serif] text-[clamp(1.375rem,2.5vw,2.25rem)] font-[380] leading-[1.05] tracking-[-0.04em] text-editorial-ink no-underline;
+  }
+  .contact-page__form-section {
+    @apply grid grid-cols-12 gap-8 bg-editorial-surface/70 px-[var(--spacing-page)] py-[clamp(4rem,7vw,6rem)];
+  }
+  .contact-page__form-copy {
+    @apply col-span-12 max-w-[26rem] md:col-span-5;
+  }
+  .contact-page__form-copy p {
+    @apply mt-8 text-editorial-muted;
+  }
+  .contact-page__form {
+    @apply col-span-12 md:col-span-7;
+  }
+  .contact-page__location {
+    @apply grid grid-cols-12 items-start gap-8 px-[var(--spacing-page)] py-[clamp(4rem,7vw,6rem)];
+  }
+  .contact-page__location > div:first-child {
+    @apply col-span-12 md:col-span-4;
+  }
+  .contact-page__map {
+    @apply col-span-12 min-h-[310px] bg-[url('/images/contact-figma/map.webp')] bg-cover bg-center md:col-span-8 md:min-h-[558px];
+  }
 }

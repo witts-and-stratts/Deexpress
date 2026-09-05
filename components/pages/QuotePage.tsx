@@ -7,17 +7,23 @@ import { Reveal } from '@/components/Reveal'
 import { QuoteInquiryForm } from '@/components/InquiryForm'
 import { useLang } from '@/lib/i18n'
 import { SITE, WHATSAPP_URL } from '@/lib/site'
-import { Eyebrow, PageHero, container, section, textLink } from '@/components/ui'
+import { Eyebrow, container, section, textLink } from '@/components/ui'
 
 export function QuotePage() {
   const { t } = useLang()
   return (
     <main>
-      <PageHero eyebrow={t.quote.eyebrow} title={t.quote.title} sub={t.quote.intro} />
+      <section className="contact-page__hero quote-page__hero" aria-labelledby="quote-title">
+        <div className="contact-page__hero-shade" />
+        <div className="contact-page__hero-content">
+          <h1 id="quote-title" className="text-h1 text-white md:max-w-[10ch]">{t.quote.title}</h1>
+          <p className="site-body text-white">{t.quote.intro}</p>
+        </div>
+      </section>
 
       <section className={section}>
         <div className={`${container} grid items-start gap-9 lg:grid-cols-12 lg:gap-18`}>
-          <Reveal className="lg:col-span-5">
+          <Reveal className="lg:col-span-12">
             <div className="grid gap-4.5">
               <div className="mb-1">
                 <Eyebrow>{t.home.processEyebrow}</Eyebrow>
@@ -56,18 +62,15 @@ export function QuotePage() {
             </div>
           </Reveal>
 
-          <Reveal delay={140} className="lg:col-span-7">
-            <div>
-              <div className="mb-7">
-                <Eyebrow>{t.quote.eyebrow}</Eyebrow>
-                <h2 className="mt-4 font-display text-[clamp(1.6rem,2.6vw,2.2rem)] font-semibold tracking-tight">
+          <Reveal delay={140} className="order-first lg:col-span-12">
+              {/* <div className="mb-7">
+                <h2 className="text-h3">
                   {t.quote.title}
                 </h2>
-              </div>
+              </div> */}
               <Suspense fallback={null}>
                 <QuoteInquiryForm />
               </Suspense>
-            </div>
           </Reveal>
         </div>
       </section>

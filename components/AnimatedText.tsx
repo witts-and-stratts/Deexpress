@@ -72,11 +72,9 @@ function normalizeSplitBy(splitBy?: SplitBy | SplitBy[]) {
 
   for (const level of requested) {
     if (level === 'char') {
-      expanded.add('sentence');
       expanded.add('words');
       expanded.add('char');
     } else if (level === 'words') {
-      expanded.add('sentence');
       expanded.add('words');
     } else {
       expanded.add('sentence');
@@ -173,7 +171,12 @@ export default function AnimatedText({
       const key = `${path}-${levelIndex}-${index}`;
       const isWhitespace = /^\s+$/.test(part) || part === '';
       const display = splitType === 'sentence' ? 'block' : 'inline-block';
-      const whiteSpace = splitType === 'char' ? 'pre' : 'pre-wrap';
+      const whiteSpace =
+        splitType === 'char'
+          ? 'pre'
+          : splitType === 'words' && hasNext
+            ? 'nowrap'
+            : 'pre-wrap';
 
       if (hasNext && !isWhitespace) {
         return (

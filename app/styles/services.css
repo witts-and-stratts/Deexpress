@@ -7,7 +7,7 @@
   }
   .air-freight-page__hero-image {
     @apply absolute inset-0 -z-20 bg-cover bg-position-[58%_center] md:bg-center;
-    background-image: url('/images/air-freight-hero.jpeg');
+    background-image: url('/images/air-freight-hero.webp');
   }
   .air-freight-page__hero-overlay {
     @apply absolute inset-0 -z-10 bg-[linear-gradient(0deg,rgba(12,16,27,.72),rgba(12,16,27,.05)_56%)];
@@ -19,7 +19,7 @@
     @apply col-span-12 lg:col-span-9;
   }
   .air-freight-page__hero h1 {
-    @apply text-h1 max-w-[14ch] text-white md:text-[clamp(3.5rem,5.55vw,5rem)];
+    @apply text-h1 max-w-[20ch] text-white;
   }
   .air-freight-page__hero-copy > .motion-reveal:last-child {
     @apply col-span-12 lg:col-start-8 lg:col-span-5;
@@ -56,7 +56,7 @@
   }
   .air-freight-page__efficiency-hero > div:first-child {
     @apply absolute inset-0 -z-20 bg-cover bg-center;
-    background-image: url('/images/air-freight-efficiency-hero.png');
+    background-image: url('/images/air-freight-efficiency-hero.webp');
   }
   .air-freight-page__efficiency-hero::after {
     @apply absolute inset-0 -z-10 bg-[linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,.05)_62%)];

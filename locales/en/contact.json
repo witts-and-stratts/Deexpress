@@ -1,0 +1,22 @@
+{
+  "eyebrow": "Contact",
+  "title": "We look forward to hearing from you.",
+  "intro": "Questions about a shipment, a destination or a partnership? Send us a message or reach us directly — in English, German or French.",
+  "formTitle": "Send us a message",
+  "subjects": [
+    "Quote request",
+    "Shipment inquiry",
+    "Vehicle sourcing & shipping",
+    "Storage",
+    "Partnership",
+    "Other"
+  ],
+  "office": "Office",
+  "hours": "Office hours",
+  "directTitle": "Call us directly",
+  "languagesLabel": "Languages",
+  "whatsappTitle": "Prefer WhatsApp?",
+  "whatsappText": "Message us directly — we typically reply during office hours.",
+  "partnership": "Partnership inquiries: agents, carriers and commercial cooperation — email us or select “Partnership” in the form.",
+  "success": "Thank you — your message has been received. Our team will get back to you within one business day."
+}

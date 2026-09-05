@@ -1,0 +1,104 @@
+{
+  "eyebrow": "Our services",
+  "title": "The right route for what you move.",
+  "intro": "Six core services, one standard: careful handling, clear communication and a team that treats your cargo like its own. Choose a service to learn more.",
+  "howTitle": "How it works",
+  "detailCta": "Request a free estimate",
+  "pathways": [
+    {
+      "title": "Move freight",
+      "text": "For shipments where speed, volume or the commercial need shapes the route.",
+      "services": ["air-freight", "sea-freight", "commercial-cargo"]
+    },
+    {
+      "title": "Move vehicles",
+      "text": "From finding a vehicle in Europe to moving it internationally across borders.",
+      "services": ["vehicle-shipping"]
+    },
+    {
+      "title": "Personal goods & storage",
+      "text": "For belongings and goods that need space and planning before their next movement.",
+      "services": ["personal-effects", "storage"]
+    }
+  ],
+  "details": {
+    "air-freight": {
+      "title": "Air freight",
+      "tagline": "Time-critical air freight services from Europe to Africa and beyond – we deliver your cargo safely to its destination with speed, efficiency and care.",
+      "summary": "When every day counts, we coordinate air freight from European airports to destinations across our network — with careful handling and clear communication from take-off to arrival.",
+      "features": [
+        "Time-critical and priority shipments",
+        "Airport-to-door coordination",
+        "Export documentation support",
+        "Careful handling of high-value cargo"
+      ]
+    },
+    "sea-freight": {
+      "title": "Sea freight",
+      "tagline": "Scale for larger shipments.",
+      "summary": "For heavy, bulky or less time-sensitive cargo, sea freight is the cost-efficient route. We coordinate container and consolidated shipments from European ports to destinations across our network.",
+      "features": [
+        "Container and consolidated cargo",
+        "Port-to-door coordination",
+        "Cost-efficient for heavy and bulky goods",
+        "Regular sailing schedules"
+      ]
+    },
+    "vehicle-shipping": {
+      "title": "Vehicle sourcing & shipping",
+      "tagline": "Find it, buy it, ship it.",
+      "summary": "From finding a vehicle in Europe to international shipping, we coordinate the journey through one team.",
+      "features": [
+        "Vehicle search, purchase and seller coordination",
+        "Cars, trucks, buses and special equipment",
+        "Container and RoRo options where available",
+        "Purchase and export paperwork support",
+        "Destination handover coordination"
+      ]
+    },
+    "commercial-cargo": {
+      "title": "Commercial cargo",
+      "tagline": "Freight that keeps business moving.",
+      "summary": "Retail, wholesale or industrial — we coordinate recurring and one-off commercial shipments so your goods arrive where your business needs them.",
+      "features": [
+        "Palletised and loose cargo",
+        "Recurring business shipments",
+        "Customs documentation support",
+        "Air, sea and land options"
+      ]
+    },
+    "personal-effects": {
+      "title": "Personal effects",
+      "tagline": "Move what matters.",
+      "summary": "Boxes, luggage, household items or a whole move — we help individuals ship personal belongings from Europe with clear guidance at every step.",
+      "features": [
+        "Boxes, luggage and household goods",
+        "Flexible shipment sizes",
+        "Careful handling standards",
+        "Personal guidance from our team"
+      ]
+    },
+    "vehicle-sourcing": {
+      "title": "Vehicle sourcing",
+      "tagline": "Find it, buy it, ship it.",
+      "summary": "Looking for a vehicle in Europe? We assist with sourcing and purchasing — and connect the process directly to international vehicle shipping.",
+      "features": [
+        "Vehicle search across Europe",
+        "Purchase assistance and negotiation",
+        "Inspection and paperwork support",
+        "Seamless link to vehicle shipping"
+      ]
+    },
+    "storage": {
+      "title": "Storage & warehousing",
+      "tagline": "Secure space between journeys.",
+      "summary": "Short or long term, we store your goods safely in Berlin — and connect storage directly to your shipment schedule.",
+      "features": [
+        "Short and long-term storage",
+        "Berlin-based warehouse",
+        "Storage for retail and private customers",
+        "Direct link to shipping schedules"
+      ]
+    }
+  }
+}

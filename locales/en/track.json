@@ -1,0 +1,27 @@
+{
+  "eyebrow": "Tracking",
+  "title": "Track your shipment.",
+  "intro": "Enter your tracking reference to see the latest available status of your shipment.",
+  "label": "Tracking number",
+  "placeholder": "e.g. DEX-2024-0185",
+  "button": "Track shipment",
+  "demoNote": "Our live tracking system is being connected to this new website. Enter a reference to preview the experience — for the current status of a real shipment, contact our team.",
+  "statuses": [
+    "Quote requested",
+    "Booking confirmed",
+    "Cargo received",
+    "In transit",
+    "Customs clearance",
+    "Out for delivery",
+    "Delivered"
+  ],
+  "contactCta": "Contact us for a status update",
+  "invalid": "Please enter a tracking reference.",
+  "panelIntro": "Enter your tracking number to see the latest status and estimated delivery date.",
+  "trackingNumber": "Tracking number",
+  "currentStatus": "Current status",
+  "origin": "Origin",
+  "destination": "Destination",
+  "estimatedDelivery": "Estimated delivery",
+  "progress": "Progress"
+}
