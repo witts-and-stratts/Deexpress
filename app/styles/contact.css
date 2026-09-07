@@ -4,13 +4,10 @@
     @apply overflow-clip bg-white font-sans text-editorial-ink;
   }
   .contact-page__hero {
-    @apply relative min-h-147.5 text-white [background:#163442_url('/images/contact-figma/hero.webp')_50%_50%/cover_no-repeat] md:min-h-162;
+    @apply relative min-h-147.5 bg-[#163442] text-white md:min-h-162;
   }
   .quote-page__hero {
-    @apply [background:#163442_url('/images/blue-stacked-container.jpg')_50%_50%/cover_no-repeat] portrait:[background:#163442_url('/images/blue-stacked-container-portrait.jpg')_50%_50%/cover_no-repeat];
-  }
-  .track-page__hero {
-    @apply [background:#163442_url('/images/transport-logistics-products.jpg')_50%_50%/cover_no-repeat];
+    @apply bg-[#163442];
   }
   .contact-page__hero-shade {
     @apply absolute inset-0 bg-[linear-gradient(90deg,rgba(4,23,35,.62),rgba(4,23,35,.12)_70%)];

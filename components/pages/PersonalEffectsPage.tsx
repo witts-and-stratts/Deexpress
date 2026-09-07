@@ -28,7 +28,7 @@ export function PersonalEffectsPage() {
       hero={{
         title: 'Personal effects, delivered with care',
         text: 'Laptops, home appliances, luggage and everyday belongings — shipped from Europe with personal service and careful coordination, whether you are sending one item or several.',
-        image: '/images/personal-showcase-items.webp',
+        image: {src: '/images/personal-effect-shipping.webp', portrait: '/images/personal-effect-shipping-portrait.webp'},
       }}
       introduction={{
         text: 'DEExpress provides tailored shipping for the personal items you need or want to send to others. From a laptop or home appliance to clothing, luggage and boxed belongings,',
@@ -44,7 +44,7 @@ export function PersonalEffectsPage() {
       efficiency={{
         title: 'One item or several. Care at every stage.',
         text: 'Your shipment is planned around the belongings you are sending, the time you have and the destination ahead. We connect collection, storage where needed and international transport in one manageable plan.',
-        image: '/images/personal-showcase-shipping.webp',
+        image: {src: '/images/delivery-man-with-packages.webp', portrait: '/images/delivery-man-with-packages-portrait.webp'},
       }}
       scope={{
         title: 'Safe in our hands, whatever you are sending.',
@@ -66,10 +66,10 @@ export function PersonalEffectsPage() {
       journey={{
         heading: 'From your hands to theirs, carefully coordinated.',
         images: [
-          '/images/personal-showcase-items.webp',
-          '/images/personal-showcase-packing.webp',
-          '/images/personal-showcase-shipping.webp',
-          '/images/personal-showcase-arrival.webp',
+          {src: '/images/client-personal-effect-inventory.webp', portrait: '/images/client-personal-effect-inventory-portrait.webp'},
+          {src: '/images/personal-showcase-packaging.webp', portrait: '/images/personal-showcase-packaging-portrait.webp'},
+          {src: '/images/export-preparation-and-shipping.webp', portrait: '/images/export-preparation-and-shipping-portrait.webp'},
+          {src: '/images/client-received-package.webp', portrait: '/images/client-received-package-portrait.webp'},
         ],
         scenes: personalEffectsJourney,
       }}

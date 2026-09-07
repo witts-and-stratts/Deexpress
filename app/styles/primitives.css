@@ -1,4 +1,12 @@
 @layer components {
+  .responsive-image {
+    background-image: var(--desktop-image);
+  }
+  @media (orientation: portrait) {
+    .responsive-image[data-portrait-image='true'] {
+      background-image: var(--portrait-image);
+    }
+  }
   .site-container {
     @apply mx-auto w-full max-w-200 px-page;
   }

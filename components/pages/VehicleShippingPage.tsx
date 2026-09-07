@@ -28,7 +28,7 @@ export function VehicleShippingPage() {
       hero={{
         title: 'Vehicle sourcing and shipping, delivered with confidence',
         text: 'From finding your vehicle in Europe to shipping it to Africa and the Middle East — we bring purchase support, careful handling and international transport together.',
-        image: '/images/vehicle-terminal.webp',
+        image: {src: '/images/vehicle-sourcing-bmw.webp', portrait: '/images/vehicle-sourcing-bmw-portrait.webp'},
       }}
       introduction={{
         text: 'DEExpress provides tailored vehicle sourcing and shipping services for cars, trucks, buses and special equipment. Whether you are buying in Europe or shipping a vehicle you already own,',
@@ -44,7 +44,7 @@ export function VehicleShippingPage() {
       efficiency={{
         title: 'One vehicle or a fleet. One connected service.',
         text: 'From a private purchase to commercial vehicle requirements, we bring sourcing, collection and shipping into one plan — balancing the route, timing and handling needs of your vehicle.',
-        image: '/images/vehicle-roro-loading.webp',
+        image: {src: '/images/vehicle-fleet.webp', portrait: '/images/vehicle-fleet-portrait.webp'},
       }}
       scope={{
         title: 'Safe in our hands, from first search to final handover.',
@@ -66,10 +66,10 @@ export function VehicleShippingPage() {
       journey={{
         heading: 'From purchase to port. From port to you.',
         images: [
-          '/images/vehicle-showcase-sourcing.webp',
-          '/images/vehicle-showcase-export.webp',
-          '/images/vehicle-showcase-loading.webp',
-          '/images/vehicle-showcase-arrival.webp',
+          {src: '/images/vehicle-sourcing.webp', portrait: '/images/vehicle-sourcing-portrait.webp'},
+          {src: '/images/vehicle-showcase-export.webp', portrait: '/images/vehicle-showcase-export-portrait.webp'},
+          {src: '/images/vehicle-showcase-loading.webp', portrait: '/images/vehicle-showcase-loading-portrait.webp'},
+          {src: '/images/vehicle-showcase-arrival.webp', portrait: '/images/vehicle-showcase-arrival-portrait.webp'},
         ],
         scenes: vehicleJourney,
       }}

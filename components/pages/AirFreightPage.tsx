@@ -28,7 +28,7 @@ export function AirFreightPage() {
       hero={{
         title: 'Worldwide air freight, delivered with confidence',
         text: 'Time-critical air freight services from Europe to Africa and beyond – we deliver your cargo safely to its destination with speed, efficiency and care.',
-        image: '/images/air-freight-hero.webp',
+        image: {src: '/images/air-freight-hero.webp', portrait: '/images/air-freight-hero-portrait.webp'},
       }}
       introduction={{
         text: 'For time-critical and high-value shipments, we coordinate air freight from European airports to destinations across our network,',
@@ -45,11 +45,11 @@ export function AirFreightPage() {
       efficiency={{
         title: 'Speed meets cost efficiency',
         text: 'Tailor-made logistics services from Europe to Africa by road, air, water or rail – we deliver your cargo safely to its destination with efficiency and care.',
-        image: '/images/air-freight-efficiency-hero.webp',
+        image: {src: '/images/air-freight-efficiency-hero.webp', portrait: '/images/air-freight-efficiency-hero-portrait.webp'},
       }}
       scope={{
         title: 'Safe in our hands, wherever your cargo is headed.',
-        image:  '/images/airport-cargo.jpg',
+        image:  '/images/airport-cargo.webp',
         items: [
           'European airport departures to destinations in the DEexpress network',
           'Priority consignments, smaller freight and high-value cargo',
@@ -66,10 +66,10 @@ export function AirFreightPage() {
       }}
       journey={{
         images: [
-          '/images/deexpress-cargo-processor.jpg',
-          '/images/air-showcase-booking.webp',
-          '/images/air-showcase-arrival.webp',
-          '/images/air-showcase-onward.webp',
+          {src: '/images/deexpress-cargo-processor.webp', portrait: '/images/deexpress-cargo-processor-portrait.webp'},
+          {src: '/images/air-showcase-booking.webp', portrait: '/images/air-showcase-booking-portrait.webp'},
+          {src: '/images/air-showcase-arrival.webp', portrait: '/images/air-showcase-arrival-portrait.webp'},
+          {src: '/images/air-showcase-onward.webp', portrait: '/images/air-showcase-onward-portrait.webp'},
         ],
         scenes: airFreightProcess,
       }}

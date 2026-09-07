@@ -13,6 +13,13 @@ import {
 import type { ServiceStory } from '@/lib/service-content';
 import AnimatedText from './AnimatedText';
 
+export type JourneyShowcaseImage =
+  | string
+  | {
+      src: string;
+      portrait?: string;
+    };
+
 const copyVariants: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: {
@@ -44,13 +51,15 @@ function JourneyImage({
   progress,
   reduceMotion,
 }: {
-  image: string;
+  image: JourneyShowcaseImage;
   index: number;
   sceneCount: number;
   imageCount: number;
   progress: MotionValue<number>;
   reduceMotion: boolean | null;
 }) {
+  const src = typeof image === 'string' ? image : image.src;
+  const portraitImage = typeof image === 'string' ? undefined : image.portrait;
   const scrollSteps = Math.max(1, sceneCount - 1);
   const start = index === 0 ? 0 : Math.max(0, (index - 0.5) / scrollSteps);
   const end = Math.min(1, start + 0.35 / scrollSteps);
@@ -74,15 +83,20 @@ function JourneyImage({
         willChange: 'opacity, transform',
       }}
     >
-      <Image
-        src={image}
-        alt=''
-        fill
-        sizes='100vw'
-        loading='eager'
-        className='service-showcase__image'
-        style={{ opacity: 1 }}
-      />
+      <picture className='absolute inset-0'>
+        {portraitImage ? (
+          <source media='(orientation: portrait)' srcSet={portraitImage} />
+        ) : null}
+        <Image
+          src={src}
+          alt=''
+          fill
+          sizes='100vw'
+          loading='eager'
+          className='service-showcase__image'
+          style={{ opacity: 1 }}
+        />
+      </picture>
     </motion.div>
   );
 }
@@ -90,12 +104,15 @@ function JourneyImage({
 export function ServiceJourneyShowcase({
   scenes,
   images,
+  portraitImages,
   label,
   heading,
   showNumbers = true,
 }: {
   scenes: ServiceStory['scenes'];
-  images: string[];
+  images: JourneyShowcaseImage[];
+  /** Optional portrait alternatives matched to the corresponding landscape image. */
+  portraitImages?: string[];
   label: string;
   heading?: string;
   showNumbers?: boolean;
@@ -117,17 +134,30 @@ export function ServiceJourneyShowcase({
         {heading ? (
           <h2 className='service-showcase__heading'>{heading}</h2>
         ) : null}
-        {images.map((image, index) => (
-          <JourneyImage
-            key={image}
-            image={image}
-            index={index}
-            sceneCount={scenes.length}
-            imageCount={images.length}
-            progress={scrollYProgress}
-            reduceMotion={reduceMotion}
-          />
-        ))}
+        {images.map((image, index) => {
+          const portraitImage = portraitImages?.[index];
+          const responsiveImage =
+            typeof image === 'string'
+              ? portraitImage
+                ? { src: image, portraitImage }
+                : image
+              : {
+                  ...image,
+                  portraitImage: image.portrait ?? portraitImage,
+                };
+
+          return (
+            <JourneyImage
+              key={typeof image === 'string' ? image : image.src}
+              image={responsiveImage}
+              index={index}
+              sceneCount={scenes.length}
+              imageCount={images.length}
+              progress={scrollYProgress}
+              reduceMotion={reduceMotion}
+            />
+          );
+        })}
       </div>
       <div className='service-showcase__panels'>
         {scenes.map((scene, index) => (

@@ -8,12 +8,14 @@ import { QuoteInquiryForm } from '@/components/InquiryForm'
 import { useLang } from '@/lib/i18n'
 import { SITE, WHATSAPP_URL } from '@/lib/site'
 import { Eyebrow, container, section, textLink } from '@/components/ui'
+import { ResponsiveImage } from '@/components/ResponsiveImage'
 
 export function QuotePage() {
   const { t } = useLang()
   return (
     <main>
       <section className="contact-page__hero quote-page__hero" aria-labelledby="quote-title">
+        <ResponsiveImage className="absolute inset-0 bg-cover bg-center" src="/images/blue-stacked-container.webp" portraitSrc="/images/blue-stacked-container-portrait.webp" aria-hidden="true" />
         <div className="contact-page__hero-shade" />
         <div className="contact-page__hero-content">
           <h1 id="quote-title" className="text-h1 text-white md:max-w-[10ch]">{t.quote.title}</h1>

@@ -26,10 +26,13 @@ export function CommercialCargoPage() {
     <FreightServicePage
       slug='commercial-cargo'
       hero={{
-        title: 'Commercial cargo that keeps business moving',
+        title: 'Commercial cargo shipping that keeps business moving',
         text: 'Reliable freight coordination for one-off projects and recurring commercial shipments of every scale.',
-        image:
-          'https://images.unsplash.com/photo-1586528116493-a029325540fa?auto=format&fit=crop&w=1600&q=85',
+        image: {
+          src: '/images/truck-unloading-middle-commercial-dock.webp',
+          portrait:
+            '/images/truck-unloading-middle-commercial-dock-portrait.webp',
+        },
       }}
       introduction={{
         text: 'DEExpress plan commercial cargo around your goods, route and operating requirements,',
@@ -45,11 +48,14 @@ export function CommercialCargoPage() {
       efficiency={{
         title: 'Logistics designed around your cargo',
         text: 'The right solution for your shipment needs, not with a fixed route. Across road, air, sea and rail, we balance speed, cost and care to move your cargo safely from Europe to Africa.',
-        image: '/images/service-cargo.jpg',
+        image: {
+          src: '/images/multimodal-logistics.webp',
+          portrait: '/images/multimodal-logistics-portrait.webp',
+        },
       }}
       scope={{
-        title: 'A practical partner for every commercial movement.',
-        image: '/images/train.webp',
+        title: 'A practical partner for every commercial cargo movement.',
+        image: '/images/air-freight-hero.webp',
         items: [
           'Commercial goods planned around specific delivery requirements',
           'Palletised, loose, project, oversized and sensitive cargo coordination',
@@ -63,10 +69,22 @@ export function CommercialCargoPage() {
       }}
       journey={{
         images: [
-          '/images/service-cargo.jpg',
-          '/images/train.webp',
-          '/images/truck.webp',
-          '/images/service-sea.webp',
+          {
+            src: '/images/package-sorting-in-progress.webp',
+            portrait: '/images/package-sorting-in-progress-portrait.webp',
+          },
+          {
+            src: '/images/sea-and-air-transport.webp',
+            portrait: '/images/sea-and-air-transport-portrait.webp',
+          },
+          {
+            src: '/images/customs-agent-in-warehouse.webp',
+            portrait: '/images/customs-agent-in-warehouse-portrait.webp',
+          },
+          {
+            src: '/images/delivery-employee.webp',
+            portrait: '/images/delivery-employee-portrait.webp',
+          },
         ],
         heading: 'Every commercial movement, kept connected',
         scenes: commercialCargoProcess,

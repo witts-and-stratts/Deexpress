@@ -9,6 +9,7 @@ import Parallax from '@/components/Parallax';
 import { ServiceContact } from '@/components/ServiceContact';
 import { ServiceJourneyShowcase } from '@/components/ServiceJourneyShowcase';
 import { ServiceScopeList } from '@/components/ServiceScopeList';
+import { ResponsiveImage } from '@/components/ResponsiveImage';
 import { useLang } from '@/lib/i18n';
 import {
   SERVICE_EXTRA_FAQS,
@@ -45,6 +46,55 @@ const statistics = [
   { value: 75, suffix: '%', label: 'Cost reduction' },
   { value: 10, suffix: 'X', label: 'Capacity increase' },
 ];
+const freightBenefits = [
+  {
+    title: 'Cost efficiency',
+    text: 'Sea freight offers the cheapest transport solution for large quantities of goods over long distances',
+    icons: ['/images/icons/benefit-cost-efficiency.svg'],
+  },
+  {
+    title: 'Sustainability',
+    text: 'Lower CO2 emissions compared to other modes of transport make sea freight more environmentally friendly',
+    icons: [
+      '/images/icons/benefit-sustainability-a.svg',
+      '/images/icons/benefit-sustainability-b.svg',
+    ],
+  },
+  {
+    title: 'Optimized all around',
+    text: 'Our sea freight solutions combine efficiency, sustainability and global reach',
+    icons: ['/images/icons/benefit-optimized.svg'],
+  },
+  {
+    title: 'Flexibility',
+    text: 'Perfect for transporting all types of goods, from general cargo to project loads',
+    icons: [
+      '/images/icons/benefit-flexibility-a.svg',
+      '/images/icons/benefit-flexibility-b.svg',
+    ],
+  },
+  {
+    title: 'Reliability',
+    text: 'Reliable routes and regular departures guarantee predictable logistics',
+    icons: ['/images/icons/benefit-reliability.svg'],
+  },
+  {
+    title: 'Global reach',
+    text: 'Worldwide port connections and door-to-door coordination keep your cargo moving across borders',
+    icons: ['/images/icons/benefit-optimized.svg'],
+  },
+];
+
+type ResponsiveBackgroundImage = { src: string; portrait?: string };
+
+const seaFreightHeroImage: ResponsiveBackgroundImage = {
+  src: '/images/sea-shipping.webp',
+  portrait: '/images/sea-shipping-portrait.webp',
+};
+const seaFreightEfficiencyImage: ResponsiveBackgroundImage = {
+  src: '/images/shipping-containers.webp',
+  portrait: '/images/shipping-containers-portrait.webp',
+};
 
 /** Sea freight is intentionally composed here—not through a shared page template. */
 export function SeaFreightPage() {
@@ -56,11 +106,10 @@ export function SeaFreightPage() {
   return (
     <main className='air-freight-page sea-freight-page'>
       <section className='air-freight-page__hero'>
-        <div
+        <ResponsiveImage
           className='air-freight-page__hero-image'
-          style={{
-            backgroundImage: 'url(/images/sea-shipping.jpg)',
-          }}
+          src={seaFreightHeroImage.src}
+          portraitSrc={seaFreightHeroImage.portrait}
           aria-hidden='true'
         />
         <div className='air-freight-page__hero-overlay' aria-hidden='true' />
@@ -108,8 +157,10 @@ export function SeaFreightPage() {
       </section>
 
       <section className='air-freight-page__efficiency-hero'>
-        <div
-          style={{ backgroundImage: 'url(/images/shipping-containers.jpg)' }}
+        <ResponsiveImage
+          className='air-freight-page__efficiency-image'
+          src={seaFreightEfficiencyImage.src}
+          portraitSrc={seaFreightEfficiencyImage.portrait}
           aria-hidden='true'
         />
         <Parallax speed={0.2}>
@@ -127,7 +178,7 @@ export function SeaFreightPage() {
           <h2>Cost efficiency and seamless port-to-point processing</h2>
           <div className='air-freight-page__scope-image'>
             <Image
-              src='/images/shipping-containers2.jpg'
+              src='/images/shipping-containers2.webp'
               alt=''
               fill
               aria-hidden='true'
@@ -161,10 +212,10 @@ export function SeaFreightPage() {
         <ServiceJourneyShowcase
           scenes={story.scenes}
           images={[
-            '/images/blue-stacked-container.jpg',
-            '/images/port.jpg',
-            '/images/deexpress-warehouse.jpg',
-            '/images/port-call.jpg',
+            {src: '/images/blue-stacked-container.webp', portrait: '/images/extra-containers.webp'},
+            {src: '/images/port.webp', portrait: '/images/port-portrait.webp'},
+            {src: '/images/deexpress-warehouse.webp', portrait: '/images/deexpress-warehouse-portrait.webp'},
+            {src: '/images/port-call.webp', portrait: '/images/port-call-portrait.webp'},
           ]}
           label='Sea freight process'
           heading='A sea route, kept connected'
@@ -190,6 +241,27 @@ export function SeaFreightPage() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className='sea-freight-page__benefits' aria-labelledby='sea-freight-benefits-title'>
+        <Reveal>
+          <h2 id='sea-freight-benefits-title'>Benefits of ship freight with DEexpress</h2>
+        </Reveal>
+        <div className='sea-freight-page__benefit-grid'>
+          {freightBenefits.map((benefit, index) => (
+            <Reveal key={benefit.title} delay={index * 55}>
+              <article className='sea-freight-page__benefit-card'>
+                <div className={`sea-freight-page__benefit-heading sea-freight-page__benefit-heading--${index + 1}`}>
+                  <span className='sea-freight-page__benefit-icon' aria-hidden='true'>
+                    {benefit.icons.map((icon) => <img key={icon} src={icon} alt='' />)}
+                  </span>
+                  <h3>{benefit.title}</h3>
+                </div>
+                <p>{benefit.text}</p>
+              </article>
+            </Reveal>
+          ))}
         </div>
       </section>
 

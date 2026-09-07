@@ -6,6 +6,6 @@ export const metadata: Metadata = pageMetadata({
   title: 'Storage and warehousing in Berlin',
   description: 'Flexible short- and long-term storage in Berlin, connected directly to your international shipping schedule.',
   pathname: '/services/storage',
-  image: '/images/blue-stacked-container.jpg',
+  image: '/images/blue-stacked-container.webp',
 })
 export default function Page() { return <StoragePage /> }

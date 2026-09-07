@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import type { ComponentProps, ReactNode } from 'react'
 import { buttonVariants } from '@/components/ui/button'
+import { ResponsiveImage } from '@/components/ResponsiveImage'
 import { cn } from '@/lib/utils'
 
 export const container = 'site-container max-w-7xl'
@@ -51,14 +52,15 @@ export function BtnLink({
   )
 }
 
-export function PageHero({ eyebrow, title, sub, image }: { eyebrow: string; title: ReactNode; sub: string; image?: string }) {
+export function PageHero({ eyebrow, title, sub, image, portraitImage }: { eyebrow: string; title: ReactNode; sub: string; image?: string; portraitImage?: string }) {
   return (
     <section className="site-hero">
       {image ? (
-        <div
+        <ResponsiveImage
           aria-hidden
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${image})` }}
+          src={image}
+          portraitSrc={portraitImage}
         />
       ) : (
         <div

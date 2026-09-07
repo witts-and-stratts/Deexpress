@@ -40,7 +40,7 @@ const assets = {
   air: '/images/service-air.webp',
   sea: '/images/service-sea.webp',
   vehicle: '/images/service-vehicle.webp',
-  cargo: '/images/service-cargo.jpg',
+  cargo: '/images/service-cargo.webp',
   personal: '/images/service-personal.webp',
   sourcing: '/images/service-sourcing.webp',
   plane: '/images/plane.webp',

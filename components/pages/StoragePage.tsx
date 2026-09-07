@@ -24,7 +24,7 @@ export function StoragePage() {
       hero={{
         title: 'Storage that keeps your next step in sight',
         text: 'Short- and long-term storage in Berlin for personal belongings and retail goods — with careful coordination from warehouse arrival to collection or onward shipping.',
-        image: '/images/storage-showcase-warehouse.webp',
+        image: {src: '/images/storage-showcase-warehouse.webp', portrait: '/images/storage-showcase-warehouse-portrait.webp'},
       }}
       introduction={{
         text: 'DEExpress provides storage and warehousing for private and retail customers in Berlin. Whether your goods are waiting for a shipping date or need space for longer,',
@@ -40,11 +40,11 @@ export function StoragePage() {
       efficiency={{
         title: 'Space for your goods. Flexibility for your schedule.',
         text: 'Collection dates, deliveries and shipping schedules do not always align. We bring storage and onward transport into one plan, with the duration and arrangements shaped around your requirements.',
-        image: '/images/storage-showcase-dispatch.webp',
+        image: {src: '/images/storage-shipping.webp', portrait: '/images/storage-shipping-portrait.webp'},
       }}
       scope={{
         title: 'Safe in our hands, until the next handover.',
-        image: '/images/storage-showcase-receiving.webp',
+        image: '/images/cargo-warehouse.webp',
         items: [
           'Berlin-based storage for private and retail customers',
           'Short- and long-term arrangements, subject to availability',
@@ -60,11 +60,11 @@ export function StoragePage() {
       }}
       showStatistics={false}
       journey={{
-        heading: 'From goods received to ready to go.',
+        heading: 'Stored and ready to go.',
         images: [
-          '/images/storage-showcase-receiving.webp',
-          '/images/storage-showcase-warehouse.webp',
-          '/images/storage-showcase-dispatch.webp',
+          {src: '/images/package-checks.webp', portrait: '/images/package-checks-portrait.webp'},
+          {src: '/images/package-on-conveyor-belts.webp', portrait: '/images/package-on-conveyor-belts-portrait.webp'},
+          {src: '/images/cargo-transport.webp', portrait: '/images/cargo-transport-portrait.webp'},
         ],
         scenes: storageJourney,
       }}

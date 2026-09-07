@@ -7,7 +7,12 @@
   }
   .air-freight-page__hero-image {
     @apply absolute inset-0 -z-20 bg-cover bg-position-[58%_center] md:bg-center;
-    background-image: url('/images/air-freight-hero.webp');
+    background-image: var(--desktop-image, url('/images/air-freight-hero.webp'));
+  }
+  @media (orientation: portrait) {
+    .air-freight-page__hero-image[data-portrait-image='true'] {
+      background-image: var(--portrait-image);
+    }
   }
   .air-freight-page__hero-overlay {
     @apply absolute inset-0 -z-10 bg-[linear-gradient(0deg,rgba(12,16,27,.72),rgba(12,16,27,.05)_56%)];
@@ -54,9 +59,14 @@
   .air-freight-page__efficiency-hero {
     @apply relative isolate flex min-h-screen items-end overflow-hidden px-page py-[clamp(2.5rem,6vw,5rem)] text-white;
   }
-  .air-freight-page__efficiency-hero > div:first-child {
+  .air-freight-page__efficiency-image {
     @apply absolute inset-0 -z-20 bg-cover bg-center;
-    background-image: url('/images/air-freight-efficiency-hero.webp');
+    background-image: var(--desktop-image, url('/images/air-freight-efficiency-hero.webp'));
+  }
+  @media (orientation: portrait) {
+    .air-freight-page__efficiency-image[data-portrait-image='true'] {
+      background-image: var(--portrait-image);
+    }
   }
   .air-freight-page__efficiency-hero::after {
     @apply absolute inset-0 -z-10 bg-[linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,.05)_62%)];
@@ -126,6 +136,120 @@
   }
   .air-freight-page__work-cards p {
     @apply mt-3 text-[.95rem] leading-relaxed text-editorial-muted;
+  }
+  .sea-freight-page__benefits {
+    @apply bg-surface-accent/15 px-page py-section;
+  }
+  /* .sea-freight-page__benefits > .motion-reveal {
+    @apply max-w-142.75;
+  } */
+  .sea-freight-page__benefits h2 {
+    @apply text-h2 text-editorial-accent;
+  }
+  .sea-freight-page__benefit-grid {
+    @apply mt-page grid grid-cols-2 overflow-hidden border border-border bg-white md:grid-cols-3 lg:grid-cols-4;
+  }
+  .sea-freight-page__benefit-grid > .motion-reveal {
+    @apply h-full border-b border-r border-[#e3e3e3];
+  }
+  .sea-freight-page__benefit-grid > .motion-reveal:nth-child(2n) { border-right: 0; }
+  .sea-freight-page__benefit-grid > .motion-reveal:nth-last-child(-n + 2) { border-bottom: 0; }
+  .sea-freight-page__benefit-card {
+    @apply flex min-h-50 h-full flex-col gap-5 bg-white p-5;
+  }
+  @media (min-width: 768px) {
+    .sea-freight-page__benefit-grid > .motion-reveal:nth-child(2n) { border-right: 1px solid #e3e3e3; }
+    .sea-freight-page__benefit-grid > .motion-reveal:nth-child(3n) { border-right: 0; }
+    .sea-freight-page__benefit-grid > .motion-reveal:nth-last-child(-n + 3) { border-bottom: 0; }
+  }
+  @media (min-width: 1024px) {
+    .sea-freight-page__benefit-grid > .motion-reveal:nth-child(3n) { border-right: 1px solid #e3e3e3; }
+    .sea-freight-page__benefit-grid > .motion-reveal:nth-child(4n) { border-right: 0; }
+    .sea-freight-page__benefit-grid > .motion-reveal:nth-last-child(-n + 2) { border-bottom: 0; }
+    .sea-freight-page__benefit-grid > .motion-reveal:nth-child(4) .sea-freight-page__benefit-card {
+      box-shadow: inset 0 -1px 0 #e3e3e3;
+    }
+  }
+  .sea-freight-page__benefit-heading {
+    @apply flex items-center gap-2.5;
+  }
+  .sea-freight-page__benefit-icon {
+    @apply relative block size-10 shrink-0;
+  }
+  .sea-freight-page__benefit-icon img {
+    @apply absolute block;
+  }
+  .sea-freight-page__benefit-heading--1 img {
+    @apply left-[6.67px] top-[6.76px] h-[26.61px] w-[26.12px];
+  }
+  .sea-freight-page__benefit-heading--2 img:first-child {
+    @apply left-[15px] top-[3.33px] h-[14.97px] w-[13.3px];
+  }
+  .sea-freight-page__benefit-heading--2 img:last-child {
+    @apply left-[6.11px] top-[18.07px] h-[15.11px] w-[27.97px];
+  }
+  .sea-freight-page__benefit-heading--3 img {
+    @apply left-[5px] top-[4.58px] size-[29.93px];
+  }
+  .sea-freight-page__benefit-heading--4 img:first-child {
+    @apply left-[15.83px] top-[17.19px] h-[12.24px] w-[19.95px];
+  }
+  .sea-freight-page__benefit-heading--4 img:last-child {
+    @apply left-[4.17px] top-[10.53px] h-[12.24px] w-[19.95px];
+  }
+  .sea-freight-page__benefit-heading--5 img {
+    @apply left-[10.34px] top-[12.01px] h-[15.45px] w-[20.93px];
+  }
+  .sea-freight-page__benefit-card h3 {
+    @apply text-[21px] leading-[1.15] font-normal tracking-[-.01em] text-editorial-accent;
+  }
+  .sea-freight-page__benefit-card p {
+    @apply max-w-[268px] text-[16px] leading-[1.375] tracking-[-.0125em] text-[#030000];
+  }
+  .service-benefits {
+    @apply bg-[#aaa8c4]/15 px-page py-section;
+  }
+  .service-benefits > .motion-reveal {
+    @apply max-w-[36rem];
+  }
+  .service-benefits h2 {
+    @apply text-h2 text-editorial-accent;
+  }
+  .service-benefits__grid {
+    @apply mt-12 grid grid-cols-2 overflow-hidden border border-[#e3e3e3] bg-white md:grid-cols-3 lg:grid-cols-4;
+  }
+  .service-benefits__item {
+    @apply h-full border-b border-r border-[#e3e3e3];
+  }
+  .service-benefits__item:nth-child(2n) { border-right: 0; }
+  .service-benefits__item:nth-last-child(-n + 2) { border-bottom: 0; }
+  .service-benefits__card {
+    @apply flex min-h-50 h-full flex-col gap-5 bg-white p-5;
+  }
+  .service-benefits__heading {
+    @apply flex items-center gap-2.5 text-editorial-accent;
+  }
+  .service-benefits__heading > svg { @apply size-10 shrink-0; }
+  .service-benefits__heading h3 {
+    @apply text-[21px] leading-[1.15] font-normal tracking-[-.01em];
+  }
+  .service-benefits__card p {
+    @apply max-w-[268px] text-[16px] leading-[1.375] tracking-[-.0125em] text-[#030000];
+  }
+  @media (min-width: 768px) {
+    .service-benefits__item:nth-child(2n) { border-right: 1px solid #e3e3e3; }
+    .service-benefits__item:nth-child(3n) { border-right: 0; }
+    .service-benefits__item:nth-last-child(-n + 3) { border-bottom: 0; }
+  }
+  @media (min-width: 1024px) {
+    .service-benefits__item:nth-child(3n) { border-right: 1px solid #e3e3e3; }
+    .service-benefits__item:nth-child(4n) { border-right: 0; }
+    .service-benefits__item:nth-last-child(-n + 2) { border-bottom: 0; }
+  }
+  @media (min-width: 1024px) {
+    .sea-freight-page__benefit-card {
+      @apply min-h-[200px];
+    }
   }
   .air-freight-page__process {
     @apply relative bg-editorial-ink;

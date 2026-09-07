@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { InquiryForm } from '@/components/InquiryForm';
+import { ResponsiveImage } from '@/components/ResponsiveImage';
 import { SITE, WHATSAPP_URL } from '@/lib/site';
 import { HomeFooter, HomeHeader } from '@/components/pages/HomePage';
 
@@ -53,6 +54,7 @@ export function ContactPage() {
   return (
     <main className='contact-page'>
       <section className='contact-page__hero' aria-labelledby='contact-title'>
+        <ResponsiveImage className='absolute inset-0 bg-cover bg-center' src='/images/contact-figma/hero.webp' aria-hidden='true' />
         <HomeHeader />
         <div className='contact-page__hero-shade' />
         <div className='contact-page__hero-content'>

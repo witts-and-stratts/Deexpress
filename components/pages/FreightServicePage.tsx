@@ -7,8 +7,13 @@ import { Counter } from '@/components/Counter';
 import { Reveal } from '@/components/motion/Motion';
 import Parallax from '@/components/Parallax';
 import { ServiceContact } from '@/components/ServiceContact';
-import { ServiceJourneyShowcase } from '@/components/ServiceJourneyShowcase';
+import {
+  ServiceJourneyShowcase,
+  type JourneyShowcaseImage,
+} from '@/components/ServiceJourneyShowcase';
 import { ServiceScopeList } from '@/components/ServiceScopeList';
+import { ServiceBenefits } from '@/components/ServiceBenefits';
+import { ResponsiveImage } from '@/components/ResponsiveImage';
 import { useLang } from '@/lib/i18n';
 import {
   SERVICE_EXTRA_FAQS,
@@ -17,16 +22,30 @@ import {
 } from '@/lib/service-content';
 import type { ServiceSlug } from '@/lib/site';
 
+type ResponsiveBackgroundImage =
+  | string
+  | { src: string; portrait?: string };
+
 type ServicePageProps = {
   slug: ServiceSlug;
-  hero: { title: string; text: string; image: string };
+  hero: {
+    title: string;
+    text: string;
+    image: ResponsiveBackgroundImage;
+    portraitImage?: string;
+  };
   introduction: { text: string; accent: string };
   capabilityLabel: string;
   capabilities: string[];
-  efficiency: { title: string; text: string; image: string };
+  efficiency: {
+    title: string;
+    text: string;
+    image: ResponsiveBackgroundImage;
+  };
   scope: { title: string; image: string; items: string[] };
   journey: {
-    images: string[];
+    images: JourneyShowcaseImage[];
+    portraitImages?: string[];
     heading?: string;
     scenes?: { title: string; text: string }[];
   };
@@ -80,12 +99,23 @@ export function FreightServicePage({
     ...SERVICE_EXTRA_FAQS[lang][slug],
   ];
 
+  const heroImage = typeof hero.image === 'string' ? hero.image : hero.image.src;
+  const heroPortraitImage =
+    typeof hero.image === 'object'
+      ? hero.image.portrait ?? hero.portraitImage
+      : hero.portraitImage;
+  const efficiencyImage =
+    typeof efficiency.image === 'string' ? efficiency.image : efficiency.image.src;
+  const efficiencyPortraitImage =
+    typeof efficiency.image === 'object' ? efficiency.image.portrait : undefined;
+
   return (
     <main className='air-freight-page'>
       <section className='air-freight-page__hero'>
-        <div
+        <ResponsiveImage
           className='air-freight-page__hero-image'
-          style={{ backgroundImage: `url(${hero.image})` }}
+          src={heroImage}
+          portraitSrc={heroPortraitImage}
           aria-hidden='true'
         />
         <div className='air-freight-page__hero-overlay' aria-hidden='true' />
@@ -117,6 +147,7 @@ export function FreightServicePage({
               key={capability}
               className='col-span-12 sm:col-span-6 lg:col-span-3'
             >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={capabilityIcons[index]} alt='' aria-hidden='true' />
               <p>{capability}</p>
             </div>
@@ -125,8 +156,10 @@ export function FreightServicePage({
       </section>
 
       <section className='air-freight-page__efficiency-hero'>
-        <div
-          style={{ backgroundImage: `url(${efficiency.image})` }}
+        <ResponsiveImage
+          className='air-freight-page__efficiency-image'
+          src={efficiencyImage}
+          portraitSrc={efficiencyPortraitImage}
           aria-hidden='true'
         />
         <Parallax speed={0.2}>
@@ -171,6 +204,7 @@ export function FreightServicePage({
         <ServiceJourneyShowcase
           scenes={journey.scenes ?? story.scenes}
           images={journey.images}
+          portraitImages={journey.portraitImages}
           label={`${hero.title} process`}
           heading={journey.heading ?? 'Quick professional process'}
           showNumbers={false}
@@ -183,11 +217,7 @@ export function FreightServicePage({
             <h2>{work?.title ?? 'We handle the work that matters the most'}</h2>
           </Reveal>
           <div className='air-freight-page__work-cards col-span-12 grid grid-cols-12'>
-            {(
-              work?.items ?? [
-                ...proof.benefits,
-              ]
-            ).map((item) => (
+            {(work?.items ?? [...proof.benefits]).map((item) => (
               <article
                 key={item.title}
                 className='col-span-12 sm:col-span-6 lg:col-span-3'
@@ -199,6 +229,8 @@ export function FreightServicePage({
           </div>
         </div>
       </section>
+
+      <ServiceBenefits service={slug} />
 
       <section className='air-freight-page__answers grid grid-cols-12'>
         <Reveal className='col-span-12 lg:col-span-5'>

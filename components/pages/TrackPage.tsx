@@ -6,6 +6,7 @@ import { ArrowUpRight } from 'lucide-react'
 import { Reveal } from '@/components/Reveal'
 import { TrackingWidget } from '@/components/TrackingWidget'
 import { useLang } from '@/lib/i18n'
+import { ResponsiveImage } from '@/components/ResponsiveImage'
 
 export function TrackPage() {
   const { t } = useLang()
@@ -15,6 +16,7 @@ export function TrackPage() {
   return (
     <main className="tracking-page">
       <section className="contact-page__hero track-page__hero" aria-labelledby="tracking-title">
+        <ResponsiveImage className="absolute inset-0 bg-cover bg-center" src="/images/transport-logistics-products.webp" aria-hidden="true" />
         <div className="contact-page__hero-shade" />
         <div className="contact-page__hero-content">
           <h1 id="tracking-title" className="text-h1 text-white">{t.track.title}</h1>
