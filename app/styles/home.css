@@ -37,10 +37,10 @@
     @apply relative isolate z-0 bg-black;
   }
   .home-service-showcase .service-showcase__panels {
-    @apply mt-[-100svh];
+    @apply mt-[-100lvh];
   }
   .service-showcase__visual {
-    @apply sticky top-0 z-0 h-svh overflow-hidden bg-editorial-ink;
+    @apply sticky top-0 z-0 h-lvh overflow-hidden bg-editorial-ink;
   }
   .service-showcase__visual::after {
     @apply absolute inset-0 bg-black/40 content-[''];
