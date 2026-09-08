@@ -26,7 +26,7 @@ export function DestinationsPage() {
   return (
     <main>
       <GlobalCoverage
-        subtitle={t.destinations.title}
+        subtitle='One network. 26 destinations.'
         searchable
         className='coverage--destinations'
       />
@@ -76,13 +76,13 @@ export function DestinationsPage() {
       </section> */}
 
       <section className='tracking-page__support mt-10'>
-        <p className='text-h3 text-white'>{t.track.supportTitle}</p>
+        <p className='text-h3 text-white'>Need help with a shipment?</p>
         <div className='tracking-page__support-actions'>
           <Link href='/contact'>
-            {t.track.supportContact} <ArrowUpRight size={18} aria-hidden='true' />
+            Contact our team <ArrowUpRight size={18} aria-hidden='true' />
           </Link>
           <Link href='/quote'>
-            {t.track.supportQuote} <ArrowUpRight size={18} aria-hidden='true' />
+            Request a quote <ArrowUpRight size={18} aria-hidden='true' />
           </Link>
         </div>
       </section>

@@ -13,23 +13,51 @@ import { InquiryForm } from '@/components/InquiryForm';
 import { EditorialHero } from '@/components/pages/EditorialPage';
 import { SITE, WHATSAPP_URL } from '@/lib/site';
 import { HomeFooter, HomeHeader } from '@/components/pages/HomePage';
-import { useLang } from '@/lib/i18n';
+
+const contactOptions: {
+  title: string;
+  value: string;
+  href?: string;
+  icon: LucideIcon;
+  imageIcon?: string;
+}[] = [
+  {
+    title: 'Hotline for shipment, tracking and other urgent information',
+    value: '+49 (0)152 29939834',
+    href: 'tel:+4915229939834',
+    icon: Phone,
+    imageIcon: '/images/icons/contact-phone.svg',
+  },
+  {
+    title: 'Partnerships, vehicle procurement and sourcing',
+    value: '+49 (0)176 87132767',
+    href: 'tel:+4917687132767',
+    icon: Handshake,
+    imageIcon: '/images/icons/contact-phone.svg',
+  },
+  {
+    title: 'Instant customer support via call or WhatsApp message',
+    value: '+49 (0)152 29939834',
+    href: WHATSAPP_URL,
+    icon: MessageCircle,
+    imageIcon: '/images/icons/contact-whatsapp.svg',
+  },
+  {
+    title: 'Office hours',
+    value: 'Mon – Fri · 9:00 – 17:00',
+    icon: Clock3,
+    imageIcon: '/images/icons/contact-hours.svg',
+  },
+];
 
 export function ContactPage() {
-  const { t } = useLang();
-  const contactOptions: { title: string; value: string; href?: string; icon: LucideIcon; imageIcon?: string }[] = [
-    { title: t.contact.page.options[0], value: '+49 (0)152 29939834', href: 'tel:+4915229939834', icon: Phone, imageIcon: '/images/icons/contact-phone.svg' },
-    { title: t.contact.page.options[1], value: '+49 (0)176 87132767', href: 'tel:+4917687132767', icon: Handshake, imageIcon: '/images/icons/contact-phone.svg' },
-    { title: t.contact.page.options[2], value: '+49 (0)152 29939834', href: WHATSAPP_URL, icon: MessageCircle, imageIcon: '/images/icons/contact-whatsapp.svg' },
-    { title: t.contact.page.options[3], value: 'Mon – Fri · 9:00 – 17:00', icon: Clock3, imageIcon: '/images/icons/contact-hours.svg' },
-  ];
   return (
     <main className='contact-page'>
       <EditorialHero
         headingId='contact-title'
-        title={t.contact.page.heroTitle}
-        intro={t.contact.page.heroIntro}
-        image='/images/contact-figma/hero.webp'
+        title='Talk to us'
+        intro='Whether you need a custom freight quote, shipment updates, or want to discuss a partnership—our teams in Berlin and across Africa are here to assist.'
+        image='/images/contact/hero.webp'
         header={<HomeHeader />}
       />
 
@@ -39,18 +67,20 @@ export function ContactPage() {
       >
         <div className='contact-page__options-intro pb-40'>
           <h2 id='contact-options-title' className='text-h3'>
-            {t.contact.page.optionsTitle}
+            Contact Options
           </h2>
-          <p className='site-lead'>{t.contact.page.shippingRequestTitle}</p>
+          <p className='site-lead'>Shipping Request</p>
           <div>
             <span>
-              {t.contact.page.shippingRequestText}
+              For shipping request, please use our special shipping request
+              form. This gives us all the necessary details to offer you a
+              tailor-made solution.
             </span>
             <Link
               href='/quote'
               className='flex gap-2 text-editorial-accent mt-8'
             >
-              {t.contact.page.shippingRequestLink}{' '}
+              Shipping request form{' '}
               <ArrowUpRight size={18} aria-hidden='true' className='mt-1' />
             </Link>
           </div>
@@ -102,12 +132,17 @@ export function ContactPage() {
       >
         <div className='contact-page__form-copy'>
           <h2 id='contact-form-title' className='text-h2'>
-            {t.contact.page.businessTitle}
+            How can we assist your business?
           </h2>
           <p>
-            {t.contact.page.businessText} <strong>{t.contact.page.businessEmphasis}</strong>
+            Tell us what you need and we’ll get back to you with a tailored
+            solution.{' '}
+            <strong>
+              Whether you need a freight quote, shipment updates, or want to
+              discuss a partnership — our team is here to help.
+            </strong>
           </p>
-          <p>{t.contact.page.responseTime}</p>
+          <p>We typically respond within 2 business hours.</p>
         </div>
         <div className='contact-page__form'>
           <InquiryForm kind='contact' />
@@ -120,7 +155,7 @@ export function ContactPage() {
       >
         <div>
           <h2 id='find-us-title' className='text-h3'>
-            {t.contact.page.locationTitle}
+            Find us in Berlin
           </h2>
           <address>
             {SITE.legalName}
@@ -133,7 +168,7 @@ export function ContactPage() {
         <div
           className='contact-page__map'
           role='img'
-          aria-label={t.contact.page.mapLabel}
+          aria-label='Map showing the Berlin office location'
         />
       </section>
       <HomeFooter />

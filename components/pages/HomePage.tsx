@@ -99,8 +99,59 @@ const assets = {
   regionsIcon: '/images/icons/regions.svg',
 };
 
+const preferenceStats = [
+  {
+    value: '26+',
+    label: 'Destinations across Africa & the Middle East',
+    icon: assets.globeIcon,
+  },
+  {
+    value: '4',
+    label: 'Multi-modal shipping methods',
+    icon: assets.multimodalIcon,
+  },
+  {
+    value: '3',
+    label: 'Regions served',
+    icon: assets.regionsIcon,
+  },
+] as const;
+
+const services = [
+  [
+    'Air freight',
+    assets.responsiveImages.air,
+    'Time-sensitive shipments, coordinated from collection to arrival.',
+  ],
+  [
+    'Sea freight',
+    assets.responsiveImages.sea,
+    'Cost-effective ocean freight for larger loads and long-distance routes.',
+  ],
+  [
+    'Vehicle sourcing & shipping',
+    assets.responsiveImages.vehicle,
+    'From finding a vehicle in Europe to international shipping, coordinated through one team.',
+  ],
+  [
+    'Commercial cargo',
+    assets.responsiveImages.cargo,
+    'Freight planned around your business requirements and destination.',
+  ],
+  [
+    'Personal effects shipping',
+    assets.responsiveImages.personal,
+    'Careful coordination for the belongings that move with you.',
+  ],
+  [
+    'Storage & warehousing',
+    assets.responsiveImages.storage,
+    'Secure storage connected to the next stage of your shipment.',
+  ],
+] as const;
+
 function LanguageSelector({ footer = false }: { footer?: boolean }) {
-  const { lang, setLang, t } = useLang();
+  const { lang, setLang } = useLang();
   const language = lang.toUpperCase();
   const flag = lang === 'de' ? '/flags/de.svg' : '/flags/gb.svg';
   const selectLanguage = (value: Lang) => setLang(value);
@@ -109,7 +160,7 @@ function LanguageSelector({ footer = false }: { footer?: boolean }) {
     <DropdownMenu>
       <DropdownMenuTrigger
         className={footer ? 'site-footer__language' : 'site-nav__language'}
-        aria-label={t.nav.languageSelector}
+        aria-label='Choose language'
       >
         <Image src={flag} alt='' width={20} height={20} />{' '}
         <span>{language}</span> <ChevronDown size={12} aria-hidden='true' />
@@ -133,7 +184,6 @@ function LanguageSelector({ footer = false }: { footer?: boolean }) {
 }
 
 export function HomeHeader() {
-  const { t } = useLang();
   const [open, setOpen] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
   const pathname = usePathname();
@@ -221,7 +271,7 @@ export function HomeHeader() {
         ref={headerRef}
         className={`site-nav${open ? ' site-nav--open' : ''}`}
       >
-        <Link className='site-nav__brand' href='/' aria-label={t.nav.brandHome}>
+        <Link className='site-nav__brand' href='/' aria-label='DEexpress home'>
           <Image
             src={assets.responsiveImages.logo}
             alt='DEexpress'
@@ -235,7 +285,7 @@ export function HomeHeader() {
           onClick={() => setOpen(!open)}
           aria-expanded={open}
           aria-controls='home-navigation'
-          aria-label={open ? t.nav.closeNavigation : t.nav.openNavigation}
+          aria-label={open ? 'Close navigation' : 'Open navigation'}
         >
           <motion.span
             className='site-nav__toggle-line'
@@ -258,19 +308,19 @@ export function HomeHeader() {
         <nav className='site-nav__links' id='home-navigation'>
           <div className='site-nav__menu-links'>
             <Link href='/about' onClick={() => setOpen(false)}>
-              {t.nav.about}
+              About
             </Link>
             <Link href='/services' onClick={() => setOpen(false)}>
-              {t.nav.services}
+              Services
             </Link>
             <Link href='/track' onClick={() => setOpen(false)}>
-              {t.nav.track}
+              Track
             </Link>
             <Link href='/destinations' onClick={() => setOpen(false)}>
-              {t.nav.destinations}
+              Destinations
             </Link>
             <Link href='/contact' onClick={() => setOpen(false)}>
-              {t.nav.contact}
+              Contact
             </Link>
           </div>
           <div className='site-nav__bottom-actions'>
@@ -283,7 +333,7 @@ export function HomeHeader() {
               )}
               onClick={() => setOpen(false)}
             >
-              {t.common.getQuote}
+              Get a quote
             </Link>
           </div>
         </nav>
@@ -295,7 +345,7 @@ export function HomeHeader() {
           <motion.nav
             className='site-nav-mobile md:hidden'
             id='home-navigation-mobile'
-            aria-label={t.nav.mobileNavigation}
+            aria-label='Mobile navigation'
             initial={{ opacity: 0, y: -16, scale: 0.98 }}
             animate={{
               opacity: 1,
@@ -330,11 +380,11 @@ export function HomeHeader() {
               }}
             >
               {[
-                { href: '/about', label: t.nav.about },
-                { href: '/services', label: t.nav.services },
-                { href: '/track', label: t.nav.track },
-                { href: '/destinations', label: t.nav.destinations },
-                { href: '/contact', label: t.nav.contact },
+                { href: '/about', label: 'About' },
+                { href: '/services', label: 'Services' },
+                { href: '/track', label: 'Track' },
+                { href: '/destinations', label: 'Destinations' },
+                { href: '/contact', label: 'Contact' },
               ].map((item) => (
                 <MotionLink
                   key={item.href}
@@ -395,7 +445,7 @@ export function HomeHeader() {
                 })}
                 onClick={() => setOpen(false)}
               >
-                {t.common.getQuote}
+                Get a quote
               </Link>
             </motion.div>
           </motion.nav>
@@ -556,23 +606,6 @@ function ShowcaseImage({
 }
 
 function ServiceGrid() {
-  const { lang, t } = useLang();
-  const services = [
-    ['air-freight', assets.responsiveImages.air],
-    ['sea-freight', assets.responsiveImages.sea],
-    ['vehicle-shipping', assets.responsiveImages.vehicle],
-    ['commercial-cargo', assets.responsiveImages.cargo],
-    ['personal-effects', assets.responsiveImages.personal],
-    ['storage', assets.responsiveImages.storage],
-  ] as const;
-  const originalEnglishCards = [
-    ['Air freight', 'Time-sensitive shipments, coordinated from collection to arrival.'],
-    ['Sea freight', 'Cost-effective ocean freight for larger loads and long-distance routes.'],
-    ['Vehicle sourcing & shipping', 'From finding a vehicle in Europe to international shipping, coordinated through one team.'],
-    ['Commercial cargo', 'Freight planned around your business requirements and destination.'],
-    ['Personal effects shipping', 'Careful coordination for the belongings that move with you.'],
-    ['Storage & warehousing', 'Secure storage connected to the next stage of your shipment.'],
-  ] as const;
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const reduceMotion = useReducedMotion();
   const { scrollYProgress } = useScroll({
@@ -589,8 +622,8 @@ function ServiceGrid() {
     <div className='service-showcase home-service-showcase' ref={sectionRef}>
       <div className='service-showcase__visual'>
         <h2 className='service-showcase__heading text-h4'>
-          <span>{lang === 'en' ? 'One system.' : t.services.title}</span>
-          <span className='opacity-70 g'> {lang === 'en' ? 'Multiple effects' : t.services.intro}</span>
+          <span>Global shipping.</span>
+          <span className='opacity-70 g'> For every cargo</span>
         </h2>
         {services.map(([, image], index) => (
           <ShowcaseImage
@@ -604,12 +637,8 @@ function ServiceGrid() {
         ))}
       </div>
       <div className='service-showcase__panels'>
-        {services.map(([slug], index) => {
-          const [title, summary] = lang === 'en'
-            ? originalEnglishCards[index]
-            : [t.services.details[slug].title, t.services.details[slug].summary]
-          return (
-          <section key={slug} className='service-showcase__panel'>
+        {services.map(([title, , description]) => (
+          <section key={title} className='service-showcase__panel'>
             <Link href='/services' className='service-showcase__copy'>
               <AnimatedText
                 trigger='inView'
@@ -634,7 +663,7 @@ function ServiceGrid() {
                 }}
               >
                 <span className='service-showcase__description'>
-                  {summary}
+                  {description}
                 </span>
               </AnimatedText>
               <AnimatedText
@@ -645,26 +674,24 @@ function ServiceGrid() {
                 className='flex w-full'
               >
                 <span className='service-showcase__link gap-2'>
-                  {lang === 'en' ? 'Explore' : t.common.learnMore}
+                  Explore
                   <AnimatedExploreIcon />
                 </span>
               </AnimatedText>
             </Link>
           </section>
-          )
-        })}
+        ))}
       </div>
     </div>
   );
 }
 
 function TransportRow() {
-  const { lang, t } = useLang();
   const modes = [
-    [lang === 'en' ? 'Airplane' : t.services.details['air-freight'].title, assets.plane],
-    [lang === 'en' ? 'Ship' : t.services.details['sea-freight'].title, assets.ship],
-    [lang === 'en' ? 'Train' : t.services.details['commercial-cargo'].title, assets.train],
-    [lang === 'en' ? 'Truck' : t.services.details.storage.title, assets.truck],
+    ['Airplane', assets.plane],
+    ['Ship', assets.ship],
+    ['Train', assets.train],
+    ['Truck', assets.truck],
   ] as const;
   return (
     <div className='preference__transport'>
@@ -678,11 +705,16 @@ function TransportRow() {
   );
 }
 
+const testimonial = {
+  quote:
+    '"DEexpress transformed our supply chain. Their real-time tracking and dedicated team reduced our transit times by 40% on the Berlin-Lagos corridor."',
+  name: 'Marcus Weber',
+  role: 'Head of Logistics, AutoTech GmbH',
+};
+
 type SplideHandle = { splide: { go: (control: string | number) => void } };
 
 function TestimonialCarousel() {
-  const { t } = useLang();
-  const testimonial = t.home.testimonial;
   const [activeSlide, setActiveSlide] = useState(0);
   const splideRef = useRef<SplideHandle | null>(null);
 
@@ -702,12 +734,12 @@ function TestimonialCarousel() {
           speed: 600,
         }}
         onMoved={(_, nextIndex) => setActiveSlide(nextIndex)}
-        aria-label={testimonial.carouselLabel}
+        aria-label='Customer testimonials'
       >
         <SplideTrack>
           {[testimonial, testimonial, testimonial].map((item, index) => (
             <SplideSlide key={index}>
-              <span className='section-label'>{testimonial.sectionLabel}</span>
+              <span className='section-label'>Testimonials</span>
               <blockquote>{item.quote}</blockquote>
               <div className='testimonials__author'>
                 <strong>{item.name}</strong>
@@ -723,7 +755,7 @@ function TestimonialCarousel() {
               size='icon'
               type='button'
               onClick={() => splideRef.current?.splide.go('<')}
-              aria-label={testimonial.previous}
+              aria-label='Previous testimonial'
               className='rounded-full bg-white'
             >
               <ArrowLeft strokeWidth={1} />
@@ -733,7 +765,7 @@ function TestimonialCarousel() {
               size='icon'
               type='button'
               onClick={() => splideRef.current?.splide.go('>')}
-              aria-label={testimonial.next}
+              aria-label='Next testimonial'
               className='rounded-full bg-white'
             >
               <ArrowRight strokeWidth={1} />
@@ -761,7 +793,6 @@ function TestimonialCarousel() {
 }
 
 export function HomePage() {
-  const { t } = useLang();
   return (
     <main className='home-page'>
       <section className='home-page__hero'>
@@ -775,14 +806,16 @@ export function HomePage() {
         <div className='home-page__hero-copy'>
           <Reveal delay={80}>
             <h1 className='text-h1 text-white'>
-              {t.home.heroTitle1}
+              Move what matters
               <br />
-              {t.home.heroTitle2}
+              with confidence
             </h1>
           </Reveal>
           <Reveal delay={220}>
             <p className='site-lead text-white'>
-              {t.home.heroSub}
+              Tailor-made logistics services from Europe to Africa by road, air,
+              water or rail – we deliver your cargo safely to its destination
+              with efficiency and care
             </p>
           </Reveal>
         </div>
@@ -796,10 +829,12 @@ export function HomePage() {
           className='text-h3 max-w-[52ch]'
         >
           <strong>
-            {t.home.introP1}
+            DEExpress coordinates air, sea and vehicle shipping from Europe to
+            destinations across 26 African countries and the Middle East —
           </strong>{' '}
           <span className='text-gray-500'>
-            {t.home.introP2}
+            helping individuals and businesses move internationally with greater
+            clarity and control.
           </span>
         </AnimatedText>
       </section>
@@ -809,15 +844,16 @@ export function HomePage() {
       </section>
 
       <section className='preference'>
-        <h2 className='text-h2 text-editorial-accent'>{t.home.preference.title}</h2>
+        <h2 className='text-h2 text-editorial-accent'>Ship your preference</h2>
         <p className='site-body'>
-          {t.home.preference.text}
+          From origin to destination, we follow your preference in means, cost
+          and handling.
         </p>
         <TransportRow />
-        <ul className='preference__stats' aria-label={t.home.preference.statsLabel}>
-          {t.home.preference.stats.map(({ value, label }, index) => (
+        <ul className='preference__stats' aria-label='DEExpress coverage at a glance'>
+          {preferenceStats.map(({ value, label, icon }, index) => (
             <li className='preference__stat' key={label}>
-              <Image src={[assets.globeIcon, assets.multimodalIcon, assets.regionsIcon][index]} alt='' width={ 200 } height={ 100 } className={ index === 0 ? 'h-12 mt-0': '' } />
+              <Image src={ icon } alt='' width={ 200 } height={ 100 } className={ index === 0 ? 'h-12 mt-0': '' } />
               <strong>{value}</strong>
               <span>{label}</span>
             </li>
@@ -829,10 +865,27 @@ export function HomePage() {
 
       <section className='trust'>
         <h2 className='text-h2 text-editorial-accent'>
-          {t.home.whyTitle}
+          Built on speed, transparency and trust.
         </h2>
         <div className='trust__grid trust__grid--principles'>
-          {t.home.why.map(({ title, text: copy }) => (
+          {[
+            [
+              'Speed',
+              'We are fast and effective — from the first inquiry to the final delivery of your cargo.',
+            ],
+            [
+              'Tracking',
+              'Up-to-date status details for your customers, from the point of shipment until arrival.',
+            ],
+            [
+              'Flexible payment',
+              'Payment should not be a barrier. Contact us — we will find an option that works for you.',
+            ],
+            [
+              'Service',
+              'A customer service team that is ready to assist quickly, in English, German or French.',
+            ],
+          ].map(([title, copy]) => (
             <div className='trust__item' key={title}>
               <strong className='text-card-title'>{title}</strong>
               <span className='site-body mt-4 max-w-[32ch] leading-[1.375]'>
@@ -843,10 +896,10 @@ export function HomePage() {
         </div>
         <div className='trust__grid trust__grid--metrics'>
           {[
-            ['10M+', 'Interactions / month'],
-            ['70%+', 'Autonomous resolution'],
+            ['10M+', 'Total packages shipped'],
+            ['<2 Hr', 'Time to issue resolution'],
             ['75%', 'Cost reduction'],
-            ['10X', 'Capacity increase'],
+            ['67', 'Port deliveries per month'],
           ].map(([value, label]) => (
             <div className='trust__item' key={label}>
               <strong className='text-metric'>{value}</strong>
@@ -864,15 +917,35 @@ export function HomePage() {
 
       <section className='industries'>
         <h2 className='text-h2 text-editorial-accent'>
-          {t.home.industriesTitle}
+          Trusted across industries
         </h2>
         <p className='site-body'>
-          {t.home.industriesSub}
+          Different cargo, different requirements — the same dependable
+          handling.
         </p>
         <div className='industries__grid'>
-          {[assets.industry1, assets.industry2, assets.industry3, assets.industry4].map((image, index) => {
-            const { title, text: copy } = t.home.industries[index]
-            return (
+          {[
+            [
+              assets.industry1,
+              'Automotive',
+              'Ensure your tracking number to see the latest status and estimated delivery date.',
+            ],
+            [
+              assets.industry2,
+              'Retail',
+              'Fast and reliable delivery of consumer goods to stores and customers.',
+            ],
+            [
+              assets.industry3,
+              'Food',
+              'Temperature-controlled logistics for perishable goods and ingredients.',
+            ],
+            [
+              assets.industry4,
+              'Hardware',
+              'Specialized handling for heavy machinery and sensitive electronic equipment.',
+            ],
+          ].map(([image, title, copy]) => (
             <article className='industries__item' key={title}>
               <Image src={image} alt={title} fill />
               <div className='industries__item-copy'>
@@ -880,8 +953,7 @@ export function HomePage() {
                 <span className='site-body text-white/70'>{copy}</span>
               </div>
             </article>
-            )
-          })}
+          ))}
         </div>
       </section>
 

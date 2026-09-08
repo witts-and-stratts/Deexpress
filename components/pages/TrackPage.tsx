@@ -6,7 +6,6 @@ import { ArrowUpRight } from 'lucide-react'
 import { Reveal } from '@/components/Reveal'
 import { TrackingWidget } from '@/components/TrackingWidget'
 import { useLang } from '@/lib/i18n'
-import { EditorialHero } from '@/components/pages/EditorialPage'
 
 export function TrackPage() {
   const { t } = useLang()
@@ -15,14 +14,13 @@ export function TrackPage() {
 
   return (
     <main className="tracking-page">
-      <EditorialHero
-        headingId="tracking-title"
-        className="track-page__hero"
-        title={t.track.title}
-        intro={t.track.intro}
-        introClassName="max-w-[40ch]"
-        image="/images/transport-logistics-products.webp"
-      />
+      <section className="contact-page__hero track-page__hero" aria-labelledby="tracking-title">
+        <div className="contact-page__hero-shade" />
+        <div className="contact-page__hero-content">
+          <h1 id="tracking-title" className="text-h1 text-white">{t.track.title}</h1>
+          <p className="site-lead text-white max-w-[40ch]">{t.track.intro}</p>
+        </div>
+      </section>
 
       <section className="tracking-page__content" aria-label={t.track.title}>
         <Reveal className="tracking-page__panel">
@@ -31,10 +29,10 @@ export function TrackPage() {
       </section>
 
       <section className="tracking-page__support">
-        <p className="text-h3 text-white">{t.track.supportTitle}</p>
+        <p className="text-h3 text-white">Need help with a shipment?</p>
         <div className="tracking-page__support-actions">
-          <Link href="/contact">{t.track.supportContact} <ArrowUpRight size={18} aria-hidden="true" /></Link>
-          <Link href="/quote">{t.track.supportQuote} <ArrowUpRight size={18} aria-hidden="true" /></Link>
+          <Link href="/contact">Contact our team <ArrowUpRight size={18} aria-hidden="true" /></Link>
+          <Link href="/quote">Request a quote <ArrowUpRight size={18} aria-hidden="true" /></Link>
         </div>
       </section>
     </main>

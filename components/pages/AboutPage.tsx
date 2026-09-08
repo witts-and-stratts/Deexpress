@@ -13,7 +13,7 @@ import { CONTACT_PERSONS } from '@/lib/site';
 import Image from 'next/image';
 import AnimatedText from '../AnimatedText';
 import Parallax from '../Parallax';
-import { motion, useReducedMotion } from 'motion/react';
+import { motion } from 'motion/react';
 import { useRef } from 'react';
 
 const aboutImages = {
@@ -32,32 +32,6 @@ const aboutImages = {
 export function AboutPage() {
   const { t } = useLang();
   const aboutRef = useRef(null);
-  const reduceMotion = useReducedMotion();
-  const collageContainer = {
-    hidden: {},
-    visible: {
-      transition: {
-        delayChildren: 0.08,
-        staggerChildren: 0.16,
-      },
-    },
-  };
-  const collageItem = {
-    hidden: {
-      opacity: 0,
-      y: reduceMotion ? 0 : 48,
-      scale: reduceMotion ? 1 : 0.98,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.65,
-        ease: [0.16, 1, 0.3, 1] as const,
-      },
-    },
-  };
 
   return (
     <main className='about editorial-page'>
@@ -152,30 +126,18 @@ export function AboutPage() {
         >
           {t.about.mission}
         </AnimatedText>
-        <motion.div
-          className='about__collage'
-          aria-hidden='true'
-          variants={collageContainer}
-          initial='hidden'
-          whileInView='visible'
-          viewport={{ once: true, amount: 0.25 }}
-        >
+        <div className='about__collage' aria-hidden='true'>
           {aboutImages.collage.map((image) => (
-            <motion.div
-              className='about__collage-item'
+            <Image
+              src={image}
+              alt=''
               key={image}
-              variants={collageItem}
-            >
-              <Image
-                src={image}
-                alt=''
-                width={1500}
-                height={1500}
-                className='about__collage-image'
-              />
-            </motion.div>
+              width={1500}
+              height={1500}
+              className={`about__collage-image`}
+            />
           ))}
-        </motion.div>
+        </div>
       </section>
       <section className='about__vision' data-header-surface='dark'>
         <ServiceJourneyShowcase
