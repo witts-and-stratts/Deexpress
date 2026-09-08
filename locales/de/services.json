@@ -3,6 +3,27 @@
   "title": "Die richtige Route für Ihre Fracht.",
   "intro": "Sechs Kernleistungen, ein Standard: sorgfältige Abwicklung, klare Kommunikation und ein Team, das Ihre Fracht wie die eigene behandelt. Wählen Sie eine Leistung, um mehr zu erfahren.",
   "howTitle": "So funktioniert es",
+  "processIntro": "Von der ersten Anfrage bis zum Weitertransport koordiniert ein Team jeden Schritt.",
+  "processSteps": [
+    {
+      "title": "Erzählen Sie uns von Ihrer Sendung",
+      "text": "Teilen Sie uns mit, was Sie versenden, wohin es gehen soll und wann es dort sein muss."
+    },
+    {
+      "title": "Erhalten Sie Ihr individuelles Angebot",
+      "text": "Wir prüfen den passenden Service und die Route und senden Ihnen ein klares, unverbindliches Angebot."
+    },
+    {
+      "title": "Bereiten Sie die Abholung vor",
+      "text": "Wir beraten Sie zu Verpackung, Dokumenten und den Details der Übergabe Ihrer Fracht."
+    },
+    {
+      "title": "Wir koordinieren die Reise",
+      "text": "Von der Abholung über den Versand bis zur Übergabe am Ziel halten wir Ihre Sendung in Bewegung."
+    }
+  ],
+  "partnersTitle": "Versandpartner",
+  "partnersIntro": "Wir koordinieren Seefracht mit etablierten Reedereipartnern in unserem Netzwerk.",
   "detailCta": "Kostenloses Angebot anfordern",
   "pathways": [
     {

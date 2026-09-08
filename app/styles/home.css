@@ -89,25 +89,19 @@
     @apply h-12 w-[85%] object-contain;
   }
   .preference__stats {
-    @apply grid grid-cols-12 pt-6;
+    @apply grid list-none grid-cols-1 pt-6 md:grid-cols-3;
   }
-  .preference__stats > div {
-    @apply col-span-12 grid grid-cols-[48px_1fr] grid-rows-[auto_1fr] items-center gap-x-5 border-b border-r-0 border-editorial-line py-4 md:col-span-4 md:border-b-0 md:border-r;
+  .preference__stat {
+    @apply grid grid-cols-[6rem_auto_1fr] items-start gap-x-5 border-b border-editorial-line py-4 last:border-b-0 md:border-r md:border-b-0 md:px-[clamp(1.5rem,5vw,3.5rem)] md:first:pl-0 md:last:border-r-0 md:last:pr-0;
   }
-  .preference__stats > div + div {
-    @apply pl-0 md:pl-[clamp(1.5rem,5vw,3.5rem)];
+  .preference__stat img {
+    @apply h-24 -mt-6 object-contain;
   }
-  .preference__stats > div:last-child {
-    @apply border-r-0;
-  }
-  .preference__stats img {
-    @apply row-span-2 w-12;
-  }
-  .preference__stats span {
+  .preference__stat strong {
     @apply font-['Saans',var(--font-inter),Arial,sans-serif] text-[clamp(2rem,3.2vw,2.875rem)] font-[380] leading-none tracking-[-0.02em] text-editorial-ink;
   }
-  .preference__stats small {
-    @apply text-[0.875rem] leading-[1.15] text-editorial-muted;
+  .preference__stat span {
+    @apply text-[0.875rem] leading-[1.3] text-editorial-muted;
   }
 
   .coverage {
@@ -188,19 +182,7 @@
     @apply mt-section bg-editorial-surface px-page py-[clamp(2rem,4vw,3.5rem)];
   }
   .shipment-tracking__panel {
-    @apply mx-auto grid grid-cols-12 items-end gap-6;
-  }
-  .shipment-tracking__panel > div {
-    @apply col-span-12;
-  }
-  .shipment-tracking__form {
-    @apply col-span-12 flex flex-col gap-3 md:flex-row;
-  }
-  .shipment-tracking__field {
-    @apply flex h-14 min-w-0 flex-1 items-center gap-3 border border-editorial-line/50 px-4 text-editorial-muted;
-  }
-  .shipment-tracking__field input {
-    @apply min-w-0 flex-1 border-0 bg-transparent outline-none;
+    @apply mx-auto w-full;
   }
 
   .industries {
@@ -262,7 +244,7 @@
     @apply flex flex-col gap-1;
   }
   .testimonials__controls {
-    @apply flex items-center justify-between;
+    @apply flex items-center justify-between mt-10;
   }
   .testimonials__arrows,
   .testimonials__indicators {

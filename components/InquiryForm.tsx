@@ -59,7 +59,7 @@ export function InquiryForm({ kind }: { kind: 'contact' | 'quote' }) {
             required
             name='name'
             autoComplete='name'
-            placeholder='Jane Doe'
+            placeholder={t.contact.placeholders.name}
             className={fieldClass}
           />
         </FormField>
@@ -69,7 +69,7 @@ export function InquiryForm({ kind }: { kind: 'contact' | 'quote' }) {
             type='email'
             name='email'
             autoComplete='email'
-            placeholder='jane@company.com'
+            placeholder={t.contact.placeholders.email}
             className={fieldClass}
           />
         </FormField>
@@ -105,7 +105,7 @@ export function InquiryForm({ kind }: { kind: 'contact' | 'quote' }) {
               required
               name='message'
               rows={5}
-              placeholder='Tell us how we can help.'
+              placeholder={t.contact.placeholders.message}
               className={`${fieldClass} resize-y`}
             />
           </FormField>

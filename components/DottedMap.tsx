@@ -46,7 +46,7 @@ export function DottedMap({ active, onSelect }: { active: RegionId | null; onSel
       viewBox={`0 0 ${W} ${H}`}
       className="h-full w-full min-h-[380px]"
       role="img"
-      aria-label="Interactive coverage map: Europe, Africa and the Middle East"
+      aria-label={t.coverage.mapLabel}
     >
       {dots.map((d) => (
         <circle
@@ -119,7 +119,7 @@ export function DottedMap({ active, onSelect }: { active: RegionId | null; onSel
         )
       })}
 
-      <g className="group" aria-label="Berlin headquarters">
+      <g className="group" aria-label={t.coverage.origin}>
         <circle
           cx={px(europe.col)}
           cy={py(europe.row)}

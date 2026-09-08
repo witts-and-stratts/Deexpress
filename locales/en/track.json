@@ -23,5 +23,16 @@
   "origin": "Origin",
   "destination": "Destination",
   "estimatedDelivery": "Estimated delivery",
-  "progress": "Progress"
+  "progress": "Progress",
+  "supportTitle": "Need help with a shipment?",
+  "supportContact": "Contact our team",
+  "supportQuote": "Request a quote",
+  "timeline": [
+    { "label": "Order placed", "date": "Mar 08, 2026" },
+    { "label": "Picked up", "date": "Mar 09, 2026" },
+    { "label": "In transit", "date": "Mar 10–12, 2026" },
+    { "label": "Out for delivery", "date": "Today" },
+    { "label": "Delivered", "date": "Pending" }
+  ],
+  "example": { "origin": "Berlin, Germany", "destination": "Lagos, Nigeria", "estimatedDelivery": "Mar 14, 2026" }
 }

@@ -4,9 +4,12 @@ import { useEffect, useRef, useState, ReactNode } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 
 type AnimatableValue = number | string;
+type WrapperElement = keyof HTMLElementTagNameMap;
 
 interface ParallaxProps {
   children: ReactNode;
+  /** Element or component used for the outer parallax wrapper. Default: "div". */
+  as?: WrapperElement;
   /**
    * Factor to multiply the scroll distance. 0 is no effect, positive moves faster, negative moves against.
    * Default: 0.2
@@ -39,6 +42,7 @@ interface ParallaxProps {
 
 function ParallaxMotion({
   children,
+  as = "div",
   speed = 0.2,
   className = "",
   direction = "vertical",
@@ -47,6 +51,9 @@ function ParallaxMotion({
   to,
 }: ParallaxProps) {
   const targetRef = useRef<HTMLDivElement>(null);
+  // The tag is constrained to HTML elements; this assertion avoids a TypeScript
+  // union across every intrinsic element while retaining the runtime tag value.
+  const Wrapper = as as "div";
   const { scrollYProgress } = useScroll({
     target: targetRef,
     offset: ["start end", "end start"],
@@ -82,16 +89,17 @@ function ParallaxMotion({
   };
 
   return (
-    <div ref={targetRef} className={`relative ${className}`}>
+    <Wrapper ref={targetRef} className={`relative ${className}`}>
       <motion.div style={style} className="h-full w-full">
         {children}
       </motion.div>
-    </div>
+    </Wrapper>
   );
 }
 
-export default function Parallax({ disableOnMobile = false, children, ...props }: ParallaxProps) {
+export default function Parallax({ as = "div", disableOnMobile = false, children, ...props }: ParallaxProps) {
   const [isMobile, setIsMobile] = useState(false);
+  const Wrapper = as as "div";
 
   useEffect(() => {
     if (!disableOnMobile) return;
@@ -104,9 +112,8 @@ export default function Parallax({ disableOnMobile = false, children, ...props }
   }, [disableOnMobile]);
 
   if (disableOnMobile && isMobile) {
-    return <div className={`relative ${props.className ?? ''}`}>{children}</div>;
+    return <Wrapper className={`relative ${props.className ?? ''}`}>{children}</Wrapper>;
   }
 
-  return <ParallaxMotion {...props} disableOnMobile={undefined}>{children}</ParallaxMotion>;
+  return <ParallaxMotion {...props} as={Wrapper} disableOnMobile={undefined}>{children}</ParallaxMotion>;
 }
-

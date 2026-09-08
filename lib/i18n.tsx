@@ -3,6 +3,7 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
 import enAbout from '@/locales/en/about.json'
 import enCommon from '@/locales/en/common.json'
+import enCoverage from '@/locales/en/coverage.json'
 import enContact from '@/locales/en/contact.json'
 import enDestinations from '@/locales/en/destinations.json'
 import enFooter from '@/locales/en/footer.json'
@@ -15,6 +16,7 @@ import enServices from '@/locales/en/services.json'
 import enTrack from '@/locales/en/track.json'
 import deAbout from '@/locales/de/about.json'
 import deCommon from '@/locales/de/common.json'
+import deCoverage from '@/locales/de/coverage.json'
 import deContact from '@/locales/de/contact.json'
 import deDestinations from '@/locales/de/destinations.json'
 import deFooter from '@/locales/de/footer.json'
@@ -29,6 +31,7 @@ import deTrack from '@/locales/de/track.json'
 const en = {
   about: enAbout,
   common: enCommon,
+  coverage: enCoverage,
   contact: enContact,
   destinations: enDestinations,
   footer: enFooter,
@@ -47,6 +50,7 @@ export type Lang = 'en' | 'de'
 const de: Dict = {
   about: deAbout,
   common: deCommon,
+  coverage: deCoverage,
   contact: deContact,
   destinations: deDestinations,
   footer: deFooter,
@@ -69,6 +73,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>('en')
 
   useEffect(() => {
+    const requested = new URLSearchParams(window.location.search).get('lang')
+    if (requested === 'de' || requested === 'en') {
+      const id = requestAnimationFrame(() => setLangState(requested))
+      return () => cancelAnimationFrame(id)
+    }
     const saved = window.localStorage.getItem('dex-lang')
     if (saved === 'de' || saved === 'en') {
       const id = requestAnimationFrame(() => setLangState(saved))

@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { VehicleShippingPage } from '@/components/pages/VehicleShippingPage'
 import { pageMetadata } from '@/lib/seo'
+import { metadataCopy } from '@/lib/metadata'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Vehicle sourcing and international shipping from Europe',
-  description: 'Find, purchase and ship cars, trucks, buses and special equipment from Europe through one coordinated team.',
+  ...metadataCopy.vehicleShipping,
   pathname: '/services/vehicle-shipping',
   image: '/images/vehicle-terminal.webp',
 })

@@ -5,16 +5,16 @@ import { LanguageProvider } from '@/lib/i18n'
 import { organizationSchema } from '@/lib/seo'
 import { RouteShell } from '@/components/RouteShell'
 import { WhatsAppFloat } from '@/components/WhatsAppFloat'
+import { metadataCopy } from '@/lib/metadata'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
 
 export const metadata: Metadata = {
   title: {
-    default: 'DEexpress Logistics GmbH — International Freight from Berlin to Africa & the Middle East',
-    template: '%s | DEExpress Logistics',
+    default: metadataCopy.layout.title,
+    template: metadataCopy.layout.template,
   },
-  description:
-    'Air, sea, rail and road freight from Berlin to 26 countries across Africa and the Middle East. Vehicle sourcing and shipping, commercial cargo, personal effects and storage.',
+  description: metadataCopy.layout.description,
   metadataBase: new URL('https://deexpress-logistics.eu'),
   applicationName: 'DEexpress Logistics',
   keywords: ['international freight', 'freight forwarding Berlin', 'air freight Africa', 'sea freight Africa', 'vehicle shipping', 'logistics Germany'],
@@ -31,17 +31,17 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'DEExpress Logistics GmbH',
-    description: 'International freight from Berlin to 26 countries across Africa and the Middle East.',
+    description: metadataCopy.layout.openGraphDescription,
     type: 'website',
     locale: 'en_US',
     url: '/',
     siteName: 'DEexpress Logistics',
-    images: [{ url: '/images/home-hero.webp', width: 1200, height: 630, alt: 'DEexpress Logistics international freight' }],
+    images: [{ url: '/images/home-hero.webp', width: 1200, height: 630, alt: metadataCopy.layout.imageAlt }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'DEexpress Logistics GmbH',
-    description: 'International freight from Berlin to 26 countries across Africa and the Middle East.',
+    description: metadataCopy.layout.openGraphDescription,
     images: ['/images/home-hero.webp'],
   },
 }

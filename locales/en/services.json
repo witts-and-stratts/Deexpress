@@ -1,23 +1,44 @@
 {
   "eyebrow": "Our services",
-  "title": "The right route for what you move.",
-  "intro": "Six core services, one standard: careful handling, clear communication and a team that treats your cargo like its own. Choose a service to learn more.",
+  "title": "The right way to move cargo across borders",
+  "intro": "We help customers and businesses move cargo, cars and personal items from Europe to Africa and the Middle East with careful handling, clear communication and a team that treats your cargo like its own.",
   "howTitle": "How it works",
+  "processIntro": "From your first enquiry to onward shipping, one team coordinates every step.",
+  "processSteps": [
+    {
+      "title": "Tell us about your shipment",
+      "text": "Share what you are moving, where it needs to go and when you need it there."
+    },
+    {
+      "title": "Receive your tailored estimate",
+      "text": "We assess the right service and route, then send a clear, no-obligation estimate."
+    },
+    {
+      "title": "Prepare for collection",
+      "text": "We guide you on packing, paperwork and the handover details for your cargo."
+    },
+    {
+      "title": "We coordinate the journey",
+      "text": "From collection to shipping and destination handover, we keep your shipment moving."
+    }
+  ],
+  "partnersTitle": "Shipping partners",
+  "partnersIntro": "We coordinate sea freight with established carrier partners across our network.",
   "detailCta": "Request a free estimate",
   "pathways": [
     {
-      "title": "Move freight",
-      "text": "For shipments where speed, volume or the commercial need shapes the route.",
+      "title": "Air, sea and commercial shipping",
+      "text": "Price competitive shipping for time-sensitive cargo, single items or bulky loads, through air and sea.",
       "services": ["air-freight", "sea-freight", "commercial-cargo"]
     },
     {
-      "title": "Move vehicles",
-      "text": "From finding a vehicle in Europe to moving it internationally across borders.",
+      "title": "Vehicle sourcing & shipping",
+      "text": "Vehicle purchase assistance, inspection and paperwork support, from searching in Europe to moving it internationally across borders.",
       "services": ["vehicle-shipping"]
     },
     {
       "title": "Personal goods & storage",
-      "text": "For belongings and goods that need space and planning before their next movement.",
+      "text": "Small packages, personal items or a whole move, including storage and warehousing, from Europe to Africa and the Middle East.",
       "services": ["personal-effects", "storage"]
     }
   ],

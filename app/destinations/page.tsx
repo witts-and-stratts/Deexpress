@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { DestinationsPage } from '@/components/pages/DestinationsPage'
 import { pageMetadata } from '@/lib/seo'
+import { metadataCopy } from '@/lib/metadata'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Destinations',
-  description: 'Freight from Europe to 26 countries across Africa and destinations in the Middle East. Explore the regions DEExpress serves.',
+  ...metadataCopy.destinations,
   pathname: '/destinations',
   image: '/images/coverage-earth.webp',
 })

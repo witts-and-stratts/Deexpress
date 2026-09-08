@@ -5,20 +5,13 @@ import { Hash, Search } from 'lucide-react'
 import { useLang } from '@/lib/i18n'
 import { Button } from '@/components/ui/button'
 
-const timeline = [
-  { label: 'Order placed', date: 'Mar 08, 2026' },
-  { label: 'Picked up', date: 'Mar 09, 2026' },
-  { label: 'In transit', date: 'Mar 10–12, 2026' },
-  { label: 'Out for delivery', date: 'Today' },
-  { label: 'Delivered', date: 'Pending' },
-]
-
 export function TrackingWidget({ initialRef = '' }: { initialRef?: string }) {
   const { t } = useLang()
   const [ref, setRef] = useState(initialRef)
   const [activeRef, setActiveRef] = useState<string | null>(null)
   const [error, setError] = useState(false)
   const activeStage = 3
+  const timeline = t.track.timeline
 
   const submit = (event: React.FormEvent) => {
     event.preventDefault()
@@ -49,9 +42,9 @@ export function TrackingWidget({ initialRef = '' }: { initialRef?: string }) {
             <div className="tracking-widget__current"><span>{t.track.currentStatus}</span><p><i aria-hidden="true" />{timeline[activeStage].label}</p></div>
           </div>
           <dl className="tracking-widget__details">
-            <div><dt>{t.track.origin}</dt><dd>Berlin, Germany</dd></div>
-            <div><dt>{t.track.destination}</dt><dd>Lagos, Nigeria</dd></div>
-            <div><dt>{t.track.estimatedDelivery}</dt><dd>Mar 14, 2026</dd></div>
+            <div><dt>{t.track.origin}</dt><dd>{t.track.example.origin}</dd></div>
+            <div><dt>{t.track.destination}</dt><dd>{t.track.example.destination}</dd></div>
+            <div><dt>{t.track.estimatedDelivery}</dt><dd>{t.track.example.estimatedDelivery}</dd></div>
           </dl>
           <div className="tracking-widget__progress">
             <span>{t.track.progress}</span>

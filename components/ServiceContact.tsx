@@ -1,6 +1,8 @@
 import { Phone, ArrowUpRight } from 'lucide-react'
 import Link from 'next/link'
 import { CONTACT_PERSONS } from '@/lib/site'
+import { Reveal } from '@/components/motion/Motion'
+import { useLang } from '@/lib/i18n'
 
 export function ServiceContact({ title, text, callLabel, quoteHref, quoteLabel, variant = 'default' }: { title: string; text: string; callLabel: string; quoteHref: string; quoteLabel: string; variant?: 'default' | 'air-freight' }) {
   const contact = CONTACT_PERSONS[0]
@@ -37,6 +39,28 @@ export function ServiceContact({ title, text, callLabel, quoteHref, quoteLabel, 
           <Link href={quoteHref}>{quoteLabel} <ArrowUpRight size={17} aria-hidden="true" /></Link>
         </div>
       </div>
+    </section>
+  )
+}
+
+export function ServiceQuoteClosing({
+  quoteHref,
+  quoteLabel,
+}: {
+  quoteHref: string;
+  quoteLabel: string;
+}) {
+  const { t } = useLang()
+  return (
+    <section className='air-freight-page__closing grid grid-cols-12'>
+      <Reveal className='col-span-12 lg:col-span-7'>
+        <h2>{t.home.ctaTitle}</h2>
+        <p>{t.home.ctaText}</p>
+        <Link href={quoteHref}>
+          {quoteLabel}
+          <ArrowUpRight size={18} aria-hidden='true' />
+        </Link>
+      </Reveal>
     </section>
   )
 }

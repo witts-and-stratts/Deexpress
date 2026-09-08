@@ -5,6 +5,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Color, MeshPhongMaterial } from 'three';
 import type { GlobeMethods } from 'react-globe.gl';
 import type { RegionId } from '@/lib/site';
+import { useLang } from '@/lib/i18n';
 
 const Globe = dynamic(() => import('react-globe.gl'), { ssr: false });
 
@@ -190,6 +191,7 @@ export function CoverageGlobe({
   onSelect: (region: RegionId) => void;
   className?: string;
 }) {
+  const { t } = useLang();
   const globeRef = useRef<GlobeMethods | undefined>(undefined);
   const hostRef = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState({ width: 0, height: 0 });
@@ -289,7 +291,7 @@ export function CoverageGlobe({
     <div
       ref={hostRef}
       className={`coverage-globe-canvas ${className}`}
-      aria-label='International outbound airline routes globe'
+      aria-label={t.coverage.mapLabel}
     >
       {canUseWebGL && size.width > 0 ? (
         <Globe
@@ -298,7 +300,7 @@ export function CoverageGlobe({
           height={size.height}
           backgroundColor='rgba(0,0,0,0)'
           globeImageUrl='//cdn.jsdelivr.net/npm/three-globe/example/img/earth-night.jpg'
-          bumpImageUrl='//cdn.jsdelivr.net/npm/three-globe/example/img/earth-topology.png'
+          bumpImageUrl='//cdn.jsdelivr.net/npm/three-globe/example/img/earth-topology.webp'
           globeMaterial={globeMaterial}
           arcsData={activeRoutes}
           arcLabel={arcLabel}

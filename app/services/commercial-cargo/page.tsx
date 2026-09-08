@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { CommercialCargoPage } from '@/components/pages/CommercialCargoPage'
 import { pageMetadata } from '@/lib/seo'
+import { metadataCopy } from '@/lib/metadata'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Commercial cargo logistics from Europe',
-  description: 'Reliable freight coordination for recurring and one-off commercial cargo shipments by air, sea and land.',
+  ...metadataCopy.commercialCargo,
   pathname: '/services/commercial-cargo',
   image: '/images/service-cargo.webp',
 })

@@ -19,7 +19,7 @@ Modern logistics-tech: a premium, globally competitive identity built around net
 
 Sora is the display face for page titles, section headings, cards and metrics; Inter is the UI and reading face for copy, forms, navigation and metadata. The role scale is deliberately compact: `type-display-hero`, `type-display-section`, `type-display-card`, `type-body-lead`, `type-body`, `type-label`, and `type-data`. Body copy is 16px minimum with a 1.75 line height and should remain within 65–72ch. Labels are 12px/700 uppercase with measured tracking; data uses tabular numerals.
 
-Use the semantic `text-ink`, `text-ink-muted`, `bg-surface`, `bg-surface-muted`, and `border-border` tokens for standard interface surfaces. Reusable CSS primitives are `ui-button` (with size and color modifiers), `ui-field`, `ui-label`, `ui-card`, `ui-form-card`, and `ui-status-card`; use them before composing one-off control styles. The Figma-specific `.new-home` surface retains its local Saans treatment as a separately authored editorial experience.
+Use the semantic `text-ink`, `text-ink-muted`, `bg-surface`, `bg-surface-muted`, and `border-border` tokens for standard interface surfaces. Reusable CSS primitives are `ui-button` (with size and color modifiers), `ui-field`, `ui-label`, `ui-card`, `ui-form-card`, and `ui-status-card`; use them before composing one-off control styles. The -specific `.new-home` surface retains its local Saans treatment as a separately authored editorial experience.
 
 ## Composition
 

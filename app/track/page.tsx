@@ -2,10 +2,10 @@ import type { Metadata } from 'next'
 import { Suspense } from 'react'
 import { TrackPage } from '@/components/pages/TrackPage'
 import { pageMetadata } from '@/lib/seo'
+import { metadataCopy } from '@/lib/metadata'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Track shipment',
-  description: 'Track your DEExpress shipment — enter your tracking reference to see the latest available status.',
+  ...metadataCopy.track,
   pathname: '/track',
 })
 

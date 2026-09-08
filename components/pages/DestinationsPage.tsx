@@ -1,23 +1,37 @@
-'use client'
+'use client';
 
-import { Reveal } from '@/components/Reveal'
-import { GlobalCoverage } from '@/components/GlobalCoverage'
-import { useLang } from '@/lib/i18n'
-import { REGIONS } from '@/lib/site'
-import { BtnLink, Eyebrow, PageHero, container, section, sectionHeadTitle, sectionSm } from '@/components/ui'
+import { Reveal } from '@/components/Reveal';
+import { GlobalCoverage } from '@/components/GlobalCoverage';
+import { useLang } from '@/lib/i18n';
+import { REGIONS } from '@/lib/site';
+import {
+  BtnLink,
+  Eyebrow,
+  PageHero,
+  container,
+  section,
+  sectionHeadTitle,
+  sectionSm,
+} from '@/components/ui';
+import Link from 'next/link';
+import { ArrowUpRight } from 'lucide-react';
 
 const ctaPanel =
-  'relative overflow-hidden rounded-3xl bg-linear-to-br from-navy-900 to-royal-600 p-10 text-white sm:p-16 lg:p-20'
+  'relative overflow-hidden rounded-3xl bg-linear-to-br from-navy-900 to-royal-600 p-10 text-white sm:p-16 lg:p-20';
 const ctaGlow =
-  'absolute inset-0 bg-[radial-gradient(520px_320px_at_88%_20%,rgba(255,122,26,0.35),transparent_60%),radial-gradient(420px_300px_at_8%_100%,rgba(255,255,255,0.12),transparent_60%)]'
+  'absolute inset-0 bg-[radial-gradient(520px_320px_at_88%_20%,rgba(255,122,26,0.35),transparent_60%),radial-gradient(420px_300px_at_8%_100%,rgba(255,255,255,0.12),transparent_60%)]';
 
 export function DestinationsPage() {
-  const { t } = useLang()
+  const { t } = useLang();
   return (
     <main>
-      <GlobalCoverage subtitle="One network. 26 destinations." searchable className="coverage--destinations" />
+      <GlobalCoverage
+        subtitle={t.destinations.title}
+        searchable
+        className='coverage--destinations'
+      />
 
-      <section className={`${section} bg-white`}>
+      {/* <section className={`${section} bg-white`}>
         <div className={`${container} grid items-start gap-10 lg:grid-cols-12 lg:gap-24`}>
           <Reveal delay={140} className="lg:col-span-5">
             <div>
@@ -37,9 +51,9 @@ export function DestinationsPage() {
             </div>
           </Reveal>
         </div>
-      </section>
+      </section> */}
 
-      <section className={sectionSm}>
+      {/* <section className={sectionSm}>
         <div className={container}>
           <Reveal>
             <div className={ctaPanel}>
@@ -59,7 +73,19 @@ export function DestinationsPage() {
             </div>
           </Reveal>
         </div>
+      </section> */}
+
+      <section className='tracking-page__support mt-10'>
+        <p className='text-h3 text-white'>{t.track.supportTitle}</p>
+        <div className='tracking-page__support-actions'>
+          <Link href='/contact'>
+            {t.track.supportContact} <ArrowUpRight size={18} aria-hidden='true' />
+          </Link>
+          <Link href='/quote'>
+            {t.track.supportQuote} <ArrowUpRight size={18} aria-hidden='true' />
+          </Link>
+        </div>
       </section>
     </main>
-  )
+  );
 }

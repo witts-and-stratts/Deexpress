@@ -229,7 +229,7 @@ export default function CoverageGlobeScene({ active, preview, onSelect, onPrevie
       {!ready && fallback}
       <div className={`coverage-globe-scene ${ready ? 'is-ready' : ''}`}>
         <Globe ref={globe} width={width} height={height} backgroundColor="rgba(0,0,0,0)"
-          globeImageUrl="/images/coverage-night.webp" bumpImageUrl="/images/coverage-topology.png" globeMaterial={material}
+          globeImageUrl="/images/coverage-night.webp" bumpImageUrl="/images/coverage-topology.webp" globeMaterial={material}
           animateIn={false}
           arcsData={routes}
           arcLabel={(item: object) => `${(item as CityRoute).source.city} → ${(item as CityRoute).destination.city}`}

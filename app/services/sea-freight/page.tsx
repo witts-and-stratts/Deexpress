@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { SeaFreightPage } from '@/components/pages/SeaFreightPage'
 import { pageMetadata } from '@/lib/seo'
+import { metadataCopy } from '@/lib/metadata'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Sea freight from Europe to Africa and the Middle East',
-  description: 'Cost-efficient sea freight for containers and consolidated cargo from European ports to destinations across the DEexpress network.',
+  ...metadataCopy.seaFreight,
   pathname: '/services/sea-freight',
   image: '/images/sea-shipping.webp',
 })

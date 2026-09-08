@@ -18,5 +18,21 @@
   "whatsappTitle": "Lieber WhatsApp?",
   "whatsappText": "Schreiben Sie uns direkt — wir antworten in der Regel während der Öffnungszeiten.",
   "partnership": "Partnerschaftsanfragen: Agenturen, Frachtführer und gewerbliche Kooperationen erreichen uns per E-Mail oder über das Formular.",
-  "success": "Vielen Dank — Ihre Nachricht ist eingegangen. Unser Team meldet sich innerhalb eines Werktages bei Ihnen."
+  "success": "Vielen Dank — Ihre Nachricht ist eingegangen. Unser Team meldet sich innerhalb eines Werktages bei Ihnen.",
+  "page": {
+    "heroTitle": "Sprechen Sie mit uns",
+    "heroIntro": "Ob Sie ein individuelles Frachtangebot, Sendungsupdates oder ein Gespräch über eine Partnerschaft benötigen — unsere Teams in Berlin und Afrika helfen Ihnen gern.",
+    "optionsTitle": "Kontaktmöglichkeiten",
+    "shippingRequestTitle": "Versandanfrage",
+    "shippingRequestText": "Für Versandanfragen nutzen Sie bitte unser spezielles Anfrageformular. So erhalten wir alle Angaben für eine maßgeschneiderte Lösung.",
+    "shippingRequestLink": "Versandanfrageformular",
+    "options": ["Hotline für Sendungen, Tracking und dringende Informationen", "Partnerschaften, Fahrzeugbeschaffung und Sourcing", "Sofortiger Kundensupport per Anruf oder WhatsApp", "Öffnungszeiten"],
+    "businessTitle": "Wie können wir Ihr Unternehmen unterstützen?",
+    "businessText": "Teilen Sie uns mit, was Sie benötigen, und wir melden uns mit einer passenden Lösung bei Ihnen.",
+    "businessEmphasis": "Ob Sie ein Frachtangebot, Sendungsupdates oder ein Gespräch über eine Partnerschaft benötigen — unser Team hilft Ihnen gern.",
+    "responseTime": "Wir antworten in der Regel innerhalb von 2 Geschäftsstunden.",
+    "locationTitle": "Finden Sie uns in Berlin",
+    "mapLabel": "Karte mit dem Berliner Bürostandort"
+  },
+  "placeholders": { "name": "Max Mustermann", "email": "max@beispiel.de", "message": "Wie können wir Ihnen helfen?" }
 }

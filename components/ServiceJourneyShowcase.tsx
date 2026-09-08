@@ -79,7 +79,7 @@ function JourneyImage({
       className='absolute inset-0'
       style={{
         opacity,
-        scale: reduceMotion ? 1 : scale,
+        // scale: reduceMotion ? 1 : scale,
         willChange: 'opacity, transform',
       }}
     >
@@ -132,7 +132,7 @@ export function ServiceJourneyShowcase({
     >
       <div className='service-showcase__visual'>
         {heading ? (
-          <h2 className='service-showcase__heading'>{heading}</h2>
+          <h2 className='service-showcase__heading text-white/70'>{heading}</h2>
         ) : null}
         {images.map((image, index) => {
           const portraitImage = portraitImages?.[index];

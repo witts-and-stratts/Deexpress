@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { QuotePage } from '@/components/pages/QuotePage'
 import { pageMetadata } from '@/lib/seo'
+import { metadataCopy } from '@/lib/metadata'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Get a quote',
-  description: 'Request a free, no-obligation shipping estimate from DEExpress Logistics — air, sea, vehicle and commercial cargo.',
+  ...metadataCopy.quote,
   pathname: '/quote',
 })
 

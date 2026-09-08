@@ -4,7 +4,7 @@
     @apply overflow-clip bg-white font-sans text-editorial-ink;
   }
   .contact-page__hero {
-    @apply relative min-h-147.5 bg-[#163442] text-white md:min-h-162;
+    @apply relative min-h-148 bg-[#163442] text-white md:min-h-162;
   }
   .quote-page__hero {
     @apply bg-[#163442];
@@ -71,6 +71,6 @@
     @apply col-span-12 md:col-span-4;
   }
   .contact-page__map {
-    @apply col-span-12 min-h-[310px] bg-[url('/images/contact-figma/map.webp')] bg-cover bg-center md:col-span-8 md:min-h-[558px];
+    @apply col-span-12 min-h-77.5 bg-[url('/images/contact-figma/map.webp')] bg-cover bg-center md:col-span-8 md:min-h-139.5 rounded-md;
   }
 }

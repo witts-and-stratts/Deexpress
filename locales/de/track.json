@@ -23,5 +23,16 @@
   "origin": "Abgangsort",
   "destination": "Zielort",
   "estimatedDelivery": "Voraussichtliche Lieferung",
-  "progress": "Fortschritt"
+  "progress": "Fortschritt",
+  "supportTitle": "Benötigen Sie Hilfe mit einer Sendung?",
+  "supportContact": "Unser Team kontaktieren",
+  "supportQuote": "Angebot anfragen",
+  "timeline": [
+    { "label": "Auftrag erteilt", "date": "08. März 2026" },
+    { "label": "Abgeholt", "date": "09. März 2026" },
+    { "label": "Unterwegs", "date": "10.–12. März 2026" },
+    { "label": "In Zustellung", "date": "Heute" },
+    { "label": "Zugestellt", "date": "Ausstehend" }
+  ],
+  "example": { "origin": "Berlin, Deutschland", "destination": "Lagos, Nigeria", "estimatedDelivery": "14. März 2026" }
 }

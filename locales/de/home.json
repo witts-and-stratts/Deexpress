@@ -113,5 +113,20 @@
   "sourcingText": "Wir finden, prüfen und kaufen Fahrzeuge in Ihrem Auftrag — und verbinden den Prozess direkt mit dem internationalen Fahrzeugtransport. Ein Team, ein Ansprechpartner, von der Suche bis zur Zustellung.",
   "sourcingCta": "Fahrzeugbeschaffung",
   "ctaTitle": "Bereit zu versenden?",
-  "ctaText": "Sagen Sie uns, was Sie versenden und wohin — wir senden Ihnen ein kostenloses, unverbindliches Angebot."
+  "ctaText": "Sagen Sie uns, was Sie versenden und wohin — wir senden Ihnen ein kostenloses, unverbindliches Angebot.",
+  "preference": {
+    "title": "Versenden nach Ihren Wünschen",
+    "text": "Von der Abholung bis zum Ziel richten wir Transportart, Kosten und Abwicklung nach Ihren Wünschen aus.",
+    "statsLabel": "DEexpress-Netzwerk auf einen Blick",
+    "stats": [{ "value": "26+", "label": "Ziele in Afrika und im Nahen Osten" }, { "value": "4", "label": "Multimodale Transportarten" }, { "value": "3", "label": "Bediente Regionen" }]
+  },
+  "testimonial": {
+    "sectionLabel": "Kundenstimmen",
+    "carouselLabel": "Kundenstimmen",
+    "previous": "Vorherige Kundenstimme",
+    "next": "Nächste Kundenstimme",
+    "quote": "DEexpress hat unsere Lieferkette verändert. Mit Echtzeit-Tracking und einem engagierten Team konnten wir unsere Laufzeiten auf der Strecke Berlin–Lagos um 40 % senken.",
+    "name": "Marcus Weber",
+    "role": "Leiter Logistik, AutoTech GmbH"
+  }
 }

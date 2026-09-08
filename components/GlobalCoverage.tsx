@@ -11,7 +11,7 @@ import { useLang } from '@/lib/i18n'
 import { DESTINATION_COUNTRIES, REGIONS, type RegionId } from '@/lib/site'
 import { cn } from '@/lib/utils'
 
-export function GlobalCoverage({ subtitle = 'From Europe to 26 destinations', searchable = false, className = '' }: { subtitle?: string; searchable?: boolean; className?: string }) {
+export function GlobalCoverage({ subtitle, searchable = false, className = '' }: { subtitle?: string; searchable?: boolean; className?: string }) {
   const { t } = useLang()
   const [activeRegion, setActiveRegion] = useState<RegionId>('north-africa')
   const [countrySearchOpen, setCountrySearchOpen] = useState(false)
@@ -22,14 +22,14 @@ export function GlobalCoverage({ subtitle = 'From Europe to 26 destinations', se
     <section className={`coverage ${className}`}>
       <div className='coverage__copy'>
         <h2 className='text-h2 text-white'>
-          Global Coverage
+          {t.coverage.title}
           <br />
-          <span>{subtitle}</span>
+          <span>{subtitle ?? t.coverage.subtitle}</span>
         </h2>
         <p className='site-lead text-white/60'>
-          Our network connects European origins with destinations across Africa and the Middle East. Select a region to see how we move your freight.
+          {t.coverage.intro}
         </p>
-        <div className='coverage__tabs' role='tablist' aria-label='Coverage regions'>
+        <div className='coverage__tabs' role='tablist' aria-label={t.coverage.choose}>
           {REGIONS.map(({ id }) => (
             <Button
               key={id}
@@ -53,7 +53,7 @@ export function GlobalCoverage({ subtitle = 'From Europe to 26 destinations', se
         <h3 className='text-card-title'>{region.name}</h3>
         <p className='site-body'>{region.text}</p>
         <Link href='/destinations' className='gap-2 flex items-center hover:scale-105 transition-transform duration-300 ease-out mt-auto min-h-0 origin-left'>
-          Learn More <ArrowUpRight aria-hidden='true' size={20} className='mb-0' />
+          {t.coverage.learnMore} <ArrowUpRight aria-hidden='true' size={20} className='mb-0' />
         </Link>
       </aside>
       {searchable && (

@@ -113,5 +113,20 @@
   "sourcingText": "We find, inspect and purchase vehicles on your behalf — then connect the process directly to international vehicle shipping. One team, one contact, from search to delivery.",
   "sourcingCta": "Vehicle sourcing",
   "ctaTitle": "Ready to move?",
-  "ctaText": "Tell us what you are shipping and where it needs to go — we will send you a free, no-obligation estimate."
+  "ctaText": "Tell us what you are shipping and where it needs to go — we will send you a free, no-obligation estimate.",
+  "preference": {
+    "title": "Ship your preference",
+    "text": "From origin to destination, we follow your preference in means, cost and handling.",
+    "statsLabel": "DEexpress coverage at a glance",
+    "stats": [{ "value": "26+", "label": "Destinations across Africa & the Middle East" }, { "value": "4", "label": "Multi-modal shipping methods" }, { "value": "3", "label": "Regions served" }]
+  },
+  "testimonial": {
+    "sectionLabel": "Testimonials",
+    "carouselLabel": "Customer testimonials",
+    "previous": "Previous testimonial",
+    "next": "Next testimonial",
+    "quote": "DEexpress transformed our supply chain. Their real-time tracking and dedicated team reduced our transit times by 40% on the Berlin-Lagos corridor.",
+    "name": "Marcus Weber",
+    "role": "Head of Logistics, AutoTech GmbH"
+  }
 }

@@ -1,7 +1,8 @@
 'use client';
 
 import { GlobalCoverage } from '@/components/GlobalCoverage';
-import { ParallaxImage, Reveal } from '@/components/motion/Motion';
+import { TrackingWidget } from '@/components/TrackingWidget';
+import { Reveal } from '@/components/motion/Motion';
 import { Button, buttonVariants } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -10,10 +11,15 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { useLang, type Lang } from '@/lib/i18n';
-import { Input } from '@base-ui/react';
+import { SITE } from '@/lib/site';
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
-import { ArrowUpRight, ChevronDown, Hash, Menu, Search, X } from 'lucide-react';
+import {
+  ArrowLeft,
+  ArrowRight,
+  ArrowUpRight,
+  ChevronDown,
+} from 'lucide-react';
 import {
   AnimatePresence,
   motion,
@@ -30,70 +36,71 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import AnimatedText from '../AnimatedText';
 import { cn } from '@/lib/utils';
+import { ResponsiveImage } from '../ResponsiveImage';
+import { JourneyShowcaseImage } from '../ServiceJourneyShowcase';
 
 const MotionLink = motion.create(Link);
 
 const assets = {
-  hero: '/images/home-hero.webp',
-  logo: '/images/logo.webp',
-  footerLogo: '/images/footer-logo.webp',
-  air: '/images/service-air.webp',
-  sea: '/images/service-sea.webp',
-  vehicle: '/images/service-vehicle.webp',
-  cargo: '/images/service-cargo.webp',
-  personal: '/images/service-personal.webp',
-  sourcing: '/images/service-sourcing.webp',
+  responsiveImages: {
+    hero: { src: '/images/home-hero.webp', portrait: '/images/home-hero.webp' },
+    logo: '/images/logo.webp',
+    footerLogo: '/images/footer-logo.webp',
+    air: {
+      src: '/images/air-freight-hero.webp',
+      portrait: '/images/air-freight-hero-portrait.webp',
+    },
+    sea: { src: '/images/port.webp', portrait: '/images/port-portrait.webp' },
+    vehicle: {
+      src: '/images/vehicle-showcase-loading.webp',
+      portrait: '/images/vehicle-showcase-loading-portrait.webp',
+    },
+    cargo: {
+      src: '/images/service-cargo.webp',
+      portrait: '/images/truck-unloading-middle-commercial-dock-portrait.webp',
+    },
+    personal: {
+      src: '/images/personal-effect-shipping.webp',
+      portrait: '/images/personal-effect-shipping-portrait.webp',
+    },
+    storage: {
+      src: '/images/storage-showcase-warehouse.webp',
+      portrait: '/images/storage-showcase-warehouse-portrait.webp',
+    },
+    sourcing: {
+      src: '/images/service-sourcing.webp',
+      portrait: '/images/service-sourcing-portrait.webp',
+    },
+  } satisfies {
+    hero: { src: string; portrait: string };
+    logo: string;
+    footerLogo: string;
+    air: { src: string; portrait: string };
+    sea: { src: string; portrait: string };
+    vehicle: { src: string; portrait: string };
+    cargo: { src: string; portrait: string };
+    personal: { src: string; portrait: string };
+    storage: { src: string; portrait: string };
+    sourcing: { src: string; portrait: string };
+  },
   plane: '/images/plane.webp',
   ship: '/images/ship.webp',
   train: '/images/train.webp',
   truck: '/images/truck.webp',
   car: '/images/car.webp',
-  coverage: '/images/coverage-figma.webp',
+  coverage: '/images/coverage.webp',
   industry1: '/images/industry1.webp',
   industry2: '/images/industry2.webp',
   industry3: '/images/industry3.webp',
   industry4: '/images/industry4.webp',
   pattern: '/images/wavy-background.svg',
-  globeIcon: '/images/icons/globe-icon.svg',
-  multimodalIcon: '/images/icons/multimodal-icon.svg',
-  regionsIcon: '/images/icons/regions-icon.svg',
+  globeIcon: '/images/icons/globe.svg',
+  multimodalIcon: '/images/icons/multi-modal.svg',
+  regionsIcon: '/images/icons/regions.svg',
 };
 
-const services = [
-  [
-    'Air freight',
-    assets.air,
-    'Time-sensitive shipments, coordinated from collection to arrival.',
-  ],
-  [
-    'Sea freight',
-    assets.sea,
-    'Cost-effective ocean freight for larger loads and long-distance routes.',
-  ],
-  [
-    'Vehicle sourcing & shipping',
-    assets.vehicle,
-    'From finding a vehicle in Europe to international shipping, coordinated through one team.',
-  ],
-  [
-    'Commercial cargo',
-    assets.cargo,
-    'Freight planned around your business requirements and destination.',
-  ],
-  [
-    'Personal effects shipping',
-    assets.personal,
-    'Careful coordination for the belongings that move with you.',
-  ],
-  [
-    'Storage & warehousing',
-    assets.cargo,
-    'Secure storage connected to the next stage of your shipment.',
-  ],
-] as const;
-
 function LanguageSelector({ footer = false }: { footer?: boolean }) {
-  const { lang, setLang } = useLang();
+  const { lang, setLang, t } = useLang();
   const language = lang.toUpperCase();
   const flag = lang === 'de' ? '/flags/de.svg' : '/flags/gb.svg';
   const selectLanguage = (value: Lang) => setLang(value);
@@ -102,23 +109,23 @@ function LanguageSelector({ footer = false }: { footer?: boolean }) {
     <DropdownMenu>
       <DropdownMenuTrigger
         className={footer ? 'site-footer__language' : 'site-nav__language'}
-        aria-label='Choose language'
+        aria-label={t.nav.languageSelector}
       >
-        <img src={flag} alt='' /> <span>{language}</span>{' '}
-        <ChevronDown size={12} aria-hidden='true' />
+        <Image src={flag} alt='' width={20} height={20} />{' '}
+        <span>{language}</span> <ChevronDown size={12} aria-hidden='true' />
       </DropdownMenuTrigger>
       <DropdownMenuContent align='end' className='language-menu'>
         <DropdownMenuItem
           onClick={() => selectLanguage('de')}
           className='language-menu__item'
         >
-          <img src='/flags/de.svg' alt='' /> Deutsch
+          <Image src='/flags/de.svg' alt='' width={20} height={20} /> Deutsch
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => selectLanguage('en')}
           className='language-menu__item'
         >
-          <img src='/flags/gb.svg' alt='' /> English
+          <Image src='/flags/gb.svg' alt='' width={20} height={20} /> English
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
@@ -126,6 +133,7 @@ function LanguageSelector({ footer = false }: { footer?: boolean }) {
 }
 
 export function HomeHeader() {
+  const { t } = useLang();
   const [open, setOpen] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
   const pathname = usePathname();
@@ -141,8 +149,13 @@ export function HomeHeader() {
     const updateSurface = () => {
       frame = 0;
       // Clamp elastic overscroll so bouncing at either end cannot flip direction.
-      const scroll = Math.max(0, Math.min(window.scrollY,
-        document.documentElement.scrollHeight - window.innerHeight));
+      const scroll = Math.max(
+        0,
+        Math.min(
+          window.scrollY,
+          document.documentElement.scrollHeight - window.innerHeight,
+        ),
+      );
       const delta = scroll - previousScroll;
       previousScroll = scroll;
       if (scroll <= header.offsetHeight + 16 || delta < 0) {
@@ -161,17 +174,25 @@ export function HomeHeader() {
       const headerBounds = header.getBoundingClientRect();
       const headerStyle = getComputedStyle(header);
       // Keep sampling the resting position even while the header slides offscreen.
-      const sampleY = bounds.top - headerBounds.top + bounds.height / 2
-        + (parseFloat(headerStyle.top) || 0) + (parseFloat(headerStyle.marginTop) || 0);
+      const sampleY =
+        bounds.top -
+        headerBounds.top +
+        bounds.height / 2 +
+        (parseFloat(headerStyle.top) || 0) +
+        (parseFloat(headerStyle.marginTop) || 0);
       // Sample beneath the controls, excluding the fixed navigation itself.
-      const surface = document.elementsFromPoint(
-        bounds.left + bounds.width / 2,
-        sampleY,
-      ).find((element) => !header.contains(element)
-        && !element.closest('.site-nav-mobile')
-        && element.closest('main, footer'));
+      const surface = document
+        .elementsFromPoint(bounds.left + bounds.width / 2, sampleY)
+        .find(
+          (element) =>
+            !header.contains(element) &&
+            !element.closest('.site-nav-mobile') &&
+            element.closest('main, footer'),
+        );
       header.dataset.surface = surface
-        ? getComputedStyle(surface).getPropertyValue('--header-surface').trim() || 'light'
+        ? getComputedStyle(surface)
+            .getPropertyValue('--header-surface')
+            .trim() || 'light'
         : 'light';
     };
     const scheduleUpdate = () => {
@@ -196,9 +217,17 @@ export function HomeHeader() {
 
   return (
     <>
-      <header ref={headerRef} className={`site-nav${open ? ' site-nav--open' : ''}`}>
-        <Link className='site-nav__brand' href='/' aria-label='DEexpress home'>
-          <img src={assets.logo} alt='DEexpress' />
+      <header
+        ref={headerRef}
+        className={`site-nav${open ? ' site-nav--open' : ''}`}
+      >
+        <Link className='site-nav__brand' href='/' aria-label={t.nav.brandHome}>
+          <Image
+            src={assets.responsiveImages.logo}
+            alt='DEexpress'
+            width={102}
+            height={56}
+          />
         </Link>
         <button
           className='site-nav__toggle md:hidden'
@@ -206,7 +235,7 @@ export function HomeHeader() {
           onClick={() => setOpen(!open)}
           aria-expanded={open}
           aria-controls='home-navigation'
-          aria-label={open ? 'Close navigation' : 'Open navigation'}
+          aria-label={open ? t.nav.closeNavigation : t.nav.openNavigation}
         >
           <motion.span
             className='site-nav__toggle-line'
@@ -229,19 +258,19 @@ export function HomeHeader() {
         <nav className='site-nav__links' id='home-navigation'>
           <div className='site-nav__menu-links'>
             <Link href='/about' onClick={() => setOpen(false)}>
-              About
+              {t.nav.about}
             </Link>
             <Link href='/services' onClick={() => setOpen(false)}>
-              Shipping
+              {t.nav.services}
             </Link>
             <Link href='/track' onClick={() => setOpen(false)}>
-              Track
+              {t.nav.track}
             </Link>
             <Link href='/destinations' onClick={() => setOpen(false)}>
-              Destinations
+              {t.nav.destinations}
             </Link>
             <Link href='/contact' onClick={() => setOpen(false)}>
-              Contact
+              {t.nav.contact}
             </Link>
           </div>
           <div className='site-nav__bottom-actions'>
@@ -254,7 +283,7 @@ export function HomeHeader() {
               )}
               onClick={() => setOpen(false)}
             >
-              Get a quote
+              {t.common.getQuote}
             </Link>
           </div>
         </nav>
@@ -266,7 +295,7 @@ export function HomeHeader() {
           <motion.nav
             className='site-nav-mobile md:hidden'
             id='home-navigation-mobile'
-            aria-label='Mobile navigation'
+            aria-label={t.nav.mobileNavigation}
             initial={{ opacity: 0, y: -16, scale: 0.98 }}
             animate={{
               opacity: 1,
@@ -301,11 +330,11 @@ export function HomeHeader() {
               }}
             >
               {[
-                { href: '/about', label: 'About' },
-                { href: '/services', label: 'Shipping' },
-                { href: '/track', label: 'Track' },
-                { href: '/destinations', label: 'Destinations' },
-                { href: '/contact', label: 'Contact' },
+                { href: '/about', label: t.nav.about },
+                { href: '/services', label: t.nav.services },
+                { href: '/track', label: t.nav.track },
+                { href: '/destinations', label: t.nav.destinations },
+                { href: '/contact', label: t.nav.contact },
               ].map((item) => (
                 <MotionLink
                   key={item.href}
@@ -366,7 +395,7 @@ export function HomeHeader() {
                 })}
                 onClick={() => setOpen(false)}
               >
-                Get a quote
+                {t.common.getQuote}
               </Link>
             </motion.div>
           </motion.nav>
@@ -377,56 +406,87 @@ export function HomeHeader() {
 }
 
 export function HomeFooter() {
+  const { t } = useLang();
+  const serviceLinks = [
+    {
+      href: '/services/air-freight',
+      label: t.services.details['air-freight'].title,
+    },
+    {
+      href: '/services/sea-freight',
+      label: t.services.details['sea-freight'].title,
+    },
+    {
+      href: '/services/vehicle-shipping',
+      label: t.services.details['vehicle-shipping'].title,
+    },
+    {
+      href: '/services/commercial-cargo',
+      label: t.services.details['commercial-cargo'].title,
+    },
+    {
+      href: '/services/personal-effects',
+      label: t.services.details['personal-effects'].title,
+    },
+    {
+      href: '/services/vehicle-sourcing',
+      label: t.services.details['vehicle-sourcing'].title,
+    },
+    { href: '/services/storage', label: t.services.details.storage.title },
+  ];
+
   return (
     <footer className='site-footer'>
       <div className='site-footer__main'>
         <div className='site-footer__brand'>
-          <img src={assets.footerLogo} alt='DEexpress' />
-          <small>Logistics GmbH · Berlin</small>
-          <p>
-            International freight, storage and vehicle logistics from Berlin to
-            26 countries across Africa and the Middle East.
-          </p>
-          <strong>
-            Move across borders.
-            <br />
-            Move with confidence.
-          </strong>
+          <Image
+            src={assets.responsiveImages.footerLogo}
+            alt='DEexpress'
+            width={200}
+            height={200}
+          />
         </div>
-        <div>
-          <b>Services</b>
-          <Link href='/services'>Air freight</Link>
-          <Link href='/services'>Sea freight</Link>
-          <Link href='/services'>Vehicle shipping</Link>
-          <Link href='/services'>Commercial cargo</Link>
-          <Link href='/services'>Personal effects</Link>
-          <Link href='/services'>Storage</Link>
+        <div className='site-footer__column'>
+          <b>{t.footer.colServices}</b>
+          {serviceLinks.map((service) => (
+            <Link href={service.href} key={service.href}>
+              {service.label}
+            </Link>
+          ))}
         </div>
-        <div>
-          <b>Company</b>
-          <Link href='/about'>About us</Link>
-          <Link href='/destinations'>Destinations</Link>
-          <Link href='/track'>Track shipment</Link>
-          <Link href='/quote'>Get a quote</Link>
-          <Link href='/contact'>Contact</Link>
+        <div className='site-footer__column'>
+          <b>{t.footer.colCompany}</b>
+          <Link href='/about'>{t.nav.about}</Link>
+          <Link href='/destinations'>{t.nav.destinations}</Link>
+          <Link href='/track'>{t.common.trackShipment}</Link>
+          <Link href='/quote'>{t.common.getQuote}</Link>
+          <Link href='/contact'>{t.nav.contact}</Link>
         </div>
-        <div>
-          <b>Contact</b>
-          <a href='mailto:service@deexpress-logistics.eu'>
-            service@deexpress-logistics.eu
-          </a>
-          <span>+49 152 29939834</span>
-          <span>
-            Lichtenauer Str. 51, 13055 Berlin, Germany
-            <br />
-            <small>Mon – Fri · 9:00 – 17:00</small>
-          </span>
+        <div className='site-footer__column site-footer__contact'>
+          <b>{t.footer.colContact}</b>
+          <div>
+            <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+            <a href='tel:+4915229939834'>+49 152 29939834</a>
+          </div>
+          <div>
+            <span>
+              {SITE.street}, {SITE.city}, {SITE.country}
+            </span>
+            <small>{SITE.hours}</small>
+          </div>
         </div>
       </div>
-      <LanguageSelector footer />
+      <div className='site-footer__utility'>
+        <LanguageSelector footer />
+      </div>
       <div className='site-footer__bottom'>
-        <span>Legal notice　 Data policy</span>
-        <span>© 2026 DEexpress Logistics GmbH. All rights reserved.</span>
+        <div>
+          <Link href='/legal-notice'>{t.footer.legalNotice}</Link>
+          <Link href='/data-policy'>{t.footer.dataPolicy}</Link>
+        </div>
+        <span>
+          © 2026 {SITE.legalName}. {t.footer.rights}
+        </span>
       </div>
     </footer>
   );
@@ -456,7 +516,7 @@ function ShowcaseImage({
   progress,
   reduceMotion,
 }: {
-  image: string;
+  image: JourneyShowcaseImage;
   index: number;
   sceneCount: number;
   progress: MotionValue<number>;
@@ -477,20 +537,34 @@ function ShowcaseImage({
         willChange: 'opacity, transform',
       }}
     >
-      <Image
-        src={image}
-        alt=''
-        fill
-        sizes='100vw'
-        loading='eager'
-        className='service-showcase__image'
-        style={{ opacity: 1 }}
-      />
+      <picture className='absolute inset-0'>
+        {typeof image === 'object' && image.portrait ? (
+          <source media='(orientation: portrait)' srcSet={image.portrait} />
+        ) : null}
+        <Image
+          src={typeof image === 'string' ? image : image.src}
+          alt=''
+          fill
+          sizes='100vw'
+          loading='eager'
+          className='service-showcase__image'
+          style={{ opacity: 1 }}
+        />
+      </picture>
     </motion.div>
   );
 }
 
 function ServiceGrid() {
+  const { t } = useLang();
+  const services = [
+    ['air-freight', assets.responsiveImages.air],
+    ['sea-freight', assets.responsiveImages.sea],
+    ['vehicle-shipping', assets.responsiveImages.vehicle],
+    ['commercial-cargo', assets.responsiveImages.cargo],
+    ['personal-effects', assets.responsiveImages.personal],
+    ['storage', assets.responsiveImages.storage],
+  ] as const;
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const reduceMotion = useReducedMotion();
   const { scrollYProgress } = useScroll({
@@ -507,12 +581,12 @@ function ServiceGrid() {
     <div className='service-showcase home-service-showcase' ref={sectionRef}>
       <div className='service-showcase__visual'>
         <h2 className='service-showcase__heading text-h4'>
-          <span>One system.</span>
-          <span> Multiple effects</span>
+          <span>{t.services.title}</span>
+          <span className='opacity-70 g'> {t.services.intro}</span>
         </h2>
         {services.map(([, image], index) => (
           <ShowcaseImage
-            key={image}
+            key={image.src}
             image={image}
             index={index}
             sceneCount={services.length}
@@ -522,8 +596,8 @@ function ServiceGrid() {
         ))}
       </div>
       <div className='service-showcase__panels'>
-        {services.map(([title, , description]) => (
-          <section key={title} className='service-showcase__panel'>
+        {services.map(([slug]) => (
+          <section key={slug} className='service-showcase__panel'>
             <Link href='/services' className='service-showcase__copy'>
               <AnimatedText
                 trigger='inView'
@@ -535,7 +609,7 @@ function ServiceGrid() {
                   duration: 0.6,
                 }}
               >
-                <strong className='text-h2 text-white'>{title}</strong>
+                <strong className='text-h2 text-white'>{t.services.details[slug].title}</strong>
               </AnimatedText>
               <AnimatedText
                 trigger='inView'
@@ -548,7 +622,7 @@ function ServiceGrid() {
                 }}
               >
                 <span className='service-showcase__description'>
-                  {description}
+                  {t.services.details[slug].summary}
                 </span>
               </AnimatedText>
               <AnimatedText
@@ -559,7 +633,7 @@ function ServiceGrid() {
                 className='flex w-full'
               >
                 <span className='service-showcase__link gap-2'>
-                  Explore
+                  {t.common.learnMore}
                   <AnimatedExploreIcon />
                 </span>
               </AnimatedText>
@@ -572,17 +646,18 @@ function ServiceGrid() {
 }
 
 function TransportRow() {
+  const { t } = useLang();
   const modes = [
-    ['Airplane', assets.plane],
-    ['Ship', assets.ship],
-    ['Train', assets.train],
-    ['Truck', assets.truck],
+    [t.services.details['air-freight'].title, assets.plane],
+    [t.services.details['sea-freight'].title, assets.ship],
+    [t.services.details['commercial-cargo'].title, assets.train],
+    [t.services.details.storage.title, assets.truck],
   ] as const;
   return (
     <div className='preference__transport'>
       {modes.map(([name, image]) => (
         <div className='preference__transport-item' key={name}>
-          <img src={image} alt='' />
+          <Image src={image} alt='' width={160} height={48} />
           <span>{name}</span>
         </div>
       ))}
@@ -590,16 +665,11 @@ function TransportRow() {
   );
 }
 
-const testimonial = {
-  quote:
-    '"DEexpress transformed our supply chain. Their real-time tracking and dedicated team reduced our transit times by 40% on the Berlin-Lagos corridor."',
-  name: 'Marcus Weber',
-  role: 'Head of Logistics, AutoTech GmbH',
-};
-
 type SplideHandle = { splide: { go: (control: string | number) => void } };
 
 function TestimonialCarousel() {
+  const { t } = useLang();
+  const testimonial = t.home.testimonial;
   const [activeSlide, setActiveSlide] = useState(0);
   const splideRef = useRef<SplideHandle | null>(null);
 
@@ -619,12 +689,12 @@ function TestimonialCarousel() {
           speed: 600,
         }}
         onMoved={(_, nextIndex) => setActiveSlide(nextIndex)}
-        aria-label='Customer testimonials'
+        aria-label={testimonial.carouselLabel}
       >
         <SplideTrack>
           {[testimonial, testimonial, testimonial].map((item, index) => (
             <SplideSlide key={index}>
-              <span className='section-label'>Testimonials</span>
+              <span className='section-label'>{testimonial.sectionLabel}</span>
               <blockquote>{item.quote}</blockquote>
               <div className='testimonials__author'>
                 <strong>{item.name}</strong>
@@ -640,34 +710,36 @@ function TestimonialCarousel() {
               size='icon'
               type='button'
               onClick={() => splideRef.current?.splide.go('<')}
-              aria-label='Previous testimonial'
+              aria-label={testimonial.previous}
+              className='rounded-full bg-white'
             >
-              ←
+              <ArrowLeft strokeWidth={1} />
             </Button>
             <Button
               variant='secondary'
               size='icon'
               type='button'
               onClick={() => splideRef.current?.splide.go('>')}
-              aria-label='Next testimonial'
+              aria-label={testimonial.next}
+              className='rounded-full bg-white'
             >
-              →
+              <ArrowRight strokeWidth={1} />
             </Button>
           </div>
           <div
             className='testimonials__indicators'
             aria-label={`Testimonial ${activeSlide + 1} of 3`}
           >
-            {[0, 1, 2].map((index) => (
+            {/* {[0, 1, 2].map((index) => (
               <Button
                 key={index}
                 variant='ghost'
-                className={activeSlide === index ? 'is-active' : ''}
+                className={cn(activeSlide === index ? 'is-active' : '', 'rounded-full h-2 min-h-1! scale-50 w-10',)}
                 type='button'
                 onClick={() => splideRef.current?.splide.go(index)}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
-            ))}
+            ))} */}
           </div>
         </div>
       </Splide>
@@ -676,28 +748,28 @@ function TestimonialCarousel() {
 }
 
 export function HomePage() {
+  const { t } = useLang();
   return (
     <main className='home-page'>
       <section className='home-page__hero'>
-        <ParallaxImage
-          src={assets.hero}
-          alt='Cargo ship in a harbor'
-          strength={18}
+        <ResponsiveImage
+          aria-hidden
+          src={assets.responsiveImages.hero.src}
+          portraitSrc={assets.responsiveImages.hero.portrait}
+          className='absolute inset-0 bg-cover bg-center'
         />
         <HomeHeader />
         <div className='home-page__hero-copy'>
           <Reveal delay={80}>
             <h1 className='text-h1 text-white'>
-              Move what matters
+              {t.home.heroTitle1}
               <br />
-              with confidence
+              {t.home.heroTitle2}
             </h1>
           </Reveal>
           <Reveal delay={220}>
             <p className='site-lead text-white'>
-              Tailor-made logistics services from Europe to Africa by road, air,
-              water or rail – we deliver your cargo safely to its destination
-              with efficiency and care
+              {t.home.heroSub}
             </p>
           </Reveal>
         </div>
@@ -711,12 +783,10 @@ export function HomePage() {
           className='text-h3 max-w-[52ch]'
         >
           <strong>
-            DEExpress coordinates air, sea and vehicle shipping from Europe to
-            destinations across 26 African countries and the Middle East —
+            {t.home.introP1}
           </strong>{' '}
           <span className='text-gray-500'>
-            helping individuals and businesses move internationally with greater
-            clarity and control.
+            {t.home.introP2}
           </span>
         </AnimatedText>
       </section>
@@ -726,66 +796,30 @@ export function HomePage() {
       </section>
 
       <section className='preference'>
-        <h2 className='text-h2 text-editorial-accent'>Ship your preference</h2>
+        <h2 className='text-h2 text-editorial-accent'>{t.home.preference.title}</h2>
         <p className='site-body'>
-          From origin to destination, we follow your preference in means, cost
-          and handling.
+          {t.home.preference.text}
         </p>
         <TransportRow />
-        <div className='preference__stats'>
-          <div>
-            <img src={assets.globeIcon} alt='' />
-            <span>26+</span>
-            <small>
-              Destinations
-              <br />
-              across Africa &amp; the
-              <br />
-              Middle East
-            </small>
-          </div>
-          <div>
-            <img src={assets.multimodalIcon} alt='' />
-            <span>4</span>
-            <small>
-              Multi-modal
-              <br />
-              shipping methods
-            </small>
-          </div>
-          <div>
-            <img src={assets.regionsIcon} alt='' />
-            <span>3</span>
-            <small>Regions served</small>
-          </div>
-        </div>
+        <ul className='preference__stats' aria-label={t.home.preference.statsLabel}>
+          {t.home.preference.stats.map(({ value, label }, index) => (
+            <li className='preference__stat' key={label}>
+              <Image src={[assets.globeIcon, assets.multimodalIcon, assets.regionsIcon][index]} alt='' width={ 200 } height={ 100 } className={ index === 0 ? 'h-12 mt-0': '' } />
+              <strong>{value}</strong>
+              <span>{label}</span>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <GlobalCoverage />
 
       <section className='trust'>
         <h2 className='text-h2 text-editorial-accent'>
-          Built on speed, transparency and trust.
+          {t.home.whyTitle}
         </h2>
         <div className='trust__grid trust__grid--principles'>
-          {[
-            [
-              'Speed',
-              'We are fast and effective — from the first inquiry to the final delivery of your cargo.',
-            ],
-            [
-              'Tracking',
-              'Up-to-date status details for your customers, from the point of shipment until arrival.',
-            ],
-            [
-              'Flexible payment',
-              'Payment should not be a barrier. Contact us — we will find an option that works for you.',
-            ],
-            [
-              'Service',
-              'A customer service team that is ready to assist quickly, in English, German or French.',
-            ],
-          ].map(([title, copy]) => (
+          {t.home.why.map(({ title, text: copy }) => (
             <div className='trust__item' key={title}>
               <strong className='text-card-title'>{title}</strong>
               <span className='site-body mt-4 max-w-[32ch] leading-[1.375]'>
@@ -796,10 +830,10 @@ export function HomePage() {
         </div>
         <div className='trust__grid trust__grid--metrics'>
           {[
-            ['10M+', 'Interactions / month'],
-            ['70%+', 'Autonomous resolution'],
+            ['10M+', 'Total packages shipped'],
+            ['<2 Hr', 'Time to issue resolution'],
             ['75%', 'Cost reduction'],
-            ['10X', 'Capacity increase'],
+            ['67', 'Port deliveries per month'],
           ].map(([value, label]) => (
             <div className='trust__item' key={label}>
               <strong className='text-metric'>{value}</strong>
@@ -810,63 +844,22 @@ export function HomePage() {
       </section>
 
       <section className='shipment-tracking'>
-        <section className='shipment-tracking__panel site-panel'>
-          <div>
-            <h2 className='text-h2 text-editorial-accent'>
-              Track your shipment
-            </h2>
-            <p className='site-body mt-3 mb-6'>
-              Enter your tracking number to see the latest status and estimated
-              delivery date.
-            </p>
-          </div>
-          <form className='shipment-tracking__form' action='/track'>
-            <label className='shipment-tracking__field'>
-              <Hash size={20} />
-              <Input
-                name='ref'
-                placeholder='Enter tracking number'
-                aria-label='Enter tracking number'
-              />
-            </label>
-            <Button type='submit'>
-              <Search size={18} /> Track
-            </Button>
-          </form>
-        </section>
+        <Reveal className='shipment-tracking__panel'>
+          <TrackingWidget />
+        </Reveal>
       </section>
 
       <section className='industries'>
         <h2 className='text-h2 text-editorial-accent'>
-          Trusted across industries
+          {t.home.industriesTitle}
         </h2>
         <p className='site-body'>
-          Different cargo, different requirements — the same dependable
-          handling.
+          {t.home.industriesSub}
         </p>
         <div className='industries__grid'>
-          {[
-            [
-              assets.industry1,
-              'Automotive',
-              'Ensure your tracking number to see the latest status and estimated delivery date.',
-            ],
-            [
-              assets.industry2,
-              'Retail',
-              'Fast and reliable delivery of consumer goods to stores and customers.',
-            ],
-            [
-              assets.industry3,
-              'Food',
-              'Temperature-controlled logistics for perishable goods and ingredients.',
-            ],
-            [
-              assets.industry4,
-              'Hardware',
-              'Specialized handling for heavy machinery and sensitive electronic equipment.',
-            ],
-          ].map(([image, title, copy]) => (
+          {[assets.industry1, assets.industry2, assets.industry3, assets.industry4].map((image, index) => {
+            const { title, text: copy } = t.home.industries[index]
+            return (
             <article className='industries__item' key={title}>
               <Image src={image} alt={title} fill />
               <div className='industries__item-copy'>
@@ -874,7 +867,8 @@ export function HomePage() {
                 <span className='site-body text-white/70'>{copy}</span>
               </div>
             </article>
-          ))}
+            )
+          })}
         </div>
       </section>
 

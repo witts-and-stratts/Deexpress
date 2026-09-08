@@ -1,4 +1,4 @@
-/* Shipment tracking, adapted from the supplied Figma result state. */
+/* Shipment tracking, adapted from the supplied  result state. */
 @layer components {
   .tracking-page {
     @apply bg-white font-sans text-editorial-ink;
@@ -25,13 +25,13 @@
     @apply mt-6 flex flex-col gap-3 sm:flex-row;
   }
   .tracking-widget__input {
-    @apply flex h-14 min-w-0 flex-1 items-center gap-3 rounded-lg border border-editorial-line/70 bg-white px-4 text-editorial-muted focus-within:border-editorial-accent focus-within:ring-4 focus-within:ring-editorial-accent/10;
+    @apply flex h-16 min-w-0 flex-1 items-center gap-3 rounded-lg border border-editorial-line/70 bg-white px-4 text-editorial-muted focus-within:border-editorial-accent focus-within:ring-4 focus-within:ring-editorial-accent/10 sm:h-14;
   }
   .tracking-widget__input input {
-    @apply min-w-0 flex-1 bg-transparent text-base text-editorial-ink outline-none placeholder:text-editorial-muted;
+    @apply min-w-0 flex-1 bg-transparent text-base text-editorial-ink outline-none placeholder:text-editorial-muted max-md:h-14;
   }
   .tracking-widget__submit {
-    @apply h-14 shrink-0 rounded-lg px-6 sm:w-[13.5rem];
+    @apply h-16 shrink-0 rounded-lg px-6 sm:h-14 sm:w-[13.5rem];
   }
   .tracking-widget__error {
     @apply mt-3 text-sm text-red-700;

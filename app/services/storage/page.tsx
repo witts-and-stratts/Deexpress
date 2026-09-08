@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { StoragePage } from '@/components/pages/StoragePage'
 import { pageMetadata } from '@/lib/seo'
+import { metadataCopy } from '@/lib/metadata'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Storage and warehousing in Berlin',
-  description: 'Flexible short- and long-term storage in Berlin, connected directly to your international shipping schedule.',
+  ...metadataCopy.storage,
   pathname: '/services/storage',
   image: '/images/blue-stacked-container.webp',
 })

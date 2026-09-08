@@ -5,5 +5,10 @@
   "about": "Über uns",
   "track": "Sendungsverfolgung",
   "contact": "Kontakt",
-  "quoteCta": "Angebot anfordern"
+  "quoteCta": "Angebot anfordern",
+  "languageSelector": "Sprache auswählen",
+  "brandHome": "DEexpress Startseite",
+  "openNavigation": "Navigation öffnen",
+  "closeNavigation": "Navigation schließen",
+  "mobileNavigation": "Mobile Navigation"
 }

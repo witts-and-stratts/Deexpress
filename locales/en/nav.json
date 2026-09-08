@@ -5,5 +5,10 @@
   "about": "About",
   "track": "Track",
   "contact": "Contact",
-  "quoteCta": "Get a quote"
+  "quoteCta": "Get a quote",
+  "languageSelector": "Choose language",
+  "brandHome": "DEexpress home",
+  "openNavigation": "Open navigation",
+  "closeNavigation": "Close navigation",
+  "mobileNavigation": "Mobile navigation"
 }

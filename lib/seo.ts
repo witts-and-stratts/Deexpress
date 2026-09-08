@@ -12,7 +12,14 @@ export function pageMetadata({ title, description, pathname, image = '/images/ho
   return {
     title,
     description,
-    alternates: { canonical: pathname },
+    alternates: {
+      canonical: pathname,
+      languages: {
+        'en-US': `${pathname}?lang=en`,
+        'de-DE': `${pathname}?lang=de`,
+        'x-default': pathname,
+      },
+    },
     openGraph: {
       title: `${title} | ${SITE.name}`,
       description,

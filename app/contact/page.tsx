@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { ContactPage } from '@/components/pages/ContactPage'
 import { pageMetadata } from '@/lib/seo'
+import { metadataCopy } from '@/lib/metadata'
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Contact',
-  description: 'Contact DEExpress Logistics GmbH in Berlin — by form, phone, email or WhatsApp. We answer in English, German and French.',
+  ...metadataCopy.contact,
   pathname: '/contact',
 })
 

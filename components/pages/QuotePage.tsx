@@ -8,20 +8,24 @@ import { QuoteInquiryForm } from '@/components/InquiryForm'
 import { useLang } from '@/lib/i18n'
 import { SITE, WHATSAPP_URL } from '@/lib/site'
 import { Eyebrow, container, section, textLink } from '@/components/ui'
-import { ResponsiveImage } from '@/components/ResponsiveImage'
+import { EditorialHero } from '@/components/pages/EditorialPage'
 
 export function QuotePage() {
   const { t } = useLang()
   return (
     <main>
-      <section className="contact-page__hero quote-page__hero" aria-labelledby="quote-title">
-        <ResponsiveImage className="absolute inset-0 bg-cover bg-center" src="/images/blue-stacked-container.webp" portraitSrc="/images/blue-stacked-container-portrait.webp" aria-hidden="true" />
-        <div className="contact-page__hero-shade" />
-        <div className="contact-page__hero-content">
-          <h1 id="quote-title" className="text-h1 text-white md:max-w-[10ch]">{t.quote.title}</h1>
-          <p className="site-body text-white">{t.quote.intro}</p>
-        </div>
-      </section>
+      <EditorialHero
+        headingId="quote-title"
+        className="quote-page__hero"
+        title={t.quote.title}
+        intro={t.quote.intro}
+        headingClassName="md:max-w-[10ch]"
+        introClassName="site-body"
+        image={{
+          src: '/images/blue-stacked-container.webp',
+          portraitSrc: '/images/blue-stacked-container-portrait.webp',
+        }}
+      />
 
       <section className={section}>
         <div className={`${container} grid items-start gap-9 lg:grid-cols-12 lg:gap-18`}>
