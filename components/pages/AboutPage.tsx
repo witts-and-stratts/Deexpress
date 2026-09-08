@@ -69,7 +69,7 @@ export function AboutPage() {
         />
         <div className='about__hero-shade' />
         <div className='about__hero-copy'>
-          <h1>{t.about.Title}</h1>
+          <h1>{t.about.title}</h1>
         </div>
       </section>
       <section

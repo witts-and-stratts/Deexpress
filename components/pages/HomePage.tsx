@@ -556,7 +556,7 @@ function ShowcaseImage({
 }
 
 function ServiceGrid() {
-  const { t } = useLang();
+  const { lang, t } = useLang();
   const services = [
     ['air-freight', assets.responsiveImages.air],
     ['sea-freight', assets.responsiveImages.sea],
@@ -564,6 +564,14 @@ function ServiceGrid() {
     ['commercial-cargo', assets.responsiveImages.cargo],
     ['personal-effects', assets.responsiveImages.personal],
     ['storage', assets.responsiveImages.storage],
+  ] as const;
+  const originalEnglishCards = [
+    ['Air freight', 'Time-sensitive shipments, coordinated from collection to arrival.'],
+    ['Sea freight', 'Cost-effective ocean freight for larger loads and long-distance routes.'],
+    ['Vehicle sourcing & shipping', 'From finding a vehicle in Europe to international shipping, coordinated through one team.'],
+    ['Commercial cargo', 'Freight planned around your business requirements and destination.'],
+    ['Personal effects shipping', 'Careful coordination for the belongings that move with you.'],
+    ['Storage & warehousing', 'Secure storage connected to the next stage of your shipment.'],
   ] as const;
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const reduceMotion = useReducedMotion();
@@ -581,8 +589,8 @@ function ServiceGrid() {
     <div className='service-showcase home-service-showcase' ref={sectionRef}>
       <div className='service-showcase__visual'>
         <h2 className='service-showcase__heading text-h4'>
-          <span>{t.services.title}</span>
-          <span className='opacity-70 g'> {t.services.intro}</span>
+          <span>{lang === 'en' ? 'One system.' : t.services.title}</span>
+          <span className='opacity-70 g'> {lang === 'en' ? 'Multiple effects' : t.services.intro}</span>
         </h2>
         {services.map(([, image], index) => (
           <ShowcaseImage
@@ -596,7 +604,11 @@ function ServiceGrid() {
         ))}
       </div>
       <div className='service-showcase__panels'>
-        {services.map(([slug]) => (
+        {services.map(([slug], index) => {
+          const [title, summary] = lang === 'en'
+            ? originalEnglishCards[index]
+            : [t.services.details[slug].title, t.services.details[slug].summary]
+          return (
           <section key={slug} className='service-showcase__panel'>
             <Link href='/services' className='service-showcase__copy'>
               <AnimatedText
@@ -609,7 +621,7 @@ function ServiceGrid() {
                   duration: 0.6,
                 }}
               >
-                <strong className='text-h2 text-white'>{t.services.details[slug].title}</strong>
+                <strong className='text-h2 text-white'>{title}</strong>
               </AnimatedText>
               <AnimatedText
                 trigger='inView'
@@ -622,7 +634,7 @@ function ServiceGrid() {
                 }}
               >
                 <span className='service-showcase__description'>
-                  {t.services.details[slug].summary}
+                  {summary}
                 </span>
               </AnimatedText>
               <AnimatedText
@@ -633,25 +645,26 @@ function ServiceGrid() {
                 className='flex w-full'
               >
                 <span className='service-showcase__link gap-2'>
-                  {t.common.learnMore}
+                  {lang === 'en' ? 'Explore' : t.common.learnMore}
                   <AnimatedExploreIcon />
                 </span>
               </AnimatedText>
             </Link>
           </section>
-        ))}
+          )
+        })}
       </div>
     </div>
   );
 }
 
 function TransportRow() {
-  const { t } = useLang();
+  const { lang, t } = useLang();
   const modes = [
-    [t.services.details['air-freight'].title, assets.plane],
-    [t.services.details['sea-freight'].title, assets.ship],
-    [t.services.details['commercial-cargo'].title, assets.train],
-    [t.services.details.storage.title, assets.truck],
+    [lang === 'en' ? 'Airplane' : t.services.details['air-freight'].title, assets.plane],
+    [lang === 'en' ? 'Ship' : t.services.details['sea-freight'].title, assets.ship],
+    [lang === 'en' ? 'Train' : t.services.details['commercial-cargo'].title, assets.train],
+    [lang === 'en' ? 'Truck' : t.services.details.storage.title, assets.truck],
   ] as const;
   return (
     <div className='preference__transport'>
@@ -830,10 +843,10 @@ export function HomePage() {
         </div>
         <div className='trust__grid trust__grid--metrics'>
           {[
-            ['10M+', 'Total packages shipped'],
-            ['<2 Hr', 'Time to issue resolution'],
+            ['10M+', 'Interactions / month'],
+            ['70%+', 'Autonomous resolution'],
             ['75%', 'Cost reduction'],
-            ['67', 'Port deliveries per month'],
+            ['10X', 'Capacity increase'],
           ].map(([value, label]) => (
             <div className='trust__item' key={label}>
               <strong className='text-metric'>{value}</strong>

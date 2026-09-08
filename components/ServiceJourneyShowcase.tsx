@@ -49,37 +49,31 @@ function JourneyImage({
   sceneCount,
   imageCount,
   progress,
-  reduceMotion,
 }: {
   image: JourneyShowcaseImage;
   index: number;
   sceneCount: number;
   imageCount: number;
   progress: MotionValue<number>;
-  reduceMotion: boolean | null;
 }) {
   const src = typeof image === 'string' ? image : image.src;
   const portraitImage = typeof image === 'string' ? undefined : image.portrait;
-  const scrollSteps = Math.max(1, sceneCount - 1);
-  const start = index === 0 ? 0 : Math.max(0, (index - 0.5) / scrollSteps);
-  const end = Math.min(1, start + 0.35 / scrollSteps);
-  const nextEnd = (index + 0.85) / scrollSteps;
-  const opacity = useTransform(() => {
-    const value = progress.get();
-    // Retire a covered image so only adjacent scenes can blend, in either direction.
-    if (index < imageCount - 1 && value >= nextEnd) return 0;
-    return index === 0
-      ? 1
-      : Math.max(0, Math.min(1, (value - start) / (end - start)));
-  });
-  const scale = useTransform(progress, [start, end], [1.06, 1]);
+  // Some services have more imagery than copy scenes. Base transitions on the
+  // larger count so every image receives a non-zero portion of the scroll.
+  const timelineCount = Math.max(sceneCount, imageCount);
+  const start = index / timelineCount;
+  const end = Math.min(1, start + 0.35 / timelineCount);
+  const opacity = useTransform(
+    progress,
+    [start, end],
+    index === 0 ? [1, 1] : [0, 1],
+  );
 
   return (
     <motion.div
       className='absolute inset-0'
       style={{
         opacity,
-        // scale: reduceMotion ? 1 : scale,
         willChange: 'opacity, transform',
       }}
     >
@@ -139,11 +133,11 @@ export function ServiceJourneyShowcase({
           const responsiveImage =
             typeof image === 'string'
               ? portraitImage
-                ? { src: image, portraitImage }
+                ? { src: image, portrait: portraitImage }
                 : image
               : {
                   ...image,
-                  portraitImage: image.portrait ?? portraitImage,
+                  portrait: image.portrait ?? portraitImage,
                 };
 
           return (
@@ -154,7 +148,6 @@ export function ServiceJourneyShowcase({
               sceneCount={scenes.length}
               imageCount={images.length}
               progress={scrollYProgress}
-              reduceMotion={reduceMotion}
             />
           );
         })}

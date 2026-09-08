@@ -1,12 +1,11 @@
 {
   "eyebrow": "About us",
-  "title": "German precision. African reach.",
-  "Title": "Precision shipping with global reach",
+  "title": "Precision sihpping with global reach",
   "intro": "DEexpress Logistics GmbH is an international logistics and freight forwarding company based in Berlin, coordinating air, sea and land freight from Europe to 26 countries across Africa and the Middle East.",
   "storyTitle": "Our story",
   "story": [
     "DEexpress Logistics GmbH was founded in Berlin with a clear purpose: to make shipping between Europe, Africa and the Middle East simple, transparent and dependable.",
-    "What began as a focused freight service has grown into a full logistics operation — coordinating shipments by air, sea, rail and road, with storage solutions in Berlin and a team that speaks the languages of our customers.",
+    "What began as a focused freight service has grown into a full logistics operation — coordinating shipments by air, sea, rail and road, with storage solutions in Berlin and a team that speaks the languages of our customers: English, German and French.",
     "Today we serve individuals moving personal belongings and vehicles as well as businesses across the automotive, retail, food and hardware industries."
   ],
   "missionTitle": "Our mission",
@@ -32,7 +31,7 @@
       "text": "You always have a name and a number — not a ticket queue."
     }
   ],
-  "leadershipTitle": "Our Team & Leadership",
+  "leadershipTitle": "Leadership",
   "leadershipSub": "Backed by decades of logistics expertise, our team combines deep industry knowledge with a relentless commitment to getting every shipment where it needs to be — on time, every time.",
   "managingDirector": "Managing Director"
 }

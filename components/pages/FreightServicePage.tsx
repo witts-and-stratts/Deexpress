@@ -19,11 +19,54 @@ import { EditorialProcess } from '@/components/pages/EditorialPage';
 import { useLang } from '@/lib/i18n';
 import {
   SERVICE_EXTRA_FAQS,
+  ORIGINAL_ENGLISH_SERVICE_SCOPES,
   SERVICE_OPERATIONAL_COPY,
   SERVICE_PROOF_COPY,
   SERVICE_STORIES,
 } from '@/lib/service-content';
 import type { ServiceSlug } from '@/lib/site';
+
+const originalEnglishJourneys: Partial<Record<ServiceSlug, { title: string; text: string }[]>> = {
+  'air-freight': [
+    { title: 'Cargo purchase & negotiations', text: 'For specific requests, we start by liaising with your suppliers, making transportation arrangements and purchasing your products on your behalf, with optimal payment facilitation.' },
+    { title: 'Booking & export preparation', text: 'Once the route is agreed, the shipment is prepared for collection and airport handling. DEexpress supports the export-document process and coordinates the handovers required before departure.' },
+    { title: 'Arrival, customs clearing & handling', text: 'We handle the customs process in the destination airport, with filing of complete paperwork and other regulatory obligations.' },
+    { title: 'Onward coordination', text: 'At destination, the next handover is planned around the confirmed route. Where available, the service continues from airport handling to final delivery coordination.' },
+  ],
+  'commercial-cargo': [
+    { title: 'Start with the business requirement', text: 'We begin with the goods, packing, origin, destination and delivery priority — whether the shipment is a one-off project or part of a regular supply flow.' },
+    { title: 'Build the right route around the cargo', text: 'Air, sea, rail and road options are considered together, balancing timing, cost and the practical handling needs of your shipment.' },
+    { title: 'Coordinate the movement from collection onward', text: 'Collection, export documents and transport handovers are planned as one connected flow, with clear communication as the cargo moves.' },
+    { title: 'Keep the next shipment ready to move', text: 'For recurring cargo, the agreed process creates a dependable basis for the next request. For one-off shipments, delivery is coordinated around the confirmed route.' },
+  ],
+  'personal-effects': [
+    { title: 'Your items & your shipping needs', text: 'A laptop, a home appliance or a few boxes for family — tell us what you are sending and where it needs to go. We review the item details, size and preferred timing to plan a suitable air or sea freight route from Europe.' },
+    { title: 'Packing guidance & collection', text: 'Different items need different preparation. We provide packing guidance for your shipment and review any special handling needs before collection, bringing the item list, paperwork and collection arrangements together.' },
+    { title: 'Export preparation & shipping', text: 'With your belongings ready, we coordinate export-document support and the handover for international transport. Where storage is needed before departure, we discuss the arrangements as part of your shipment plan.' },
+    { title: 'Arrival & final handover', text: 'As your shipment arrives, we coordinate the destination handover and guide you through the next steps. Collection or onward delivery is planned around the agreed service, with availability confirmed for your destination.' },
+  ],
+  'vehicle-shipping': [
+    { title: 'Vehicle sourcing & purchase support', text: 'Looking for a vehicle in Europe? We support the search, liaise with sellers and assist with purchase negotiations. Inspection and document checks are arranged where available, with shipping requirements considered from the start.' },
+    { title: 'Collection & export preparation', text: 'Once your vehicle is ready, we coordinate collection, export documents and the port handover. Already own the vehicle? Your journey can begin here, with storage available when collection and departure dates do not align.' },
+    { title: 'Vehicle loading & sea transport', text: 'From a single car to commercial vehicles, we plan container or roll-on/roll-off transport around the vehicle and destination. Booking, handling and loading arrangements are connected for a carefully managed departure.' },
+    { title: 'Arrival & onward delivery', text: 'At destination, we coordinate the arrival handover and support the customs-document process. Where available, onward transport connects the port to your final delivery point, with clear communication throughout.' },
+  ],
+  storage: [
+    { title: 'Storage planning & goods receipt', text: 'Tell us what you need to store, how much space it requires and when it will arrive. We confirm suitable arrangements and coordinate the warehouse handover, with any onward shipping requirements considered from the start.' },
+    { title: 'Storage & shipment coordination', text: 'Your goods are held in Berlin for the agreed period, whether you need a short stay before departure or longer-term space. When several deliveries need to travel together, we discuss consolidation as part of the onward plan.' },
+    { title: 'Release & onward transport', text: 'When you are ready, we coordinate release for collection or the next shipment. Air, sea or road transport can be connected to your storage arrangements, with the route and handover agreed before your goods leave.' },
+  ],
+};
+
+const originalEnglishJourneyHeadings: Record<ServiceSlug, string> = {
+  'air-freight': 'Quick professional process',
+  'sea-freight': 'A sea route, kept connected',
+  'vehicle-shipping': 'From purchase to port. From port to you.',
+  'commercial-cargo': 'Every commercial movement, kept connected',
+  'personal-effects': 'From your hands to theirs, carefully coordinated.',
+  'vehicle-sourcing': 'Quick professional process',
+  storage: 'From goods received to ready to go.',
+};
 
 type ResponsiveBackgroundImage =
   | string
@@ -61,6 +104,10 @@ export function FreightServicePage({
   const proof = SERVICE_PROOF_COPY[lang];
   const story = SERVICE_STORIES[lang][slug];
   const operational = SERVICE_OPERATIONAL_COPY[lang][slug];
+  const originalEnglishScope = lang === 'en' ? ORIGINAL_ENGLISH_SERVICE_SCOPES[slug] : undefined;
+  const originalEnglishJourney = lang === 'en'
+    ? originalEnglishJourneys[slug] ?? SERVICE_STORIES.en[slug].scenes
+    : undefined;
   const details = t.services.details[slug];
   const faqs = [
     ...story.faqs,
@@ -140,13 +187,13 @@ export function FreightServicePage({
 
       <section className='air-freight-page__scope grid grid-cols-12'>
         <Reveal className='air-freight-page__scope-intro col-span-12 lg:col-span-4'>
-          <h2>{operational.fitTitle}</h2>
+          <h2>{originalEnglishScope?.title ?? operational.fitTitle}</h2>
           <div className='air-freight-page__scope-image'>
             <Image src={scopeImage} alt='' fill aria-hidden='true' />
           </div>
         </Reveal>
         <ServiceScopeList
-          items={operational.fit}
+          items={originalEnglishScope?.items ?? operational.fit}
           className='air-freight-page__scope-list col-span-12 lg:col-start-7 lg:col-span-6'
           ariaLabel={details.title}
         />
@@ -154,11 +201,11 @@ export function FreightServicePage({
 
       <section className='air-freight-page__process'>
         <ServiceJourneyShowcase
-          scenes={operational.scenes}
+          scenes={originalEnglishJourney ?? operational.scenes}
           images={journey.images}
           portraitImages={journey.portraitImages}
           label={details.title}
-          heading={details.title}
+          heading={lang === 'en' ? originalEnglishJourneyHeadings[slug] : details.title}
           showNumbers={false}
         />
       </section>

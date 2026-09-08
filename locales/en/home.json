@@ -1,8 +1,8 @@
 {
   "heroBadge": "Europe → Africa & Middle East",
-  "heroTitle1": "We move what matters,",
-  "heroTitle2": "across continents.",
-  "heroSub": "DEexpress Logistics GmbH coordinates air, sea and land freight from Berlin to 26 countries across Africa and the Middle East — for individuals and businesses.",
+  "heroTitle1": "Move what matters",
+  "heroTitle2": "with confidence",
+  "heroSub": "Tailor-made logistics services from Europe to Africa by road, air, water or rail – we deliver your cargo safely to its destination with efficiency and care",
   "heroTrackLabel": "Tracking number",
   "heroTrackBtn": "Track",
   "stats": [
@@ -35,8 +35,8 @@
   ],
   "introEyebrow": "Who we are",
   "introTitle": "A Berlin logistics partner for two continents.",
-  "introP1": "From our base in Berlin, DEexpress Logistics coordinates international freight by air, sea, rail and road — serving individuals and businesses across Europe, Africa and the Middle East.",
-  "introP2": "Automotive, retail, food or hardware: whatever you move, one team plans the route, handles the paperwork and keeps you informed until your cargo arrives.",
+  "introP1": "DEExpress coordinates air, sea and vehicle shipping from Europe to destinations across 26 African countries and the Middle East —",
+  "introP2": "helping individuals and businesses move internationally with greater clarity and control.",
   "servicesEyebrow": "Our services",
   "servicesTitle": "One partner. Every mode of transport.",
   "servicesSub": "From time-critical air freight to cost-efficient sea freight, vehicles, commercial cargo and secure storage — choose the service, we plan the route.",
@@ -89,24 +89,24 @@
   "trackingTitle": "Know where your shipment stands.",
   "trackingSub": "Enter your reference and see the latest available status — from booking to arrival.",
   "industriesEyebrow": "Industries",
-  "industriesTitle": "Trusted across industries.",
+  "industriesTitle": "Trusted across industries",
   "industriesSub": "Different cargo, different requirements — the same dependable handling.",
   "industries": [
     {
       "title": "Automotive",
-      "text": "We are experts in shipping for the automotive industry: cars, trucks, buses and special equipment."
+      "text": "Ensure your tracking number to see the latest status and estimated delivery date."
     },
     {
       "title": "Retail",
-      "text": "We ship and store cargo for the retail industry. Reliable and fast service makes us an ideal partner."
+      "text": "Fast and reliable delivery of consumer goods to stores and customers."
     },
     {
       "title": "Food",
-      "text": "We understand the special hygiene and temperature requirements involved in food shipment."
+      "text": "Temperature-controlled logistics for perishable goods and ingredients."
     },
     {
       "title": "Hardware",
-      "text": "We routinely ship electronics and hardware across borders — safely and effectively."
+      "text": "Specialized handling for heavy machinery and sensitive electronic equipment."
     }
   ],
   "sourcingTitle": "Looking for a vehicle in Europe?",
@@ -125,7 +125,7 @@
     "carouselLabel": "Customer testimonials",
     "previous": "Previous testimonial",
     "next": "Next testimonial",
-    "quote": "DEexpress transformed our supply chain. Their real-time tracking and dedicated team reduced our transit times by 40% on the Berlin-Lagos corridor.",
+    "quote": "\"DEexpress transformed our supply chain. Their real-time tracking and dedicated team reduced our transit times by 40% on the Berlin-Lagos corridor.\"",
     "name": "Marcus Weber",
     "role": "Head of Logistics, AutoTech GmbH"
   }
