@@ -106,7 +106,7 @@ async function translatedImageExists(imagePath, langCode, projectRoot = './') {
             await fs.access(checkPath);
             console.log(`  -> 🖼️ Found translated image: ${checkPath}`);
             return true;
-        } catch (error) {
+        } catch {
             // File doesn't exist, continue checking
         }
     }
@@ -216,13 +216,31 @@ class BaseTranslator {
         this.translationSemaphore = new Semaphore(this.maxConcurrentTranslations);
         this.cache = {};
         this.projectRoot = config.projectRoot || './';
+        this.dryRun = config.dryRun || false;
     }
 
     async initialize() {
         this.cache = await loadCache(this.cachePath);
     }
 
-    async translateText(text, targetLang) {
+    async validateSourceFiles() {
+        const sourceFiles = await getAllJsonFiles(this.sourceDir);
+        if (sourceFiles.length === 0) {
+            throw new Error(`No JSON files found in ${this.sourceDir}.`);
+        }
+
+        for (const filePath of sourceFiles) {
+            try {
+                JSON.parse(await fs.readFile(filePath, 'utf8'));
+            } catch (error) {
+                throw new Error(`Invalid JSON in ${filePath}: ${error.message}`);
+            }
+        }
+
+        console.log(`📁 Validated ${sourceFiles.length} source locale file(s).`);
+    }
+
+    async translateText() {
         throw new Error('translateText method must be implemented by subclasses');
     }
 
@@ -257,21 +275,15 @@ class BaseTranslator {
         }
 
         if (Array.isArray(obj)) {
-            // Process array items sequentially to better manage concurrency
-            const translatedArray = [];
-            for (const item of obj) {
-                translatedArray.push(await this.translateObject(item, targetLang));
-            }
-            return translatedArray;
+            return Promise.all(obj.map((item) => this.translateObject(item, targetLang)));
         }
 
         if (typeof obj === 'object' && obj !== null) {
             const newObj = {};
             const keys = Object.keys(obj);
-            // Process object keys sequentially
-            for (const key of keys) {
+            await Promise.all(keys.map(async (key) => {
                 newObj[key] = await this.translateObject(obj[key], targetLang);
-            }
+            }));
             return newObj;
         }
 
@@ -279,11 +291,8 @@ class BaseTranslator {
     }
 
     async processFiles() {
+        await this.validateSourceFiles();
         const sourceFiles = await getAllJsonFiles(this.sourceDir);
-        if (sourceFiles.length === 0) {
-            console.log(`⚠️ No JSON files found in ${this.sourceDir}. Exiting.`);
-            return;
-        }
 
         console.log(`📁 Found ${sourceFiles.length} source file(s) to translate into ${this.targetLangs.length} languages.`);
         console.log(`⚡ Limiting to ${this.maxConcurrentTranslations} concurrent translation operations.`);
@@ -307,11 +316,12 @@ class BaseTranslator {
                     const translatedData = await this.translateObject(data, lang);
 
                     const outPath = path.join(this.targetDir, lang.code, relativePath);
-                    await fs.mkdir(path.dirname(outPath), { recursive: true });
-
-                    await fs.writeFile(outPath, JSON.stringify(translatedData, null, 2), 'utf8');
+                    if (!this.dryRun) {
+                        await fs.mkdir(path.dirname(outPath), { recursive: true });
+                        await fs.writeFile(outPath, JSON.stringify(translatedData, null, 2), 'utf8');
+                    }
                     const langDuration = ((Date.now() - langStartTime) / 1000).toFixed(1);
-                    console.log(`  -> ✅ ${lang.name} (${lang.code}) translation written to: ${outPath} (took ${langDuration}s)`);
+                    console.log(`  -> ✅ ${lang.name} (${lang.code}) translation ${this.dryRun ? 'generated (not written)' : `written to: ${outPath}`} (took ${langDuration}s)`);
                 });
 
                 await Promise.all(languageTasks);
@@ -324,10 +334,13 @@ class BaseTranslator {
             }
         }
 
-        await saveCache(this.cache, this.cachePath);
+        if (!this.dryRun) await saveCache(this.cache, this.cachePath);
         const totalDuration = ((Date.now() - totalStartTime) / 1000).toFixed(1);
         console.log(`\n🎉 Translation process completed in ${totalDuration}s.`);
         console.log(`📊 Files processed: ${filesProcessed}, Files failed: ${filesFailed}.`);
+        if (filesFailed > 0) {
+            throw new Error(`${filesFailed} locale file(s) failed to translate.`);
+        }
     }
 }
 

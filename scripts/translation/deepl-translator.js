@@ -47,7 +47,7 @@ class DeepLTranslator extends BaseTranslator {
         let tagId = 0;
         
         // Find all Mustache patterns: {{variable}}, {{{variable}}}, {{#section}}, {{/section}}, etc.
-        const mustacheRegex = /\{\{[^}]*\}\}/g;
+        const mustacheRegex = /\{\{\{[\s\S]*?\}\}\}|\{\{[\s\S]*?\}\}/g;
         let match;
         
         // Reset regex lastIndex to ensure we capture all matches
@@ -113,7 +113,7 @@ class DeepLTranslator extends BaseTranslator {
         }
 
         const cacheKey = `${targetLang.code}::${text}`;
-        if (this.cache[cacheKey]) {
+        if (Object.hasOwn(this.cache, cacheKey)) {
             return this.cache[cacheKey];
         }
 

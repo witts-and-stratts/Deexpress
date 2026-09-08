@@ -27,19 +27,18 @@ class OpenAITranslator extends BaseTranslator {
         }
 
         const cacheKey = `${targetLang.code}::${text}`;
-        if (this.cache[cacheKey]) {
+        if (Object.hasOwn(this.cache, cacheKey)) {
             return this.cache[cacheKey];
         }
 
         await this.translationSemaphore.acquire();
         try {
-            const prompt = `Translate the following text to ${targetLang.name}.
+            const prompt = `Translate the text below to ${targetLang.name}.
 
-RULES:
-- Return ONLY the translated text. Do not include prefixes or quotation marks.
-- Preserve original formatting, placeholders like {{variable}}, and URLs or paths.
+Return only the translation. Preserve every placeholder, including {{variable}} and {{{variable}}}, exactly. Preserve URLs, paths, markup, line breaks, and punctuation.
 
-Original text: "${text}"`;
+Text to translate:
+${text}`;
 
             const res = await this.openai.chat.completions.create({
                 model: this.model,
@@ -48,9 +47,11 @@ Original text: "${text}"`;
                 max_tokens: this.maxTokens,
             });
 
-            let result = res.choices[0]?.message?.content?.trim() || text;
-            // Defensive cleaning to remove quotes the AI might add
-            result = result.replace(/^["'"«]?(.*?)["'"»]?$/, '$1');
+            const content = res.choices[0]?.message?.content;
+            if (typeof content !== 'string' || content.trim() === '') {
+                throw new Error('OpenAI returned no translation text.');
+            }
+            const result = content.trim();
 
             this.cache[cacheKey] = result;
             return result;

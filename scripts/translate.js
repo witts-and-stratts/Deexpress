@@ -1,11 +1,14 @@
 import "dotenv/config";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import OpenAITranslator from "./translation/openai-translator.js";
 import DeepLTranslator from "./translation/deepl-translator.js";
+import { BaseTranslator } from "./translation/base.js";
 
 // --- CONFIGURATION ---
-const SOURCE_DIR = "../locales/en";
-const TARGET_DIR = "../locales";
-const PROJECT_ROOT = "./"; // Root directory for checking image files
+const PROJECT_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const SOURCE_DIR = path.join(PROJECT_ROOT, "locales", "en");
+const TARGET_DIR = path.join(PROJECT_ROOT, "locales");
 
 const TARGET_LANGS = [
   { code: "de", name: "German" },
@@ -17,13 +20,14 @@ const MAX_CONCURRENT_TRANSLATIONS = 5;
 /**
  * Factory function to create the appropriate translator based on the provider
  */
-function createTranslator(provider) {
+function createTranslator(provider, { dryRun = false } = {}) {
   const config = {
     sourceDir: SOURCE_DIR,
     targetDir: TARGET_DIR,
     targetLangs: TARGET_LANGS,
     maxConcurrentTranslations: MAX_CONCURRENT_TRANSLATIONS,
     projectRoot: PROJECT_ROOT,
+    dryRun,
   };
 
   switch (provider.toLowerCase()) {
@@ -33,8 +37,8 @@ function createTranslator(provider) {
       }
 
       config.apiKey = process.env.OPENAI_API_KEY;
-      config.cachePath = "./translation-cache.json";
-      config.model = "gpt-4.1-2025-04-14"; // Can be configured via env var if needed
+      config.cachePath = path.join(PROJECT_ROOT, "translation-cache.json");
+      config.model = process.env.OPENAI_MODEL || "gpt-4.1-2025-04-14";
 
       return new OpenAITranslator(config);
 
@@ -44,7 +48,7 @@ function createTranslator(provider) {
       }
 
       config.apiKey = process.env.DEEPL_API_KEY;
-      config.cachePath = "./translation-cache-deepl.json";
+      config.cachePath = path.join(PROJECT_ROOT, "translation-cache-deepl.json");
       return new DeepLTranslator(config);
 
     default:
@@ -58,17 +62,30 @@ function createTranslator(provider) {
  * Main function to run the translation process
  */
 async function main() {
-  // Get the translation provider from command line arguments or default to OpenAI
   const args = process.argv.slice(2);
-  const provider = args[0] || "openai";
+  const dryRun = args.includes("--dry-run");
+  const checkOnly = args.includes("--check");
+  const provider = args.find((arg) => !arg.startsWith("--")) || "openai";
+
+  if (args.includes("--help") || args.includes("-h")) {
+    console.log("Usage: npm run translate -- [openai|deepl] [--dry-run|--check]");
+    return;
+  }
 
   console.log(
     `🚀 Starting translation process using ${provider.toUpperCase()}...`,
   );
 
   try {
+    if (checkOnly) {
+      const validator = new BaseTranslator({ sourceDir: SOURCE_DIR });
+      await validator.validateSourceFiles();
+      console.log("✅ Translation configuration and source locale files are valid.");
+      return;
+    }
+
     // Create and initialize the appropriate translator
-    const translator = createTranslator(provider);
+    const translator = createTranslator(provider, { dryRun });
     await translator.initialize();
 
     // Run the translation process
