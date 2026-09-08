@@ -1,0 +1,262 @@
+/* Home page sections and their page-specific layout. */
+@reference './typography.css';
+
+@layer components {
+  .home-page {
+    @apply overflow-clip bg-white font-sans text-editorial-ink;
+  }
+  .home-page__hero {
+    @apply relative min-h-160 h-svh overflow-hidden bg-navy-950 text-white;
+  }
+  .home-page__hero > .motion-parallax {
+    @apply min-h-screen w-full object-cover;
+  }
+  .home-page__hero-copy {
+    @apply absolute inset-x-page bottom-[clamp(2.625rem,8.39vh,5.375rem)];
+  }
+  .home-page__hero-copy h1 {
+    @apply mb-[clamp(1rem,5vw,4.5rem)] w-auto text-white md:w-4/5;
+  }
+  .home-page__hero-copy p {
+    @apply mt-6 w-auto text-white/80 md:mt-0 md:ml-auto md:w-1/2;
+  }
+  .home-page__intro {
+    @apply px-page pt-section pb-100;
+  }
+  .home-page__intro p {
+    @apply max-w-242 text-editorial-subtle;
+  }
+  .home-page__intro strong {
+    @apply font-medium text-editorial-ink;
+  }
+  .home-page__section {
+    @apply pb-[clamp(3rem,5vw,4.5rem)];
+  }
+
+  .service-showcase {
+    @apply relative isolate z-0 bg-black;
+  }
+  .home-service-showcase .service-showcase__panels {
+    @apply mt-[-100svh];
+  }
+  .service-showcase__visual {
+    @apply sticky top-0 z-0 h-svh overflow-hidden bg-editorial-ink;
+  }
+  .service-showcase__visual::after {
+    @apply absolute inset-0 bg-black/40 content-[''];
+  }
+  .service-showcase__heading {
+    @apply absolute left-page top-[clamp(1.75rem,4.2vw,4rem)] z-10 max-w-[min(700px,70vw)] text-white;
+  }
+  .service-showcase__heading span {
+    @apply text-white;
+  }
+  .service-showcase__image {
+    @apply absolute inset-0 size-full object-cover opacity-0;
+  }
+  .service-showcase__image:first-of-type {
+    @apply opacity-100;
+  }
+  .service-showcase__panels {
+    @apply relative z-10;
+  }
+  .service-showcase__panel {
+    @apply grid min-h-svh grid-cols-12 items-end px-page py-[clamp(2.5rem,7vw,7rem)] md:items-center;
+  }
+  .service-showcase__copy {
+    @apply col-span-12 col-start-1 grid max-w-140 gap-4 text-white no-underline md:col-span-6 md:col-start-7;
+  }
+  .service-showcase__description {
+    @apply text-h4 max-w-[37ch];
+  }
+  .service-showcase__link {
+    @apply text-[0.8rem] font-[570] tracking-widest text-white uppercase mt-8 flex items-center leading-none gap-1 no-underline;
+  }
+
+  .preference {
+    @apply mx-page mb-[clamp(3rem,6vw,5.5rem)] bg-editorial-surface px-[clamp(1.375rem,4vw,3.375rem)] py-[clamp(1.75rem,3vw,2.75rem)];
+  }
+  .preference > p {
+    @apply mt-3 mb-9 max-w-[52ch];
+  }
+  .preference__transport {
+    @apply grid grid-cols-12 gap-8 border-b border-editorial-line pb-7;
+  }
+  .preference__transport-item {
+    @apply col-span-6 flex flex-col-reverse items-center gap-3 text-center text-[clamp(1rem,1.39vw,1.25rem)] md:col-span-3;
+  }
+  .preference__transport-item img {
+    @apply h-12 w-[85%] object-contain;
+  }
+  .preference__stats {
+    @apply grid list-none grid-cols-1 pt-6 md:grid-cols-3;
+  }
+  .preference__stat {
+    @apply grid grid-cols-[6rem_auto_1fr] items-start gap-x-5 border-b border-editorial-line py-4 last:border-b-0 md:border-r md:border-b-0 md:px-[clamp(1.5rem,5vw,3.5rem)] md:first:pl-0 md:last:border-r-0 md:last:pr-0;
+  }
+  .preference__stat img {
+    @apply h-24 -mt-6 object-contain;
+  }
+  .preference__stat strong {
+    @apply font-['Saans',var(--font-inter),Arial,sans-serif] text-[clamp(2rem,3.2vw,2.875rem)] font-[380] leading-none tracking-[-0.02em] text-editorial-ink;
+  }
+  .preference__stat span {
+    @apply text-[0.875rem] leading-[1.3] text-editorial-muted;
+  }
+
+  .coverage {
+    @apply relative grid h-auto min-h-0 grid-cols-12 overflow-hidden bg-editorial-accent px-page pt-24 pb-[clamp(3.5rem,5.7vw,5.125rem)] text-white md:h-screen md:min-h-screen md:py-[clamp(3.5rem,5.7vw,5.125rem)];
+  }
+  .coverage--destinations {
+    @apply h-[calc(100vh+400px)] min-h-[calc(100vh+400px)] pt-50;
+  }
+  .coverage__copy {
+    @apply relative z-10 col-span-12 md:col-span-7;
+  }
+  .coverage__copy .text-h2 {
+    @apply text-white;
+  }
+  .coverage__copy h2 span {
+    @apply text-white/55;
+  }
+  .coverage__copy p {
+    @apply mt-3 max-w-2xl text-white/85;
+  }
+  .coverage__tabs {
+    @apply mt-7 flex max-w-154.75 flex-wrap gap-2;
+  }
+  .coverage__tabs button {
+    @apply border-white/30 bg-white/10 text-white hover:border-orange hover:bg-orange;
+  }
+  .coverage__card {
+    @apply relative z-10 col-span-12 mt-8 self-end rounded-md bg-white/80 p-8 pt-6 text-editorial-ink backdrop-blur-2xl md:col-span-4 md:col-start-9 md:mt-0 md:min-h-100 flex flex-col;
+  }
+  .coverage__search {
+    @apply relative z-10 col-span-12 col-start-1 mt-4 self-start md:col-span-4 md:col-start-9;
+  }
+  .coverage__card b {
+    @apply text-[0.6875rem] font-[570] leading-normal tracking-widest text-red-600 uppercase;
+  }
+  .coverage__card h3 {
+    @apply mt-6 mb-2;
+  }
+  .coverage__card a {
+    @apply mt-7 inline-flex text-editorial-accent no-underline;
+  }
+  .coverage .coverage-globe-canvas {
+    @apply pointer-events-auto absolute z-0 w-full!;
+  }
+  .coverage .coverage-globe-canvas:not(.coverage-globe-canvas--panel),
+  .coverage-globe-canvas:not(.coverage-globe-canvas--panel) {
+    @apply relative! col-span-12! top-auto! left-1/2! mt-8! block aspect-square w-[140vw]! max-w-none! -translate-x-1/2! md:absolute! md:top-[20%]! md:mt-0! md:w-full! md:translate-x-0! md:-left-1/10!;
+  }
+
+  .coverage-globe-canvas--panel {
+    @apply relative! inset-auto! mt-0! h-full! w-full! translate-x-0!;
+  }
+
+  .coverage-globe-fallback {
+    @apply relative h-full w-full object-contain;
+  }
+  .coverage-globe-fallback img {
+    @apply h-full w-full object-contain;
+  }
+
+  .trust {
+    @apply px-page pt-section;
+  }
+  .trust__grid {
+    @apply mt-12 grid grid-cols-12 gap-px border border-editorial-line bg-editorial-line;
+  }
+  .trust__item {
+    @apply col-span-12 flex min-h-30 flex-col bg-editorial-surface p-6 sm:col-span-6 md:col-span-3 md:min-h-38.5 md:p-9;
+  }
+  .trust__grid--principles .trust__item {
+    @apply min-h-60.5 pt-18;
+  }
+  .trust__grid--metrics {
+    @apply mt-2.5 border-0 bg-[#b6b6b6];
+  }
+
+  .shipment-tracking {
+    @apply mt-section bg-editorial-surface px-page py-[clamp(2rem,4vw,3.5rem)];
+  }
+  .shipment-tracking__panel {
+    @apply mx-auto w-full;
+  }
+
+  .industries {
+    @apply pt-section;
+  }
+  .industries > h2,
+  .industries > p {
+    @apply mx-page;
+  }
+  .industries > p {
+    @apply mt-3 mb-12;
+  }
+  .industries__grid {
+    @apply grid grid-cols-1 md:grid-cols-12 gap-0.5;
+  }
+  .industries__item {
+    @apply relative w-full overflow-hidden bg-editorial-ink md:col-span-6 aspect-square;
+  }
+  .industries__item > img {
+    @apply h-full w-full object-cover;
+  }
+  .industries__item::after {
+    @apply absolute inset-0 from-black/20 to-black/70 bg-linear-to-b content-[''];
+  }
+  .industries__item-copy {
+    @apply absolute bottom-16 left-10 z-10 flex max-w-108 flex-col gap-4 text-white;
+  }
+  .industries__item-copy strong,
+  .industries__item-copy span {
+    @apply text-white;
+  }
+
+  .testimonials {
+    @apply relative bg-center bg-cover px-page py-20 md:py-[clamp(5rem,17vw,15.375rem)];
+  }
+  .testimonials::before {
+    @apply absolute inset-0 bg-white/65 content-[''];
+  }
+  .testimonials__carousel {
+    @apply relative z-10 mx-auto flex min-h-0 max-w-336 flex-col gap-10 bg-editorial-surface p-[clamp(1.75rem,4vw,4rem)] sm:min-h-107.25;
+  }
+  .testimonials__splide {
+    @apply flex min-h-75.25 flex-1 flex-col;
+  }
+  .testimonials__splide .splide__track {
+    @apply flex-1 overflow-hidden;
+  }
+  .testimonials__splide .splide__list,
+  .testimonials__splide .splide__slide {
+    @apply h-full;
+  }
+  .testimonials__splide .splide__slide {
+    @apply flex flex-col gap-10;
+  }
+  .testimonials__carousel blockquote {
+    @apply m-0 max-w-none text-[clamp(1.5rem,2.22vw,2rem)] leading-[1.31] tracking-[-0.02em];
+  }
+  .testimonials__author {
+    @apply flex flex-col gap-1;
+  }
+  .testimonials__controls {
+    @apply flex items-center justify-between mt-10;
+  }
+  .testimonials__arrows,
+  .testimonials__indicators {
+    @apply flex items-center gap-3;
+  }
+  .testimonials__arrows button {
+    @apply size-12 rounded-full border-editorial-line/50 bg-white text-editorial-ink;
+  }
+  .testimonials__indicators button {
+    @apply size-2 rounded-full bg-editorial-subtle/40 p-0;
+  }
+  .testimonials__indicators button.is-active {
+    @apply w-6 bg-editorial-accent;
+  }
+}

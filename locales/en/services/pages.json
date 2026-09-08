@@ -1,0 +1,477 @@
+{
+  "shared": {
+    "workTitle": "We handle the work that matters the most",
+    "contactTitle": "Discuss your shipment with the team handling the request"
+  },
+  "air-freight": {
+    "hero": {
+      "title": "Worldwide air freight, delivered with confidence",
+      "text": "Time-critical air freight services from Europe to Africa and beyond – we deliver your cargo safely to its destination with speed, efficiency and care."
+    },
+    "introduction": {
+      "text": "For time-critical and high-value shipments, we coordinate air freight from European airports to destinations across our network,",
+      "accent": "with careful handling and clear communication from take-off to arrival."
+    },
+    "capabilityLabel": "Air freight capabilities",
+    "capabilities": [
+      "Time-critical and priority shipments",
+      "Airport-to-airport coordination",
+      "Export documentation support",
+      "Careful handling of high-value cargo"
+    ],
+    "efficiency": {
+      "title": "Speed meets cost efficiency",
+      "text": "Tailor-made logistics services from Europe to Africa by road, air, water or rail – we deliver your cargo safely to its destination with efficiency and care."
+    },
+    "highlights": [
+      {
+        "value": 24,
+        "suffix": " hrs",
+        "text": "Typical response time for initial quote planning"
+      },
+      {
+        "value": 3,
+        "suffix": " stages",
+        "text": "Collection, flight and arrival handovers coordinated"
+      },
+      {
+        "value": 2,
+        "suffix": " weeks",
+        "text": "Maximum shipping duration"
+      },
+      {
+        "value": 100,
+        "suffix": "%",
+        "text": "Cargo-specific route planning from the outset"
+      }
+    ],
+    "process": [
+      {
+        "title": "Cargo purchase & negotiations",
+        "text": "For specific requests, we start by liaising with your suppliers, making transportation arrangements and purchasing your products on your behalf, with optimal payment facilitation."
+      },
+      {
+        "title": "Booking & export preparation",
+        "text": "Once the route is agreed, the shipment is prepared for collection and airport handling. DEexpress supports the export-document process and coordinates the handovers required before departure."
+      },
+      {
+        "title": "Arrival, customs clearing & handling",
+        "text": "We handle the customs process in the destination airport, with filing of complete paperwork and other regulatory obligations."
+      },
+      {
+        "title": "Onward coordination",
+        "text": "At destination, the next handover is planned around the confirmed route. Where available, the service continues from airport handling to final delivery coordination."
+      }
+    ]
+  },
+  "commercial-cargo": {
+    "hero": {
+      "title": "Commercial cargo shipping that keeps business moving",
+      "text": "Reliable freight coordination for one-off projects and recurring commercial shipments of every scale."
+    },
+    "introduction": {
+      "text": "DEExpress plan commercial cargo around your goods, route and operating requirements,",
+      "accent": "connecting air, sea and land handovers in one clear flow."
+    },
+    "capabilityLabel": "Commercial cargo capabilities",
+    "capabilities": [
+      "One-off and recurring cargo",
+      "Air, sea and land coordination",
+      "Export documentation support",
+      "Route visibility from collection onward"
+    ],
+    "efficiency": {
+      "title": "Logistics designed around your cargo",
+      "text": "The right solution for your shipment needs, not with a fixed route. Across road, air, sea and rail, we balance speed, cost and care to move your cargo safely from Europe to Africa."
+    },
+    "highlights": [
+      {
+        "value": 4,
+        "suffix": " modes",
+        "text": "Air, sea, rail and road options considered together"
+      },
+      {
+        "value": 24,
+        "suffix": " hrs",
+        "text": "Typical response time for initial quote planning"
+      },
+      {
+        "value": 1,
+        "suffix": " team",
+        "text": "Coordinating cargo, documents and handovers"
+      },
+      {
+        "value": 100,
+        "suffix": "%",
+        "text": "Planning shaped around the cargo and delivery requirement"
+      }
+    ],
+    "process": [
+      {
+        "title": "Start with the business requirement",
+        "text": "We begin with the goods, packing, origin, destination and delivery priority — whether the shipment is a one-off project or part of a regular supply flow."
+      },
+      {
+        "title": "Build the right route around the cargo",
+        "text": "Air, sea, rail and road options are considered together, balancing timing, cost and the practical handling needs of your shipment."
+      },
+      {
+        "title": "Coordinate the movement from collection onward",
+        "text": "Collection, export documents and transport handovers are planned as one connected flow, with clear communication as the cargo moves."
+      },
+      {
+        "title": "Keep the next shipment ready to move",
+        "text": "For recurring cargo, the agreed process creates a dependable basis for the next request. For one-off shipments, delivery is coordinated around the confirmed route."
+      }
+    ],
+    "work": {
+      "title": "We handle the work that matters the most",
+      "items": [
+        {
+          "title": "Commercial route coordination",
+          "text": "Tailored planning across air, sea, rail and road transport, aligned to the nature of your cargo, destination and delivery timeline."
+        },
+        {
+          "title": "Documentation & compliance",
+          "text": "Preparation and management of shipping documents, customs paperwork and cargo-specific requirements for a compliant, seamless journey."
+        },
+        {
+          "title": "Flexible cargo handling",
+          "text": "The right equipment, consolidation, storage and handling arrangements for palletised, loose, oversized or sensitive cargo."
+        },
+        {
+          "title": "Delivery & distribution",
+          "text": "Coordination from collection to final delivery, keeping commercial cargo moving reliably across every handover."
+        }
+      ]
+    }
+  },
+  "personal-effects": {
+    "hero": {
+      "title": "Personal effects, delivered with care",
+      "text": "Laptops, home appliances, luggage and everyday belongings — shipped from Europe with personal service and careful coordination, whether you are sending one item or several."
+    },
+    "introduction": {
+      "text": "DEExpress provides tailored shipping for the personal items you need or want to send to others. From a laptop or home appliance to clothing, luggage and boxed belongings,",
+      "accent": "we bring practical guidance and careful handling to every stage of the journey."
+    },
+    "capabilityLabel": "Personal effects shipping capabilities",
+    "capabilities": [
+      "Laptops, home appliances and personal belongings",
+      "Packing guidance and collection coordination",
+      "Air and sea freight options from Europe",
+      "Export documents and destination handover"
+    ],
+    "efficiency": {
+      "title": "One item or several. Care at every stage.",
+      "text": "Your shipment is planned around the belongings you are sending, the time you have and the destination ahead. We connect collection, storage where needed and international transport in one manageable plan."
+    },
+    "process": [
+      {
+        "title": "Your items & your shipping needs",
+        "text": "A laptop, a home appliance or a few boxes for family — tell us what you are sending and where it needs to go. We review the item details, size and preferred timing to plan a suitable air or sea freight route from Europe."
+      },
+      {
+        "title": "Packing guidance & collection",
+        "text": "Different items need different preparation. We provide packing guidance for your shipment and review any special handling needs before collection, bringing the item list, paperwork and collection arrangements together."
+      },
+      {
+        "title": "Export preparation & shipping",
+        "text": "With your belongings ready, we coordinate export-document support and the handover for international transport. Where storage is needed before departure, we discuss the arrangements as part of your shipment plan."
+      },
+      {
+        "title": "Arrival & final handover",
+        "text": "As your shipment arrives, we coordinate the destination handover and guide you through the next steps. Collection or onward delivery is planned around the agreed service, with availability confirmed for your destination."
+      }
+    ],
+    "work": {
+      "title": "We handle the work that matters the most",
+      "items": [
+        {
+          "title": "Personal shipment planning",
+          "text": "Air and sea freight options reviewed around your belongings, destination and timing, with the service agreed before collection."
+        },
+        {
+          "title": "Preparation & paperwork",
+          "text": "Practical packing advice, item-list guidance and export-document support to help prepare your belongings for the journey."
+        },
+        {
+          "title": "Collection & storage",
+          "text": "Collection and departure arrangements brought together, with storage support when your shipment is ready ahead of its departure date."
+        },
+        {
+          "title": "Arrival & handover",
+          "text": "Destination arrangements explained clearly, with collection or onward delivery coordinated around the confirmed service."
+        }
+      ]
+    },
+    "answers": {
+      "title": "Personal effects shipping FAQs",
+      "items": [
+        {
+          "question": "Can I ship a laptop or home appliance?",
+          "answer": "Yes. Personal effects shipping includes laptops and home appliances, as well as clothing, luggage and other personal belongings. Share the item type, model, condition and destination so we can confirm suitability and preparation requirements for your shipment. Let us know about any batteries or special handling needs before booking."
+        },
+        {
+          "question": "Can I send just one item?",
+          "answer": "Yes. You do not need to be relocating or sending a full household shipment. We can help with a single personal item or several boxes, with the route planned around what you are sending."
+        },
+        {
+          "question": "What do you need to prepare a quote?",
+          "answer": "Tell us what you are sending, the collection address, destination and preferred timing. An item list, approximate weights and dimensions, and details of any access restrictions help us plan your shipment."
+        },
+        {
+          "question": "Should I choose air or sea freight?",
+          "answer": "The choice depends on the size of your shipment, your timing and the destination. We review suitable options with you and confirm the route as part of your quote."
+        },
+        {
+          "question": "How should I prepare my belongings?",
+          "answer": "Prepare an item list and let us know about fragile, unusually sized or special-care items before packing. We provide packing guidance for the agreed shipment and explain what information is needed before collection."
+        },
+        {
+          "question": "Can my belongings be stored before shipping?",
+          "answer": "Storage support can be discussed when your collection and shipping dates do not align. Availability and arrangements are confirmed as part of your shipment plan."
+        },
+        {
+          "question": "Will my belongings be delivered to my home?",
+          "answer": "The final handover depends on the destination and agreed service. Tell us if you need home delivery when requesting a quote so we can confirm availability and any access requirements."
+        }
+      ]
+    }
+  },
+  "sea-freight": {
+    "hero": {
+      "title": "Sea Freight and cost-effect container transport",
+      "text": "Container and consolidated sea freight coordinated from Europe to destinations across our network."
+    },
+    "introduction": {
+      "text": "DeExpress provides reliable, tailored sea freight and multimodal transport solutions, connecting key economic hubs across Africa and the Middle East through our operations in Germany.",
+      "accent": "Every shipment is handled with personalised, first-class service."
+    },
+    "capabilityLabel": "Sea freight capabilities",
+    "capabilities": [
+      "Consolidated and single cargo shipments",
+      "European cargo transportation and Port coordination",
+      "Export documentation and customs processing",
+      "Onward and last-mile delivery planning"
+    ],
+    "efficiency": {
+      "title": "Smarter shipping at every scale",
+      "text": "From a few pallets to a full container, we coordinate the route, logistics and people involved—delivering greater efficiency, better value and a smoother shipping experience."
+    },
+    "highlights": [
+      {
+        "value": 30,
+        "suffix": " days",
+        "text": "Typical transit planning window for sea freight"
+      },
+      {
+        "value": 2,
+        "suffix": " options",
+        "text": "Full-container and consolidated shipping routes"
+      },
+      {
+        "value": 1,
+        "suffix": " contact",
+        "text": "From collection through port and destination handover"
+      },
+      {
+        "value": 100,
+        "suffix": "%",
+        "text": "Route planning shaped around your cargo and destination"
+      }
+    ],
+    "faqTitle": "Sea freight FAQs"
+  },
+  "storage": {
+    "hero": {
+      "title": "Storage that keeps your next step in sight",
+      "text": "Short- and long-term storage in Berlin for personal belongings and retail goods — with careful coordination from warehouse arrival to collection or onward shipping."
+    },
+    "introduction": {
+      "text": "DEExpress provides storage and warehousing for private and retail customers in Berlin. Whether your goods are waiting for a shipping date or need space for longer,",
+      "accent": "we connect storage, handling and the next handover with personal service."
+    },
+    "capabilityLabel": "Storage and warehousing capabilities",
+    "capabilities": [
+      "Short- and long-term storage in Berlin",
+      "Personal belongings and retail goods",
+      "Consolidation and release coordination",
+      "Connected air, sea and road transport"
+    ],
+    "efficiency": {
+      "title": "Space for your goods. Flexibility for your schedule.",
+      "text": "Collection dates, deliveries and shipping schedules do not always align. We bring storage and onward transport into one plan, with the duration and arrangements shaped around your requirements."
+    },
+    "process": [
+      {
+        "title": "Storage planning & goods receipt",
+        "text": "Tell us what you need to store, how much space it requires and when it will arrive. We confirm suitable arrangements and coordinate the warehouse handover, with any onward shipping requirements considered from the start."
+      },
+      {
+        "title": "Storage & shipment coordination",
+        "text": "Your goods are held in Berlin for the agreed period, whether you need a short stay before departure or longer-term space. When several deliveries need to travel together, we discuss consolidation as part of the onward plan."
+      },
+      {
+        "title": "Release & onward transport",
+        "text": "When you are ready, we coordinate release for collection or the next shipment. Air, sea or road transport can be connected to your storage arrangements, with the route and handover agreed before your goods leave."
+      }
+    ],
+    "work": {
+      "title": "We handle the work that matters the most",
+      "items": [
+        {
+          "title": "Space & schedule planning",
+          "text": "Storage requirements reviewed around your goods, expected duration and arrival date, with availability confirmed before the handover."
+        },
+        {
+          "title": "Receipt & storage coordination",
+          "text": "Incoming deliveries and warehouse arrangements brought together so your goods enter storage with a clear plan for what follows."
+        },
+        {
+          "title": "Shipment consolidation",
+          "text": "Support for bringing goods together before onward transport, with the timing and handling requirements agreed for your shipment."
+        },
+        {
+          "title": "Release & onward shipping",
+          "text": "Collection or freight handovers coordinated around the confirmed schedule, connecting your stored goods to their next destination."
+        }
+      ]
+    },
+    "answers": {
+      "title": "Storage & warehousing FAQs",
+      "items": [
+        {
+          "question": "Where is the storage service based?",
+          "answer": "Our storage and warehousing service is based in Berlin. Contact us with your requirements so we can confirm availability and the arrangements for bringing your goods into storage."
+        },
+        {
+          "question": "Can both individuals and businesses use the service?",
+          "answer": "Yes. We provide storage for private and retail customers. Share what you need to store, including the item types, quantities and any special handling requirements, so we can confirm suitability."
+        },
+        {
+          "question": "Do you offer short- and long-term storage?",
+          "answer": "Yes. Both can be discussed depending on your goods and the space available. Tell us your expected start date and duration, even if the onward shipping date is not yet confirmed."
+        },
+        {
+          "question": "What information do you need for a quote?",
+          "answer": "Send a description of the goods, the number of items, boxes or pallets, approximate dimensions and weights, and your expected storage dates. Let us know whether you also need collection, consolidation or onward shipping."
+        },
+        {
+          "question": "Can stored goods be shipped internationally afterwards?",
+          "answer": "Yes. Storage can connect to our freight services when your goods are ready to leave. We review the destination, shipment details and timing before confirming the onward route."
+        },
+        {
+          "question": "Can several deliveries be stored for one shipment?",
+          "answer": "We can discuss consolidation support where goods need to travel together. Share the expected deliveries and destination so we can review storage, handling and departure arrangements."
+        }
+      ]
+    }
+  },
+  "vehicle-shipping": {
+    "hero": {
+      "title": "Vehicle sourcing and shipping, delivered with confidence",
+      "text": "From finding your vehicle in Europe to shipping it to Africa and the Middle East — we bring purchase support, careful handling and international transport together."
+    },
+    "introduction": {
+      "text": "DEExpress provides tailored vehicle sourcing and shipping services for cars, trucks, buses and special equipment. Whether you are buying in Europe or shipping a vehicle you already own,",
+      "accent": "we connect every stage with personal service and careful coordination."
+    },
+    "capabilityLabel": "Vehicle sourcing and shipping capabilities",
+    "capabilities": [
+      "European vehicle sourcing and purchase support",
+      "Collection, storage and port coordination",
+      "Container and roll-on/roll-off shipping",
+      "Export documents and destination handover"
+    ],
+    "efficiency": {
+      "title": "One vehicle or a fleet. One connected service.",
+      "text": "From a private purchase to commercial vehicle requirements, we bring sourcing, collection and shipping into one plan — balancing the route, timing and handling needs of your vehicle."
+    },
+    "process": [
+      {
+        "title": "Vehicle sourcing & purchase support",
+        "text": "Looking for a vehicle in Europe? We support the search, liaise with sellers and assist with purchase negotiations. Inspection and document checks are arranged where available, with shipping requirements considered from the start."
+      },
+      {
+        "title": "Collection & export preparation",
+        "text": "Once your vehicle is ready, we coordinate collection, export documents and the port handover. Already own the vehicle? Your journey can begin here, with storage available when collection and departure dates do not align."
+      },
+      {
+        "title": "Vehicle loading & sea transport",
+        "text": "From a single car to commercial vehicles, we plan container or roll-on/roll-off transport around the vehicle and destination. Booking, handling and loading arrangements are connected for a carefully managed departure."
+      },
+      {
+        "title": "Arrival & onward delivery",
+        "text": "At destination, we coordinate the arrival handover and support the customs-document process. Where available, onward transport connects the port to your final delivery point, with clear communication throughout."
+      }
+    ],
+    "work": {
+      "title": "We handle the work that matters the most",
+      "items": [
+        {
+          "title": "Sourcing & seller coordination",
+          "text": "Vehicle search, seller liaison and purchase support brought together around your requirements, budget and shipping destination."
+        },
+        {
+          "title": "Documents & export preparation",
+          "text": "Coordination of purchase records, export documents and customs paperwork to prepare your vehicle for its international journey."
+        },
+        {
+          "title": "Collection & port handling",
+          "text": "Collection, storage and loading arrangements connected to the sailing schedule, with careful handling at every stage."
+        },
+        {
+          "title": "Destination delivery",
+          "text": "Arrival and onward transport coordinated around the agreed route, keeping the journey connected beyond the port."
+        }
+      ]
+    },
+    "answers": {
+      "title": "Vehicle sourcing & shipping FAQs",
+      "items": [
+        {
+          "question": "Can you ship a vehicle I already own?",
+          "answer": "Yes. You can use our shipping service without sourcing or purchase assistance. Share the vehicle details, collection point and destination so we can plan the route."
+        },
+        {
+          "question": "Can you help me find and buy a vehicle in Europe?",
+          "answer": "We support vehicle search, seller coordination and purchase negotiations. Tell us the type of vehicle, budget and destination. Inspection and document support are discussed before purchase and arranged where available."
+        },
+        {
+          "question": "Should I choose container or RoRo shipping?",
+          "answer": "The choice depends on the vehicle, destination and available sailings. RoRo means roll-on/roll-off transport for suitable vehicles. We review the options with you before confirming the shipment."
+        },
+        {
+          "question": "What do you need to prepare a quote?",
+          "answer": "Share the vehicle type, make and model, collection location, destination and preferred timing. Let us know whether you need sourcing, storage or onward delivery as well."
+        },
+        {
+          "question": "Can you store the vehicle before departure?",
+          "answer": "Storage can be coordinated when purchase, collection and departure dates do not align. We confirm availability and arrangements as part of the shipment plan."
+        }
+      ]
+    }
+  },
+  "vehicle-sourcing": {
+    "hero": {
+      "title": "Source the vehicle. Coordinate the journey.",
+      "text": "Practical support from vehicle search and purchase through international shipping."
+    },
+    "introduction": {
+      "text": "We connect sourcing, purchase and onward movement around the vehicle you need,",
+      "accent": "so the process stays clear from first search to final handover."
+    },
+    "capabilityLabel": "Vehicle sourcing capabilities",
+    "capabilities": [
+      "Vehicle search and purchase support",
+      "European seller coordination",
+      "Export-document preparation",
+      "Shipping handover planning"
+    ],
+    "efficiency": {
+      "title": "One team, from search to shipment",
+      "text": "Vehicle sourcing becomes easier when purchase decisions and transport planning are connected."
+    }
+  }
+}

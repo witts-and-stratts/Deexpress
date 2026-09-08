@@ -1,38 +1,37 @@
 {
   "eyebrow": "Über uns",
-  "title": "Deutsche Gründlichkeit. Afrikanische Reichweite.",
-  "Title": "Präziser Versand mit globaler Reichweite",
-  "intro": "Die DEexpress Logistics GmbH ist ein internationales Logistik- und Speditionsunternehmen mit Sitz in Berlin. Wir koordinieren Luft-, See- und Landfracht von Europa aus in 26 Länder Afrikas und des Nahen Ostens.",
+  "title": "Präziser Versand mit globaler Reichweite",
+  "intro": "Die DEexpress Logistics GmbH ist ein internationales Logistik- und Speditionsunternehmen mit Sitz in Berlin, das Luft-, See- und Landtransporte von Europa in 26 Länder in Afrika und im Nahen Osten koordiniert.",
   "storyTitle": "Unsere Geschichte",
-  "story": [
-    "Die DEexpress Logistics GmbH wurde in Berlin mit einem klaren Ziel gegründet: den Versand zwischen Europa, Afrika und dem Nahen Osten einfach, transparent und verlässlich zu machen.",
-    "Aus einem fokussierten Frachtdienst ist ein umfassender Logistikbetrieb geworden — mit Transporten per Luft, See, Schiene und Straße, Lagerlösungen in Berlin und einem Team, das die Sprachen unserer Kunden spricht: Englisch, Deutsch und Französisch.",
-    "Heute betreuen wir Privatpersonen beim Versand persönlicher Gegenstände und Fahrzeuge ebenso wie Unternehmen aus den Branchen Automobil, Handel, Lebensmittel und Hardware."
-  ],
   "missionTitle": "Unsere Mission",
-  "mission": "Internationale Versandlösungen für Privat- und Geschäftskunden zu vereinfachen — durch verlässliche Koordination, ehrliche Kommunikation und persönlichen Service.",
-  "visionTitle": "Unsere Vision",
-  "vision": "Die vertrauenswürdigste Brücke zwischen Europa, Afrika und dem Nahen Osten zu sein — die erste Adresse, wenn Fracht Grenzen überqueren soll.",
+  "mission": "Unser Ziel ist es, den internationalen Versand für Privatpersonen und Unternehmen durch zuverlässige Koordination, ehrliche Kommunikation und persönlichen Service zu vereinfachen.",
+  "visionTitle": "",
+  "vision": "Unsere Vision ist es, die vertrauenswürdigste Brücke zwischen Europa, Afrika und dem Nahen Osten zu sein – der erste Name, der einem in den Sinn kommt, wenn Fracht über Grenzen transportiert werden muss.",
   "valuesTitle": "Unsere Werte",
+  "leadershipTitle": "Führung",
+  "leadershipSub": "Gestützt auf jahrzehntelange Erfahrung in der Logistik verbindet unser Team fundierte Branchenkenntnisse mit dem unermüdlichen Engagement, jede Sendung pünktlich ans Ziel zu bringen – jedes Mal.",
+  "managingDirector": "Geschäftsführer",
+  "story": [
+    "Die DEexpress Logistics GmbH wurde in Berlin mit einem klaren Ziel gegründet: den Versand zwischen Europa, Afrika und dem Nahen Osten einfach, transparent und zuverlässig zu gestalten.",
+    "Was als spezialisierter Frachtdienst begann, hat sich zu einem umfassenden Logistikunternehmen entwickelt – mit der Koordination von Transporten auf dem Luft-, See-, Schienen- und Straßenweg, Lagerlösungen in Berlin und einem Team, das die Sprachen unserer Kunden spricht: Englisch, Deutsch und Französisch.",
+    "Heute betreuen wir sowohl Privatpersonen, die persönliche Gegenstände und Fahrzeuge transportieren, als auch Unternehmen aus den Bereichen Automobil, Einzelhandel, Food und Baumarkt."
+  ],
   "values": [
     {
       "title": "Zuverlässigkeit",
-      "text": "Wir halten, was wir versprechen — termingerecht und mit Sorgfalt."
+      "text": "Wir halten, was wir versprechen – termingerecht und sorgfältig."
     },
     {
       "title": "Transparenz",
-      "text": "Klare Preise, klare Prozesse, klare Antworten. Keine Überraschungen."
+      "text": "Klare Preise, klare Abläufe, klare Antworten. Keine Überraschungen."
     },
     {
-      "title": "Tempo",
-      "text": "Wir sind schnell, denn Ihre Zeit ist wertvoll."
+      "title": "Geschwindigkeit",
+      "text": "Wir arbeiten zügig, denn Ihre Zeit ist kostbar."
     },
     {
       "title": "Persönlicher Service",
-      "text": "Sie haben immer einen Namen und eine Nummer — kein Ticket-Queue."
+      "text": "Sie erhalten immer einen Namen und eine Nummer – keine Wartemarke."
     }
-  ],
-  "leadershipTitle": "Unser Team & unsere Führung",
-  "leadershipSub": "Mit jahrzehntelanger Logistikerfahrung verbindet unser Team tiefes Branchenwissen mit dem konsequenten Anspruch, jede Sendung zuverlässig an ihr Ziel zu bringen.",
-  "managingDirector": "Geschäftsführer"
+  ]
 }

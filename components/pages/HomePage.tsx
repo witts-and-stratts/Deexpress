@@ -99,59 +99,8 @@ const assets = {
   regionsIcon: '/images/icons/regions.svg',
 };
 
-const preferenceStats = [
-  {
-    value: '26+',
-    label: 'Destinations across Africa & the Middle East',
-    icon: assets.globeIcon,
-  },
-  {
-    value: '4',
-    label: 'Multi-modal shipping methods',
-    icon: assets.multimodalIcon,
-  },
-  {
-    value: '3',
-    label: 'Regions served',
-    icon: assets.regionsIcon,
-  },
-] as const;
-
-const services = [
-  [
-    'Air freight',
-    assets.responsiveImages.air,
-    'Time-sensitive shipments, coordinated from collection to arrival.',
-  ],
-  [
-    'Sea freight',
-    assets.responsiveImages.sea,
-    'Cost-effective ocean freight for larger loads and long-distance routes.',
-  ],
-  [
-    'Vehicle sourcing & shipping',
-    assets.responsiveImages.vehicle,
-    'From finding a vehicle in Europe to international shipping, coordinated through one team.',
-  ],
-  [
-    'Commercial cargo',
-    assets.responsiveImages.cargo,
-    'Freight planned around your business requirements and destination.',
-  ],
-  [
-    'Personal effects shipping',
-    assets.responsiveImages.personal,
-    'Careful coordination for the belongings that move with you.',
-  ],
-  [
-    'Storage & warehousing',
-    assets.responsiveImages.storage,
-    'Secure storage connected to the next stage of your shipment.',
-  ],
-] as const;
-
 function LanguageSelector({ footer = false }: { footer?: boolean }) {
-  const { lang, setLang } = useLang();
+  const { lang, setLang, t } = useLang();
   const language = lang.toUpperCase();
   const flag = lang === 'de' ? '/flags/de.svg' : '/flags/gb.svg';
   const selectLanguage = (value: Lang) => setLang(value);
@@ -160,7 +109,7 @@ function LanguageSelector({ footer = false }: { footer?: boolean }) {
     <DropdownMenu>
       <DropdownMenuTrigger
         className={footer ? 'site-footer__language' : 'site-nav__language'}
-        aria-label='Choose language'
+        aria-label={t.nav.languageSelector}
       >
         <Image src={flag} alt='' width={20} height={20} />{' '}
         <span>{language}</span> <ChevronDown size={12} aria-hidden='true' />
@@ -184,6 +133,7 @@ function LanguageSelector({ footer = false }: { footer?: boolean }) {
 }
 
 export function HomeHeader() {
+  const { t } = useLang();
   const [open, setOpen] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
   const pathname = usePathname();
@@ -265,13 +215,30 @@ export function HomeHeader() {
     };
   }, [pathname]);
 
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  const navItems = [
+    { href: '/about', label: t.nav.about },
+    { href: '/services', label: t.nav.services },
+    { href: '/track', label: t.nav.track },
+    { href: '/destinations', label: t.nav.destinations },
+    { href: '/contact', label: t.nav.contact },
+  ];
+
   return (
     <>
       <header
         ref={headerRef}
         className={`site-nav${open ? ' site-nav--open' : ''}`}
       >
-        <Link className='site-nav__brand' href='/' aria-label='DEexpress home'>
+        <Link
+          href='/'
+          className='site-nav__brand'
+          aria-label={t.nav.brandHome}
+          onClick={() => setOpen(false)}
+        >
           <Image
             src={assets.responsiveImages.logo}
             alt='DEexpress'
@@ -285,7 +252,7 @@ export function HomeHeader() {
           onClick={() => setOpen(!open)}
           aria-expanded={open}
           aria-controls='home-navigation'
-          aria-label={open ? 'Close navigation' : 'Open navigation'}
+          aria-label={open ? t.nav.closeNavigation : t.nav.openNavigation}
         >
           <motion.span
             className='site-nav__toggle-line'
@@ -307,21 +274,11 @@ export function HomeHeader() {
         </button>
         <nav className='site-nav__links' id='home-navigation'>
           <div className='site-nav__menu-links'>
-            <Link href='/about' onClick={() => setOpen(false)}>
-              About
-            </Link>
-            <Link href='/services' onClick={() => setOpen(false)}>
-              Services
-            </Link>
-            <Link href='/track' onClick={() => setOpen(false)}>
-              Track
-            </Link>
-            <Link href='/destinations' onClick={() => setOpen(false)}>
-              Destinations
-            </Link>
-            <Link href='/contact' onClick={() => setOpen(false)}>
-              Contact
-            </Link>
+            {navItems.map((item) => (
+              <Link key={item.href} href={item.href} onClick={() => setOpen(false)}>
+                {item.label}
+              </Link>
+            ))}
           </div>
           <div className='site-nav__bottom-actions'>
             <LanguageSelector />
@@ -333,7 +290,7 @@ export function HomeHeader() {
               )}
               onClick={() => setOpen(false)}
             >
-              Get a quote
+              {t.common.getQuote}
             </Link>
           </div>
         </nav>
@@ -345,7 +302,7 @@ export function HomeHeader() {
           <motion.nav
             className='site-nav-mobile md:hidden'
             id='home-navigation-mobile'
-            aria-label='Mobile navigation'
+            aria-label={t.nav.mobileNavigation}
             initial={{ opacity: 0, y: -16, scale: 0.98 }}
             animate={{
               opacity: 1,
@@ -379,13 +336,7 @@ export function HomeHeader() {
                 },
               }}
             >
-              {[
-                { href: '/about', label: 'About' },
-                { href: '/services', label: 'Services' },
-                { href: '/track', label: 'Track' },
-                { href: '/destinations', label: 'Destinations' },
-                { href: '/contact', label: 'Contact' },
-              ].map((item) => (
+              {navItems.map((item) => (
                 <MotionLink
                   key={item.href}
                   href={item.href}
@@ -445,7 +396,7 @@ export function HomeHeader() {
                 })}
                 onClick={() => setOpen(false)}
               >
-                Get a quote
+                {t.common.getQuote}
               </Link>
             </motion.div>
           </motion.nav>
@@ -606,6 +557,7 @@ function ShowcaseImage({
 }
 
 function ServiceGrid() {
+  const { t } = useLang();
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const reduceMotion = useReducedMotion();
   const { scrollYProgress } = useScroll({
@@ -618,26 +570,35 @@ function ServiceGrid() {
     mass: 0.08,
   });
 
+  const showcaseImages = [
+    assets.responsiveImages.air,
+    assets.responsiveImages.sea,
+    assets.responsiveImages.vehicle,
+    assets.responsiveImages.cargo,
+    assets.responsiveImages.personal,
+    assets.responsiveImages.storage,
+  ];
+
   return (
     <div className='service-showcase home-service-showcase' ref={sectionRef}>
       <div className='service-showcase__visual'>
         <h2 className='service-showcase__heading text-h4'>
-          <span>Global shipping.</span>
-          <span className='opacity-70 g'> For every cargo</span>
+          <span>{t.home.servicesHeading.title}</span>
+          <span className='opacity-70 g'>{t.home.servicesHeading.sub}</span>
         </h2>
-        {services.map(([, image], index) => (
+        {showcaseImages.map((image, index) => (
           <ShowcaseImage
             key={image.src}
             image={image}
             index={index}
-            sceneCount={services.length}
+            sceneCount={showcaseImages.length}
             progress={smoothProgress}
             reduceMotion={reduceMotion}
           />
         ))}
       </div>
       <div className='service-showcase__panels'>
-        {services.map(([title, , description]) => (
+        {t.home.servicesShowcase.map(({ title, description }) => (
           <section key={title} className='service-showcase__panel'>
             <Link href='/services' className='service-showcase__copy'>
               <AnimatedText
@@ -674,7 +635,7 @@ function ServiceGrid() {
                 className='flex w-full'
               >
                 <span className='service-showcase__link gap-2'>
-                  Explore
+                  {t.common.explore}
                   <AnimatedExploreIcon />
                 </span>
               </AnimatedText>
@@ -687,17 +648,18 @@ function ServiceGrid() {
 }
 
 function TransportRow() {
-  const modes = [
-    ['Airplane', assets.plane],
-    ['Ship', assets.ship],
-    ['Train', assets.train],
-    ['Truck', assets.truck],
-  ] as const;
+  const { t } = useLang();
+  const transportIcons = [
+    assets.plane,
+    assets.ship,
+    assets.train,
+    assets.truck,
+  ];
   return (
     <div className='preference__transport'>
-      {modes.map(([name, image]) => (
+      {t.home.transportModes.map((name, index) => (
         <div className='preference__transport-item' key={name}>
-          <Image src={image} alt='' width={160} height={48} />
+          <Image src={transportIcons[index]} alt='' width={160} height={48} />
           <span>{name}</span>
         </div>
       ))}
@@ -705,18 +667,13 @@ function TransportRow() {
   );
 }
 
-const testimonial = {
-  quote:
-    '"DEexpress transformed our supply chain. Their real-time tracking and dedicated team reduced our transit times by 40% on the Berlin-Lagos corridor."',
-  name: 'Marcus Weber',
-  role: 'Head of Logistics, AutoTech GmbH',
-};
-
 type SplideHandle = { splide: { go: (control: string | number) => void } };
 
 function TestimonialCarousel() {
+  const { t } = useLang();
   const [activeSlide, setActiveSlide] = useState(0);
   const splideRef = useRef<SplideHandle | null>(null);
+  const testimonial = t.home.testimonial;
 
   return (
     <section className='testimonials__carousel'>
@@ -734,12 +691,12 @@ function TestimonialCarousel() {
           speed: 600,
         }}
         onMoved={(_, nextIndex) => setActiveSlide(nextIndex)}
-        aria-label='Customer testimonials'
+        aria-label={t.home.testimonial.carouselLabel}
       >
         <SplideTrack>
           {[testimonial, testimonial, testimonial].map((item, index) => (
             <SplideSlide key={index}>
-              <span className='section-label'>Testimonials</span>
+              <span className='section-label'>{t.home.testimonial.sectionLabel}</span>
               <blockquote>{item.quote}</blockquote>
               <div className='testimonials__author'>
                 <strong>{item.name}</strong>
@@ -755,7 +712,7 @@ function TestimonialCarousel() {
               size='icon'
               type='button'
               onClick={() => splideRef.current?.splide.go('<')}
-              aria-label='Previous testimonial'
+              aria-label={t.home.testimonial.previous}
               className='rounded-full bg-white'
             >
               <ArrowLeft strokeWidth={1} />
@@ -765,7 +722,7 @@ function TestimonialCarousel() {
               size='icon'
               type='button'
               onClick={() => splideRef.current?.splide.go('>')}
-              aria-label='Next testimonial'
+              aria-label={t.home.testimonial.next}
               className='rounded-full bg-white'
             >
               <ArrowRight strokeWidth={1} />
@@ -793,6 +750,21 @@ function TestimonialCarousel() {
 }
 
 export function HomePage() {
+  const { t } = useLang();
+
+  const preferenceStatIcons = [
+    assets.globeIcon,
+    assets.multimodalIcon,
+    assets.regionsIcon,
+  ];
+
+  const industryImages = [
+    assets.industry1,
+    assets.industry2,
+    assets.industry3,
+    assets.industry4,
+  ];
+
   return (
     <main className='home-page'>
       <section className='home-page__hero'>
@@ -806,16 +778,14 @@ export function HomePage() {
         <div className='home-page__hero-copy'>
           <Reveal delay={80}>
             <h1 className='text-h1 text-white'>
-              Move what matters
+              {t.home.heroTitle1}
               <br />
-              with confidence
+              {t.home.heroTitle2}
             </h1>
           </Reveal>
           <Reveal delay={220}>
             <p className='site-lead text-white'>
-              Tailor-made logistics services from Europe to Africa by road, air,
-              water or rail – we deliver your cargo safely to its destination
-              with efficiency and care
+              {t.home.heroSub}
             </p>
           </Reveal>
         </div>
@@ -829,12 +799,10 @@ export function HomePage() {
           className='text-h3 max-w-[52ch]'
         >
           <strong>
-            DEExpress coordinates air, sea and vehicle shipping from Europe to
-            destinations across 26 African countries and the Middle East —
+            {t.home.introP1}
           </strong>{' '}
           <span className='text-gray-500'>
-            helping individuals and businesses move internationally with greater
-            clarity and control.
+            {t.home.introP2}
           </span>
         </AnimatedText>
       </section>
@@ -844,16 +812,15 @@ export function HomePage() {
       </section>
 
       <section className='preference'>
-        <h2 className='text-h2 text-editorial-accent'>Ship your preference</h2>
+        <h2 className='text-h2 text-editorial-accent'>{t.home.preference.title}</h2>
         <p className='site-body'>
-          From origin to destination, we follow your preference in means, cost
-          and handling.
+          {t.home.preference.text}
         </p>
         <TransportRow />
-        <ul className='preference__stats' aria-label='DEExpress coverage at a glance'>
-          {preferenceStats.map(({ value, label, icon }, index) => (
+        <ul className='preference__stats' aria-label={t.home.preference.statsLabel}>
+          {t.home.preference.stats.map(({ value, label }, index) => (
             <li className='preference__stat' key={label}>
-              <Image src={ icon } alt='' width={ 200 } height={ 100 } className={ index === 0 ? 'h-12 mt-0': '' } />
+              <Image src={preferenceStatIcons[index]} alt='' width={200} height={100} className={index === 0 ? 'h-12 mt-0' : ''} />
               <strong>{value}</strong>
               <span>{label}</span>
             </li>
@@ -865,42 +832,20 @@ export function HomePage() {
 
       <section className='trust'>
         <h2 className='text-h2 text-editorial-accent'>
-          Built on speed, transparency and trust.
+          {t.home.whyTitle}
         </h2>
         <div className='trust__grid trust__grid--principles'>
-          {[
-            [
-              'Speed',
-              'We are fast and effective — from the first inquiry to the final delivery of your cargo.',
-            ],
-            [
-              'Tracking',
-              'Up-to-date status details for your customers, from the point of shipment until arrival.',
-            ],
-            [
-              'Flexible payment',
-              'Payment should not be a barrier. Contact us — we will find an option that works for you.',
-            ],
-            [
-              'Service',
-              'A customer service team that is ready to assist quickly, in English, German or French.',
-            ],
-          ].map(([title, copy]) => (
+          {t.home.why.map(({ title, text }) => (
             <div className='trust__item' key={title}>
               <strong className='text-card-title'>{title}</strong>
               <span className='site-body mt-4 max-w-[32ch] leading-[1.375]'>
-                {copy}
+                {text}
               </span>
             </div>
           ))}
         </div>
         <div className='trust__grid trust__grid--metrics'>
-          {[
-            ['10M+', 'Total packages shipped'],
-            ['<2 Hr', 'Time to issue resolution'],
-            ['75%', 'Cost reduction'],
-            ['67', 'Port deliveries per month'],
-          ].map(([value, label]) => (
+          {t.home.metrics.map(({ value, label }) => (
             <div className='trust__item' key={label}>
               <strong className='text-metric'>{value}</strong>
               <span className='text-label'>{label}</span>
@@ -917,40 +862,18 @@ export function HomePage() {
 
       <section className='industries'>
         <h2 className='text-h2 text-editorial-accent'>
-          Trusted across industries
+          {t.home.industriesTitle}
         </h2>
         <p className='site-body'>
-          Different cargo, different requirements — the same dependable
-          handling.
+          {t.home.industriesSub}
         </p>
         <div className='industries__grid'>
-          {[
-            [
-              assets.industry1,
-              'Automotive',
-              'Ensure your tracking number to see the latest status and estimated delivery date.',
-            ],
-            [
-              assets.industry2,
-              'Retail',
-              'Fast and reliable delivery of consumer goods to stores and customers.',
-            ],
-            [
-              assets.industry3,
-              'Food',
-              'Temperature-controlled logistics for perishable goods and ingredients.',
-            ],
-            [
-              assets.industry4,
-              'Hardware',
-              'Specialized handling for heavy machinery and sensitive electronic equipment.',
-            ],
-          ].map(([image, title, copy]) => (
+          {t.home.industries.map(({ title, text }, index) => (
             <article className='industries__item' key={title}>
-              <Image src={image} alt={title} fill />
+              <Image src={industryImages[index]} alt={title} fill />
               <div className='industries__item-copy'>
                 <strong className='text-card-title text-white'>{title}</strong>
-                <span className='site-body text-white/70'>{copy}</span>
+                <span className='site-body text-white/70'>{text}</span>
               </div>
             </article>
           ))}

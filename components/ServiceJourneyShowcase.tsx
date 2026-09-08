@@ -72,14 +72,14 @@ function JourneyImage({
       ? 1
       : Math.max(0, Math.min(1, (value - start) / (end - start)));
   });
-  const scale = useTransform(progress, [start, end], [1.06, 1]);
+  // const scale = useTransform(progress, [start, end], [1.06, 1]);
 
   return (
     <motion.div
       className='absolute inset-0'
       style={{
         opacity,
-        scale: reduceMotion ? 1 : scale,
+        // scale: reduceMotion ? 1 : scale,
         willChange: 'opacity, transform',
       }}
     >

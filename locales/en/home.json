@@ -128,5 +128,47 @@
     "quote": "\"DEexpress transformed our supply chain. Their real-time tracking and dedicated team reduced our transit times by 40% on the Berlin-Lagos corridor.\"",
     "name": "Marcus Weber",
     "role": "Head of Logistics, AutoTech GmbH"
-  }
+  },
+  "servicesHeading": {
+    "title": "Global shipping.",
+    "sub": " For every cargo"
+  },
+  "servicesShowcase": [
+    {
+      "title": "Air freight",
+      "description": "Time-sensitive shipments, coordinated from collection to arrival."
+    },
+    {
+      "title": "Sea freight",
+      "description": "Cost-effective ocean freight for larger loads and long-distance routes."
+    },
+    {
+      "title": "Vehicle sourcing & shipping",
+      "description": "From finding a vehicle in Europe to international shipping, coordinated through one team."
+    },
+    {
+      "title": "Commercial cargo",
+      "description": "Freight planned around your business requirements and destination."
+    },
+    {
+      "title": "Personal effects shipping",
+      "description": "Careful coordination for the belongings that move with you."
+    },
+    {
+      "title": "Storage & warehousing",
+      "description": "Secure storage connected to the next stage of your shipment."
+    }
+  ],
+  "metrics": [
+    { "value": "10M+", "label": "Total packages shipped" },
+    { "value": "<2 Hr", "label": "Time to issue resolution" },
+    { "value": "75%", "label": "Cost reduction" },
+    { "value": "67", "label": "Port deliveries per month" }
+  ],
+  "transportModes": [
+    "Airplane",
+    "Ship",
+    "Train",
+    "Truck"
+  ]
 }

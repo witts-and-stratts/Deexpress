@@ -1,38 +1,57 @@
 {
-  "eyebrow": "Sendungsverfolgung",
-  "title": "Sendung verfolgen.",
-  "intro": "Geben Sie Ihre Sendungsnummer ein, um den letzten verfügbaren Status Ihrer Sendung zu sehen.",
-  "label": "Sendungsnummer",
+  "eyebrow": "Nachverfolgung",
+  "title": "Verfolgen Sie Ihre Sendung.",
+  "intro": "Geben Sie Ihre Sendungsnummer ein, um den aktuellsten Status Ihrer Sendung anzuzeigen.",
+  "label": "Sendungsverfolgungsnummer",
   "placeholder": "z. B. DEX-2024-0185",
   "button": "Sendung verfolgen",
-  "demoNote": "Unser Live-Tracking wird gerade mit dieser neuen Website verbunden. Geben Sie eine Referenz ein, um die Funktion zu testen — für den aktuellen Status einer echten Sendung kontaktieren Sie unser Team.",
+  "demoNote": "Unser Live-Tracking-System wird derzeit mit dieser neuen Website verknüpft. Geben Sie eine Referenznummer ein, um einen Vorgeschmack auf die neue Benutzererfahrung zu erhalten – für den aktuellen Status einer konkreten Sendung wenden Sie sich bitte an unser Team.",
+  "contactCta": "Kontaktieren Sie uns, um den aktuellen Stand zu erfahren",
+  "invalid": "Bitte geben Sie eine Sendungsnummer ein.",
+  "panelIntro": "Geben Sie Ihre Sendungsnummer ein, um den aktuellen Status und den voraussichtlichen Liefertermin anzuzeigen.",
+  "trackingNumber": "Sendungsverfolgungsnummer",
+  "currentStatus": "Aktueller Stand",
+  "origin": "Herkunft",
+  "destination": "Reiseziel",
+  "estimatedDelivery": "Voraussichtlicher Liefertermin",
+  "progress": "Fortschritt",
+  "supportTitle": "Benötigen Sie Hilfe bei einer Sendung?",
+  "supportContact": "Kontaktieren Sie unser Team",
+  "supportQuote": "Angebot anfordern",
   "statuses": [
-    "Angebot angefragt",
+    "Angebotsanfrage",
     "Buchung bestätigt",
-    "Fracht erhalten",
+    "Waren erhalten",
     "Unterwegs",
     "Zollabfertigung",
-    "In Zustellung",
-    "Zugestellt"
+    "Zur Auslieferung bereit",
+    "Geliefert"
   ],
-  "contactCta": "Kontaktieren Sie uns für eine Statusaktualisierung",
-  "invalid": "Bitte geben Sie eine Sendungsnummer ein.",
-  "panelIntro": "Geben Sie Ihre Sendungsnummer ein, um den aktuellen Status und das voraussichtliche Lieferdatum zu sehen.",
-  "trackingNumber": "Sendungsnummer",
-  "currentStatus": "Aktueller Status",
-  "origin": "Abgangsort",
-  "destination": "Zielort",
-  "estimatedDelivery": "Voraussichtliche Lieferung",
-  "progress": "Fortschritt",
-  "supportTitle": "Benötigen Sie Hilfe mit einer Sendung?",
-  "supportContact": "Unser Team kontaktieren",
-  "supportQuote": "Angebot anfragen",
+  "example": {
+    "origin": "Berlin, Deutschland",
+    "destination": "Lagos, Nigeria",
+    "estimatedDelivery": "14. März 2026"
+  },
   "timeline": [
-    { "label": "Auftrag erteilt", "date": "08. März 2026" },
-    { "label": "Abgeholt", "date": "09. März 2026" },
-    { "label": "Unterwegs", "date": "10.–12. März 2026" },
-    { "label": "In Zustellung", "date": "Heute" },
-    { "label": "Zugestellt", "date": "Ausstehend" }
-  ],
-  "example": { "origin": "Berlin, Deutschland", "destination": "Lagos, Nigeria", "estimatedDelivery": "14. März 2026" }
+    {
+      "label": "Bestellung aufgegeben",
+      "date": "08. März 2026"
+    },
+    {
+      "label": "Abgeholt",
+      "date": "09. März 2026"
+    },
+    {
+      "label": "Unterwegs",
+      "date": "10.–12. März 2026"
+    },
+    {
+      "label": "Zur Auslieferung bereit",
+      "date": "Heute"
+    },
+    {
+      "label": "Geliefert",
+      "date": "Ausstehend"
+    }
+  ]
 }

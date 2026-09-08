@@ -1,0 +1,108 @@
+{
+  "air-freight": {
+    "title": "Bei uns ist Ihre Fracht in sicheren Händen – ganz gleich, wohin sie unterwegs ist.",
+    "journeyHeading": "Expressversand. Jedes Mal",
+    "items": [
+      "Abflüge von europäischen Flughäfen zu Zielen im DEexpress-Netzwerk",
+      "Eilsendungen, Kleinsendungen und hochwertige Fracht",
+      "Koordination von Abhol- und Ausfuhrdokumenten bis zur Übergabe am Bestimmungsort",
+      "Europäische Importe und Exporte mit persönlichen Kontakten von A bis Z",
+      "Multimodale Lösungen für Effizienz und Kostenvorteile",
+      "Umfassender Luftfracht-Service, von der Abholung bis zur Zustellung",
+      "Express- und Bordkurierdienste für höchste Dringlichkeit",
+      "Zollabfertigung, einschließlich Einfuhr, Ausfuhr und Steuerzoll",
+      "Sendungsverfolgung für maximale Transparenz Ihrer Sendungen",
+      "Lagerhaltung und Distribution an wichtigen DEexpress-Standorten",
+      "Wöchentlicher Transport von Autos und Luxusgütern"
+    ]
+  },
+  "sea-freight": {
+    "title": "Kosteneffizienz und nahtlose Verarbeitung vom Hafen zum Bestimmungsort",
+    "journeyHeading": "Seeweg. Kosteneffizienz",
+    "items": [
+      "FCL- und LCL-Transporte zu und von Seehäfen weltweit",
+      "Partnerschaftliche Zusammenarbeit mit führenden Reedereien",
+      "Verladung und Wiegen von Containern gemäß den VGM-SOLAS-Anforderungen",
+      "Unterstützung entlang der Lieferkette, einschließlich Lagerung, Vertrieb und Mehrwertdienste",
+      "Zollabfertigung einschließlich Ein- und Ausfuhr",
+      "Containertransporte nach Afrika und in den Nahen Osten",
+      "Verladung, Entladung und Sicherung von Containern",
+      "Gefahrgut und Projekte für anspruchsvolle Anforderungen",
+      "Koordination von Tür zu Tür – von der Abholstelle bis zum Endempfänger"
+    ]
+  },
+  "vehicle-shipping": {
+    "title": "Bei uns in sicheren Händen – von der ersten Suche bis zur endgültigen Übergabe.",
+    "journeyHeading": "Vom Einkauf bis zum Hafen. Vom Hafen zu Ihnen.",
+    "items": [
+      "Fahrzeugsuche in ganz Europa, ganz nach Ihren Anforderungen und Ihrem Budget",
+      "Kontakt zur Verkäuferseite, Unterstützung beim Kauf und bei Verhandlungen",
+      "Prüfung und Unterstützung bei Fahrzeugpapieren, sofern verfügbar",
+      "Transport von PKWs, SUVs, LKWs, Bussen und Spezialfahrzeugen",
+      "Abholung beim vereinbarten europäischen Verkäufer oder am Standort des Fahrzeugs",
+      "Container- und RoRo-Optionen auf geeigneten, verfügbaren Strecken",
+      "Unterstützung bei Kaufunterlagen, Exportdokumenten und Zolldokumenten",
+      "Lagerung bei Abweichungen zwischen Kauf-, Abhol- und Abreisedatum",
+      "Abfertigung im Hafen, Versandaktualisierungen und Koordination der Übergabe am Bestimmungsort",
+      "Weiterleitungsplanung, sofern innerhalb unseres Netzwerks möglich"
+    ]
+  },
+  "commercial-cargo": {
+    "title": "Ein zuverlässiger Partner für jeden gewerblichen Gütertransport.",
+    "journeyHeading": "Logistik, damit das Geschäft läuft",
+    "items": [
+      "Handelswaren, die auf bestimmte Lieferanforderungen abgestimmt sind",
+      "Koordination von palettierter, loser, projektbezogener, übergroßer und empfindlicher Fracht",
+      "Luft-, See-, Schienen- und Straßenverkehr gemeinsam betrachtet",
+      "Exportdokumente, Zertifizierung, Zollabwicklung und Koordination behördlicher Angelegenheiten",
+      "Ein Ansprechpartner, Nachverfolgung und zeitnahe Updates bei jeder Übergabe",
+      "Sichere kurz- und langfristige Lagerung, Konsolidierung und Containerabfertigung",
+      "Last-Mile-Zustellung und Weiterverteilung über lokale und regionale Netzwerke",
+      "Flexible Unterstützung für einmalige und wiederkehrende Sendungen"
+    ]
+  },
+  "personal-effects": {
+    "title": "Bei uns ist alles in sicheren Händen, ganz gleich, was Sie versenden.",
+    "journeyHeading": "Alltagsfracht. Mit Freude zugestellt.",
+    "items": [
+      "Laptops, Haushaltsgeräte, Kleidung, Reisegepäck und persönliche Gegenstände",
+      "Flexible Versandmengen, von einem einzelnen Artikel bis zu mehreren Kartons",
+      "Routenplanung unter Berücksichtigung Ihres Zielortes, des Volumens und des gewünschten Zeitrahmens",
+      "Luft- oder Seefrachtoptionen für geeignete Sendungen",
+      "Praktische Tipps zum Packen, bevor Ihre Sachen abgeholt werden",
+      "Koordination der Abholung vom vereinbarten Standort in Europa",
+      "Anleitung zur Erstellung der Stückliste und des Exportdokuments für Ihre Sendung",
+      "Lagerung bei abweichenden Abhol- und Abgabeterminen",
+      "Klare Kommunikation während der Abholung, des Versands und der Zustellung",
+      "Abholung am Bestimmungsort oder Planung der Weiterlieferung, sofern verfügbar"
+    ]
+  },
+  "vehicle-sourcing": {
+    "title": "Klare Unterstützung bei jedem Entscheidungspunkt.",
+    "journeyHeading": "Schneller, professioneller Ablauf",
+    "items": [
+      "Überprüfung der Fahrzeuganforderungen vor Beginn der Durchsuchung",
+      "Koordination von An- und Verkäufen in Europa",
+      "Prüfung und Unterstützung bei der Dokumentation, soweit verfügbar",
+      "Nach dem Kauf geplante Versandoptionen",
+      "Ein Ansprechpartner von der Suche bis zur Übergabe",
+      "Unterstützung bei der Lagerung, wenn sich Abholtermine verschieben"
+    ]
+  },
+  "storage": {
+    "title": "Bei uns in sicheren Händen – bis zur nächsten Übergabe.",
+    "journeyHeading": "Verstaut und einsatzbereit.",
+    "items": [
+      "Lagerung in Berlin für Privat- und Einzelhandelskunden",
+      "Kurz- und langfristige Vereinbarungen, je nach Verfügbarkeit",
+      "Platzbedarf, aufgeschlüsselt nach Artikel, Karton- oder Palettenmenge",
+      "Lagerung geeigneter persönlicher Gegenstände und gewerblicher Güter",
+      "Koordination von Wareneingang und Lagerübergabe",
+      "Lagerung zeitlich abgestimmt auf eingehende Lieferungen und Versandtermine",
+      "Unterstützung bei der Zusammenfassung von gemeinsam transportierten Gütern",
+      "Freigabevereinbarungen für die Abholung oder den Weitertransport",
+      "Anbindung an geeignete Luft-, See- und Straßengüterverkehrswege",
+      "Klare Kommunikation von der Ankunft bis zur Abreise"
+    ]
+  }
+}

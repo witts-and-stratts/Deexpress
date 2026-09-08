@@ -1,37 +1,37 @@
 {
   "europe": {
     "name": "Europa",
-    "tag": "Startpunkt & Sammelung",
-    "text": "Unser Heimatmarkt. Fracht wird in Berlin und ganz Europa abgeholt, gebündelt und verschickt."
+    "tag": "Entstehung und Konsolidierung",
+    "text": "Unsere Zentrale. Die Fracht wird in Berlin und in ganz Europa abgeholt, gebündelt und versandt."
   },
   "north-africa": {
     "name": "Nordafrika",
     "tag": "Zielregion",
-    "text": "Direkte Korridore von Europa an die nordafrikanische Küste — eine der kürzesten Seerouten in unserem Netzwerk."
+    "text": "Direkte Verbindungen von Europa zur nordafrikanischen Küste – zu den kürzesten Seewegen in unserem Netzwerk."
   },
   "west-africa": {
     "name": "Westafrika",
     "tag": "Zielregion",
-    "text": "Einer unserer stärksten Korridore — europäische Häfen und Flughäfen verbunden mit westafrikanischen Handelszentren."
+    "text": "Einer unserer wichtigsten Verkehrskorridore, der europäische Häfen und Flughäfen mit westafrikanischen Handelszentren verbindet."
   },
   "central-africa": {
     "name": "Zentralafrika",
     "tag": "Zielregion",
-    "text": "Frachtkoordination in zentralafrikanische Märkte — geplant um verlässliche Routen und sorgfältige Übergaben."
+    "text": "Frachtkoordination für die Märkte in Zentralafrika, geplant auf der Grundlage zuverlässiger Routenführung und sorgfältiger Übergaben."
   },
   "east-africa": {
     "name": "Ostafrika",
     "tag": "Zielregion",
-    "text": "Luft- und Seefracht zu Torhäfen Ostafrikas, mit Anschlüssen ins Landesinnere."
+    "text": "Luft- und Seefracht zu den ostafrikanischen Drehkreuzen mit Weiterbeförderung zu Zielen im Landesinneren."
   },
   "southern-africa": {
     "name": "Südliches Afrika",
     "tag": "Zielregion",
-    "text": "Container- und Fahrzeugrouten in den südlichen Korridor des Kontinents."
+    "text": "Containertransportwege für Fahrzeuge und gewerbliche Fracht in den südlichen Korridor des Kontinents."
   },
   "middle-east": {
     "name": "Naher Osten",
     "tag": "Zielregion",
-    "text": "Wir verbinden europäische Exporteure mit den Märkten am Golf und in der Levante — per Luft und See."
+    "text": "Wir verbinden europäische Exporteure über zuverlässige Luft- und Seeverkehrswege mit den Märkten am Persischen Golf und in der Levante."
   }
 }

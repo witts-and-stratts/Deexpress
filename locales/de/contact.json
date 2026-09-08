@@ -1,38 +1,48 @@
 {
   "eyebrow": "Kontakt",
-  "title": "Wir freuen uns auf Ihre Nachricht.",
-  "intro": "Fragen zu einer Sendung, einem Zielort oder einer Partnerschaft? Schreiben Sie uns oder rufen Sie direkt an — auf Englisch, Deutsch oder Französisch.",
-  "formTitle": "Schreiben Sie uns",
+  "title": "Wir freuen uns darauf, von Ihnen zu hören.",
+  "intro": "Haben Sie Fragen zu einer Sendung, einem Bestimmungsort oder einer Partnerschaft? Schreiben Sie uns eine Nachricht oder wenden Sie sich direkt an uns – auf Englisch, Deutsch oder Französisch.",
+  "formTitle": "Schicken Sie uns eine Nachricht",
+  "office": "Büro",
+  "hours": "Sprechzeiten",
+  "directTitle": "Call us directly",
+  "languagesLabel": "Sprachen",
+  "whatsappTitle": "Bevorzugst du WhatsApp?",
+  "whatsappText": "Schreiben Sie uns direkt eine Nachricht – wir antworten in der Regel während der Bürozeiten.",
+  "partnership": "Anfragen zu Partnerschaften: Vertreter, Spediteure und geschäftliche Zusammenarbeit – schreiben Sie uns eine E-Mail oder wählen Sie im Formular die Option „Partnerschaft“ aus.",
+  "success": "Vielen Dank – Ihre Nachricht ist bei uns eingegangen. Unser Team wird sich innerhalb eines Werktags bei Ihnen melden.",
   "subjects": [
     "Angebotsanfrage",
     "Sendungsanfrage",
-    "Fahrzeugbeschaffung & Transport",
+    "Beschaffung und Versand von Fahrzeugen",
     "Lagerung",
     "Partnerschaft",
     "Sonstiges"
   ],
-  "office": "Büro",
-  "hours": "Öffnungszeiten",
-  "directTitle": "Direkter Kontakt",
-  "languagesLabel": "Sprachen",
-  "whatsappTitle": "Lieber WhatsApp?",
-  "whatsappText": "Schreiben Sie uns direkt — wir antworten in der Regel während der Öffnungszeiten.",
-  "partnership": "Partnerschaftsanfragen: Agenturen, Frachtführer und gewerbliche Kooperationen erreichen uns per E-Mail oder über das Formular.",
-  "success": "Vielen Dank — Ihre Nachricht ist eingegangen. Unser Team meldet sich innerhalb eines Werktages bei Ihnen.",
+  "placeholders": {
+    "name": "Jane Doe",
+    "email": "jane@company.com",
+    "message": "Sagen Sie uns, wie wir Ihnen helfen können."
+  },
   "page": {
-    "heroTitle": "Sprechen Sie mit uns",
-    "heroIntro": "Ob Sie ein individuelles Frachtangebot, Sendungsupdates oder ein Gespräch über eine Partnerschaft benötigen — unsere Teams in Berlin und Afrika helfen Ihnen gern.",
+    "heroTitle": "Sprechen Sie uns an",
+    "heroIntro": "Ganz gleich, ob Sie ein individuelles Frachtangebot benötigen, Informationen zum Sendungsstatus wünschen oder eine Partnerschaft besprechen möchten – unsere Teams in Berlin und in ganz Afrika stehen Ihnen gerne zur Seite.",
     "optionsTitle": "Kontaktmöglichkeiten",
     "shippingRequestTitle": "Versandanfrage",
-    "shippingRequestText": "Für Versandanfragen nutzen Sie bitte unser spezielles Anfrageformular. So erhalten wir alle Angaben für eine maßgeschneiderte Lösung.",
-    "shippingRequestLink": "Versandanfrageformular",
-    "options": ["Hotline für Sendungen, Tracking und dringende Informationen", "Partnerschaften, Fahrzeugbeschaffung und Sourcing", "Sofortiger Kundensupport per Anruf oder WhatsApp", "Öffnungszeiten"],
+    "shippingRequestText": "Für Versandanfragen nutzen Sie bitte unser spezielles Formular für Versandanfragen. So erhalten wir alle notwendigen Angaben, um Ihnen eine maßgeschneiderte Lösung anbieten zu können.",
+    "shippingRequestLink": "Formular für Versandanfragen",
+    "officeHoursValue": "Mo – Fr · 9:00 – 17:00 Uhr",
     "businessTitle": "Wie können wir Ihr Unternehmen unterstützen?",
-    "businessText": "Teilen Sie uns mit, was Sie benötigen, und wir melden uns mit einer passenden Lösung bei Ihnen.",
-    "businessEmphasis": "Ob Sie ein Frachtangebot, Sendungsupdates oder ein Gespräch über eine Partnerschaft benötigen — unser Team hilft Ihnen gern.",
-    "responseTime": "Wir antworten in der Regel innerhalb von 2 Geschäftsstunden.",
-    "locationTitle": "Finden Sie uns in Berlin",
-    "mapLabel": "Karte mit dem Berliner Bürostandort"
-  },
-  "placeholders": { "name": "Max Mustermann", "email": "max@beispiel.de", "message": "Wie können wir Ihnen helfen?" }
+    "businessText": "Teilen Sie uns Ihre Anforderungen mit, und wir melden uns bei Ihnen mit einer maßgeschneiderten Lösung.",
+    "businessEmphasis": "Ganz gleich, ob Sie ein Frachtangebot benötigen, Informationen zum Versandstatus wünschen oder eine Zusammenarbeit besprechen möchten – unser Team steht Ihnen gerne zur Verfügung.",
+    "responseTime": "In der Regel antworten wir innerhalb von 2 Geschäftsstunden.",
+    "locationTitle": "So finden Sie uns in Berlin",
+    "mapLabel": "Karte mit dem Standort des Berliner Büros",
+    "options": [
+      "Hotline für Versand, Sendungsverfolgung und andere dringende Informationen",
+      "Partnerschaften, Fahrzeugbeschaffung und Beschaffungswesen",
+      "Sofortiger Kundensupport per Call oder WhatsApp-Nachricht",
+      "Sprechzeiten"
+    ]
+  }
 }

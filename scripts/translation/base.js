@@ -58,6 +58,29 @@ function shouldSkipTranslation(text) {
 }
 
 /**
+ * Collects every object key in a locale document.
+ *
+ * Locale files use some of their keys as reference values (for example,
+ * "air-freight" in a related-services array). Those references must remain
+ * stable across languages even though they are represented as strings.
+ */
+function collectObjectKeys(value, keys = new Set()) {
+    if (Array.isArray(value)) {
+        for (const item of value) collectObjectKeys(item, keys);
+        return keys;
+    }
+
+    if (value && typeof value === 'object') {
+        for (const [key, child] of Object.entries(value)) {
+            keys.add(key);
+            collectObjectKeys(child, keys);
+        }
+    }
+
+    return keys;
+}
+
+/**
  * Checks if a string is an image file path
  */
 function isImagePath(text) {
@@ -124,6 +147,9 @@ async function withRetry(fn, retries = 5, initialDelay = 1000) {
             return await fn();
         } catch (err) {
             lastError = err;
+            if (err.retryable === false) {
+                throw err;
+            }
             if (err.status === 429) {
                 const delay = initialDelay * Math.pow(2, i);
                 console.warn(`⚠️ Rate limited. Retrying in ${delay / 1000}s...`);
@@ -267,22 +293,28 @@ class BaseTranslator {
     }
 
     /**
-     * Recursively traverses a JSON object or array and translates all string values.
+     * Recursively traverses a JSON object or array and translates copy while
+     * preserving strings that reference keys in the source document.
      */
-    async translateObject(obj, targetLang) {
+    async translateObject(obj, targetLang, translationKeys) {
+        // Build this once for the complete source document and pass it down
+        // recursively so string references can be distinguished from copy.
+        const keys = translationKeys || collectObjectKeys(obj);
+
         if (typeof obj === 'string') {
+            if (keys.has(obj)) return obj;
             return await this.handleTextTranslation(obj, targetLang);
         }
 
         if (Array.isArray(obj)) {
-            return Promise.all(obj.map((item) => this.translateObject(item, targetLang)));
+            return Promise.all(obj.map((item) => this.translateObject(item, targetLang, keys)));
         }
 
         if (typeof obj === 'object' && obj !== null) {
             const newObj = {};
-            const keys = Object.keys(obj);
-            await Promise.all(keys.map(async (key) => {
-                newObj[key] = await this.translateObject(obj[key], targetLang);
+            const objectKeys = Object.keys(obj);
+            await Promise.all(objectKeys.map(async (key) => {
+                newObj[key] = await this.translateObject(obj[key], targetLang, keys);
             }));
             return newObj;
         }

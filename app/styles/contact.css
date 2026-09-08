@@ -71,6 +71,6 @@
     @apply col-span-12 md:col-span-4;
   }
   .contact-page__map {
-    @apply col-span-12 min-h-77.5 bg-[url('/images/contact-figma/map.webp')] bg-cover bg-center md:col-span-8 md:min-h-139.5 rounded-md;
+    @apply col-span-12 min-h-77.5 bg-[url('/images/contact/map.webp')] bg-cover bg-center md:col-span-8 md:min-h-139.5 rounded-md;
   }
 }

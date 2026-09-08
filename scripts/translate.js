@@ -33,9 +33,9 @@ function createTranslator(provider, { dryRun = false } = {}) {
 
   switch (provider.toLowerCase()) {
     case "huerray":
-      config.cachePath = path.join(PROJECT_ROOT, "translation-cache-huerray.json");
+      config.cachePath = path.join(PROJECT_ROOT, "translation-cache.json");
       config.endpoint = process.env.HUERRAY_TRANSLATION_ENDPOINT || HUERRAY_TRANSLATION_ENDPOINT;
-      config.origin = process.env.HUERRAY_TRANSLATION_ORIGIN || "https://thrypes.com";
+      config.origin = process.env.HUERRAY_TRANSLATION_ORIGIN || "https://deexpress-logistics.eu";
       return new HuerrayTranslator(config);
 
     case "openai":

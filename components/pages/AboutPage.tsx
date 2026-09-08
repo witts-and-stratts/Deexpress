@@ -13,20 +13,46 @@ import { CONTACT_PERSONS } from '@/lib/site';
 import Image from 'next/image';
 import AnimatedText from '../AnimatedText';
 import Parallax from '../Parallax';
-import { motion } from 'motion/react';
+import { motion, type Variants } from 'motion/react';
 import { useRef } from 'react';
 
 const aboutImages = {
   hero: '/images/about/hero.webp',
   intro: '/images/about/intro.jpg',
   story: '/images/about/story.webp',
-  vision: '/images/about/vision.webp',
+  vision: {src: '/images/dispatch-and-recipient.jpg', portrait: '/images/dispatch-and-recipient-portrait.jpg'},
   collage: [
     '/images/about/collage-1.webp',
     '/images/about/collage-3.webp',
     '/images/about/collage-2.webp',
   ],
   team: ['/images/about/team-micheal.webp', '/images/about/team-adedapo.webp'],
+};
+
+const aboutImagesContainerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+};
+
+const aboutImageVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+    scale: 0.96,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.7,
+      ease: [0.2, 0, 0, 1],
+    },
+  },
 };
 
 export function AboutPage() {
@@ -126,18 +152,30 @@ export function AboutPage() {
         >
           {t.about.mission}
         </AnimatedText>
-        <div className='about__collage' aria-hidden='true'>
+        <motion.div
+          className='about__collage'
+          aria-hidden='true'
+          variants={aboutImagesContainerVariants}
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {aboutImages.collage.map((image) => (
-            <Image
-              src={image}
-              alt=''
+            <motion.div
+              className='about__collage-item'
               key={image}
-              width={1500}
-              height={1500}
-              className={`about__collage-image`}
-            />
+              variants={aboutImageVariants}
+            >
+              <Image
+                src={image}
+                alt=''
+                width={1500}
+                height={1500}
+                className='about__collage-image'
+              />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </section>
       <section className='about__vision' data-header-surface='dark'>
         <ServiceJourneyShowcase

@@ -1,10 +1,66 @@
 {
-  "heroBadge": "Europa → Afrika & Naher Osten",
-  "heroTitle1": "Wir bewegen, was Ihnen wichtig ist —",
-  "heroTitle2": "über Kontinente hinweg.",
-  "heroSub": "Die DEexpress Logistics GmbH koordiniert Luft-, See- und Landfracht von Berlin aus in 26 Länder Afrikas und des Nahen Ostens — für Privat- und Geschäftskunden.",
-  "heroTrackLabel": "Sendungsnummer",
-  "heroTrackBtn": "Verfolgen",
+  "heroBadge": "Europa → Afrika und Naher Osten",
+  "heroTitle1": "Bewegen, was zählt",
+  "heroTitle2": "mit Zuversicht",
+  "heroSub": "Maßgeschneiderte Logistikdienstleistungen von Europa nach Afrika auf der Straße, in der Luft, auf dem Wasserweg oder auf der Schiene – wir bringen Ihre Fracht sicher, effizient und sorgfältig an ihren Bestimmungsort",
+  "heroTrackLabel": "Sendungsverfolgungsnummer",
+  "heroTrackBtn": "Titel",
+  "introEyebrow": "Wer wir sind",
+  "introTitle": "Ein Berliner Logistikpartner für zwei Kontinente.",
+  "introP1": "DEExpress koordiniert Luft-, See- und Straßentransporte von Europa zu Zielen in 26 afrikanischen Ländern und im Nahen Osten —",
+  "introP2": "Wir unterstützen Privatpersonen und Unternehmen dabei, internationale Umzüge mit mehr Übersicht und Kontrolle zu bewältigen.",
+  "servicesEyebrow": "Unsere Dienstleistungen",
+  "servicesTitle": "Ein Partner. Alle Verkehrsmittel.",
+  "servicesSub": "Von zeitkritischer Luftfracht über kostengünstige Seefracht bis hin zu Fahrzeugen, gewerblichen Gütern und sicherer Lagerung – wählen Sie die Dienstleistung, wir planen die Route.",
+  "coverageEyebrow": "Weltweite Abdeckung",
+  "coverageTitle": "Von Europa aus zu 26 Reisezielen.",
+  "coverageSub": "Unser Netzwerk verbindet europäische Abgangsorte mit Zielen in ganz Afrika und im Nahen Osten. Wählen Sie eine Region aus, um zu sehen, wie wir Ihre Fracht transportieren.",
+  "mapHint": "Wählen Sie eine Region aus",
+  "whyEyebrow": "Warum DEexpress?",
+  "whyTitle": "Basierend auf Schnelligkeit, Transparenz und Vertrauen.",
+  "processEyebrow": "Unser Verfahren",
+  "processTitle": "Ihre Sendung in vier Schritten.",
+  "processSub": "Ein einfacher, transparenter Ablauf – egal, ob es sich um eine einzelne Schachtel oder eine komplette gewerbliche Ladung handelt.",
+  "trackingEyebrow": "Sendungsverfolgung",
+  "trackingTitle": "Behalten Sie den Überblick über den Status Ihrer Sendung.",
+  "trackingSub": "Geben Sie Ihre Referenznummer ein und sehen Sie sich den aktuellen Status an – von der Buchung bis zur Ankunft.",
+  "industriesEyebrow": "Branchen",
+  "industriesTitle": "Branchenübergreifend geschätzt",
+  "industriesSub": "Unterschiedliche Fracht, unterschiedliche Anforderungen – stets die gleiche zuverlässige Abfertigung.",
+  "sourcingTitle": "Sind Sie auf der Suche nach einem Fahrzeug in Europa?",
+  "sourcingText": "Wir suchen, prüfen und kaufen Fahrzeuge in Ihrem Auftrag – und verbinden diesen Prozess direkt mit dem internationalen Fahrzeugtransport. Ein Team, ein Ansprechpartner, von der Suche bis zur Auslieferung.",
+  "sourcingCta": "Fahrzeugbeschaffung",
+  "ctaTitle": "Bereit für den Umzug?",
+  "ctaText": "Teilen Sie uns mit, was Sie versenden möchten und wohin die Sendung gehen soll – wir senden Ihnen dann ein kostenloses, unverbindliches Angebot zu.",
+  "marquee": [
+    "Luftfracht",
+    "Seefracht",
+    "Güterverkehr auf der Schiene",
+    "Straßengüterverkehr",
+    "Beschaffung und Versand von Fahrzeugen",
+    "Gewerblicher Frachtverkehr",
+    "Persönliche Gegenstände",
+    "Lagerung"
+  ],
+  "transportModes": [
+    "Flugzeug",
+    "Schiff",
+    "Zug",
+    "Lkw"
+  ],
+  "testimonial": {
+    "sectionLabel": "Kundenstimmen",
+    "carouselLabel": "Kundenstimmen",
+    "previous": "Vorherige Kundenstimme",
+    "next": "Nächster Erfahrungsbericht",
+    "quote": "„DEexpress hat unsere Lieferkette grundlegend verändert. Dank der Echtzeit-Sendungsverfolgung und des engagierten Teams konnten wir unsere Transportzeiten auf der Strecke Berlin–Lagos um 40 % verkürzen.“",
+    "name": "Marcus Weber",
+    "role": "Leiter Logistik, AutoTech GmbH"
+  },
+  "servicesHeading": {
+    "title": "Weltweiter Versand.",
+    "sub": " Für jede Fracht"
+  },
   "stats": [
     {
       "value": 26,
@@ -12,7 +68,7 @@
     },
     {
       "value": 6,
-      "label": "Kernleistungen"
+      "label": "Kernleistungen im Bereich Logistik"
     },
     {
       "value": 3,
@@ -23,110 +79,121 @@
       "label": "Ansprechpartner für Ihre Sendung"
     }
   ],
-  "marquee": [
-    "Luftfracht",
-    "Seefracht",
-    "Schienenfracht",
-    "Straßenfracht",
-    "Fahrzeugbeschaffung & Transport",
-    "Kommerzielle Fracht",
-    "Umzugsgut",
-    "Lagerung"
-  ],
-  "introEyebrow": "Über uns",
-  "introTitle": "Ein Logistikpartner aus Berlin für zwei Kontinente.",
-  "introP1": "Von unserem Standort in Berlin aus koordiniert die DEexpress Logistics internationalen Frachtverkehr per Luft, See, Schiene und Straße — für Privat- und Geschäftskunden in Europa, Afrika und dem Nahen Osten.",
-  "introP2": "Automobil, Handel, Lebensmittel oder Hardware: Was auch immer Sie transportieren — ein Team plant die Route, erledigt die Formalitäten und hält Sie auf dem Laufenden, bis Ihre Fracht ankommt.",
-  "servicesEyebrow": "Unsere Leistungen",
-  "servicesTitle": "Ein Partner. Jede Transportart.",
-  "servicesSub": "Von zeitkritischer Luftfracht bis zur kosteneffizienten Seefracht, von Fahrzeugen über kommerzielle Fracht bis zur sicheren Lagerung — wählen Sie die Leistung, wir planen die Route.",
-  "coverageEyebrow": "Globale Reichweite",
-  "coverageTitle": "Von Europa in 26 Länder.",
-  "coverageSub": "Unser Netzwerk verbindet europäische Startpunkte mit Zielen in ganz Afrika und dem Nahen Osten. Wählen Sie eine Region, um zu sehen, wie wir Ihre Fracht bewegen.",
-  "mapHint": "Region auswählen",
-  "whyEyebrow": "Warum DEexpress",
-  "whyTitle": "Schnell, transparent und verlässlich.",
   "why": [
     {
       "title": "Geschwindigkeit",
-      "text": "Wir sind schnell und effizient — von der ersten Anfrage bis zur finalen Zustellung Ihrer Fracht."
+      "text": "Wir arbeiten schnell und effizient – von der ersten Anfrage bis zur endgültigen Auslieferung Ihrer Fracht."
     },
     {
-      "title": "Sendungsverfolgung",
-      "text": "Aktuelle Statusinformationen — vom Versandpunkt bis zur Ankunft Ihrer Sendung."
+      "title": "Nachverfolgung",
+      "text": "Aktuelle Statusinformationen zu Ihren Kunden – vom Versand bis zur Ankunft."
     },
     {
-      "title": "Flexible Zahlung",
-      "text": "Zahlung darf keine Hürde sein. Sprechen Sie uns an — wir finden eine Lösung, die für Sie passt."
+      "title": "Flexible Zahlungsmöglichkeiten",
+      "text": "Die Bezahlung sollte kein Hindernis sein. Kontaktieren Sie uns – wir finden eine Lösung, die zu Ihnen passt."
     },
     {
       "title": "Service",
-      "text": "Ein Kundenservice-Team, das schnell hilft — auf Englisch, Deutsch oder Französisch."
+      "text": "Ein Kundenservice-Team, das Ihnen schnell weiterhilft – auf Englisch, Deutsch oder Französisch."
     }
   ],
-  "processEyebrow": "Unser Prozess",
-  "processTitle": "Ihre Sendung in vier Schritten.",
-  "processSub": "Ein einfacher, transparenter Prozess — gleich ob ein einzelner Karton oder eine komplette gewerbliche Ladung.",
   "steps": [
     {
       "title": "Kontaktieren Sie uns",
-      "text": "Sagen Sie uns, was Sie versenden möchten — per Formular, Telefon oder WhatsApp."
+      "text": "Teilen Sie uns mit, was Sie versenden möchten – per Formular, Telefon oder WhatsApp."
     },
     {
-      "title": "Kostenloses Angebot",
-      "text": "Wir prüfen Ihre Anfrage und senden Ihnen ein kostenloses, unverbindliches Angebot."
+      "title": "Fordern Sie einen kostenlosen Kostenvoranschlag an",
+      "text": "Wir prüfen Ihre Anforderungen und senden Ihnen ein kostenloses, unverbindliches Angebot zu."
     },
     {
-      "title": "Verpacken",
-      "text": "Sie bereiten Ihre Fracht für Versand oder Lagerung vor — wir beraten Sie dabei."
+      "title": "Verpackung",
+      "text": "Sie bereiten Ihre Fracht für den Versand oder die Lagerung vor – wir beraten Sie dabei."
     },
     {
       "title": "Abholung & Versand",
-      "text": "Innerhalb Berlins holen wir Ihre Fracht ab. Von dort koordinieren wir die Reise bis zum Ziel."
+      "text": "In Berlin holen wir Ihre Fracht ab. Von dort aus koordinieren wir den Transport zum Bestimmungsort."
     }
   ],
-  "trackingEyebrow": "Sendungsverfolgung",
-  "trackingTitle": "Wissen Sie immer, wo Ihre Sendung ist.",
-  "trackingSub": "Geben Sie Ihre Referenz ein und sehen Sie den letzten verfügbaren Status — von der Buchung bis zur Ankunft.",
-  "industriesEyebrow": "Branchen",
-  "industriesTitle": "Vertraut in vielen Branchen.",
-  "industriesSub": "Verschiedene Fracht, verschiedene Anforderungen — dieselbe verlässliche Abwicklung.",
   "industries": [
     {
-      "title": "Automobil",
-      "text": "Wir sind Experten für den Versand in der Automobilbranche: Pkw, Lkw, Busse und Sonderfahrzeuge."
+      "title": "Automobilindustrie",
+      "text": "Geben Sie Ihre Sendungsnummer ein, um den aktuellen Status und den voraussichtlichen Liefertermin anzuzeigen."
     },
     {
-      "title": "Handel",
-      "text": "Wir versenden und lagern Fracht für den Einzelhandel. Zuverlässiger und schneller Service macht uns zum idealen Partner."
+      "title": "Einzelhandel",
+      "text": "Schnelle und zuverlässige Lieferung von Konsumgütern an Geschäfte und Kunden."
     },
     {
-      "title": "Lebensmittel",
-      "text": "Wir verstehen die besonderen Hygiene- und Temperaturanforderungen beim Lebensmittelversand."
+      "title": "Food",
+      "text": "Temperaturgeführte Logistik für verderbliche Waren und Zutaten."
     },
     {
       "title": "Hardware",
-      "text": "Wir versenden Elektronik und Hardware regelmäßig, sicher und effizient über Grenzen hinweg."
+      "text": "Spezialtransporte für schwere Maschinen und empfindliche elektronische Geräte."
     }
   ],
-  "sourcingTitle": "Suchen Sie ein Fahrzeug in Europa?",
-  "sourcingText": "Wir finden, prüfen und kaufen Fahrzeuge in Ihrem Auftrag — und verbinden den Prozess direkt mit dem internationalen Fahrzeugtransport. Ein Team, ein Ansprechpartner, von der Suche bis zur Zustellung.",
-  "sourcingCta": "Fahrzeugbeschaffung",
-  "ctaTitle": "Bereit zu versenden?",
-  "ctaText": "Sagen Sie uns, was Sie versenden und wohin — wir senden Ihnen ein kostenloses, unverbindliches Angebot.",
+  "servicesShowcase": [
+    {
+      "title": "Luftfracht",
+      "description": "Zeitkritische Sendungen, koordiniert von der Abholung bis zur Zustellung."
+    },
+    {
+      "title": "Seefracht",
+      "description": "Kostengünstige Seefracht für größere Ladungen und Fernstrecken."
+    },
+    {
+      "title": "Beschaffung und Versand von Fahrzeugen",
+      "description": "Von der Fahrzeugsuche in Europa bis zum internationalen Transport – alles aus einer Hand."
+    },
+    {
+      "title": "Gewerblicher Frachtverkehr",
+      "description": "Der Transport wird ganz auf Ihre geschäftlichen Anforderungen und Ihren Bestimmungsort abgestimmt."
+    },
+    {
+      "title": "Versand von persönlichen Gegenständen",
+      "description": "Sorgfältige Koordination für die Gegenstände, die mit Ihnen umziehen."
+    },
+    {
+      "title": "Lagerung und Lagerhaltung",
+      "description": "Sichere Lagerung, die an die nächste Phase Ihres Versands angebunden ist."
+    }
+  ],
+  "metrics": [
+    {
+      "value": "10 Mio.+",
+      "label": "Gesamtzahl der versendeten Pakete"
+    },
+    {
+      "value": "<2 Std.",
+      "label": "Bearbeitungsdauer bis zur Beschlussfassung"
+    },
+    {
+      "value": "75%",
+      "label": "Kostensenkung"
+    },
+    {
+      "value": "67",
+      "label": "Hafenumschläge pro Monat"
+    }
+  ],
   "preference": {
-    "title": "Versenden nach Ihren Wünschen",
-    "text": "Von der Abholung bis zum Ziel richten wir Transportart, Kosten und Abwicklung nach Ihren Wünschen aus.",
-    "statsLabel": "DEexpress-Netzwerk auf einen Blick",
-    "stats": [{ "value": "26+", "label": "Ziele in Afrika und im Nahen Osten" }, { "value": "4", "label": "Multimodale Transportarten" }, { "value": "3", "label": "Bediente Regionen" }]
-  },
-  "testimonial": {
-    "sectionLabel": "Kundenstimmen",
-    "carouselLabel": "Kundenstimmen",
-    "previous": "Vorherige Kundenstimme",
-    "next": "Nächste Kundenstimme",
-    "quote": "DEexpress hat unsere Lieferkette verändert. Mit Echtzeit-Tracking und einem engagierten Team konnten wir unsere Laufzeiten auf der Strecke Berlin–Lagos um 40 % senken.",
-    "name": "Marcus Weber",
-    "role": "Leiter Logistik, AutoTech GmbH"
+    "title": "Versandart nach Wahl",
+    "text": "Vom Abholort bis zum Bestimmungsort richten wir uns ganz nach Ihren Wünschen hinsichtlich Transportart, Kosten und Abwicklung.",
+    "statsLabel": "DEexpress-Versicherungsschutz auf einen Blick",
+    "stats": [
+      {
+        "value": "26+",
+        "label": "Reiseziele in Afrika und im Nahen Osten"
+      },
+      {
+        "value": "4",
+        "label": "Multimodale Versandarten"
+      },
+      {
+        "value": "3",
+        "label": "Bediente Regionen"
+      }
+    ]
   }
 }

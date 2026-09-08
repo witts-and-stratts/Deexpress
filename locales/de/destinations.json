@@ -1,12 +1,12 @@
 {
-  "eyebrow": "Ziele",
-  "title": "Ein Netzwerk. 26 Ziele.",
-  "intro": "Von unserem Standort in Berlin koordinieren wir Fracht in 26 Länder Afrikas und zu Zielen im Nahen Osten. Entdecken Sie die Regionen, die wir bedienen.",
-  "mapTitle": "Interaktive Abdeckung",
-  "mapSub": "Wählen Sie eine Region, um zu sehen, wie wir Fracht zwischen Europa und Ihrem Ziel bewegen.",
-  "listTitle": "Regionen, die wir bedienen",
-  "searchPlaceholder": "Länder durchsuchen, die wir bedienen",
-  "searchNoResults": "Kein passendes Ziel. Fragen Sie unser Team nach Ihrer Route.",
-  "note": "Unsere vollständige Länderliste wird gerade für die neue Website finalisiert. Fragen Sie uns direkt nach Ihrem Zielort — wenn er in unserem Netzwerk liegt, bestätigen wir die beste Route für Ihre Fracht.",
-  "askCta": "Nach Ihrem Zielort fragen"
+  "eyebrow": "Reiseziele",
+  "title": "Ein Netzwerk. 26 Reiseziele.",
+  "intro": "Von unserem Standort in Berlin aus koordinieren wir Frachttransporte in 26 Länder in ganz Afrika sowie zu Zielen im Nahen Osten. Entdecken Sie die Regionen, die wir bedienen.",
+  "mapTitle": "Interaktive Berichterstattung",
+  "mapSub": "Wählen Sie eine Region aus, um zu erfahren, wie wir Fracht zwischen Europa und Ihrem Zielort transportieren.",
+  "listTitle": "Regionen, in denen wir tätig sind",
+  "searchPlaceholder": "Länder suchen, in denen wir tätig sind",
+  "searchNoResults": "Es wurde kein passendes Ziel gefunden. Fragen Sie unser Team nach Ihrer Route.",
+  "note": "Unsere vollständige Länderliste für diese neue Website wird derzeit fertiggestellt. Fragen Sie uns direkt nach Ihrem Zielort – sofern dieser zu unserem Netzwerk gehört, werden wir Ihnen die beste Route für Ihre Fracht bestätigen.",
+  "askCta": "Fragen Sie nach Ihrem Reiseziel"
 }

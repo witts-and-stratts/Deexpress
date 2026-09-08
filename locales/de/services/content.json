@@ -1,717 +1,717 @@
 {
+  "proof": {
+    "title": "Was DEexpress bei jeder Sendung koordiniert.",
+    "contactTitle": "Besprechen Sie den Versand mit dem Team, das für die Anfrage zuständig ist.",
+    "contactText": "Geben Sie die Fracht, den Abgangsort, den Bestimmungsort und den voraussichtlichen Zeitrahmen an. Das Team kann dann den nächsten sinnvollen Schritt bestätigen.",
+    "callLabel": "Call directly",
+    "benefits": [
+      {
+        "title": "Hafenkoordination",
+        "text": "Der Transport im Einfuhrhafen, die Schiffsbuchungen und die Containerübergaben werden mit dem Hafenbetrieb abgestimmt, um einen reibungslosen Ablauf Ihres Frachttransports zu gewährleisten"
+      },
+      {
+        "title": "Erstellung von Dokumenten und Bescheinigungen",
+        "text": "Erstellung und Verwaltung der wesentlichen Versanddokumente, Zollpapiere und erforderlichen Bescheinigungen für einen vorschriftsmäßigen und reibungslosen Transport"
+      },
+      {
+        "title": "Sperrgut",
+        "text": "Maßgeschneiderte Transportlösungen mit der richtigen Ausrüstung, Umschlagtechnik und Routenplanung für übergroße, schwere oder unkonventionelle Fracht."
+      },
+      {
+        "title": "Lieferung auf der letzten Meile",
+        "text": "Koordination des Endtransports vom Hafen bis zum Bestimmungsort, damit Ihre Fracht sicher, zuverlässig und pünktlich ankommt."
+      }
+    ]
+  },
+  "extraFaqs": {
+    "air-freight": [
+      {
+        "question": "Was beeinflusst einen Kostenvoranschlag für Luftfracht?",
+        "answer": "Die Beschreibung der Fracht, ihre Größe oder ihr Gewicht, der Abgangsort, der Bestimmungsort und der gewünschte Zeitrahmen helfen uns dabei, einen korrekten Kostenvoranschlag zu erstellen."
+      },
+      {
+        "question": "Was sollte ich mitteilen, bevor ich ein Angebot anfordere?",
+        "answer": "Geben Sie zunächst den Abholort, den Bestimmungsort, die Frachtdaten und den gewünschten Zeitrahmen an. Wir helfen Ihnen dann bei allen weiteren Angaben, die für die Route erforderlich sind."
+      }
+    ],
+    "sea-freight": [
+      {
+        "question": "Was beeinflusst die Kosten für Seefracht?",
+        "answer": "Volumen, Verpackung, Herkunftsort, Bestimmungsort und die Art der Sendung beeinflussen den Kostenvoranschlag. Geben Sie so viele Details wie möglich an, damit wir Ihnen ein aussagekräftiges Angebot unterbreiten können."
+      },
+      {
+        "question": "Woran erkenne ich, ob Containerfracht oder Sammelgut die richtige Wahl ist?",
+        "answer": "Die Wahl hängt von der Menge und der Art Ihrer Fracht ab. Unser Team wird die praktikabelste Option mit Ihnen besprechen, sobald wir die Sendung genau kennen."
+      }
+    ],
+    "vehicle-shipping": [
+      {
+        "question": "Welche Angaben werden für einen Kostenvoranschlag für den Fahrzeugtransport benötigt?",
+        "answer": "Fahrzeugtyp, Marke oder Modell, Abholort, Zielort und Ihr gewünschter Zeitrahmen bilden für uns die richtige Ausgangsbasis."
+      },
+      {
+        "question": "Wann sollte ich mich wegen eines Fahrzeugs an Sie wenden?",
+        "answer": "Bitte kontaktieren Sie uns, sobald Sie das Fahrzeug und den gewünschten Bestimmungsort kennen. So hat das Team genügend Zeit, den Transportablauf und die erforderlichen Formalitäten mit Ihnen zu besprechen."
+      }
+    ],
+    "commercial-cargo": [
+      {
+        "question": "Was sollte ein Unternehmen in seiner ersten Anfrage angeben?",
+        "answer": "Geben Sie an, was transportiert werden soll, wo der Transport beginnt und endet, wie die Sendung verpackt ist und ob es sich um eine einmalige oder eine wiederkehrende Sendung handelt."
+      },
+      {
+        "question": "Kann sich die Route an veränderte geschäftliche Anforderungen anpassen?",
+        "answer": "Wir besprechen die Versandbedingungen mit Ihnen und können gemeinsam die am besten geeignete weitere Vorgehensweise erörtern, wenn sich Prioritäten, Waren oder Zielorte ändern."
+      }
+    ],
+    "personal-effects": [
+      {
+        "question": "Welche Informationen helfen Ihnen bei der Kostenkalkulation für einen Umzug von Privatgegenständen?",
+        "answer": "Am besten beginnen Sie mit einer Übersicht über die Gegenstände, die Abhol- und Lieferorte, die geschätzte Stückzahl und den von Ihnen geplanten Zeitplan."
+      },
+      {
+        "question": "Können Sie mir die Einfuhrbestimmungen für meine persönlichen Gegenstände bestätigen?",
+        "answer": "Die Anforderungen können je nach Bestimmungsort und Sendung variieren. Teilen Sie uns bitte mit, wohin Ihre Gegenstände transportiert werden sollen, und wir erklären Ihnen die nächsten Schritte für Ihre Route."
+      }
+    ],
+    "vehicle-sourcing": [
+      {
+        "question": "Welche Angaben muss ich machen, um eine Fahrzeugsuche zu starten?",
+        "answer": "Teilen Sie uns bitte den gewünschten Fahrzeugtyp oder das gewünschte Modell, den geplanten Bestimmungsort, Ihr Budget oder Ihre Kaufkriterien mit und geben Sie an, ob Sie auch einen Transport benötigen."
+      },
+      {
+        "question": "Kann ich den Versand erst nach Abschluss des Kaufs veranlassen?",
+        "answer": "Ja. Wir können den Beschaffungsprozess mit dem Fahrzeugtransport verknüpfen, sobald das Fahrzeug versandbereit ist."
+      }
+    ],
+    "storage": [
+      {
+        "question": "Welche Informationen werden für die Organisation der Lagerung benötigt?",
+        "answer": "Teilen Sie uns bitte mit, was gelagert werden soll, wie viele Artikel oder Paletten es ungefähr sind, wann die Lagerung beginnen soll und ob ein Weitertransport geplant ist."
+      },
+      {
+        "question": "Wie veranlasse ich die Freigabe für den Weitertransport?",
+        "answer": "Wenn Ihre nächste Sendung zur Planung bereitsteht, teilen Sie dem Team bitte den Bestimmungsort und den Zeitrahmen mit, damit die nächste Übergabe koordiniert werden kann."
+      }
+    ]
+  },
   "stories": {
     "air-freight": {
-      "fitTitle": "Wenn Zeit die Route bestimmt.",
+      "fitTitle": "Wenn die Zeit den Weg bestimmt.",
+      "prepareTitle": "Bringen Sie die wichtigsten Punkte zum ersten Gespräch mit.",
+      "faqTitle": "Luftfracht – leicht verständlich erklärt.",
+      "related": [
+        "commercial-cargo",
+        "storage"
+      ],
       "fit": [
-        "Prioritäre Fracht, die nicht auf eine längere Seereise warten kann",
-        "Kleinere oder hochwertige Sendungen mit sorgfältigem Koordinationsbedarf",
-        "Sendungen mit Planung vom Flughafen bis zur Tür"
+        "Eilfracht, die nicht auf eine längere Seereise warten kann",
+        "Kleinere oder hochwertige Sendungen, die eine sorgfältige Koordination erfordern",
+        "Sendungen, die eine Planung vom Flughafen bis zur Haustür erfordern"
+      ],
+      "prepare": [
+        "Abfahrts- und Ankunftsstadt oder -land",
+        "Was wird versandt und wie wird es verpackt?",
+        "Ungefähre Menge, Abmessungen oder Gewicht",
+        "Ihr bevorzugter Abhol- oder Liefertermin"
       ],
       "scenes": [
         {
           "title": "Beginnen Sie mit der Sendung, nicht mit einer Vorlage.",
-          "text": "Sagen Sie uns, was bewegt wird, wo es startet und wo es ankommen soll. Wir verstehen zuerst den praktischen Bedarf hinter der Dringlichkeit."
+          "text": "Teilen Sie uns mit, was transportiert werden soll, wo die Abholung stattfindet und wo die Lieferung erfolgen soll. Zunächst versuchen wir, die praktischen Anforderungen zu verstehen, die hinter der Dringlichkeit stehen."
         },
         {
-          "title": "Eine Route, die auf Übergaben ausgelegt ist.",
-          "text": "Unser Team koordiniert Abholung, Flughafenabwicklung und Weitertransport, damit die Sendung einen klaren Weg von Abflug bis Ankunft hat."
+          "title": "Eine Route, die sich an den Übergaben orientiert.",
+          "text": "Unser Team koordiniert die Abholung, die Abfertigung am Flughafen und den Weitertransport, sodass die Sendung vom Abgang bis zur Ankunft einen durchgängigen Weg nimmt."
         },
         {
-          "title": "Bleiben Sie nah an der Bewegung.",
-          "text": "Wir halten die Kommunikation klar und koordinieren die nächste Übergabe am Zielort."
+          "title": "Bleib nah an der Bewegung dran.",
+          "text": "Wir sorgen während des gesamten Transportwegs für eine klare Kommunikation und koordinieren die nächste Übergabe am Bestimmungsort."
         }
       ],
-      "prepareTitle": "Bringen Sie die wichtigsten Angaben zum ersten Gespräch mit.",
-      "prepare": [
-        "Ursprungs- und Zielort",
-        "Was versendet wird und wie es verpackt ist",
-        "Ungefähre Menge, Maße oder Gewicht",
-        "Gewünschter Abhol- oder Lieferzeitpunkt"
-      ],
-      "faqTitle": "Luftfracht, klar erklärt.",
       "faqs": [
         {
-          "question": "Ist Luftfracht für jede Sendung geeignet?",
-          "answer": "Sie ist oft richtig, wenn Zeit die wichtigste Priorität ist. Teilen Sie uns die Details mit, und wir besprechen die passende Route."
+          "question": "Ist Luftfracht für jede Sendung die richtige Wahl?",
+          "answer": "Dies ist oft die richtige Wahl, wenn es vor allem auf die Lieferzeit ankommt. Teilen Sie uns die Versanddetails mit, und wir besprechen gemeinsam die am besten geeignete Route."
         },
         {
-          "question": "Helfen Sie bei Exportdokumenten?",
-          "answer": "Wir koordinieren und unterstützen bei Exportdokumenten. Die Anforderungen hängen von Fracht und Ziel ab."
+          "question": "Können Sie mir bei den Exportformalitäten helfen?",
+          "answer": "Wir übernehmen die Koordination und Unterstützung bei der Erstellung der Exportunterlagen. Da die Anforderungen von der Fracht und dem Bestimmungsort abhängen, besprechen wir mit Ihnen die richtigen nächsten Schritte."
         },
         {
-          "question": "Kann Luftfracht bis zum Endziel weitergeführt werden?",
-          "answer": "Wir koordinieren Flughafen-bis-Tür-Übergaben, wo sie in unserem Netzwerk verfügbar sind."
+          "question": "Kann die Luftfracht bis zum Endziel weiterbefördert werden?",
+          "answer": "Wir koordinieren die Übergabe vom Flughafen bis zur Haustür, sofern dies innerhalb unseres Netzwerks möglich ist. Ihre Route wird im Rahmen des Angebotsverfahrens bestätigt."
         }
-      ],
-      "related": [
-        "commercial-cargo",
-        "storage"
       ]
     },
     "sea-freight": {
-      "fitTitle": "Wenn Umfang die Reise prägt.",
-      "fit": [
-        "Schwere, sperrige oder größere Frachtmengen",
-        "Sendungen, bei denen Kosteneffizienz wichtiger ist als Tempo",
-        "Container- oder Sammelladungen aus europäischen Häfen"
-      ],
-      "scenes": [
-        {
-          "title": "Geben Sie der ganzen Sendung Raum.",
-          "text": "Seefracht beginnt mit der tatsächlichen Form Ihrer Fracht: Einzelstücke, Paletten, Umzugsgut oder ein voller Container."
-        },
-        {
-          "title": "Die Kette vom Hafen bis zur Tür koordinieren.",
-          "text": "Wir verbinden Abholung, Konsolidierung, Hafenabwicklung und Weitertransport in einem Plan."
-        },
-        {
-          "title": "Die lange Reise nachvollziehbar halten.",
-          "text": "Auch eine lange Route braucht klare Kommunikation. Wir bleiben bei den Übergaben bis zum Ziel erreichbar."
-        },
-        {
-          "title": "Volle Transparenz und klare Dokumentation",
-          "text": "Verfolgen Sie Ihre Sendung in jeder Phase, während wir die zugehörigen Unterlagen koordinieren. Von Transportnachweisen bis zu Zolldokumenten wird alles sorgfältig und effizient für einen transparenten Ablauf bearbeitet."
-        }
-      ],
-      "prepareTitle": "Ein klarer Auftrag schafft eine klare Route.",
-      "prepare": [
-        "Ursprungs- und Zielort",
-        "Frachtart und Verpackungsform",
-        "Anzahl der Stücke, Paletten oder geschätztes Volumen",
-        "Ob Zeit oder Kosten die höhere Priorität haben"
-      ],
-      "faqTitle": "Seefracht, klar erklärt.",
-      "faqs": [
-        {
-          "question": "Koordinieren Sie Container und Sammelladungen?",
-          "answer": "Wir koordinieren Container- und Sammelsendungen. Die passende Lösung hängt von Größe, Verpackung und Ziel ab."
-        },
-        {
-          "question": "Kann Seefracht mit Inlandslieferung verbunden werden?",
-          "answer": "Wir koordinieren Hafen-bis-Tür-Übergaben, wo verfügbar, und bestätigen die praktische Route vor der Buchung."
-        },
-        {
-          "question": "Kann ich Lagerung mit Seefracht verbinden?",
-          "answer": "Ja. Lagerung in Berlin kann Ihren Versandplan vor der Seereise unterstützen."
-        }
-      ],
+      "fitTitle": "Wenn der Umfang den Weg bestimmt.",
+      "prepareTitle": "Ein klarer Auftrag sorgt für einen klareren Weg.",
+      "faqTitle": "Seefracht – leicht verständlich erklärt.",
       "related": [
         "storage",
         "commercial-cargo"
+      ],
+      "fit": [
+        "Schwere, sperrige oder voluminöse Fracht",
+        "Sendungen, bei denen Kosteneffizienz wichtiger ist als Geschwindigkeit",
+        "Container- oder Sammelgut, das aus europäischen Häfen transportiert wird"
+      ],
+      "prepare": [
+        "Abfahrts- und Ankunftsstadt oder -land",
+        "Frachtart und Verpackungsform",
+        "Anzahl der Stück, Paletten oder geschätztes Volumen",
+        "Ob der Zeitplan oder die Kosten die höhere Priorität haben"
+      ],
+      "scenes": [
+        {
+          "title": "Zuverlässige Speditionsdienstleistungen für Containertransporte aus Europa",
+          "text": "Effiziente, flexible und nachhaltige Seefrachtlösungen für Containertransporte aus Europa. Durch die intelligente Kombination von See-, Schienen- und Straßentransporten schaffen wir zuverlässige, kostengünstige Routen, die Ihre Fracht effizient befördern und gleichzeitig die Umweltbelastung reduzieren."
+        },
+        {
+          "title": "Abgestimmte Lieferkette vom Hafen bis zur Haustür",
+          "text": "Von der Ankunft im Hafen bis zur Auslieferung am endgültigen Bestimmungsort koordinieren wir jede Etappe der Transportkette. Durch die Verknüpfung von Hafenumschlag, Zollabfertigung sowie Schienen- und Straßentransport sorgen wir dafür, dass Ihre Fracht reibungslos, zuverlässig und kosteneffizient vom Hafen bis zur Haustür transportiert wird."
+        },
+        {
+          "title": "Sicherer Speicher. Immer einsatzbereit, wenn Sie es sind",
+          "text": "Sichere und skalierbare Lagerlösungen, die speziell auf Ihre Lieferkette zugeschnitten sind. Von der kurzfristigen Zwischenlagerung bis zur langfristigen Lagerhaltung koordinieren wir Umschlag, Bestandsführung und Weitertransport, damit Ihre Fracht sicher und zugänglich bleibt und effizient transportiert wird."
+        },
+        {
+          "title": "Vollständige Transparenz und klare Dokumentation",
+          "text": "Verfolgen Sie Ihre Sendung in jeder Phase, während wir uns um die dazugehörigen Unterlagen kümmern. Von Transportbelegen bis hin zu Zollpapieren – alles wird präzise und effizient abgewickelt, um einen transparenten und reibungslosen Ablauf zu gewährleisten."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Befördern Sie sowohl Containerfracht als auch Sammelgut?",
+          "answer": "Wir koordinieren Container- und Sammelguttransporte. Die Wahl der geeigneten Vorgehensweise hängt von der Größe, der Verpackung und dem Bestimmungsort Ihrer Fracht ab."
+        },
+        {
+          "question": "Kann die Seefracht mit der Lieferung im Landesinneren verknüpft werden?",
+          "answer": "Wir koordinieren, soweit möglich, die Übergabe vom Hafen bis zur Haustür. Vor der Buchung legen wir die optimale Route zu Ihrem Zielort fest."
+        },
+        {
+          "question": "Kann ich Lagerung mit Seefracht kombinieren?",
+          "answer": "Ja. Ein Lager in Berlin kann die Einhaltung des Versandplans vor der anschließenden Seetransportetappe gewährleisten."
+        }
       ]
     },
     "vehicle-shipping": {
-      "fitTitle": "Wenn die Fracht Räder hat.",
-      "fit": [
-        "Pkw, Lkw, Busse und Sonderfahrzeuge",
-        "Fahrzeugkäufe mit internationalem Weitertransport",
-        "Sendungen mit Koordination von Fahrzeug- und Exportpapieren"
-      ],
-      "scenes": [
-        {
-          "title": "Mit dem Fahrzeug vor Ihnen beginnen.",
-          "text": "Ein einzelnes Fahrzeug und eine Flotte starten nicht gleich. Wir klären Fahrzeugtyp, Abholort und Ziel, bevor die Route geplant wird."
-        },
-        {
-          "title": "Die praktische Transportart wählen.",
-          "text": "Wo verfügbar, koordinieren wir Container- und RoRo-Optionen passend zu Fahrzeug, Route und Übergaben."
-        },
-        {
-          "title": "Papiere mit dem Abfahrtsplan verbinden.",
-          "text": "Unterstützung bei Kauf- und Exportpapieren wird zusammen mit dem Transportplan koordiniert."
-        }
-      ],
+      "fitTitle": "Wenn die Ladung Räder hat.",
       "prepareTitle": "Halten Sie die Fahrzeuggeschichte bereit.",
-      "prepare": [
-        "Fahrzeugtyp, Marke und Modell",
-        "Abholort und Ziel",
-        "Ob das Fahrzeug bereits gekauft ist",
-        "Zeitliche oder Übergabe-Anforderungen"
-      ],
-      "faqTitle": "Fahrzeugtransport, klar erklärt.",
-      "faqs": [
-        {
-          "question": "Welche Fahrzeuge koordinieren Sie?",
-          "answer": "Wir koordinieren Pkw, Lkw, Busse und Sonderfahrzeuge. Sagen Sie uns mehr über das Fahrzeug."
-        },
-        {
-          "question": "Was ist RoRo?",
-          "answer": "RoRo ist eine Fahrzeugtransportoption auf ausgewählten Routen. Wir bestätigen die Eignung für Ihre Sendung."
-        },
-        {
-          "question": "Helfen Sie auch vor dem Fahrzeugkauf?",
-          "answer": "Ja. Unsere Fahrzeugbeschaffung unterstützt Suche und Kauf und verbindet sich direkt mit dem Versand."
-        }
-      ],
+      "faqTitle": "Fahrzeugtransport – leicht verständlich erklärt.",
       "related": [
         "vehicle-sourcing",
         "storage"
+      ],
+      "fit": [
+        "Pkw, Lkw, Busse und Spezialfahrzeuge",
+        "Fahrzeugkäufe, bei denen eine internationale Weiterreise erforderlich ist",
+        "Sendungen, bei denen die Koordination der Fahrzeug- und Ausfuhrpapiere erforderlich ist"
+      ],
+      "prepare": [
+        "Fahrzeugtyp, Marke und Modell",
+        "Abholort und Bestimmungsort",
+        "Ob das Fahrzeug bereits gekauft wurde",
+        "Gibt es irgendwelche Überlegungen hinsichtlich des Zeitplans oder der Übergabe?"
+      ],
+      "scenes": [
+        {
+          "title": "Beginnen Sie mit dem Fahrzeug vor Ihnen.",
+          "text": "Ein Einzelfahrzeug und eine Fahrzeugflotte starten nicht vom selben Ort aus. Wir legen den Fahrzeugtyp, den Abholort und das Ziel fest, bevor wir die Route planen."
+        },
+        {
+          "title": "Entscheiden Sie sich für die praktische Variante.",
+          "text": "Soweit möglich, stimmen wir die Container- und RoRo-Optionen auf das Fahrzeug, die Route und die jeweiligen Übergaben ab."
+        },
+        {
+          "title": "Verknüpfen Sie die Unterlagen mit der Abreise.",
+          "text": "Die Unterstützung bei den Einkaufs- und Ausfuhrformalitäten wird parallel zum Transportplan koordiniert, sodass der gesamte Transport als ein einziger Prozess betrachtet wird."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Welche Fahrzeuge können Sie koordinieren?",
+          "answer": "Wir organisieren PKWs, LKWs, Busse und Spezialfahrzeuge. Teilen Sie uns die Fahrzeugdaten mit, dann besprechen wir gemeinsam die geeignete Route."
+        },
+        {
+          "question": "Was ist RoRo?",
+          "answer": "RoRo ist eine Möglichkeit zum Transport von Fahrzeugen, die auf ausgewählten Routen angeboten wird. Wir prüfen, ob diese Option für Ihre konkrete Sendung geeignet und verfügbar ist."
+        },
+        {
+          "question": "Können Sie mir helfen, bevor ich ein Fahrzeug kaufe?",
+          "answer": "Ja. Unser Fahrzeugbeschaffungsservice unterstützt Sie bei der Suche und beim Kauf und sorgt anschließend direkt für den Transport."
+        }
       ]
     },
     "commercial-cargo": {
-      "fitTitle": "Wenn die Sendung das Geschäft unterstützt.",
-      "fit": [
-        "Wiederkehrende oder einmalige Geschäftssendungen",
-        "Palettierte oder lose Handelswaren",
-        "Routen mit Luft-, See- und Landkoordination"
-      ],
-      "scenes": [
-        {
-          "title": "Verstehen, was die Fracht ermöglichen soll.",
-          "text": "Die Sendung kann ein Geschäft, ein Projekt oder einen wiederkehrenden Versorgungsrhythmus bedienen. Damit beginnen wir, nicht nur mit den Kartons."
-        },
-        {
-          "title": "Die Koordination um die Ware aufbauen.",
-          "text": "Wir planen die passende Luft-, See- oder Landoption nach Fracht, Verpackung und Übergaben am Ziel."
-        },
-        {
-          "title": "Ein durchgehender Ansprechpartner für die Route.",
-          "text": "Von der ersten Anforderung bis zur Zielkoordination hält ein Team Bewegung und Kommunikation zusammen."
-        }
-      ],
-      "prepareTitle": "Machen Sie die geschäftliche Anforderung sichtbar.",
-      "prepare": [
-        "Ursprungs- und Zielort",
-        "Warenbeschreibung und Verpackungsform",
-        "Häufigkeit bei wiederkehrenden Sendungen",
-        "Menge, Maße oder Palettenzahl"
-      ],
-      "faqTitle": "Kommerzielle Fracht, klar erklärt.",
-      "faqs": [
-        {
-          "question": "Koordinieren Sie wiederkehrende Sendungen?",
-          "answer": "Ja. Wir unterstützen wiederkehrende und einmalige gewerbliche Frachtanforderungen."
-        },
-        {
-          "question": "Welche Transportart sollte ich wählen?",
-          "answer": "Luft-, See- und Landoptionen hängen von Ware, Ziel und Prioritäten ab. Wir prüfen dies gemeinsam."
-        },
-        {
-          "question": "Unterstützen Sie bei Zolldokumenten?",
-          "answer": "Wir koordinieren und unterstützen bei Zolldokumenten. Die benötigten Unterlagen hängen von Fracht und Ziel ab."
-        }
-      ],
+      "fitTitle": "Wenn die Lieferung das Geschäft unterstützt.",
+      "prepareTitle": "Machen Sie die geschäftlichen Anforderungen sichtbar.",
+      "faqTitle": "Gewerblicher Güterverkehr – Erläuterungen.",
       "related": [
         "air-freight",
         "sea-freight"
+      ],
+      "fit": [
+        "Regelmäßige oder einmalige Geschäftssendungen",
+        "Auf Paletten verpackte oder lose Handelswaren",
+        "Routen, bei denen Luft-, See- und Landtransporte kombiniert werden können"
+      ],
+      "prepare": [
+        "Abfahrts- und Ankunftsstadt oder -land",
+        "Warenbeschreibung und Verpackungsformate",
+        "Häufigkeit, mit der Sendungen wiederkehren",
+        "Menge, Abmessungen oder Palettenanzahl"
+      ],
+      "scenes": [
+        {
+          "title": "Machen Sie sich klar, welche Anforderungen die Ladung erfüllen muss.",
+          "text": "Die Lieferung kann für eine Filiale, ein Projekt oder einen regelmäßigen Lieferrhythmus bestimmt sein. Wir gehen von diesem betrieblichen Bedarf aus, nicht nur von den Kartons."
+        },
+        {
+          "title": "Die Koordination rund um die Waren aufbauen.",
+          "text": "Wir planen die passende Transportart – ob Luft-, See- oder Landtransport – unter Berücksichtigung der Fracht, ihrer Verpackung und der Übergabe am Bestimmungsort."
+        },
+        {
+          "title": "Verleihen Sie der Route einen einheitlichen Bezugspunkt.",
+          "text": "Von der ersten Anforderung bis zur Koordination am Zielort sorgt ein einziges Team dafür, dass Transport und Kommunikation nahtlos ineinandergreifen."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Koordinieren Sie wiederkehrende Lieferungen?",
+          "answer": "Ja. Wir unterstützen sowohl regelmäßige als auch einmalige Transportaufträge im gewerblichen Bereich."
+        },
+        {
+          "question": "Welchen Verkehrsmittel sollte ich wählen?",
+          "answer": "Die Wahl zwischen Luft-, See- und Landtransport hängt von Ihrer Fracht, dem Bestimmungsort und Ihren Prioritäten ab. Wir besprechen diese Faktoren mit Ihnen, bevor wir Ihnen eine Transportroute empfehlen."
+        },
+        {
+          "question": "Können Sie bei der Erstellung der Zollunterlagen helfen?",
+          "answer": "Wir übernehmen die Koordination und bieten Unterstützung bei der Erstellung der Zolldokumente. Welche Dokumente erforderlich sind, hängt von der Fracht und dem Bestimmungsort ab."
+        }
       ]
     },
     "personal-effects": {
-      "fitTitle": "Wenn das Umziehende persönlich ist.",
-      "fit": [
-        "Kartons, Gepäck und Haushaltsgüter",
-        "Privatpersonen beim Umzug oder Versand ins Ausland",
-        "Flexible Sendungsgrößen mit persönlicher Begleitung"
-      ],
-      "scenes": [
-        {
-          "title": "Mit den Dingen beginnen, die wichtig sind.",
-          "text": "Persönliche Gegenstände sind nicht einfach eine Liste. Wir verstehen, was Sie bewegen, wohin es geht und wie sich der Prozess anfühlen soll."
-        },
-        {
-          "title": "Einen Umzug in überschaubare Schritte verwandeln.",
-          "text": "Wir helfen bei der Vorbereitung der Abholung und koordinieren den Weitertransport mit klarer Kommunikation."
-        },
-        {
-          "title": "Eine Person im Mittelpunkt der Route behalten.",
-          "text": "Unser Team bleibt Ihr Ansprechpartner von der ersten Frage bis zur Übergabe am Ziel."
-        }
-      ],
-      "prepareTitle": "Ein paar Angaben helfen uns, Sie gut zu begleiten.",
-      "prepare": [
-        "Abhol- und Lieferort",
-        "Überblick über die zu versendenden Gegenstände",
-        "Geschätzte Anzahl von Kartons oder Stücken",
-        "Geplanter Umzugs- oder Lieferzeitraum"
-      ],
-      "faqTitle": "Umzugsgut, klar erklärt.",
-      "faqs": [
-        {
-          "question": "Helfen Sie bei kleinen Sendungen und Umzügen?",
-          "answer": "Ja. Wir koordinieren flexible Größen, von Kartons und Gepäck bis zu Haushaltsgütern."
-        },
-        {
-          "question": "Wie sollte ich meine Sachen verpacken?",
-          "answer": "Wir beraten Sie vor Versand oder Lagerung zur Vorbereitung. Die beste Lösung hängt von Gegenständen und Route ab."
-        },
-        {
-          "question": "Kann Lagerung Teil des Umzugs sein?",
-          "answer": "Ja. Wir verbinden Berliner Lagerung mit Ihrem Versandplan, wenn Sie Raum zwischen den Schritten benötigen."
-        }
-      ],
+      "fitTitle": "Wenn es um Persönliches geht.",
+      "prepareTitle": "Ein paar Angaben helfen uns dabei, Sie bestmöglich zu beraten.",
+      "faqTitle": "Persönliche Gegenstände – zur Klarstellung.",
       "related": [
         "storage",
         "air-freight"
+      ],
+      "fit": [
+        "Kartons, Gepäck und Haushaltsgegenstände",
+        "Personen, die ins Ausland umziehen oder persönliche Gegenstände dorthin versenden",
+        "Flexible Versandmengen, die eine individuelle Beratung erfordern"
+      ],
+      "prepare": [
+        "Wo die Gegenstände abgeholt und ausgeliefert werden",
+        "Eine Übersicht über die zu transportierenden Gegenstände",
+        "Geschätzte Anzahl an Kartons oder Stückzahlen",
+        "Ihr gewünschtes Umzugs- oder Lieferzeitfenster"
+      ],
+      "scenes": [
+        {
+          "title": "Fang mit den wichtigen Dingen an.",
+          "text": "Persönliche Gegenstände sind nicht einfach nur eine Liste von Gegenständen. Wir beginnen damit, zu verstehen, was Sie umziehen, wohin es geht und wie Sie sich den Ablauf vorstellen."
+        },
+        {
+          "title": "Teilen Sie einen Schritt in überschaubare Teilschritte auf.",
+          "text": "Wir unterstützen Sie bei der Vorbereitung der Abholung und koordinieren den Weitertransport – dabei sorgen wir stets für eine klare Kommunikation."
+        },
+        {
+          "title": "Stellen Sie eine Person in die Mitte der Route.",
+          "text": "Unser Team steht Ihnen von der ersten Anfrage bis zur Übergabe am Bestimmungsort als Ansprechpartner zur Verfügung."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Können Sie sowohl bei einer kleinen Sendung als auch bei einem Umzug helfen?",
+          "answer": "Ja. Wir organisieren den Transport von Sendungen unterschiedlicher Größe, von Kartons und Gepäckstücken bis hin zu Hausrat."
+        },
+        {
+          "question": "Wie soll ich meine Sachen einpacken?",
+          "answer": "Wir beraten Sie hinsichtlich der Vorbereitung vor dem Versand oder der Lagerung. Die beste Vorgehensweise hängt von den Gegenständen und der Transportstrecke ab."
+        },
+        {
+          "question": "Kann die Einlagerung Teil des Umzugs sein?",
+          "answer": "Ja. Wir können Lagerkapazitäten in Berlin in Ihren Versandplan einbinden, wenn Sie zwischen den einzelnen Etappen Lagerraum benötigen."
+        }
       ]
     },
     "vehicle-sourcing": {
-      "fitTitle": "Wenn die Reise vor dem Kauf beginnt.",
-      "fit": [
-        "Kunden auf der Suche nach einem Fahrzeug in Europa",
-        "Käufe mit Unterstützung bei Suche, Prüfung oder Verhandlung",
-        "Fahrzeugkäufe mit anschließendem internationalem Versand"
-      ],
-      "scenes": [
-        {
-          "title": "Mit dem benötigten Fahrzeug beginnen.",
-          "text": "Sagen Sie uns, wonach Sie suchen, wofür das Fahrzeug gedacht ist und wohin es reisen soll. Die Suche beginnt mit dem Ziel im Blick."
-        },
-        {
-          "title": "Den Kauf mit praktischen Prüfungen verbinden.",
-          "text": "Wir unterstützen bei Suche, Prüfung und Kauf, damit die Fahrzeugentscheidung auch den nächsten Schritt berücksichtigt."
-        },
-        {
-          "title": "Nahtlos vom Kauf zum Versand wechseln.",
-          "text": "Sobald das Fahrzeug bereit ist, kann dasselbe Team den Kaufprozess mit internationalem Versand verbinden."
-        }
-      ],
-      "prepareTitle": "Richten Sie die Suche sinnvoll ein.",
-      "prepare": [
-        "Fahrzeugtyp, Marke oder bevorzugtes Modell",
-        "Geplantes Ziel",
-        "Ungefähres Budget oder Kaufprioritäten",
-        "Ob Sie auch internationalen Versand benötigen"
-      ],
-      "faqTitle": "Fahrzeugbeschaffung, klar erklärt.",
-      "faqs": [
-        {
-          "question": "Helfen Sie bei der Fahrzeugsuche in Europa?",
-          "answer": "Ja. Wir unterstützen bei der Suche in ganz Europa und besprechen die für Sie wichtigen Anforderungen."
-        },
-        {
-          "question": "Unterstützen Sie beim Kauf?",
-          "answer": "Wir helfen bei Kauf, Verhandlung, Prüfung und Papierarbeit als Teil der Beschaffung."
-        },
-        {
-          "question": "Können Beschaffung und Versand zusammen organisiert werden?",
-          "answer": "Ja. Die Fahrzeugbeschaffung ist direkt mit unserer internationalen Versandkoordination verbunden."
-        }
-      ],
+      "fitTitle": "Wenn die Reise schon vor dem Kauf beginnt.",
+      "prepareTitle": "Richten Sie die Suche so ein, dass Sie gleich sinnvoll loslegen können.",
+      "faqTitle": "Fahrzeugbeschaffung – leicht verständlich erklärt.",
       "related": [
         "vehicle-shipping",
         "storage"
-      ]
-    },
-    "storage": {
-      "fitTitle": "Wenn der Zeitplan Raum braucht.",
+      ],
       "fit": [
-        "Waren, die auf ein Versandfenster warten",
-        "Private oder Handelsgüter mit Zwischenlagerung in Berlin",
-        "Sendungen, die vor dem Weitertransport Lagerung benötigen"
+        "Kunden, die in Europa ein Fahrzeug suchen",
+        "Einkäufe, bei denen Unterstützung bei der Suche, Prüfung oder Verhandlung benötigt wird",
+        "Ein Fahrzeugkauf, der mit einem internationalen Versand einhergeht"
+      ],
+      "prepare": [
+        "Fahrzeugtyp, Marke oder bevorzugtes Modell",
+        "Beabsichtigtes Ziel",
+        "Ihr ungefähres Budget oder Ihre Kaufprioritäten",
+        "Ob Sie auch einen internationalen Versand benötigen"
       ],
       "scenes": [
         {
-          "title": "Raum zwischen zwei Bewegungen schaffen.",
-          "text": "Lagerung gibt Ihren Waren eine bewusste Pause—ob Sie auf Abholung, Kauf oder die nächste Versandphase warten."
+          "title": "Beginnen Sie mit dem Fahrzeug, das Sie benötigen.",
+          "text": "Teilen Sie uns mit, wonach Sie suchen, wofür Sie das Fahrzeug nutzen möchten und wohin es letztendlich fahren soll. Die Suche beginnt mit dem vollständigen Zielort im Blick."
         },
         {
-          "title": "Die Waren nah am Plan halten.",
-          "text": "Unser Lager in Berlin verbindet Lagerung mit der nächsten Transportentscheidung statt sie zu einer separaten Aufgabe zu machen."
+          "title": "Verbinden Sie den Kauf mit praktischen Überprüfungen.",
+          "text": "Wir unterstützen Sie bei der Beschaffung, der Begutachtung und dem Kauf, damit die Entscheidung für ein Fahrzeug mit Blick auf die nächste Phase getroffen wird."
         },
         {
-          "title": "Freigeben, wenn die Route bereit ist.",
-          "text": "Sobald der Weitertransport geplant ist, koordinieren wir die nächste Übergabe in den gewählten Service."
+          "title": "Nahtloser Übergang vom Kauf zum Versand.",
+          "text": "Sobald das Fahrzeug bereit ist, kann dasselbe Team den Kaufprozess mit dem internationalen Fahrzeugtransport verknüpfen."
         }
       ],
-      "prepareTitle": "Sagen Sie uns, was der Raum leisten soll.",
-      "prepare": [
-        "Was gelagert werden soll",
-        "Ungefähre Anzahl von Gegenständen, Paletten oder Kartons",
-        "Wann die Lagerung beginnen soll",
-        "Ob die Waren mit DEexpress weitertransportiert werden"
-      ],
-      "faqTitle": "Lagerung, klar erklärt.",
       "faqs": [
         {
-          "question": "Wo befindet sich die Lagerung?",
-          "answer": "Unser Lager- und Warehousing-Service befindet sich in Berlin."
+          "question": "Können Sie mir helfen, ein Fahrzeug in ganz Europa zu finden?",
+          "answer": "Ja. Wir unterstützen Sie bei der Fahrzeugsuche in ganz Europa und besprechen gerne mit Ihnen die Auswahl passender Creator."
         },
         {
-          "question": "Können Privatpersonen und Unternehmen den Service nutzen?",
-          "answer": "Ja. Wir lagern für Handels- und Privatkunden."
+          "question": "Bieten Sie Unterstützung beim Kauf an?",
+          "answer": "Im Rahmen des Beschaffungsprozesses unterstützen wir Sie bei Einkauf, Verhandlungen, Begutachtung und der Erledigung der Formalitäten."
         },
         {
-          "question": "Kann Lagerung mit Weitertransport verbunden werden?",
-          "answer": "Ja. Lagerung wird mit Ihrem Versandplan koordiniert, wenn die Waren bereit sind."
+          "question": "Können Beschaffung und Versand gemeinsam organisiert werden?",
+          "answer": "Ja. Die Fahrzeugbeschaffung ist so konzipiert, dass sie direkt mit unserer internationalen Fahrzeugtransportkoordination verknüpft ist."
         }
-      ],
+      ]
+    },
+    "storage": {
+      "fitTitle": "Wenn der Zeitplan etwas Spielraum braucht.",
+      "prepareTitle": "Sag uns, was „Space“ tun soll.",
+      "faqTitle": "Lagerung – leicht verständlich erklärt.",
       "related": [
         "sea-freight",
         "personal-effects"
+      ],
+      "fit": [
+        "Waren, die auf einen Versandtermin warten",
+        "Private oder Einzelhandelsartikel, für die in Berlin Zwischenlagerfläche benötigt wird",
+        "Sendungen, bei denen eine Lagerung vor dem Weitertransport von Vorteil ist"
+      ],
+      "prepare": [
+        "Was muss gelagert werden?",
+        "Ungefähre Anzahl an Artikeln, Paletten oder Kartons",
+        "Wann sollte mit der Lagerung begonnen werden?",
+        "Ob die Waren weiterhin per DEexpress versandt werden"
+      ],
+      "scenes": [
+        {
+          "title": "Schaffe einen Abstand zwischen zwei Bewegungen.",
+          "text": "Die Lagerung verschafft Ihren Waren eine bewusste Atempause – ganz gleich, ob Sie auf eine Abholung, einen Kauf oder die nächste Versandstufe warten."
+        },
+        {
+          "title": "Halten Sie sich bei der Warenabwicklung eng an den Plan.",
+          "text": "Unser Lager in Berlin verknüpft die Lagerung mit der nächsten Transportentscheidung, anstatt sie als separate Aufgabe zu behandeln."
+        },
+        {
+          "title": "Freigabe, sobald die Route fertig ist.",
+          "text": "Sobald Ihr weiterer Reiseplan feststeht, koordinieren wir die nächste Übergabe an den gewählten Transportdienstleister."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Wo befindet sich der Lagerraum?",
+          "answer": "Unser Lager- und Lagerdienst hat seinen Sitz in Berlin."
+        },
+        {
+          "question": "Können Privatpersonen und Unternehmen diesen Dienst nutzen?",
+          "answer": "Ja. Wir bieten Lagerräume für Einzelhandelskunden und Privatkunden an."
+        },
+        {
+          "question": "Kann die Lagerung mit dem Weitertransport verknüpft werden?",
+          "answer": "Ja. Die Lagerung wird direkt mit Ihrem Versandplan abgestimmt, sobald die Waren versandbereit sind."
+        }
       ]
     }
   },
   "enhancements": {
     "air-freight": {
-      "optionsTitle": "Wählen Sie das Tempo, das zur Sendung passt.",
+      "optionsTitle": "Wählen Sie die Versandart, die am besten zur Sendung passt.",
+      "combinationTitle": "Verbinde die Geschwindigkeit mit der gesamten Strecke.",
+      "combinationText": "Luftfracht kann Teil eines umfassenderen Frachtplans sein, wobei in Berlin Lagerkapazitäten zur Verfügung stehen, falls der Versandplan eine Unterbrechung erfordert.",
       "options": [
         {
-          "title": "Prioritäre Fracht",
-          "text": "Für Sendungen, bei denen Zeit vom ersten Gespräch an die Planung prägt."
+          "title": "Prioritätsfracht",
+          "text": "Für Sendungen, bei denen der Zeitfaktor bereits beim ersten Call im Mittelpunkt der Planungsgespräche steht."
         },
         {
-          "title": "Hochwertige Fracht",
-          "text": "Sorgfältige Koordination für Güter mit klarer, eng begleiteter Übergabe."
+          "title": "Hochwertiges Uhrwerk",
+          "text": "Sorgfältige Koordination für Fracht, die eine reibungslose und genau überwachte Übergabe erfordert."
         }
-      ],
-      "combinationTitle": "Tempo mit der gesamten Route verbinden.",
-      "combinationText": "Luftfracht kann Teil eines größeren Plans für kommerzielle Fracht sein; Berliner Lagerung schafft Raum, wenn der Zeitplan es braucht."
+      ]
     },
     "sea-freight": {
-      "optionsTitle": "Lassen Sie die Reise zur Ladung passen.",
+      "optionsTitle": "Passen Sie die Transportstrecke der Ladung an.",
+      "combinationTitle": "Die Seefracht sollte mit der gesamten Lieferkette zusammenarbeiten.",
+      "combinationText": "Die Seefracht lässt sich nahtlos mit der Lagerung in Berlin und der Koordination von Handelsgütern verbinden, sodass der Transportweg auch über den Hafen hinaus geplant werden kann.",
       "options": [
         {
           "title": "Containerfracht",
-          "text": "Eine praktische Route für größere, schwerere oder klar definierte Mengen."
+          "text": "Eine praktische Versandmöglichkeit für größere, schwerere oder spezifischere Sendungsmengen."
         },
         {
-          "title": "Sammelfracht",
-          "text": "Eine koordinierte Option für Güter, die keinen eigenen Vollcontainer benötigen."
+          "title": "Sammelgut",
+          "text": "Eine koordinierte Transportmöglichkeit für Güter, für die allein kein ganzer Container benötigt wird."
         }
-      ],
-      "combinationTitle": "Seefracht als Teil der ganzen Kette.",
-      "combinationText": "Seefracht verbindet sich mit Berliner Lagerung und kommerzieller Frachtkoordination, damit die Planung nicht am Hafen endet."
+      ]
     },
     "vehicle-shipping": {
-      "optionsTitle": "Bewegen Sie das Fahrzeug auf der passenden Route.",
+      "optionsTitle": "Fahren Sie das Fahrzeug auf der für es geeigneten Strecke.",
+      "combinationTitle": "Von der Suche nach dem Fahrzeug bis zu dessen Abtransport.",
+      "combinationText": "Die Beschaffung von Fahrzeugen kann direkt in den Fahrzeugtransport münden, wobei Lagerkapazitäten zur Verfügung stehen, wenn Kauf- und Abfahrtsdatum nicht übereinstimmen.",
       "options": [
         {
-          "title": "Containeroptionen",
-          "text": "Eine geschützte Route, die um Fahrzeug, Ziel und geplante Übergaben herum betrachtet wird."
+          "title": "Container-Optionen",
+          "text": "Eine gesicherte Route, die das Fahrzeug, das Ziel und die geplanten Übergaben berücksichtigt."
         },
         {
           "title": "RoRo-Optionen",
-          "text": "Auf ausgewählten Routen für passende Fahrzeuge verfügbar; unser Team bestätigt die praktische Wahl."
+          "text": "Verfügbar auf ausgewählten Strecken für geeignete Fahrzeuge; das Team bespricht die praktische Umsetzung mit Ihnen."
         }
-      ],
-      "combinationTitle": "Vom Finden des Fahrzeugs bis zum Versand.",
-      "combinationText": "Fahrzeugbeschaffung kann direkt in den Versand führen; Lagerung hilft, wenn Kauf- und Abfahrtsdaten nicht zusammenpassen."
+      ]
     },
     "commercial-cargo": {
-      "optionsTitle": "Planen Sie nach dem geschäftlichen Bedarf.",
+      "optionsTitle": "Planen Sie entsprechend den geschäftlichen Anforderungen.",
+      "combinationTitle": "Wählen Sie den Modus entsprechend der Ware aus.",
+      "combinationText": "Gewerbliche Fracht kann auf dem Luft- oder Seeweg transportiert werden, wobei die Route je nach Ware, Bestimmungsort und der von Ihnen festgelegten Priorität festgelegt wird.",
       "options": [
         {
-          "title": "Einmalige Fracht",
-          "text": "Eine koordinierte Bewegung für eine einzelne gewerbliche Anforderung oder ein Projekt."
+          "title": "Einmalfracht",
+          "text": "Eine koordinierte Maßnahme im Hinblick auf eine bestimmte geschäftliche Anforderung oder ein bestimmtes Projekt."
         },
         {
-          "title": "Wiederkehrende Fracht",
-          "text": "Ein beständiger Ansprechpartner für wiederholte Sendungen und neue Routenanforderungen."
+          "title": "Regelmäßige Fracht",
+          "text": "Ein fester Ansprechpartner für wiederkehrende Transporte und sich wandelnde Routenanforderungen."
         }
-      ],
-      "combinationTitle": "Wählen Sie den Modus nach der Ware.",
-      "combinationText": "Kommerzielle Fracht kann per Luft oder See bewegt werden; die Route richtet sich nach Ware, Ziel und Ihrer Priorität."
+      ]
     },
     "personal-effects": {
-      "optionsTitle": "Machen Sie einen persönlichen Umzug überschaubar.",
+      "optionsTitle": "Sorgen Sie dafür, dass ein Umzug für Sie überschaubar bleibt.",
+      "combinationTitle": "Schaffe Freiraum, wenn ein Umzug Zeit braucht.",
+      "combinationText": "Persönliche Gegenstände können in ein Lager in Berlin oder per Luftfracht transportiert werden, wenn Zeitplan, Größe und Bestimmungsort eine andere Vorgehensweise erfordern.",
       "options": [
         {
-          "title": "Kleinere persönliche Sendungen",
-          "text": "Kartons, Gepäck und persönliche Dinge mit praktischer Begleitung."
+          "title": "Kleinere private Sendungen",
+          "text": "Kartons, Gepäck und persönliche Gegenstände, ergänzt durch praktische Hinweise."
         },
         {
-          "title": "Haushaltsumzüge",
-          "text": "Ein klarer Weg für größere Mengen persönlicher Gegenstände über Grenzen hinweg."
+          "title": "Umzüge von Privathaushalten",
+          "text": "Ein klarerer Weg für den grenzüberschreitenden Transport größerer Mengen persönlicher Gegenstände."
         }
-      ],
-      "combinationTitle": "Raum schaffen, wenn ein Umzug Zeit braucht.",
-      "combinationText": "Persönliche Gegenstände können mit Berliner Lagerung oder Luftfracht verbunden werden, wenn Zeit, Größe und Ziel einen anderen Schritt erfordern."
+      ]
     },
     "vehicle-sourcing": {
       "optionsTitle": "Schaffen Sie Klarheit im Kaufprozess.",
+      "combinationTitle": "Ein Weg von der Suche bis zum Versand.",
+      "combinationText": "Die Fahrzeugbeschaffung ist so konzipiert, dass sie nahtlos in den Fahrzeugtransport übergeht, sodass Kauf und internationale Übergabe von einem einzigen Team abgewickelt werden.",
       "options": [
         {
           "title": "Fahrzeugsuche",
-          "text": "Unterstützung bei der Suche nach einem passenden Fahrzeug in Europa nach Ihren Anforderungen."
+          "text": "Unterstützung bei der Suche nach einem geeigneten Fahrzeug in ganz Europa, das Ihren Anforderungen entspricht."
         },
         {
-          "title": "Kaufunterstützung",
-          "text": "Prüfung, Verhandlung und Papierarbeit werden betrachtet, bevor das Fahrzeug weiterreist."
+          "title": "Unterstützung beim Kauf",
+          "text": "Untersuchung, Verhandlungen und Unterstützung bei den Formalitäten, die vor der Weiterfahrt des Fahrzeugs zu erledigen sind."
         }
-      ],
-      "combinationTitle": "Eine Reise von der Suche bis zum Versand.",
-      "combinationText": "Fahrzeugbeschaffung ist direkt mit Fahrzeugtransport verbunden, damit Kauf und internationale Übergabe durch ein Team laufen."
+      ]
     },
     "storage": {
-      "optionsTitle": "Nutzen Sie Raum als Teil des Plans.",
+      "optionsTitle": "Beziehen Sie den Raum in die Planung mit ein.",
+      "combinationTitle": "Verbinde das Aufbewahren stets mit Bewegung.",
+      "combinationText": "Die Lagerung kann direkt in die Seefracht, den Transport von persönlichen Gegenständen oder eine andere Dienstleistung übergehen, sobald der weitere Zeitplan feststeht.",
       "options": [
         {
-          "title": "Kurzfristige Lagerung",
-          "text": "Eine praktische Pause, während Abholung, Kauf oder Abfahrt koordiniert werden."
+          "title": "Kurzzeitlagerung",
+          "text": "Eine praktische Wartezeit, während die Abholung, der Kauf oder der Abreisetermin koordiniert wird."
         },
         {
-          "title": "Längere Lagerung",
-          "text": "Berliner Raum für private oder Handelsgüter, die bereit für die nächste Bewegung bleiben sollen."
+          "title": "Langfristige Lagerung",
+          "text": "Ein Lager in Berlin für Privat- oder Einzelhandelswaren, die für den nächsten Transport bereitstehen müssen."
         }
-      ],
-      "combinationTitle": "Lagerung mit Bewegung verbinden.",
-      "combinationText": "Lagerung kann direkt in Seefracht, Umzugsgutversand oder einen anderen Service führen, wenn der Weitertransport bereit ist."
+      ]
     }
-  },
-  "proof": {
-    "title": "Was DEexpress für jede Sendung koordiniert.",
-    "benefits": [
-      {
-        "title": "Routenplanung",
-        "text": "Ursprung, Ziel, Frachtart und Zeitpunkt werden geprüft, bevor der Transportplan bestätigt wird."
-      },
-      {
-        "title": "Koordination der Übergaben",
-        "text": "Abholung, Abwicklung bei Carrier, Hafen oder Flughafen und die Zielübergabe werden als zusammenhängende Schritte geplant."
-      },
-      {
-        "title": "Dokumentenunterstützung",
-        "text": "Wo es für den Service relevant ist, unterstützt das Team bei Export-, Zoll- oder Kaufdokumenten."
-      },
-      {
-        "title": "Zustellung auf der letzten Meile",
-        "text": "Wir koordinieren die letzte Etappe vom Hafen bis zum Ziel, damit Ihre Fracht sicher, zuverlässig und planmäßig ankommt."
-      }
-    ],
-    "contactTitle": "Besprechen Sie die Sendung mit dem Team, das die Anfrage bearbeitet.",
-    "contactText": "Teilen Sie Fracht, Ursprung, Ziel und gewünschten Zeitpunkt mit. Das Team kann dann den nächsten praktischen Schritt bestätigen.",
-    "callLabel": "Direkt anrufen"
-  },
-  "extraFaqs": {
-    "air-freight": [
-      {
-        "question": "Was beeinflusst ein Luftfrachtangebot?",
-        "answer": "Frachtbeschreibung, Maße oder Gewicht, Ursprung, Ziel und gewünschter Zeitpunkt helfen uns, das passende Angebot vorzubereiten."
-      },
-      {
-        "question": "Was sollte ich vor einer Angebotsanfrage mitteilen?",
-        "answer": "Beginnen Sie mit Abholort, Ziel, Frachtdetails und gewünschtem Zeitpunkt. Wir erklären Ihnen, was für die Route noch benötigt wird."
-      }
-    ],
-    "sea-freight": [
-      {
-        "question": "Was beeinflusst die Kosten der Seefracht?",
-        "answer": "Volumen, Verpackung, Ursprung, Ziel und Sendungsart prägen das Angebot. Je mehr Details Sie teilen, desto hilfreicher wird die Einschätzung."
-      },
-      {
-        "question": "Woher weiß ich, ob Container oder Sammelfracht passt?",
-        "answer": "Das hängt von Menge und Form Ihrer Fracht ab. Unser Team bespricht die praktische Option, sobald wir die Sendung verstehen."
-      }
-    ],
-    "vehicle-shipping": [
-      {
-        "question": "Welche Angaben brauche ich für ein Fahrzeugtransport-Angebot?",
-        "answer": "Fahrzeugtyp, Marke oder Modell, Abholort, Ziel und gewünschter Zeitpunkt sind der richtige Anfang."
-      },
-      {
-        "question": "Wann sollte ich mich wegen eines Fahrzeugs melden?",
-        "answer": "Melden Sie sich, sobald Fahrzeug und Ziel feststehen. So kann das Team Transport und Papierweg frühzeitig mit Ihnen besprechen."
-      }
-    ],
-    "commercial-cargo": [
-      {
-        "question": "Was sollte ein Unternehmen in der ersten Anfrage angeben?",
-        "answer": "Teilen Sie mit, was bewegt wird, wo die Fracht startet und endet, wie sie verpackt ist und ob die Sendung einmalig oder wiederkehrend ist."
-      },
-      {
-        "question": "Kann sich die Route ändern, wenn sich Geschäftsanforderungen ändern?",
-        "answer": "Wir prüfen die Anforderung mit Ihnen und können die passende nächste Route besprechen, wenn sich Prioritäten, Waren oder Ziele verändern."
-      }
-    ],
-    "personal-effects": [
-      {
-        "question": "Welche Angaben helfen bei einem Angebot für Umzugsgut?",
-        "answer": "Ein Überblick über die Gegenstände, Abhol- und Lieferort, geschätzte Stückzahl und geplanter Zeitpunkt sind der beste Anfang."
-      },
-      {
-        "question": "Können Sie Anforderungen am Zielort bestätigen?",
-        "answer": "Anforderungen können je nach Ziel und Sendung variieren. Sagen Sie uns, wohin Ihr Umzugsgut geht, und wir erklären die nächsten Schritte."
-      }
-    ],
-    "vehicle-sourcing": [
-      {
-        "question": "Was sollte ich für die Fahrzeugsuche mitteilen?",
-        "answer": "Sagen Sie uns Fahrzeugtyp oder Modell, geplantes Ziel, Budget oder Kaufprioritäten und ob Sie auch Versand benötigen."
-      },
-      {
-        "question": "Kann ich den Versand erst nach dem Kauf organisieren?",
-        "answer": "Ja. Wir können die Beschaffung mit Fahrzeugtransport verbinden, sobald das Fahrzeug bereit ist."
-      }
-    ],
-    "storage": [
-      {
-        "question": "Welche Angaben brauche ich für eine Lageranfrage?",
-        "answer": "Sagen Sie uns, was gelagert werden soll, die ungefähre Anzahl von Gegenständen oder Paletten, den Startzeitpunkt und ob ein Weitertransport folgt."
-      },
-      {
-        "question": "Wie organisiere ich die Freigabe für den Weitertransport?",
-        "answer": "Sobald die nächste Sendung geplant werden kann, kontaktieren Sie unser Team mit Ziel und Zeitpunkt, damit die Übergabe koordiniert wird."
-      }
-    ]
   },
   "operational": {
     "air-freight": {
       "fitTitle": "Luftfracht für zeitkritische und hochwertige Sendungen.",
+      "prepareTitle": "Erforderliche Angaben für eine Luftfrachtanfrage.",
+      "faqTitle": "Häufig gestellte Fragen zur Luftfracht.",
       "fit": [
         "Abflüge von europäischen Flughäfen zu Zielen im DEexpress-Netzwerk",
-        "Prioritäre Sendungen, kleinere Fracht und hochwertige Güter",
-        "Koordination von Abholung und Exportdokumenten bis zur Übergabe am Ziel"
+        "Eilsendungen, Kleinsendungen und hochwertige Fracht",
+        "Koordination von Abhol- und Ausfuhrdokumenten bis zur Übergabe am Bestimmungsort"
       ],
       "scenes": [
         {
-          "title": "Prüfung der Sendung",
-          "text": "Wir beginnen mit Fracht, Abholort, Ziel, Maßen oder Gewicht und dem gewünschten Versanddatum. Diese Angaben zeigen, ob Luftfracht die passende Transportart ist."
+          "title": "Versandüberprüfung",
+          "text": "Wir beginnen mit der Fracht, der Abholstelle, dem Bestimmungsort, den Abmessungen oder dem Gewicht sowie dem Datum, an dem die Sendung transportiert werden muss. Anhand dieser Angaben lässt sich feststellen, ob Luftfracht die geeignete Transportart ist."
         },
         {
-          "title": "Buchung und Exportvorbereitung",
-          "text": "Nach der Routenabstimmung wird die Sendung für Abholung und Flughafenabwicklung vorbereitet. DEexpress unterstützt bei Exportdokumenten und koordiniert die Übergaben vor Abflug."
+          "title": "Buchung und Vorbereitung für den Export",
+          "text": "Sobald die Route festgelegt ist, wird die Sendung für die Abholung und die Abfertigung am Flughafen vorbereitet. DEexpress unterstützt die Erstellung der Exportdokumente und koordiniert die vor dem Abflug erforderlichen Übergaben."
         },
         {
-          "title": "Ankunft und Weiterkoordination",
-          "text": "Am Ziel wird die nächste Übergabe nach der bestätigten Route geplant. Wo verfügbar, kann die Koordination von der Flughafenabwicklung bis zur Zustellung reichen."
+          "title": "Ankunft und weitere Koordination",
+          "text": "Am Zielort wird die nächste Übergabe entsprechend der bestätigten Route geplant. Sofern möglich, erstreckt sich der Service von der Abfertigung am Flughafen bis zur Koordination der Endauslieferung."
         }
-      ],
-      "prepareTitle": "Angaben für eine Luftfrachtanfrage.",
-      "faqTitle": "Häufige Fragen zur Luftfracht."
+      ]
     },
     "sea-freight": {
-      "fitTitle": "Seefracht für Container, Sammelladungen und sperrige Güter.",
+      "fitTitle": "Seefracht für Container, Sammelgut und sperrige Güter.",
+      "prepareTitle": "Erforderliche Angaben für eine Seefrachtanfrage.",
+      "faqTitle": "Häufig gestellte Fragen zur Seefracht.",
       "fit": [
-        "Container- und Sammelsendungen aus europäischen Häfen",
-        "Schwere, sperrige oder weniger zeitkritische Güter",
-        "Koordination vom Hafen bis zur Tür und Dokumentenunterstützung"
+        "Container- und Sammelguttransporte aus europäischen Häfen",
+        "Schwere, sperrige oder weniger dringende Güter",
+        "Koordination vom Hafen bis zur Haustür und Unterstützung bei der Dokumentation"
       ],
       "scenes": [
         {
-          "title": "Prüfung von Fracht und Ladung",
-          "text": "Wir prüfen Frachtart, Verpackung, Volumen und Ziel. So lässt sich entscheiden, ob Container oder Sammelladung der praktischere Ausgangspunkt ist."
+          "title": "Fracht- und Ladungsplanung",
+          "text": "Wir prüfen die Art der Fracht, die Verpackung, das Volumen und den Bestimmungsort. Davon hängt ab, ob ein Container oder eine Sammelsendung die sinnvollere Ausgangsbasis ist."
         },
         {
-          "title": "Abholung, Konsolidierung und Hafenabwicklung",
-          "text": "Die Fracht wird für die relevanten Übergaben vor Abfahrt vorbereitet. Der Plan kann Abholung, Konsolidierung, Hafenabwicklung und benötigte Dokumente umfassen."
+          "title": "Abholung, Konsolidierung und Umschlag im Hafen",
+          "text": "Die Fracht wird vor der Abfahrt für die entsprechenden Übergaben vorbereitet. Der Plan kann die Abholung, die Zusammenführung, die Abfertigung im Hafen sowie die für den Transport erforderlichen Dokumente umfassen."
         },
         {
-          "title": "Übergabe am Ziel",
-          "text": "Die Seereise ist ein Teil der Bewegung. DEexpress koordiniert die Übergabe am Ziel und bespricht Weiterlieferung, wo sie für die Route verfügbar ist."
+          "title": "Zielübergabe",
+          "text": "Die Seetransportetappe ist ein Teil des Transportvorgangs. DEexpress koordiniert die Übergabe am Bestimmungsort und bespricht die Weiterlieferung, sofern diese auf der Strecke möglich ist."
         }
-      ],
-      "prepareTitle": "Angaben für eine Seefrachtanfrage.",
-      "faqTitle": "Häufige Fragen zur Seefracht."
+      ]
     },
     "vehicle-shipping": {
-      "fitTitle": "Internationaler Versand für Pkw, Lkw, Busse und Ausrüstung.",
+      "fitTitle": "Internationaler Transport von PKWs, LKWs, Bussen und Ausrüstung.",
+      "prepareTitle": "Erforderliche Angaben für eine Fahrzeugtransportanfrage.",
+      "faqTitle": "Häufig gestellte Fragen zum Fahrzeugtransport.",
       "fit": [
-        "Fahrzeugabholung und Versand aus Europa",
-        "Container- und RoRo-Optionen auf passenden Routen",
-        "Unterstützung bei Kauf- und Exportpapieren"
+        "Abholung und Versand von Fahrzeugen aus Europa",
+        "Container- und RoRo-Optionen auf den entsprechenden Routen",
+        "Unterstützung bei den Formalitäten für Einkauf und Export"
       ],
       "scenes": [
         {
-          "title": "Prüfung von Fahrzeug und Route",
-          "text": "Wir bestätigen Fahrzeugtyp, Abholort, Ziel und Kaufstatus. Diese Angaben bestimmen die verfügbaren Transport- und Übergabeoptionen."
+          "title": "Überprüfung von Fahrzeugen und Routen",
+          "text": "Wir bestätigen den Fahrzeugtyp, den Abholort, den Bestimmungsort und den Kaufstatus. Diese Angaben bestimmen die verfügbaren Transport- und Übergabemöglichkeiten."
         },
         {
-          "title": "Transportvorbereitung",
-          "text": "Das Fahrzeug wird für die vereinbarte Versandart vorbereitet. Wo relevant, koordiniert DEexpress Unterstützung bei Kauf- und Exportpapieren parallel zum Transportplan."
+          "title": "Vorbereitung für den Transport",
+          "text": "Das Fahrzeug wird für die vereinbarte Versandart vorbereitet. Gegebenenfalls koordiniert DEexpress neben dem Transportplan auch die Unterstützung bei den Kauf- und Ausfuhrformalitäten."
         },
         {
-          "title": "Versand und Übergabe am Ziel",
-          "text": "Das Fahrzeug wird auf der vereinbarten Route bewegt; die Übergabe am Ziel ist Teil des gesamten Versandprozesses."
+          "title": "Versand und Übergabe am Bestimmungsort",
+          "text": "Das Fahrzeug fährt die vereinbarte Route ab, wobei die Übergabe am Bestimmungsort als Teil des gesamten Transportprozesses koordiniert wird."
         }
-      ],
-      "prepareTitle": "Angaben für eine Fahrzeugtransportanfrage.",
-      "faqTitle": "Häufige Fragen zum Fahrzeugtransport."
+      ]
     },
     "commercial-cargo": {
-      "fitTitle": "Kommerzielle Fracht für einmalige und wiederkehrende Geschäftssendungen.",
+      "fitTitle": "Gewerbliche Fracht für einmalige und wiederkehrende Geschäftssendungen.",
+      "prepareTitle": "Erforderliche Angaben für eine gewerbliche Frachtanfrage.",
+      "faqTitle": "Häufig gestellte Fragen zur gewerblichen Fracht.",
       "fit": [
         "Palettierte und lose Handelswaren",
-        "Luft-, See- und Landoptionen nach Anforderung",
-        "Dokumentenunterstützung für gewerbliche Fracht"
+        "Luft-, See- und Landtransportmöglichkeiten basierend auf dem Versandbedarf",
+        "Unterstützung bei der Dokumentation von Geschäftsfracht"
       ],
       "scenes": [
         {
-          "title": "Prüfung von Anforderung und Route",
-          "text": "Wir beginnen mit Ware, Verpackungsform, Versandhäufigkeit, Ursprung und Ziel. So kann das Team die passende Transportart und Route einschätzen."
+          "title": "Anforderungs- und Routenprüfung",
+          "text": "Wir beginnen mit den Gütern, der Verpackungsart, der Versandhäufigkeit sowie dem Abgangs- und Bestimmungsort. Damit erhält das Team die notwendigen Informationen, um die geeignete Transportart und Route zu ermitteln."
         },
         {
-          "title": "Sendungskoordination",
-          "text": "Der vereinbarte Plan verbindet Abholung, Abwicklung und die gewählte Transportart. Dokumentenunterstützung wird nach Fracht und Ziel koordiniert."
+          "title": "Versandkoordination",
+          "text": "Der vereinbarte Plan vereint Abholung, Abfertigung und die gewählte Transportart. Die Unterstützung bei der Dokumentation wird entsprechend der Fracht und dem Bestimmungsort koordiniert."
         },
         {
           "title": "Wiederkehrende oder einmalige Übergabe",
-          "text": "Bei wiederkehrender Fracht können dieselben Angaben spätere Anfragen unterstützen. Bei Einzelbewegungen wird die Zielübergabe nach dem bestätigten Plan koordiniert."
+          "text": "Bei wiederkehrenden Transporten können dieselben Informationen als Grundlage für spätere Anfragen dienen. Bei einmaligen Transporten wird die Übergabe am Bestimmungsort auf der Grundlage des bestätigten Transportplans koordiniert."
         }
-      ],
-      "prepareTitle": "Angaben für eine Anfrage zu kommerzieller Fracht.",
-      "faqTitle": "Häufige Fragen zu kommerzieller Fracht."
+      ]
     },
     "personal-effects": {
-      "fitTitle": "Versand persönlicher Gegenstände für Kartons, Gepäck und Hausrat.",
+      "fitTitle": "Versand von persönlichen Gegenständen wie Kartons, Gepäck und Haushaltsgegenständen.",
+      "prepareTitle": "Erforderliche Angaben für einen Antrag auf Rückgabe persönlicher Gegenstände.",
+      "faqTitle": "Häufig gestellte Fragen zu persönlichen Gegenständen.",
       "fit": [
-        "Private Sendungen aus Europa ins DEexpress-Netzwerk",
+        "Private Sendungen aus Europa an das DEexpress-Netzwerk",
         "Kartons, Gepäck und Haushaltsgegenstände",
-        "Begleitung bei Abholung, Verpackung und Weitertransport"
+        "Hinweise zur Abholung, Verpackung und Weiterbeförderung"
       ],
       "scenes": [
         {
-          "title": "Prüfung von Gegenständen und Ziel",
-          "text": "Wir beginnen mit den Gegenständen, Abholort und Ziel. Eine ungefähre Anzahl von Kartons oder Stücken hilft uns, die Sendungsgröße zu verstehen."
+          "title": "Überprüfung von Artikeln und Bestimmungsorten",
+          "text": "Zunächst gehen wir darauf ein, was transportiert wird, wo es abgeholt wird und wohin es gebracht wird. Eine ungefähre Angabe der Anzahl der Kartons oder Gegenstände hilft uns, den Umfang der Sendung einzuschätzen."
         },
         {
-          "title": "Vorbereitung und Abholung",
-          "text": "DEexpress gibt praktische Hinweise zur Vorbereitung persönlicher Gegenstände für Versand oder Lagerung und koordiniert dann Abholung und nächste Übergabe."
+          "title": "Vorbereitung und Entnahme",
+          "text": "DEexpress bietet praktische Hilfestellung bei der Vorbereitung persönlicher Gegenstände für den Versand oder die Einlagerung und koordiniert anschließend die Abholung sowie die Übergabe an den nächsten Transportdienstleister."
         },
         {
-          "title": "Versand und Lieferkoordination",
-          "text": "Die Route wird nach dem bestätigten Ziel geplant. Das Team bleibt Ihr Ansprechpartner, während die Sendung ihre Übergaben durchläuft."
+          "title": "Koordination von Versand und Lieferung",
+          "text": "Die Route wird rund um den bestätigten Bestimmungsort geplant. Das Team bleibt der Ansprechpartner, während die Sendung die verschiedenen Übergaben durchläuft."
         }
-      ],
-      "prepareTitle": "Angaben für eine Anfrage zu persönlichen Gegenständen.",
-      "faqTitle": "Häufige Fragen zu persönlichen Gegenständen."
+      ]
     },
     "vehicle-sourcing": {
-      "fitTitle": "Fahrzeugbeschaffung in Europa mit Anschluss an internationalen Versand.",
+      "fitTitle": "Fahrzeugbeschaffung in Europa in Verbindung mit internationalem Versand.",
+      "prepareTitle": "Erforderliche Angaben für die Einleitung einer Fahrzeugsuche.",
+      "faqTitle": "Häufig gestellte Fragen zur Fahrzeugbeschaffung.",
       "fit": [
         "Fahrzeugsuche in ganz Europa",
-        "Unterstützung bei Kauf, Verhandlung, Prüfung und Papieren",
-        "Direkte Übergabe von Beschaffung zu Fahrzeugtransport"
+        "Unterstützung bei Kauf, Verhandlungen, Begutachtung und Formalitäten",
+        "Eine direkte Übergabe vom Einkauf an den Fahrzeugtransport"
       ],
       "scenes": [
         {
-          "title": "Fahrzeugbriefing",
-          "text": "Der Prozess beginnt mit Fahrzeugtyp, Marke oder Modell, geplantem Ziel und Kaufprioritäten. Das bildet die Grundlage für die Suche."
+          "title": "Fahrzeugübersicht",
+          "text": "Der Prozess beginnt mit der Angabe des Fahrzeugtyps, der bevorzugten Marke oder des bevorzugten Modells, des vorgesehenen Einsatzortes und der Kaufkriterien. Daraus ergibt sich das Suchprofil."
         },
         {
-          "title": "Suche und Kaufunterstützung",
-          "text": "DEexpress unterstützt bei der Identifikation von Fahrzeugen sowie bei Prüfung, Verhandlung, Kauf und Papierarbeit nach Bedarf."
+          "title": "Unterstützung bei der Suche und beim Kauf",
+          "text": "DEexpress unterstützt bei der Identifizierung von Fahrzeugen und hilft bei der Begutachtung, den Verhandlungen, dem Kauf sowie den erforderlichen Formalitäten."
         },
         {
-          "title": "Übergabe an den Versand",
-          "text": "Wenn das Fahrzeug bereit ist, kann die Beschaffung direkt in den internationalen Versand übergehen, ohne Kauf und Transportplan zu trennen."
+          "title": "Übergabe der Sendung",
+          "text": "Sobald das Fahrzeug bereitsteht, kann der Beschaffungsprozess direkt in den internationalen Fahrzeugtransport übergehen, ohne dass der Kauf vom Transportplan getrennt werden muss."
         }
-      ],
-      "prepareTitle": "Angaben für den Start einer Fahrzeugsuche.",
-      "faqTitle": "Häufige Fragen zur Fahrzeugbeschaffung."
+      ]
     },
     "storage": {
-      "fitTitle": "Lagerung und Warehousing in Berlin vor der nächsten Versandphase.",
+      "fitTitle": "Lagerung und Zwischenlagerung in Berlin bis zur nächsten Versandetappe.",
+      "prepareTitle": "Für einen Lagerungsantrag erforderliche Angaben.",
+      "faqTitle": "Häufig gestellte Fragen zum Thema Speicher.",
       "fit": [
         "Kurz- und langfristige Lagerung in Berlin",
-        "Handels- und Privatgüter",
-        "Lagerung mit Anschluss an einen geplanten Weitertransport"
+        "Einzelhandel und private Güter",
+        "Lagerung im Zusammenhang mit einem geplanten Weitertransport"
       ],
       "scenes": [
         {
-          "title": "Prüfung des Lagerbedarfs",
-          "text": "Wir klären, was gelagert werden soll, die Menge an Gegenständen oder Paletten, den Startzeitpunkt und ob die Güter weitertransportiert werden sollen."
+          "title": "Überprüfung des Speicherbedarfs",
+          "text": "Wir legen fest, was gelagert werden soll, wie viele Artikel oder Paletten es sind, wann die Lagerung beginnt und ob die Waren voraussichtlich weiterbefördert werden."
         },
         {
-          "title": "Übergabe an das Lager",
-          "text": "Die Güter werden in den Berliner Lagerplan übernommen und bleiben mit der nächsten Versandentscheidung verbunden."
+          "title": "Lagerübergabe",
+          "text": "Die Waren werden in den Berliner Lagerplan aufgenommen, zusammen mit den Informationen, die erforderlich sind, um sie mit der nächsten Versandentscheidung zu verknüpfen."
         },
         {
           "title": "Freigabe für den Weitertransport",
-          "text": "Wenn die nächste Route bestätigt ist, können die gelagerten Güter für die passende Übergabe in Seefracht, Umzugsgutversand oder einen anderen DEexpress-Service vorbereitet werden."
+          "text": "Sobald die nächste Route bestätigt ist, können die gelagerten Waren für die entsprechende Übergabe an die Seefracht, den Versand von persönlichen Gegenständen oder einen anderen DEexpress-Service vorbereitet werden."
         }
-      ],
-      "prepareTitle": "Angaben für eine Lageranfrage.",
-      "faqTitle": "Häufige Fragen zur Lagerung."
+      ]
     }
   }
 }

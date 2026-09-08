@@ -2,10 +2,11 @@
   "getQuote": "Angebot anfordern",
   "trackShipment": "Sendung verfolgen",
   "learnMore": "Mehr erfahren",
-  "contactTeam": "Unser Team kontaktieren",
-  "whatsappChat": "Per WhatsApp chatten",
-  "scroll": "Scrollen Sie zum Entdecken",
+  "contactTeam": "Kontaktieren Sie unser Team",
+  "whatsappChat": "Auf WhatsApp chatten",
+  "scroll": "Scrollen Sie, um mehr zu entdecken",
   "backHome": "Zurück zur Startseite",
-  "ourServices": "Unsere Leistungen",
-  "exploreDestinations": "Ziele entdecken"
+  "ourServices": "Unsere Dienstleistungen",
+  "exploreDestinations": "Reiseziele entdecken",
+  "explore": "Entdecken"
 }

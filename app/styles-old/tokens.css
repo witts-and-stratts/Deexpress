@@ -1,0 +1,53 @@
+/* Design-system source of truth. Tailwind v4 turns these into utilities. */
+@theme {
+  --color-navy-950: #050d1a;
+  --color-navy-900: #0a1b31;
+  --color-navy-800: #102944;
+  --color-royal: #1e5eff;
+  --color-royal-600: #1849c9;
+  --color-orange: #ff7a1a;
+  --color-orange-light: #ff9142;
+  --color-gold: #ffb454;
+  --color-map: #94b0d6;
+  --color-ink: #142033;
+  --color-ink-muted: #526276;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f4f6fa;
+  --color-surface-strong: #eaf0f8;
+  --color-surface-accent: #aaa8c4;
+  --color-border: #dce4ee;
+  --color-focus: #1e5eff;
+
+  --color-editorial-ink: #2d2928;
+  --color-editorial-muted: #5d5a58;
+  --color-editorial-subtle: #736f6a;
+  --color-editorial-line: #b8aea4;
+  --color-editorial-surface: #efeeed;
+  --color-editorial-accent: #231aa8;
+  --color-editorial-accent-hover: #352cc0;
+
+  /* Saans is the homepage typeface; Inter remains available for dense UI/data. */
+  --font-sans: 'Saans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Saans', ui-sans-serif, system-ui, sans-serif;
+  --radius-control: 0.5rem;
+  --radius-panel: 0.25rem;
+  --spacing-page: clamp(1.5rem, 3.94vw, 5rem);
+  --spacing-section: clamp(3rem, 8vw, 7rem);
+}
+
+:root {
+  /* Shadcn menu primitives use these semantic surface tokens. */
+  --popover: #ffffff;
+  --popover-foreground: #2d2928;
+  --accent: #efeeed;
+  --accent-foreground: #2d2928;
+  --site-page-gutter: var(--spacing-page);
+  --site-section-space: var(--spacing-section);
+}
+
+@theme inline {
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+}

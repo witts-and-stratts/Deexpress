@@ -1,0 +1,507 @@
+@layer components {
+  .air-freight-page {
+    @apply overflow-clip bg-white text-editorial-ink;
+  }
+  .air-freight-page__hero {
+    @apply relative isolate flex min-h-[min(64rem,100svh)] items-end overflow-hidden text-white;
+  }
+  .air-freight-page__hero-image {
+    @apply absolute inset-0 -z-20 bg-cover bg-position-[58%_center] md:bg-center;
+    background-image: var(--desktop-image, url('/images/air-freight-hero.webp'));
+  }
+  @media (orientation: portrait) {
+    .air-freight-page__hero-image[data-portrait-image='true'] {
+      background-image: var(--portrait-image);
+    }
+  }
+  .air-freight-page__hero-overlay {
+    @apply absolute inset-0 -z-10 bg-[linear-gradient(0deg,rgba(12,16,27,.72),rgba(12,16,27,.05)_56%)];
+  }
+  .air-freight-page__hero-copy {
+    @apply grid w-full grid-cols-12 gap-y-6 px-page pb-[clamp(2.5rem,8.5vw,5.4rem)];
+  }
+  .air-freight-page__hero-copy > .motion-reveal:first-child {
+    @apply col-span-12 lg:col-span-9;
+  }
+  .air-freight-page__hero h1 {
+    @apply text-h1 max-w-[20ch] text-white;
+  }
+  .air-freight-page__hero-copy > .motion-reveal:last-child {
+    @apply col-span-12 lg:col-start-8 lg:col-span-5;
+  }
+  .air-freight-page__hero p {
+    @apply site-lead text-white;
+  }
+  .air-freight-page__intro {
+    @apply px-page py-[clamp(4.25rem,7vw,7rem)];
+  }
+  .air-freight-page__intro h2 {
+    @apply text-[clamp(1.9rem,2.5vw,2.25rem)] leading-[1.15] tracking-[-.03em];
+  }
+  .air-freight-page__intro h2 span {
+    @apply text-editorial-subtle;
+  }
+  .air-freight-page__capabilities {
+    @apply border-y border-editorial-line/60;
+  }
+  .air-freight-page__capabilities > div > div {
+    @apply flex min-h-27 items-center gap-4 px-5 py-6;
+  }
+  .air-freight-page__capabilities > div > div + div {
+    @apply border-l border-editorial-line/60;
+  }
+  .air-freight-page__capabilities img {
+    @apply h-11 w-14 shrink-0 object-contain;
+  }
+  .air-freight-page__capabilities p {
+    @apply max-w-[16ch] text-[1rem] leading-snug;
+  }
+  .air-freight-page__efficiency-hero {
+    @apply relative isolate flex min-h-screen items-end overflow-hidden px-page py-[clamp(2.5rem,6vw,5rem)] text-white;
+  }
+  .air-freight-page__efficiency-image {
+    @apply absolute inset-0 -z-20 bg-cover bg-center;
+    background-image: var(--desktop-image, url('/images/air-freight-efficiency-hero.webp'));
+  }
+  @media (orientation: portrait) {
+    .air-freight-page__efficiency-image[data-portrait-image='true'] {
+      background-image: var(--portrait-image);
+    }
+  }
+  .air-freight-page__efficiency-hero::after {
+    @apply absolute inset-0 -z-10 bg-[linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,.05)_62%)];
+    content: '';
+  }
+  .air-freight-page__efficiency-hero > div:last-child {
+    @apply grid max-w-156 gap-5;
+  }
+  .air-freight-page__efficiency-hero h2 {
+    @apply text-h2 text-white;
+  }
+  .air-freight-page__efficiency-hero p {
+    @apply text-h4 max-w-[36ch] text-white/80 mt-4;
+  }
+  .air-freight-page__scope {
+    @apply gap-y-12 bg-editorial-accent/15 px-[clamp(1.5rem,3.333vw,3rem)] py-[66px] lg:min-h-[774px];
+  }
+  .air-freight-page__scope-intro {
+    @apply grid content-between gap-12;
+  }
+  .air-freight-page__scope-intro h2 {
+    @apply max-w-[402px] text-[clamp(2rem,2.5vw,2.25rem)] leading-[1.15] tracking-[-.03em] text-editorial-accent;
+  }
+  .air-freight-page__scope-image {
+    @apply relative h-[366px] w-full max-w-[426px] overflow-hidden;
+  }
+  .air-freight-page__scope-image > img {
+    @apply object-cover object-[33.5%_center];
+  }
+  .air-freight-page__scope-list {
+    @apply grid content-start self-start;
+  }
+  .air-freight-page__scope-list article {
+    @apply flex items-start justify-between gap-6 border-b border-editorial-line/60 py-4;
+  }
+  .air-freight-page__scope-list p {
+    @apply max-w-120 text-[1rem] leading-snug;
+  }
+  .service-scope-list__icon {
+    @apply mt-px grid size-5 shrink-0 place-items-center rounded-full bg-editorial-accent text-white;
+  }
+  .air-freight-page__statistics {
+    @apply bg-white px-page py-[clamp(4rem,5.4vw,4.875rem)];
+  }
+  .air-freight-page__statistics > div {
+    @apply border border-[#b6b6b6];
+  }
+  .air-freight-page__statistics article {
+    @apply flex min-h-38 flex-col items-start justify-start bg-[#ece8e3] px-9 py-8;
+  }
+  .air-freight-page__statistics article + article {
+    @apply border-t border-[#b6b6b6] sm:border-l sm:border-t-0;
+  }
+  .air-freight-page__statistics strong {
+    @apply text-h2 text-black;
+  }
+  .air-freight-page__statistics p {
+    @apply mt-2.5 max-w-[28ch] text-[.7rem] leading-[1.5] tracking-[.08em] uppercase text-editorial-ink;
+  }
+  .air-freight-page__answers h2,
+  .air-freight-page__closing h2 {
+    @apply mt-4 text-h2;
+  }
+  .service-benefits {
+    @apply bg-[#aaa8c4]/15 px-page py-section;
+  }
+  .service-benefits > .motion-reveal {
+    @apply max-w-[36rem];
+  }
+  .service-benefits h2 {
+    @apply text-h2 text-editorial-accent;
+  }
+  .service-benefits__grid {
+    @apply mt-12 grid grid-cols-2 overflow-hidden border border-[#e3e3e3] bg-white md:grid-cols-3 lg:grid-cols-4;
+  }
+  .service-benefits__item {
+    @apply h-full border-b border-r border-[#e3e3e3];
+  }
+  .service-benefits__item:nth-child(2n) { border-right: 0; }
+  .service-benefits__item:nth-last-child(-n + 2) { border-bottom: 0; }
+  .service-benefits__card {
+    @apply flex min-h-50 h-full flex-col gap-5 bg-white p-5;
+  }
+  .service-benefits__card h3 {
+    @apply text-[21px] leading-[1.15] font-normal tracking-[-.01em];
+  }
+  .service-benefits__card p {
+    @apply max-w-[268px] text-[16px] leading-[1.375] tracking-[-.0125em] text-[#030000];
+  }
+  @media (min-width: 768px) {
+    .service-benefits__item:nth-child(2n) { border-right: 1px solid #e3e3e3; }
+    .service-benefits__item:nth-child(3n) { border-right: 0; }
+    .service-benefits__item:nth-last-child(-n + 3) { border-bottom: 0; }
+  }
+  @media (min-width: 1024px) {
+    .service-benefits__item:nth-child(3n) { border-right: 1px solid #e3e3e3; }
+    .service-benefits__item:nth-child(4n) { border-right: 0; }
+    .service-benefits__item:nth-last-child(-n + 2) { border-bottom: 0; }
+  }
+  .air-freight-page__process {
+    @apply relative bg-editorial-ink;
+  }
+  .air-freight-page__process .service-showcase__heading {
+    @apply text-[clamp(1.75rem,2.5vw,2.25rem)] leading-[1.1] tracking-[-.03em] text-white;
+  }
+  .air-freight-page__process .service-showcase__visual::after {
+    @apply bg-black/50;
+  }
+  .air-freight-page__process .service-showcase__panels {
+    @apply -mt-[100svh];
+  }
+  .air-freight-page__process .service-showcase__copy {
+    @apply col-start-1 gap-4 pt-24 md:col-span-6 md:col-start-1;
+  }
+  .air-freight-page__process .service-showcase__copy > span {
+    @apply text-label text-orange-light;
+  }
+  .air-freight-page__process .service-showcase__copy h2 {
+    @apply text-[clamp(2rem,2.5vw,2.25rem)] leading-[1.1] tracking-[-.03em] text-white;
+  }
+  .air-freight-page__process .service-showcase__copy p {
+    @apply max-w-[36ch] text-[clamp(1rem,1.67vw,1.5rem)] leading-[1.2] text-white;
+  }
+  .air-freight-page__answers {
+    @apply gap-y-10 px-page py-section;
+  }
+  .air-freight-page__answers details {
+    @apply border-t border-editorial-line/60;
+  }
+  .air-freight-page__answers details:last-child {
+    @apply border-b border-editorial-line/60;
+  }
+  .air-freight-page__answers summary {
+    @apply flex cursor-pointer list-none items-center justify-between gap-5 py-5 text-[1rem] leading-snug;
+  }
+  .air-freight-page__answers summary::-webkit-details-marker {
+    @apply hidden;
+  }
+  .air-freight-page__answers summary svg {
+    @apply shrink-0 transition-transform;
+  }
+  .air-freight-page__answers details[open] summary svg {
+    @apply rotate-180;
+  }
+  .air-freight-page__answers details p {
+    @apply max-w-[55ch] pb-6 text-[.95rem] leading-relaxed text-editorial-muted;
+  }
+  .air-freight-page__closing {
+    @apply bg-editorial-accent px-page py-[clamp(4rem,8vw,7rem)] text-white;
+  }
+  .air-freight-page__closing h2 {
+    @apply text-white;
+  }
+  .air-freight-page__closing p {
+    @apply mt-5 max-w-[55ch] text-[1.05rem] leading-relaxed text-white/75;
+  }
+  .air-freight-page__closing a {
+    @apply mt-8 inline-flex items-center gap-2 bg-white px-6 py-3.5 font-medium text-editorial-accent no-underline transition hover:bg-editorial-surface;
+  }
+  .service-story {
+    @apply overflow-clip bg-white text-editorial-ink;
+  }
+  .service-story__hero {
+    @apply relative isolate h-svh min-h-160 overflow-hidden bg-editorial-ink text-white;
+  }
+  .service-story__hero-image {
+    @apply absolute inset-0 -z-20 size-full object-cover;
+  }
+  .service-story__hero-overlay {
+    @apply absolute inset-0 -z-10 bg-[linear-gradient(0deg,rgba(12,16,27,.92),rgba(12,16,27,.34))] md:bg-[linear-gradient(90deg,rgba(12,16,27,.88)_0%,rgba(12,16,27,.54)_54%,rgba(12,16,27,.2)_100%)];
+  }
+  .service-story__hero-copy {
+    @apply absolute inset-x-page bottom-[clamp(2.625rem,8.39vh,5.375rem)];
+  }
+  .service-story__hero-copy h1 {
+    @apply text-h1 mb-[clamp(1rem,5vw,4.5rem)] w-auto text-white md:w-4/5;
+  }
+  .service-story__hero-copy > .motion-reveal:nth-child(2) {
+    @apply ml-0 mt-6 w-auto md:ml-auto md:mt-0 md:w-1/2;
+  }
+  .service-story__hero-copy > .motion-reveal:nth-child(3) {
+    @apply ml-0 mt-6 w-auto md:ml-auto md:w-1/2;
+  }
+  .service-story__hero-copy p {
+    @apply site-lead text-white/80;
+  }
+  .service-story__hero-cta,
+  .service-story__closing-cta {
+    @apply inline-flex w-fit items-center gap-2 bg-orange px-6 py-3.5 font-medium text-white no-underline transition hover:bg-orange-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white;
+  }
+  .service-story__opening {
+    @apply grid grid-cols-12 gap-y-12 px-page py-section;
+  }
+  .service-story__opening-copy {
+    @apply col-span-12 max-w-170 lg:col-span-7;
+  }
+  .service-story__opening h2,
+  .service-story__answers h2,
+  .service-story__prepare h2,
+  .service-story__closing h2 {
+    @apply text-h2;
+  }
+  .service-story__opening-copy p {
+    @apply mt-7 max-w-[62ch] text-[clamp(1.15rem,1.7vw,1.5rem)] leading-[1.4] text-editorial-muted;
+  }
+  .service-story__fit-list {
+    @apply col-span-12 grid content-end gap-0 lg:col-start-9 lg:col-span-4;
+  }
+  .service-story__fit-list p {
+    @apply flex gap-3 border-b border-editorial-line/60 py-4 text-[1rem] leading-snug;
+  }
+  .service-story__fit-list svg {
+    @apply mt-0.5 shrink-0 text-orange;
+  }
+  .service-story__features {
+    @apply mx-page grid border-y border-editorial-line/60 sm:grid-cols-2 lg:grid-cols-4;
+  }
+  .service-story__features span {
+    @apply flex min-h-27 items-center px-5 py-6 text-[1rem] leading-snug;
+  }
+  .service-story__features span + span {
+    @apply border-t border-editorial-line/60 md:border-l md:border-t-0;
+  }
+  .service-story__options {
+    @apply grid gap-12 bg-editorial-surface px-page py-section lg:grid-cols-12 lg:items-end;
+  }
+  .service-story__options > .motion-reveal:first-child {
+    @apply lg:col-span-5;
+  }
+  .service-story__options h2,
+  .service-story__proof h2 {
+    @apply text-h2 max-w-[16ch];
+  }
+  .service-story__options > div {
+    @apply grid gap-0 border-t border-editorial-line/60 lg:col-start-7 lg:col-span-6;
+  }
+  .service-story__options article {
+    @apply grid grid-cols-[3rem_1fr] gap-x-4 border-b border-editorial-line/60 py-7;
+  }
+  .service-story__options article > span {
+    @apply text-label text-orange;
+  }
+  .service-story__options h3 {
+    @apply text-h3;
+  }
+  .service-story__options p {
+    @apply col-start-2 mt-3 max-w-[46ch] text-[1rem] leading-relaxed text-editorial-muted;
+  }
+  .service-story__showcase .service-showcase__panels {
+    @apply -mt-[100svh];
+  }
+  .service-story__showcase .service-showcase__copy {
+    @apply gap-5;
+  }
+  .service-story__showcase-copy > span {
+    @apply text-label text-orange-light;
+  }
+  .service-story__showcase-copy h2 {
+    @apply text-h2 text-white;
+  }
+  .service-story__showcase-copy p {
+    @apply max-w-[38ch] text-[1.1rem] leading-relaxed text-white/80;
+  }
+  .service-story__combination {
+    @apply grid gap-12 bg-editorial-ink px-page py-section text-white lg:grid-cols-12 lg:items-end;
+  }
+  .service-story__combination-copy {
+    @apply lg:col-span-7;
+  }
+  .service-story__combination h2 {
+    @apply max-w-[19ch] text-h2 text-white;
+  }
+  .service-story__combination p {
+    @apply mt-6 max-w-[58ch] text-[1.1rem] leading-relaxed text-white/70;
+  }
+  .service-story__combination-links {
+    @apply grid border-t border-white/30 lg:col-start-9 lg:col-span-4;
+  }
+  .service-story__combination-links a {
+    @apply flex items-center justify-between border-b border-white/30 py-5 text-[1.05rem] text-white no-underline transition hover:text-orange-light;
+  }
+  .service-story__prepare {
+    @apply relative isolate overflow-hidden px-page py-[clamp(5rem,13vw,12rem)] text-white;
+  }
+  .service-story__prepare-image {
+    @apply absolute inset-0 -z-20 bg-cover bg-center;
+  }
+  .service-story__prepare-overlay {
+    @apply absolute inset-0 -z-10 bg-[linear-gradient(105deg,rgba(15,19,36,.93),rgba(15,19,36,.72),rgba(15,19,36,.45))];
+  }
+  .service-story__prepare-copy {
+    @apply grid max-w-155 gap-7;
+  }
+  .service-story__prepare h2 {
+    @apply max-w-[16ch] text-white;
+  }
+  .service-story__prepare ul {
+    @apply grid gap-0 border-t border-white/30;
+  }
+  .service-story__prepare li {
+    @apply border-b border-white/30 py-4 pl-7 text-[1.05rem] leading-snug before:relative before:-left-7 before:mr-[-.3rem] before:text-orange before:content-['↗'];
+  }
+  .service-story__answers {
+    @apply mx-auto grid max-w-200 gap-12 px-page py-section lg:grid-cols-[.8fr_1.2fr];
+  }
+  .service-story__answers > div {
+    @apply grid content-start;
+  }
+  .service-story__faq {
+    @apply border-t border-editorial-line/60 py-0;
+  }
+  .service-story__faq:last-child {
+    @apply border-b;
+  }
+  .service-story__faq summary {
+    @apply flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.1rem] font-medium;
+  }
+  .service-story__faq summary::-webkit-details-marker {
+    @apply hidden;
+  }
+  .service-story__faq summary svg {
+    @apply shrink-0 transition-transform;
+  }
+  .service-story__faq[open] summary svg {
+    @apply rotate-180;
+  }
+  .service-story__faq p {
+    @apply max-w-[56ch] pb-7 text-[1rem] leading-relaxed text-editorial-muted;
+  }
+  .service-story__proof {
+    @apply grid gap-12 bg-editorial-surface px-page py-section lg:grid-cols-12 lg:items-end;
+  }
+  .service-story__proof > .motion-reveal:first-child {
+    @apply lg:col-span-4;
+  }
+  .service-story__proof > div {
+    @apply grid gap-0 border-t border-editorial-line/60 lg:col-start-6 lg:col-span-7 lg:grid-cols-3;
+  }
+  .service-story__proof article {
+    @apply min-h-52 border-b border-editorial-line/60 py-6 lg:border-b-0 lg:pr-6;
+  }
+  .service-story__proof .motion-reveal + .motion-reveal article {
+    @apply border-b border-editorial-line/60 py-6 md:border-b-0 md:border-l md:pl-6 md:pr-6;
+  }
+  .service-story__proof h3 {
+    @apply text-h3;
+  }
+  .service-story__proof p {
+    @apply mt-4 text-[.98rem] leading-relaxed text-editorial-muted;
+  }
+  .service-contact {
+    @apply grid bg-white lg:grid-cols-2 gap-4 justify-between;
+  }
+  .service-contact__portrait {
+    @apply min-h-100 bg-cover bg-center;
+  }
+  .service-contact__copy {
+    @apply px-page py-[clamp(4rem,8vw,7rem)];
+  }
+  .service-contact__copy h2 {
+    @apply max-w-[17ch] text-h2;
+  }
+  .service-contact__copy > p {
+    @apply mt-5 max-w-[48ch] text-[1.05rem] leading-relaxed text-editorial-muted;
+  }
+  .service-contact__person {
+    @apply mt-9 grid gap-1 border-t border-editorial-line/60 pt-5;
+  }
+  .service-contact__person strong {
+    @apply text-[1.1rem] font-medium;
+  }
+  .service-contact__person span {
+    @apply text-[.9rem] text-editorial-muted;
+  }
+  .service-contact__actions {
+    @apply mt-7 flex flex-wrap gap-3;
+  }
+  .service-contact__actions a {
+    @apply inline-flex items-center gap-2 border border-editorial-ink px-5 py-3 text-[.9rem] font-medium text-editorial-ink no-underline transition hover:border-editorial-accent hover:bg-editorial-accent hover:text-white;
+  }
+  .service-contact--air-freight {
+    @apply grid grid-cols-12 items-center gap-y-10 bg-editorial-accent/15 px-page py-[clamp(4rem,5.4vw,4.875rem)];
+  }
+  .service-contact__air-copy {
+    @apply col-span-12 lg:col-span-5;
+  }
+  .service-contact__air-copy h2 {
+    @apply max-w-[18ch] text-[clamp(2rem,2.5vw,2.25rem)] leading-[1.15] tracking-[-.03em];
+  }
+  .service-contact__air-copy p {
+    @apply mt-4 max-w-[27rem] text-[1rem] leading-[1.375] text-editorial-muted;
+  }
+  .service-contact__air-portrait {
+    @apply col-span-12 h-full aspect-square object-cover lg:col-start-7 lg:col-span-2;
+  }
+  .service-contact__air-person {
+    @apply col-span-12 grid content-center lg:col-start-9 lg:col-span-4;
+  }
+  .service-contact__air-person strong {
+    @apply text-[1.1rem] font-medium leading-[1.3];
+  }
+  .service-contact__air-person > span {
+    @apply mt-1 text-[.9rem] leading-[1.3] text-editorial-muted;
+  }
+  .service-contact__air-actions {
+    @apply mt-7 flex flex-wrap gap-3;
+  }
+  .service-contact__air-actions a {
+    @apply inline-flex h-[49px] items-center gap-2 border border-editorial-ink px-5 py-3 text-[.9rem] font-medium text-editorial-ink no-underline transition hover:border-editorial-accent hover:bg-editorial-accent hover:text-white;
+  }
+  .service-contact__air-actions img {
+    @apply size-[17px];
+  }
+  .service-story__closing {
+    @apply grid gap-14 bg-editorial-accent px-page py-[clamp(4rem,9vw,8rem)] text-white lg:grid-cols-12 lg:items-end;
+  }
+  .service-story__closing-copy {
+    @apply lg:col-span-7;
+  }
+  .service-story__closing h2 {
+    @apply max-w-[16ch] text-white;
+  }
+  .service-story__closing-copy > p {
+    @apply mt-5 max-w-[55ch] text-[1.05rem] leading-relaxed text-white/75;
+  }
+  .service-story__closing-cta {
+    @apply mt-8 bg-white text-editorial-accent hover:bg-editorial-surface focus-visible:outline-white;
+  }
+  .service-story__related {
+    @apply grid gap-0 border-t border-white/35 lg:col-start-9 lg:col-span-4;
+  }
+  .service-story__related > p {
+    @apply pt-5 pb-3 text-label text-white/60;
+  }
+  .service-story__related a {
+    @apply flex items-center justify-between border-t border-white/25 py-4 text-[1.05rem] text-white no-underline transition hover:text-orange-light;
+  }
+}

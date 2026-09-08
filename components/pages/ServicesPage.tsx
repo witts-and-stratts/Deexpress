@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowUpRight, Truck } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import AnimatedText from '@/components/AnimatedText';
 import Parallax from '@/components/Parallax';
 import { ResponsiveImage } from '@/components/ResponsiveImage';
@@ -17,7 +17,6 @@ import { useState } from 'react';
 import {
   AnimatePresence,
   motion,
-  useReducedMotion,
   type Variants,
 } from 'motion/react';
 
@@ -99,7 +98,6 @@ const serviceIndexItemVariants: Variants = {
 
 export function ServicesPage() {
   const { t } = useLang();
-  const reduceMotion = useReducedMotion();
   const pathways = t.services.pathways as {
     title: string;
     text: string;
@@ -200,7 +198,10 @@ export function ServicesPage() {
         className='services-index'
         aria-label={t.services.eyebrow}
         variants={serviceIndexVariants}
-        initial={reduceMotion ? false : 'hidden'}
+        // Keep the index usable if a locale change happens while the nav is
+        // outside the viewport. The in-view animation can still enhance it,
+        // but must not be the only path to a visible navigation.
+        initial={false}
         whileInView='visible'
         viewport={{ once: true, amount: 0.7 }}
       >

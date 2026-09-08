@@ -24,6 +24,7 @@ import {
   SERVICE_STORIES,
 } from '@/lib/service-content';
 import { SERVICE_SCOPES } from '@/lib/service-scopes';
+import { SERVICE_PAGES } from '@/lib/service-pages';
 import type { ServiceSlug } from '@/lib/site';
 
 type ResponsiveBackgroundImage =
@@ -209,7 +210,7 @@ export function FreightServicePage({
       </section>
 
       <EditorialProcess
-        title={work?.title ?? 'We handle the work that matters the most'}
+        title={work?.title ?? SERVICE_PAGES[lang].shared.workTitle}
         items={work?.items ?? proof.benefits}
       />
 
@@ -233,7 +234,7 @@ export function FreightServicePage({
       </section>
 
       <ServiceContact
-        title='Discuss your shipment with the team handling the request'
+        title={SERVICE_PAGES[lang].shared.contactTitle}
         text={proof.contactText}
         callLabel={proof.callLabel}
         quoteHref={`/quote?service=${slug}`}

@@ -2,12 +2,12 @@
   "name": "Vollständiger Name",
   "email": "E-Mail-Adresse",
   "phone": "Telefonnummer",
-  "from": "Startort (Stadt, Land)",
-  "to": "Zielort (Stadt, Land)",
-  "service": "Leistung",
+  "from": "Herkunft (Stadt, Land)",
+  "to": "Reiseziel (Stadt, Land)",
+  "service": "Service",
   "subject": "Betreff",
   "message": "Nachricht",
-  "selectService": "Leistung auswählen",
-  "selectSubject": "Betreff auswählen",
-  "required": "Pflichtfelder sind mit einem Sternchen markiert."
+  "selectService": "Wählen Sie einen Dienst aus",
+  "selectSubject": "Wählen Sie ein Thema aus",
+  "required": "Pflichtfelder sind mit einem Sternchen gekennzeichnet."
 }

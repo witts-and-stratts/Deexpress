@@ -21,40 +21,13 @@ import {
   SERVICE_STORIES,
 } from '@/lib/service-content';
 import { SERVICE_SCOPES } from '@/lib/service-scopes';
+import { SERVICE_PAGES } from '@/lib/service-pages';
 
-const capabilities = [
-  'Consolidated and single cargo shipments',
-  'European cargo transportation and Port coordination',
-  'Export documentation and customs processing',
-  'Onward and last-mile delivery planning',
-];
 const icons = [
   '/images/icons/consolidated-cargo.svg',
   '/images/icons/port.svg',
   '/images/icons/air-documentation.svg',
   '/images/icons/delivery-van.svg',
-];
-const highlights = [
-  {
-    value: 30,
-    suffix: ' days',
-    text: 'Typical transit planning window for sea freight',
-  },
-  {
-    value: 2,
-    suffix: ' options',
-    text: 'Full-container and consolidated shipping routes',
-  },
-  {
-    value: 1,
-    suffix: ' contact',
-    text: 'From collection through port and destination handover',
-  },
-  {
-    value: 100,
-    suffix: '%',
-    text: 'Route planning shaped around your cargo and destination',
-  },
 ];
 type ResponsiveBackgroundImage = { src: string; portrait?: string };
 
@@ -73,6 +46,8 @@ export function SeaFreightPage() {
   const proof = SERVICE_PROOF_COPY[lang];
   const story = SERVICE_STORIES[lang]['sea-freight'];
   const scope = SERVICE_SCOPES[lang]['sea-freight'];
+  const copy = SERVICE_PAGES[lang]['sea-freight'];
+  const shared = SERVICE_PAGES[lang].shared;
   const faqs = [...story.faqs, ...SERVICE_EXTRA_FAQS[lang]['sea-freight']];
 
   return (
@@ -87,13 +62,10 @@ export function SeaFreightPage() {
         <div className='air-freight-page__hero-overlay' aria-hidden='true' />
         <div className='air-freight-page__hero-copy'>
           <Reveal>
-            <h1>Sea Freight and cost-effect container transport</h1>
+            <h1>{copy.hero.title}</h1>
           </Reveal>
           <Reveal delay={140}>
-            <p>
-              Container and consolidated sea freight coordinated from Europe to
-              destinations across our network.
-            </p>
+            <p>{copy.hero.text}</p>
           </Reveal>
         </div>
       </section>
@@ -101,11 +73,9 @@ export function SeaFreightPage() {
       <section className='air-freight-page__intro grid grid-cols-12'>
         <Reveal className='col-span-12 mb-40 lg:col-span-9'>
           <h2 className='text-h3'>
-            DeExpress provides reliable, tailored sea freight and multimodal
-            transport solutions, connecting key economic hubs across Africa and
-            the Middle East through our operations in Germany.{' '}
+            {copy.introduction.text}{' '}
             <span>
-              Every shipment is handled with personalised, first-class service.
+              {copy.introduction.accent}
             </span>
           </h2>
         </Reveal>
@@ -113,10 +83,10 @@ export function SeaFreightPage() {
 
       <section
         className='air-freight-page__capabilities'
-        aria-label='Sea freight capabilities'
+        aria-label={copy.capabilityLabel}
       >
         <div className='grid grid-cols-12'>
-          {capabilities.map((capability, index) => (
+          {copy.capabilities.map((capability, index) => (
             <div
               key={capability}
               className='col-span-12 sm:col-span-6 lg:col-span-3'
@@ -136,12 +106,8 @@ export function SeaFreightPage() {
           aria-hidden='true'
         />
         <Parallax speed={0.2}>
-          <h2>Smarter shipping at every scale</h2>
-          <p>
-            From a few pallets to a full container, we coordinate the route,
-            logistics and people involved—delivering greater efficiency, better
-            value and a smoother shipping experience.
-          </p>
+          <h2>{copy.efficiency.title}</h2>
+          <p>{copy.efficiency.text}</p>
         </Parallax>
       </section>
 
@@ -166,7 +132,7 @@ export function SeaFreightPage() {
 
       <section className='air-freight-page__statistics'>
         <div className='grid grid-cols-12'>
-          {highlights.map((highlight) => (
+          {copy.highlights.map((highlight) => (
             <article
               key={`${highlight.value}${highlight.suffix}`}
               className='col-span-12 sm:col-span-6 lg:col-span-3'
@@ -196,7 +162,7 @@ export function SeaFreightPage() {
       </section>
 
       <EditorialProcess
-        title='We handle the work that matters the most'
+        title={shared.workTitle}
         items={proof.benefits}
       />
 
@@ -204,7 +170,7 @@ export function SeaFreightPage() {
 
       <section className='air-freight-page__answers grid grid-cols-12'>
         <Reveal className='col-span-12 lg:col-span-5'>
-          <h2>Sea freight FAQs</h2>
+          <h2>{copy.faqTitle}</h2>
         </Reveal>
         <div className='col-span-12 lg:col-start-7 lg:col-span-6'>
           {faqs.map((faq) => (
@@ -220,7 +186,7 @@ export function SeaFreightPage() {
       </section>
 
       <ServiceContact
-        title='Discuss your shipment with the team handling the request'
+        title={shared.contactTitle}
         text={proof.contactText}
         callLabel={proof.callLabel}
         quoteHref='/quote?service=sea-freight'

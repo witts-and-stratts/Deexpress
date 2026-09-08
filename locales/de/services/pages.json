@@ -1,0 +1,477 @@
+{
+  "shared": {
+    "workTitle": "Wir kümmern uns um das, was wirklich zählt",
+    "contactTitle": "Besprechen Sie Ihre Sendung mit dem Team, das für die Anfrage zuständig ist"
+  },
+  "vehicle-sourcing": {
+    "capabilityLabel": "Kapazitäten zur Fahrzeugbeschaffung",
+    "capabilities": [
+      "Unterstützung bei der Fahrzeugsuche und beim Kauf",
+      "Koordination der europäischen Verkäufer",
+      "Erstellung von Exportdokumenten",
+      "Planung der Versandübergabe"
+    ],
+    "hero": {
+      "title": "Das Fahrzeug beschaffen. Die Fahrt koordinieren.",
+      "text": "Praktische Unterstützung von der Fahrzeugsuche und dem Kauf bis hin zum internationalen Versand."
+    },
+    "introduction": {
+      "text": "Wir koordinieren Beschaffung, Einkauf und Weitertransport rund um das Fahrzeug, das Sie benötigen,",
+      "accent": "Damit bleibt der Ablauf von der ersten Suche bis zur endgültigen Übergabe übersichtlich."
+    },
+    "efficiency": {
+      "title": "Ein Team – von der Suche bis zum Versand",
+      "text": "Die Fahrzeugbeschaffung wird einfacher, wenn Kaufentscheidungen und Transportplanung miteinander verknüpft werden."
+    }
+  },
+  "air-freight": {
+    "capabilityLabel": "Luftfrachtkapazitäten",
+    "capabilities": [
+      "Zeitkritische und vorrangige Sendungen",
+      "Koordination zwischen Flughäfen",
+      "Unterstützung bei der Erstellung von Exportunterlagen",
+      "Sorgfältiger Umgang mit hochwertiger Fracht"
+    ],
+    "hero": {
+      "title": "Weltweite Luftfracht – zuverlässig zugestellt",
+      "text": "Zeitkritische Luftfrachtdienste von Europa nach Afrika und darüber hinaus – wir bringen Ihre Fracht sicher, schnell, effizient und sorgfältig an ihren Bestimmungsort."
+    },
+    "introduction": {
+      "text": "Für zeitkritische und hochwertige Sendungen koordinieren wir Luftfrachttransporte von europäischen Flughäfen zu Zielen in unserem gesamten Netzwerk,",
+      "accent": "durch sorgfältige Abwicklung und klare Kommunikation vom Start bis zur Ankunft."
+    },
+    "efficiency": {
+      "title": "Geschwindigkeit trifft auf Wirtschaftlichkeit",
+      "text": "Maßgeschneiderte Logistikdienstleistungen von Europa nach Afrika auf der Straße, in der Luft, auf dem Wasserweg oder auf der Schiene – wir bringen Ihre Fracht sicher, effizient und sorgfältig ans Ziel."
+    },
+    "highlights": [
+      {
+        "value": 24,
+        "suffix": " Std.",
+        "text": "Typische Bearbeitungszeit für die Erstellung eines ersten Angebots"
+      },
+      {
+        "value": 3,
+        "suffix": " Phasen",
+        "text": "Abholung, Flug und Übergabe bei der Ankunft koordiniert"
+      },
+      {
+        "value": 2,
+        "suffix": " Wochen",
+        "text": "Maximale Lieferdauer"
+      },
+      {
+        "value": 100,
+        "suffix": "%",
+        "text": "Frachtbezogene Routenplanung von Anfang an"
+      }
+    ],
+    "process": [
+      {
+        "title": "Kauf und Verhandlungen bezüglich Fracht",
+        "text": "Bei spezifischen Anfragen nehmen wir zunächst Kontakt zu Ihren Lieferanten auf, organisieren den Transport und kaufen Ihre Produkte in Ihrem Auftrag ein – mit optimaler Zahlungsabwicklung."
+      },
+      {
+        "title": "Buchung und Vorbereitung für den Export",
+        "text": "Sobald die Route festgelegt ist, wird die Sendung für die Abholung und die Abfertigung am Flughafen vorbereitet. DEexpress unterstützt die Erstellung der Exportdokumente und koordiniert die vor dem Abflug erforderlichen Übergaben."
+      },
+      {
+        "title": "Ankunft, Zollabfertigung und Abwicklung",
+        "text": "Wir kümmern uns um die Zollabfertigung am Zielflughafen, einschließlich der Einreichung aller erforderlichen Unterlagen und der Erfüllung sonstiger behördlicher Auflagen."
+      },
+      {
+        "title": "Weiterverfolgung",
+        "text": "Am Zielort wird die nächste Übergabe entsprechend der bestätigten Route geplant. Sofern möglich, erstreckt sich der Service von der Abfertigung am Flughafen bis zur Koordination der Endauslieferung."
+      }
+    ]
+  },
+  "sea-freight": {
+    "capabilityLabel": "Seefrachtkapazitäten",
+    "faqTitle": "Häufig gestellte Fragen zur Seefracht",
+    "capabilities": [
+      "Sammel- und Einzelguttransporte",
+      "Europäischer Güterverkehr und Hafenkoordination",
+      "Exportdokumente und Zollabfertigung",
+      "Weitertransport und Planung der Zustellung auf der letzten Meile"
+    ],
+    "hero": {
+      "title": "Seefracht und kostengünstiger Containertransport",
+      "text": "Container- und Sammelgutfracht auf See, koordiniert von Europa zu Zielen in unserem gesamten Netzwerk."
+    },
+    "introduction": {
+      "text": "DeExpress bietet zuverlässige, maßgeschneiderte Seefracht- und multimodale Transportlösungen und verbindet über unsere Standorte in Deutschland wichtige Wirtschaftszentren in ganz Afrika und im Nahen Osten.",
+      "accent": "Jede Sendung wird mit einem individuellen, erstklassigen Service abgewickelt."
+    },
+    "efficiency": {
+      "title": "Intelligentere Logistik in jeder Größenordnung",
+      "text": "Von wenigen Paletten bis hin zu einem kompletten Container – wir koordinieren die Route, die Logistik und alle beteiligten Akteure und sorgen so für mehr Effizienz, ein besseres Preis-Leistungs-Verhältnis und einen reibungsloseren Versand."
+    },
+    "highlights": [
+      {
+        "value": 30,
+        "suffix": " Tage",
+        "text": "Typischer Zeitrahmen für die Transportplanung bei Seefracht"
+      },
+      {
+        "value": 2,
+        "suffix": " Optionen",
+        "text": "Transportwege für Vollcontainer und Sammelgut"
+      },
+      {
+        "value": 1,
+        "suffix": " Kontakt",
+        "text": "Von der Abholung über den Hafen bis zur Übergabe am Bestimmungsort"
+      },
+      {
+        "value": 100,
+        "suffix": "%",
+        "text": "Eine auf Ihre Fracht und Ihr Ziel abgestimmte Routenplanung"
+      }
+    ]
+  },
+  "commercial-cargo": {
+    "capabilityLabel": "Kapazitäten im gewerblichen Frachtverkehr",
+    "capabilities": [
+      "Einmalige und wiederkehrende Fracht",
+      "Koordination in der Luft, auf See und an Land",
+      "Unterstützung bei der Erstellung von Exportunterlagen",
+      "Routensichtbarkeit ab der Abholung"
+    ],
+    "hero": {
+      "title": "Gewerbliche Frachtbeförderung, die das Geschäft am Laufen hält",
+      "text": "Zuverlässige Frachtkoordination für einmalige Projekte und wiederkehrende gewerbliche Transporte jeder Größenordnung."
+    },
+    "introduction": {
+      "text": "DEExpress plant den gewerblichen Gütertransport ganz nach Ihren Waren, Routen und betrieblichen Anforderungen,",
+      "accent": "die Übergänge zwischen Luft-, See- und Landtransport in einem übersichtlichen Ablauf miteinander verbinden."
+    },
+    "efficiency": {
+      "title": "Auf Ihre Fracht zugeschnittene Logistik",
+      "text": "Die richtige Lösung für Ihre Transportbedürfnisse – ohne festgelegte Route. Ob auf der Straße, in der Luft, auf See oder auf der Schiene: Wir finden das richtige Gleichgewicht zwischen Geschwindigkeit, Kosten und Sorgfalt, um Ihre Fracht sicher von Europa nach Afrika zu befördern."
+    },
+    "highlights": [
+      {
+        "value": 4,
+        "suffix": " Modi",
+        "text": "Luft-, See-, Schienen- und Straßenverkehr gemeinsam betrachtet"
+      },
+      {
+        "value": 24,
+        "suffix": " Std.",
+        "text": "Typische Bearbeitungszeit für die Erstellung eines ersten Angebots"
+      },
+      {
+        "value": 1,
+        "suffix": " Team",
+        "text": "Koordination von Fracht, Dokumenten und Übergaben"
+      },
+      {
+        "value": 100,
+        "suffix": "%",
+        "text": "Eine Planung, die sich an den Fracht- und Lieferanforderungen orientiert"
+      }
+    ],
+    "process": [
+      {
+        "title": "Beginnen Sie mit den geschäftlichen Anforderungen",
+        "text": "Wir beginnen mit der Ware, der Verpackung, dem Herkunfts- und Bestimmungsort sowie der Lieferpriorität – unabhängig davon, ob es sich bei der Sendung um ein einmaliges Projekt oder um einen Teil eines regelmäßigen Lieferflusses handelt."
+      },
+      {
+        "title": "Legen Sie die optimale Route um die Fracht herum fest",
+        "text": "Luft-, See-, Schienen- und Straßenverkehr werden gemeinsam in Betracht gezogen, wobei Zeitplan, Kosten und die praktischen Anforderungen an die Abwicklung Ihrer Sendung gegeneinander abgewogen werden."
+      },
+      {
+        "title": "Den Transport ab der Abholung koordinieren",
+        "text": "Abholung, Ausfuhrpapiere und Transportübergaben werden als ein zusammenhängender Ablauf geplant, wobei während des gesamten Transportwegs eine klare Kommunikation gewährleistet ist."
+      },
+      {
+        "title": "Halten Sie die nächste Lieferung versandbereit",
+        "text": "Bei regelmäßigen Transporten bildet der vereinbarte Ablauf eine verlässliche Grundlage für den nächsten Auftrag. Bei einmaligen Transporten wird die Lieferung entsprechend der bestätigten Route koordiniert."
+      }
+    ],
+    "work": {
+      "title": "Wir kümmern uns um das, was wirklich zählt",
+      "items": [
+        {
+          "title": "Koordination von Handelsrouten",
+          "text": "Maßgeschneiderte Planung für Luft-, See-, Schienen- und Straßentransporte, abgestimmt auf die Art Ihrer Fracht, den Bestimmungsort und den Lieferzeitplan."
+        },
+        {
+          "title": "Dokumentation und Compliance",
+          "text": "Erstellung und Verwaltung von Versanddokumenten, Zollpapieren und frachtspezifischen Anforderungen für einen vorschriftsmäßigen und reibungslosen Transport."
+        },
+        {
+          "title": "Flexible Frachtabfertigung",
+          "text": "Die richtige Ausrüstung sowie Maßnahmen zur Konsolidierung, Lagerung und Handhabung von palettierter, loser, übergroßer oder empfindlicher Fracht."
+        },
+        {
+          "title": "Lieferung und Vertrieb",
+          "text": "Koordination von der Abholung bis zur endgültigen Zustellung, damit die Fracht bei jedem Übergang zuverlässig weiterbefördert wird."
+        }
+      ]
+    }
+  },
+  "personal-effects": {
+    "capabilityLabel": "Versandmöglichkeiten für persönliche Gegenstände",
+    "capabilities": [
+      "Laptops, Haushaltsgeräte und persönliche Gegenstände",
+      "Anleitung zum Verpacken und Koordination der Abholung",
+      "Luft- und Seefrachtoptionen aus Europa",
+      "Exportdokumente und Übergabe am Bestimmungsort"
+    ],
+    "hero": {
+      "title": "Persönliche Gegenstände, sorgfältig geliefert",
+      "text": "Laptops, Haushaltsgeräte, Reisegepäck und Alltagsgegenstände – Versand aus Europa mit persönlicher Betreuung und sorgfältiger Koordination, ganz gleich, ob Sie einen oder mehrere Artikel versenden."
+    },
+    "introduction": {
+      "text": "DEExpress bietet maßgeschneiderte Versandlösungen für persönliche Gegenstände, die Sie versenden müssen oder möchten. Von Laptops oder Haushaltsgeräten bis hin zu Kleidung, Reisegepäck und in Kartons verpackten Gegenständen,",
+      "accent": "Wir begleiten Sie in jeder Phase Ihrer Reise mit praktischen Ratschlägen und sorgfältiger Betreuung."
+    },
+    "efficiency": {
+      "title": "Ein Artikel oder mehrere. Sorgfalt in jeder Phase.",
+      "text": "Ihre Sendung wird ganz auf die zu versendenden Gegenstände, Ihren Zeitrahmen und den Bestimmungsort abgestimmt. Wir vereinen Abholung, Lagerung (falls erforderlich) und internationalen Transport in einem übersichtlichen Plan."
+    },
+    "process": [
+      {
+        "title": "Ihre Artikel und Ihre Versandwünsche",
+        "text": "Ein Laptop, ein Haushaltsgerät oder ein paar Kartons für die Familie – teilen Sie uns mit, was Sie versenden möchten und wohin die Sendung gehen soll. Wir prüfen die Artikeldetails, die Größe und den gewünschten Lieferzeitpunkt, um eine geeignete Luft- oder Seefrachtroute aus Europa zu planen."
+      },
+      {
+        "title": "Verpackungshinweise & Abholung",
+        "text": "Verschiedene Sendungen erfordern unterschiedliche Vorbereitungen. Wir geben Ihnen Hinweise zur Verpackung Ihrer Sendung und klären vor der Abholung etwaige besondere Handhabungsanforderungen ab, wobei wir die Artikelliste, die Unterlagen und die Abholvereinbarungen zusammenstellen."
+      },
+      {
+        "title": "Exportvorbereitung und Versand",
+        "text": "Sobald Ihre Güter bereitstehen, kümmern wir uns um die Ausfuhrpapiere und die Übergabe für den internationalen Transport. Sollte vor dem Abtransport eine Lagerung erforderlich sein, besprechen wir die entsprechenden Vorkehrungen im Rahmen Ihres Transportplans."
+      },
+      {
+        "title": "Ankunft und abschließende Übergabe",
+        "text": "Sobald Ihre Sendung eintrifft, koordinieren wir die Übergabe am Bestimmungsort und begleiten Sie bei den nächsten Schritten. Die Abholung oder Weiterlieferung wird entsprechend dem vereinbarten Service geplant, wobei die Verfügbarkeit am Bestimmungsort bestätigt wird."
+      }
+    ],
+    "work": {
+      "title": "Wir kümmern uns um das, was wirklich zählt",
+      "items": [
+        {
+          "title": "Persönliche Versandplanung",
+          "text": "Wir prüfen die Luft- und Seefrachtoptionen unter Berücksichtigung Ihrer Güter, des Bestimmungsortes und des Zeitplans, wobei die Art der Beförderung vor der Abholung vereinbart wird."
+        },
+        {
+          "title": "Vorbereitung und Formalitäten",
+          "text": "Praktische Tipps zum Packen, eine Checkliste für Ihre Gegenstände und Unterstützung bei den Ausfuhrdokumenten, damit Sie Ihre Habseligkeiten optimal für die Reise vorbereiten können."
+        },
+        {
+          "title": "Entnahme und Lagerung",
+          "text": "Abhol- und Versandabwicklung aus einer Hand, einschließlich Lagerung, falls Ihre Sendung bereits vor dem Versandtermin bereitsteht."
+        },
+        {
+          "title": "Ankunft und Übergabe",
+          "text": "Die Abwicklung am Bestimmungsort wird klar erläutert, wobei die Abholung oder Weiterlieferung auf den bestätigten Service abgestimmt wird."
+        }
+      ]
+    },
+    "answers": {
+      "title": "Häufig gestellte Fragen zum Versand von persönlichen Gegenständen",
+      "items": [
+        {
+          "question": "Kann ich einen Laptop oder ein Haushaltsgerät versenden?",
+          "answer": "Ja. Der Versand von persönlichen Gegenständen umfasst Laptops und Haushaltsgeräte sowie Kleidung, Reisegepäck und andere persönliche Gegenstände. Teilen Sie uns bitte die Art, das Modell, den Zustand und den Bestimmungsort der Sendung mit, damit wir die Eignung und die Vorbereitungsanforderungen für Ihre Sendung bestätigen können. Informieren Sie uns bitte vor der Buchung über etwaige Batterien oder besondere Handhabungsanforderungen."
+        },
+        {
+          "question": "Kann ich nur einen Artikel verschicken?",
+          "answer": "Ja. Sie müssen nicht umziehen oder einen kompletten Hausrat versenden. Wir helfen Ihnen gerne bei einem einzelnen persönlichen Gegenstand oder mehreren Kartons, wobei die Route ganz auf das zugeschnitten wird, was Sie versenden möchten."
+        },
+        {
+          "question": "Was benötigen Sie, um ein Angebot zu erstellen?",
+          "answer": "Teilen Sie uns bitte mit, was Sie versenden möchten, sowie die Abholadresse, den Bestimmungsort und den gewünschten Zeitrahmen. Eine Liste der Sendungsstücke, die ungefähren Gewichte und Abmessungen sowie Angaben zu eventuellen Zugangsbeschränkungen helfen uns bei der Planung Ihrer Sendung."
+        },
+        {
+          "question": "Sollte ich mich für Luft- oder Seefracht entscheiden?",
+          "answer": "Die Wahl hängt von der Größe Ihrer Sendung, Ihrem Zeitplan und dem Bestimmungsort ab. Wir besprechen mit Ihnen geeignete Optionen und bestätigen die Route im Rahmen Ihres Angebots."
+        },
+        {
+          "question": "Wie soll ich meine Sachen vorbereiten?",
+          "answer": "Erstellen Sie eine Packliste und teilen Sie uns vor dem Verpacken mit, welche Gegenstände zerbrechlich sind, ungewöhnliche Maße haben oder besonderer Sorgfalt bedürfen. Wir geben Ihnen Hinweise zum Verpacken der vereinbarten Sendung und erklären Ihnen, welche Informationen vor der Abholung erforderlich sind."
+        },
+        {
+          "question": "Können meine Sachen vor dem Versand eingelagert werden?",
+          "answer": "Eine Lagerung kann besprochen werden, wenn Ihre Abhol- und Versandtermine nicht übereinstimmen. Die Verfügbarkeit und die entsprechenden Vereinbarungen werden im Rahmen Ihres Versandplans bestätigt."
+        },
+        {
+          "question": "Werden meine Sachen zu mir nach Hause geliefert?",
+          "answer": "Die endgültige Übergabe hängt vom Bestimmungsort und der vereinbarten Dienstleistung ab. Teilen Sie uns bei der Angebotsanfrage bitte mit, ob Sie eine Lieferung nach Hause wünschen, damit wir die Verfügbarkeit und eventuelle Zugangsvoraussetzungen prüfen können."
+        }
+      ]
+    }
+  },
+  "storage": {
+    "capabilityLabel": "Lager- und Lagerhaltungskapazitäten",
+    "capabilities": [
+      "Kurz- und langfristige Lagerung in Berlin",
+      "Persönliche Gegenstände und Handelswaren",
+      "Konsolidierung und Freigabekoordination",
+      "Vernetzte Luft-, See- und Straßenverkehrssysteme"
+    ],
+    "hero": {
+      "title": "Lagerung, bei der Sie Ihren nächsten Schritt immer im Blick behalten",
+      "text": "Kurz- und langfristige Lagerung von Privatgegenständen und Handelswaren in Berlin – mit sorgfältiger Koordination vom Wareneingang bis zur Abholung oder zum Weiterversand."
+    },
+    "introduction": {
+      "text": "DEExpress bietet Lager- und Lagerhaltungsdienstleistungen für Privat- und Einzelhandelskunden in Berlin an. Ganz gleich, ob Ihre Waren auf einen Versandtermin warten oder länger gelagert werden müssen,",
+      "accent": "Wir verbinden Lagerung, Umschlag und die weitere Weiterleitung mit persönlichem Service."
+    },
+    "efficiency": {
+      "title": "Platz für Ihre Waren. Flexibilität für Ihren Zeitplan.",
+      "text": "Abholtermine, Lieferungen und Versandpläne stimmen nicht immer überein. Wir bündeln Lagerung und Weitertransport in einem Plan, wobei die Dauer und die Modalitäten ganz auf Ihre Anforderungen zugeschnitten sind."
+    },
+    "process": [
+      {
+        "title": "Lagerplanung und Wareneingang",
+        "text": "Teilen Sie uns mit, was Sie einlagern möchten, wie viel Platz dafür benötigt wird und wann die Ware eintreffen wird. Wir bestätigen Ihnen dann geeignete Lagerbedingungen und koordinieren die Übergabe im Lager, wobei wir eventuelle Anforderungen für den Weitertransport von Anfang an berücksichtigen."
+      },
+      {
+        "title": "Lagerung und Versandkoordination",
+        "text": "Ihre Waren werden für den vereinbarten Zeitraum in Berlin gelagert, ganz gleich, ob Sie vor dem Abtransport nur eine kurze Zwischenlagerung oder längerfristigen Lagerplatz benötigen. Wenn mehrere Lieferungen zusammen transportiert werden sollen, besprechen wir im Rahmen der weiteren Planung die Möglichkeit einer Sammelladung."
+      },
+      {
+        "title": "Freigabe und Weitertransport",
+        "text": "Sobald Sie bereit sind, koordinieren wir die Freigabe zur Abholung oder den nächsten Versand. Luft-, See- oder Straßentransport können mit Ihren Lagerungsvereinbarungen verknüpft werden, wobei die Route und die Übergabe vereinbart werden, bevor Ihre Waren das Lager verlassen."
+      }
+    ],
+    "work": {
+      "title": "Wir kümmern uns um das, was wirklich zählt",
+      "items": [
+        {
+          "title": "Raum- und Terminplanung",
+          "text": "Die Lagerungsanforderungen werden unter Berücksichtigung Ihrer Güter, der voraussichtlichen Dauer und des Ankunftstermins geprüft, wobei die Verfügbarkeit vor der Übergabe bestätigt wird."
+        },
+        {
+          "title": "Koordination von Wareneingang und Lagerung",
+          "text": "Wareneingänge und Lagerabläufe werden so aufeinander abgestimmt, dass Ihre Waren mit einem klaren Plan für die weiteren Schritte eingelagert werden."
+        },
+        {
+          "title": "Sendungsbündelung",
+          "text": "Unterstützung bei der Zusammenführung von Gütern vor dem Weitertransport unter Berücksichtigung der für Ihre Sendung vereinbarten zeitlichen und abfertigungstechnischen Anforderungen."
+        },
+        {
+          "title": "Freigabe und Weiterleitung",
+          "text": "Abholungen oder Frachtübergaben werden entsprechend dem bestätigten Zeitplan koordiniert und bringen Ihre gelagerten Waren an ihren nächsten Bestimmungsort."
+        }
+      ]
+    },
+    "answers": {
+      "title": "Häufig gestellte Fragen zu Lagerung und Lagerhaltung",
+      "items": [
+        {
+          "question": "Wo befindet sich der Speicherdienst?",
+          "answer": "Unser Lager- und Lagerhaltungsdienst hat seinen Sitz in Berlin. Teilen Sie uns Ihre Anforderungen mit, damit wir die Verfügbarkeit prüfen und die Modalitäten für die Einlagerung Ihrer Waren klären können."
+        },
+        {
+          "question": "Können sowohl Privatpersonen als auch Unternehmen diesen Service nutzen?",
+          "answer": "Ja. Wir bieten Lagerflächen für Privat- und Einzelhandelskunden an. Teilen Sie uns bitte mit, was Sie lagern möchten – einschließlich der Art der Gegenstände, der Mengen und etwaiger besonderer Handhabungsanforderungen –, damit wir die Eignung prüfen können."
+        },
+        {
+          "question": "Bieten Sie kurz- und langfristige Lagerung an?",
+          "answer": "Ja. Beides kann je nach Ihrer Ware und dem verfügbaren Platz besprochen werden. Teilen Sie uns bitte Ihren voraussichtlichen Starttermin und die Dauer mit, auch wenn der Termin für den Weitertransport noch nicht feststeht."
+        },
+        {
+          "question": "Welche Informationen benötigen Sie für ein Angebot?",
+          "answer": "Bitte senden Sie uns eine Beschreibung der Waren, die Anzahl der Artikel, Kartons oder Paletten, die ungefähren Abmessungen und Gewichte sowie die voraussichtlichen Lagerzeiträume. Teilen Sie uns bitte mit, ob Sie zusätzlich eine Abholung, eine Sammelladung oder einen Weitertransport benötigen."
+        },
+        {
+          "question": "Können eingelagerte Waren anschließend international versandt werden?",
+          "answer": "Ja. Das Lager kann sich mit unseren Frachtdiensten in Verbindung setzen, sobald Ihre Waren versandfertig sind. Wir prüfen den Bestimmungsort, die Versanddetails und den Zeitplan, bevor wir die Weiterbeförderung bestätigen."
+        },
+        {
+          "question": "Können für eine Sendung mehrere Lieferungen hinterlegt werden?",
+          "answer": "Wir können die Möglichkeiten einer Sammelladung besprechen, wenn Waren gemeinsam transportiert werden müssen. Teilen Sie uns bitte die voraussichtlichen Liefertermine und den Bestimmungsort mit, damit wir die Lagerung, die Abwicklung und die Versandmodalitäten prüfen können."
+        }
+      ]
+    }
+  },
+  "vehicle-shipping": {
+    "capabilityLabel": "Kapazitäten zur Fahrzeugbeschaffung und zum Versand",
+    "capabilities": [
+      "Unterstützung bei der Beschaffung und dem Kauf von Fahrzeugen in Europa",
+      "Abholung, Lagerung und Hafenkoordination",
+      "Container- und RoRo-Verkehr",
+      "Exportdokumente und Übergabe am Bestimmungsort"
+    ],
+    "hero": {
+      "title": "Fahrzeugbeschaffung und -transport – zuverlässig und vertrauenswürdig",
+      "text": "Von der Suche nach Ihrem Fahrzeug in Europa bis hin zum Transport nach Afrika und in den Nahen Osten – wir vereinen Kaufunterstützung, sorgfältige Abwicklung und internationalen Transport unter einem Dach."
+    },
+    "introduction": {
+      "text": "DEExpress bietet maßgeschneiderte Dienstleistungen rund um die Beschaffung und den Transport von PKWs, LKWs, Bussen und Spezialfahrzeugen. Ganz gleich, ob Sie in Europa ein Fahrzeug kaufen oder ein Fahrzeug versenden möchten, das Sie bereits besitzen,",
+      "accent": "Wir verbinden jede Phase durch persönlichen Service und sorgfältige Koordination."
+    },
+    "efficiency": {
+      "title": "Ein Fahrzeug oder eine Flotte. Ein vernetzter Dienst.",
+      "text": "Vom privaten Kauf bis hin zu den Anforderungen an Nutzfahrzeuge: Wir bündeln Beschaffung, Abholung und Versand in einem Gesamtkonzept – und stimmen dabei die Route, den Zeitplan und die Abwicklungsanforderungen Ihres Fahrzeugs aufeinander ab."
+    },
+    "process": [
+      {
+        "title": "Beschaffung von Fahrzeugen und Unterstützung beim Kauf",
+        "text": "Sie suchen ein Fahrzeug in Europa? Wir unterstützen Sie bei der Suche, stehen in Kontakt mit den Verkäufern und helfen Ihnen bei den Kaufverhandlungen. Soweit möglich, werden Besichtigungen und Dokumentenprüfungen organisiert, wobei die Versandbedingungen von Anfang an berücksichtigt werden."
+      },
+      {
+        "title": "Erfassung und Vorbereitung für den Export",
+        "text": "Sobald Ihr Fahrzeug bereit ist, kümmern wir uns um die Abholung, die Ausfuhrpapiere und die Übergabe im Hafen. Sie besitzen das Fahrzeug bereits? Dann kann Ihre Reise hier beginnen – wir bieten Ihnen Lagerungsmöglichkeiten an, falls Abhol- und Abfahrtstermine nicht zusammenfallen."
+      },
+      {
+        "title": "Verladung von Fahrzeugen und Seetransport",
+        "text": "Vom PKW bis hin zu Nutzfahrzeugen – wir planen den Container- oder RoRo-Transport ganz auf das jeweilige Fahrzeug und den Bestimmungsort abgestimmt. Buchung, Abfertigung und Verladung werden aufeinander abgestimmt, um eine reibungslose Abfahrt zu gewährleisten."
+      },
+      {
+        "title": "Ankunft & Weiterleitung",
+        "text": "Am Bestimmungsort koordinieren wir die Übergabe bei Ankunft und unterstützen Sie bei der Abwicklung der Zolldokumente. Sofern verfügbar, sorgt der Weitertransport für die Verbindung vom Hafen zu Ihrem endgültigen Lieferort, wobei die Kommunikation während des gesamten Prozesses reibungslos verläuft."
+      }
+    ],
+    "work": {
+      "title": "Wir kümmern uns um das, was wirklich zählt",
+      "items": [
+        {
+          "title": "Beschaffung und Verkäuferkoodination",
+          "text": "Fahrzeugsuche, Kontakt zum Verkäufer und Unterstützung beim Kauf – ganz auf Ihre Anforderungen, Ihr Budget und Ihren Versandort abgestimmt."
+        },
+        {
+          "title": "Dokumente und Vorbereitung für den Export",
+          "text": "Abstimmung von Kaufbelegen, Ausfuhrdokumenten und Zollpapieren, um Ihr Fahrzeug für den internationalen Transport vorzubereiten."
+        },
+        {
+          "title": "Abholung und Umschlag im Hafen",
+          "text": "Abhol-, Lager- und Verlademaßnahmen, die auf den Fahrplan abgestimmt sind, mit sorgfältiger Abwicklung in jeder Phase."
+        },
+        {
+          "title": "Lieferung an den Bestimmungsort",
+          "text": "Ankunft und Weitertransport werden entsprechend der vereinbarten Route koordiniert, sodass die Reise über den Hafen hinaus nahtlos fortgesetzt wird."
+        }
+      ]
+    },
+    "answers": {
+      "title": "Häufig gestellte Fragen zur Fahrzeugbeschaffung und zum Versand",
+      "items": [
+        {
+          "question": "Können Sie ein Fahrzeug versenden, das ich bereits besitze?",
+          "answer": "Ja. Sie können unseren Transportservice auch ohne Beschaffungs- oder Kaufunterstützung in Anspruch nehmen. Teilen Sie uns bitte die Fahrzeugdaten, die Abholstelle und den Bestimmungsort mit, damit wir die Route planen können."
+        },
+        {
+          "question": "Können Sie mir helfen, in Europa ein Fahrzeug zu finden und zu kaufen?",
+          "answer": "Wir unterstützen Sie bei der Fahrzeugsuche, der Abstimmung mit dem Verkäufer und den Kaufverhandlungen. Teilen Sie uns den Fahrzeugtyp, Ihr Budget und den Bestimmungsort mit. Die Besichtigung und die Unterstützung bei den Formalitäten werden vor dem Kauf besprochen und, sofern möglich, organisiert."
+        },
+        {
+          "question": "Sollte ich mich für den Container- oder den RoRo-Transport entscheiden?",
+          "answer": "Die Wahl hängt vom Fahrzeug, dem Zielort und den verfügbaren Abfahrten ab. RoRo steht für Roll-on/Roll-off-Transport für geeignete Fahrzeuge. Wir besprechen die Optionen mit Ihnen, bevor wir den Transport bestätigen."
+        },
+        {
+          "question": "Was benötigen Sie, um ein Angebot zu erstellen?",
+          "answer": "Teilen Sie uns den Fahrzeugtyp, die Marke und das Modell, den Abholort, den Bestimmungsort und den gewünschten Zeitrahmen mit. Teilen Sie uns bitte auch mit, ob Sie eine Beschaffung, Lagerung oder Weiterlieferung benötigen."
+        },
+        {
+          "question": "Können Sie das Fahrzeug vor der Abreise unterstellen?",
+          "answer": "Die Lagerung kann koordiniert werden, wenn Kauf-, Abhol- und Versandtermine nicht übereinstimmen. Wir bestätigen die Verfügbarkeit und die entsprechenden Vorkehrungen im Rahmen des Versandplans."
+        }
+      ]
+    }
+  }
+}

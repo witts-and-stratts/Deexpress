@@ -29,10 +29,10 @@ export function TrackPage() {
       </section>
 
       <section className="tracking-page__support">
-        <p className="text-h3 text-white">Need help with a shipment?</p>
+        <p className="text-h3 text-white">{t.track.supportTitle}</p>
         <div className="tracking-page__support-actions">
-          <Link href="/contact">Contact our team <ArrowUpRight size={18} aria-hidden="true" /></Link>
-          <Link href="/quote">Request a quote <ArrowUpRight size={18} aria-hidden="true" /></Link>
+          <Link href="/contact">{t.track.supportContact} <ArrowUpRight size={18} aria-hidden="true" /></Link>
+          <Link href="/quote">{t.track.supportQuote} <ArrowUpRight size={18} aria-hidden="true" /></Link>
         </div>
       </section>
     </main>

@@ -1,21 +1,69 @@
 {
   "home": {
     "title": "Internationale Fracht von Berlin nach Afrika und in den Nahen Osten",
-    "description": "DEexpress koordiniert Luft-, See- und Landfracht von Berlin in 26 Länder Afrikas und des Nahen Ostens für Privat- und Geschäftskunden."
+    "description": "DEexpress organisiert für Privatpersonen und Unternehmen Luft-, See- und Landtransporte von Berlin in 26 Länder in Afrika und im Nahen Osten."
   },
-  "about": { "title": "Über uns", "description": "DEexpress Logistics GmbH ist ein Berliner Unternehmen für internationale Logistik und Spedition in Europa, Afrika und dem Nahen Osten." },
-  "contact": { "title": "Kontakt", "description": "Kontaktieren Sie DEExpress Logistics GmbH in Berlin per Formular, Telefon, E-Mail oder WhatsApp. Wir antworten auf Englisch, Deutsch und Französisch." },
-  "destinations": { "title": "Ziele", "description": "Fracht von Europa in 26 Länder Afrikas und zu Zielen im Nahen Osten. Entdecken Sie die Regionen, die DEExpress bedient." },
-  "quote": { "title": "Angebot anfordern", "description": "Fordern Sie ein kostenloses, unverbindliches Versandangebot von DEExpress Logistics für Luft-, See-, Fahrzeug- und Handelsfracht an." },
-  "track": { "title": "Sendung verfolgen", "description": "Verfolgen Sie Ihre DEExpress-Sendung: Geben Sie Ihre Referenz ein, um den neuesten verfügbaren Status zu sehen." },
-  "services": { "title": "Leistungen", "description": "Luftfracht, Seefracht, Fahrzeugbeschaffung und -transport, Handelsfracht, persönliche Gegenstände und Lagerung von Berlin nach Afrika und in den Nahen Osten." },
-  "dataPolicy": { "title": "Datenschutz", "description": "Erfahren Sie, wie DEexpress Logistics GmbH personenbezogene Daten verarbeitet und schützt." },
-  "legalNotice": { "title": "Impressum", "description": "Impressum und Unternehmensangaben der DEexpress Logistics GmbH." },
-  "airFreight": { "title": "Luftfracht von Europa nach Afrika und in den Nahen Osten", "description": "Zeitkritische Luftfracht von europäischen Flughäfen zu Zielen in Afrika und dem Nahen Osten, mit Exportunterstützung und sorgfältiger Frachtabwicklung." },
-  "seaFreight": { "title": "Seefracht von Europa nach Afrika und in den Nahen Osten", "description": "Kosteneffiziente Seefracht für Container und Sammelladungen von europäischen Häfen zu Zielen im DEexpress-Netzwerk." },
-  "commercialCargo": { "title": "Handelsfrachtlogistik aus Europa", "description": "Zuverlässige Frachtkoordination für wiederkehrende und einmalige Handelssendungen per Luft, See und Land." },
-  "personalEffects": { "title": "Versand persönlicher Gegenstände aus Europa", "description": "Versenden Sie Kartons, Gepäck und Haushaltswaren aus Europa mit praktischer Beratung und sorgfältiger internationaler Frachtkoordination." },
-  "storage": { "title": "Lagerung und Warehousing in Berlin", "description": "Flexible kurz- und langfristige Lagerung in Berlin, direkt mit Ihrem internationalen Versandplan verbunden." },
-  "vehicleShipping": { "title": "Fahrzeugbeschaffung und internationaler Transport aus Europa", "description": "Finden, kaufen und versenden Sie Pkw, Lkw, Busse und Sonderfahrzeuge aus Europa über ein koordiniertes Team." },
-  "layout": { "title": "DEexpress Logistics GmbH — Internationale Fracht von Berlin nach Afrika und in den Nahen Osten", "template": "%s | DEExpress Logistics", "description": "Luft-, See-, Schienen- und Straßenfracht von Berlin in 26 Länder Afrikas und des Nahen Ostens. Fahrzeugbeschaffung und -transport, Handelsfracht, persönliche Gegenstände und Lagerung.", "openGraphDescription": "Internationale Fracht von Berlin in 26 Länder Afrikas und des Nahen Ostens.", "imageAlt": "Internationale Fracht von DEexpress Logistics" }
+  "about": {
+    "title": "Über uns",
+    "description": "DEexpress Logistics GmbH – ein in Berlin ansässiges internationales Logistik- und Speditionsunternehmen, das Europa, Afrika und den Nahen Osten bedient."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "description": "Kontaktieren Sie die DEExpress Logistics GmbH in Berlin – über das Kontaktformular, per Telefon, E-Mail oder WhatsApp. Wir antworten auf Englisch, Deutsch und Französisch."
+  },
+  "destinations": {
+    "title": "Reiseziele",
+    "description": "Fracht von Europa in 26 Länder Afrikas und an Ziele im Nahen Osten. Entdecken Sie die Regionen, die DEExpress bedient."
+  },
+  "quote": {
+    "title": "Angebot anfordern",
+    "description": "Fordern Sie bei DEExpress Logistics einen kostenlosen und unverbindlichen Versandkostenvoranschlag an – für Luft-, See-, Fahrzeug- und Stückgut."
+  },
+  "track": {
+    "title": "Sendung verfolgen",
+    "description": "Verfolgen Sie Ihre DEExpress-Sendung – geben Sie Ihre Sendungsnummer ein, um den aktuellsten Status anzuzeigen."
+  },
+  "services": {
+    "title": "Dienstleistungen",
+    "description": "Luftfracht, Seefracht, Fahrzeugbeschaffung und -transport, Handelsgüter, persönliche Gegenstände und Lagerung von Berlin nach Afrika und in den Nahen Osten."
+  },
+  "dataPolicy": {
+    "title": "Datenschutzrichtlinie",
+    "description": "Erfahren Sie, wie die DEexpress Logistics GmbH mit personenbezogenen Daten umgeht und Ihre Privatsphäre schützt."
+  },
+  "legalNotice": {
+    "title": "Rechtliche Hinweise",
+    "description": "Impressum und Unternehmensdaten der DEexpress Logistics GmbH."
+  },
+  "airFreight": {
+    "title": "Luftfracht von Europa nach Afrika und in den Nahen Osten",
+    "description": "Zeitkritische Luftfracht von europäischen Flughäfen zu Zielen in ganz Afrika und im Nahen Osten, einschließlich Exportunterstützung und sorgfältiger Frachtabfertigung."
+  },
+  "seaFreight": {
+    "title": "Seetransport von Europa nach Afrika und in den Nahen Osten",
+    "description": "Kostengünstige Seefracht für Container und Sammelgut von europäischen Häfen zu Zielen im gesamten DEexpress-Netzwerk."
+  },
+  "commercialCargo": {
+    "title": "Gewerbliche Frachtlogistik aus Europa",
+    "description": "Zuverlässige Frachtkoordination für regelmäßige und einmalige gewerbliche Frachttransporte auf dem Luft-, See- und Landweg."
+  },
+  "personalEffects": {
+    "title": "Versand von persönlichen Gegenständen aus Europa",
+    "description": "Versenden Sie Kartons, Gepäck und Haushaltswaren aus Europa – mit praktischen Tipps und einer sorgfältigen Koordination des internationalen Transports."
+  },
+  "storage": {
+    "title": "Lagerung und Lagerhaltung in Berlin",
+    "description": "Flexible Kurz- und Langzeitlagerung in Berlin, direkt abgestimmt auf Ihren internationalen Versandplan."
+  },
+  "vehicleShipping": {
+    "title": "Fahrzeugbeschaffung und internationaler Versand aus Europa",
+    "description": "Finden, kaufen und versenden Sie PKWs, LKWs, Busse und Spezialfahrzeuge aus Europa – alles über ein einziges, koordiniertes Team."
+  },
+  "layout": {
+    "title": "DEexpress Logistics GmbH – Internationale Fracht von Berlin nach Afrika und in den Nahen Osten",
+    "template": "%s | DEExpress Logistics",
+    "description": "Luft-, See-, Schienen- und Straßengüterverkehr von Berlin in 26 Länder in Afrika und im Nahen Osten. Fahrzeugbeschaffung und -transport, Handelsgüter, persönliche Gegenstände und Lagerung.",
+    "openGraphDescription": "Internationale Fracht von Berlin in 26 Länder in Afrika und im Nahen Osten.",
+    "imageAlt": "DEexpress Logistics – Internationale Fracht"
+  }
 }
