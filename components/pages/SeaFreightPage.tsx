@@ -20,23 +20,13 @@ import {
   SERVICE_PROOF_COPY,
   SERVICE_STORIES,
 } from '@/lib/service-content';
+import { SERVICE_SCOPES } from '@/lib/service-scopes';
 
 const capabilities = [
   'Consolidated and single cargo shipments',
   'European cargo transportation and Port coordination',
   'Export documentation and customs processing',
   'Onward and last-mile delivery planning',
-];
-const scope = [
-  'FCL and LCL transport to and from overseas ports worldwide',
-  'Partnership-based cooperation with leading shipping companies',
-  'Shipment and container weighing in line with VGM SOLAS requirements',
-  'Supply-chain support including storage, distribution and value-added services',
-  'Customs processing including import, export',
-  'Containers to Africa and the Middle East',
-  'Container stowing, unloading and securing',
-  'Dangerous goods and projects for demanding requirements',
-  'Door-to-door coordination from collection point to final recipient',
 ];
 const icons = [
   '/images/icons/consolidated-cargo.svg',
@@ -82,6 +72,7 @@ export function SeaFreightPage() {
   const { lang, t } = useLang();
   const proof = SERVICE_PROOF_COPY[lang];
   const story = SERVICE_STORIES[lang]['sea-freight'];
+  const scope = SERVICE_SCOPES[lang]['sea-freight'];
   const faqs = [...story.faqs, ...SERVICE_EXTRA_FAQS[lang]['sea-freight']];
 
   return (
@@ -156,7 +147,7 @@ export function SeaFreightPage() {
 
       <section className='air-freight-page__scope grid grid-cols-12'>
         <Reveal className='air-freight-page__scope-intro col-span-12 lg:col-span-4'>
-          <h2>Cost efficiency and seamless port-to-point processing</h2>
+          <h2>{scope.title}</h2>
           <div className='air-freight-page__scope-image'>
             <Image
               src='/images/shipping-containers2.webp'
@@ -167,7 +158,7 @@ export function SeaFreightPage() {
           </div>
         </Reveal>
         <ServiceScopeList
-          items={scope}
+          items={scope.items}
           className='air-freight-page__scope-list col-span-12 lg:col-start-7 lg:col-span-6'
           ariaLabel='Sea freight service scope'
         />
@@ -199,7 +190,7 @@ export function SeaFreightPage() {
             {src: '/images/port-call.webp', portrait: '/images/port-call-portrait.webp'},
           ]}
           label='Sea freight process'
-          heading='Sea route. Cost efficiency'
+          heading={scope.journeyHeading}
           showNumbers={false}
         />
       </section>

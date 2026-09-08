@@ -52,22 +52,7 @@ export function VehicleShippingPage() {
         text: 'From a private purchase to commercial vehicle requirements, we bring sourcing, collection and shipping into one plan — balancing the route, timing and handling needs of your vehicle.',
         image: {src: '/images/vehicle-fleet.webp', portrait: '/images/vehicle-fleet-portrait.webp'},
       }}
-      scope={{
-        title: 'Safe in our hands, from first search to final handover.',
-        image: '/images/vehicle-inspection.webp',
-        items: [
-          'Vehicle search across Europe, shaped around your requirements and budget',
-          'Seller liaison, purchase assistance and negotiation support',
-          'Inspection and vehicle-document support where available',
-          'Transport for cars, SUVs, trucks, buses and special equipment',
-          'Collection from the agreed European seller or vehicle location',
-          'Container and RoRo options on suitable, available routes',
-          'Purchase paperwork, export documents and customs-document support',
-          'Storage when purchase, collection and departure dates differ',
-          'Port handling, shipment updates and destination handover coordination',
-          'Onward delivery planning where available within our network',
-        ],
-      }}
+      scopeImage='/images/vehicle-inspection.webp'
       journey={{
         heading: 'From purchase to port. From port to you.',
         images: [

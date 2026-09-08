@@ -3,6 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import OpenAITranslator from "./translation/openai-translator.js";
 import DeepLTranslator from "./translation/deepl-translator.js";
+import HuerrayTranslator, { DEFAULT_ENDPOINT as HUERRAY_TRANSLATION_ENDPOINT } from "./translation/huerray-translator.js";
 import { BaseTranslator } from "./translation/base.js";
 
 // --- CONFIGURATION ---
@@ -31,6 +32,12 @@ function createTranslator(provider, { dryRun = false } = {}) {
   };
 
   switch (provider.toLowerCase()) {
+    case "huerray":
+      config.cachePath = path.join(PROJECT_ROOT, "translation-cache-huerray.json");
+      config.endpoint = process.env.HUERRAY_TRANSLATION_ENDPOINT || HUERRAY_TRANSLATION_ENDPOINT;
+      config.origin = process.env.HUERRAY_TRANSLATION_ORIGIN || "https://thrypes.com";
+      return new HuerrayTranslator(config);
+
     case "openai":
       if (!process.env.OPENAI_API_KEY) {
         throw new Error("❌ OPENAI_API_KEY environment variable is not set.");
@@ -53,7 +60,7 @@ function createTranslator(provider, { dryRun = false } = {}) {
 
     default:
       throw new Error(
-        `❌ Unsupported translation provider: ${provider}. Use 'openai' or 'deepl'.`,
+        `❌ Unsupported translation provider: ${provider}. Use 'huerray', 'openai', or 'deepl'.`,
       );
   }
 }
@@ -65,10 +72,10 @@ async function main() {
   const args = process.argv.slice(2);
   const dryRun = args.includes("--dry-run");
   const checkOnly = args.includes("--check");
-  const provider = args.find((arg) => !arg.startsWith("--")) || "openai";
+  const provider = args.find((arg) => !arg.startsWith("--")) || "huerray";
 
   if (args.includes("--help") || args.includes("-h")) {
-    console.log("Usage: npm run translate -- [openai|deepl] [--dry-run|--check]");
+    console.log("Usage: npm run translate -- [huerray|openai|deepl] [--dry-run|--check]");
     return;
   }
 

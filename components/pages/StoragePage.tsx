@@ -55,22 +55,7 @@ export function StoragePage() {
           portrait: '/images/storage-shipping-portrait.webp',
         },
       }}
-      scope={{
-        title: 'Safe in our hands, until the next handover.',
-        image: '/images/cargo-warehouse.webp',
-        items: [
-          'Berlin-based storage for private and retail customers',
-          'Short- and long-term arrangements, subject to availability',
-          'Space requirements reviewed by item, box or pallet quantity',
-          'Storage for suitable personal belongings and commercial goods',
-          'Goods receipt and warehouse handover coordination',
-          'Storage timed around incoming deliveries and shipping dates',
-          'Consolidation support for goods travelling together',
-          'Release arrangements for collection or onward shipment',
-          'Connections to suitable air, sea and road freight routes',
-          'Clear communication from arrival through departure',
-        ],
-      }}
+      scopeImage='/images/cargo-warehouse.webp'
       showStatistics={false}
       journey={{
         heading: 'Stored and ready to go.',

@@ -47,23 +47,7 @@ export function AirFreightPage() {
         text: 'Tailor-made logistics services from Europe to Africa by road, air, water or rail – we deliver your cargo safely to its destination with efficiency and care.',
         image: {src: '/images/air-freight-efficiency-hero.webp', portrait: '/images/air-freight-efficiency-hero-portrait.webp'},
       }}
-      scope={{
-        title: 'Safe in our hands, wherever your cargo is headed.',
-        image:  '/images/airport-cargo.webp',
-        items: [
-          'European airport departures to destinations in the DEexpress network',
-          'Priority consignments, smaller freight and high-value cargo',
-          'Coordination from collection and export documents through destination handover',
-          'European imports and exports with personal contacts from A to Z',
-          'Multimodal solutions for efficiency and cost benefits',
-          'Complete air freight service, from pickup to delivery',
-          'Express and on-board courier services for the highest urgency',
-          'Customs processing including import, export and fiscal customs',
-          'Tracking & tracing for maximum transparency of your shipments',
-          'Warehousing and distribution at important DEexpress locations',
-          'Weekly transportation of cars & luxury goods',
-        ],
-      }}
+      scopeImage='/images/airport-cargo.webp'
       highlights={[
         {
           value: 24,

@@ -10,7 +10,7 @@ export function VehicleSourcingPage() {
     capabilityLabel="Vehicle sourcing capabilities"
     capabilities={['Vehicle search and purchase support', 'European seller coordination', 'Export-document preparation', 'Shipping handover planning']}
     efficiency={{ title: 'One team, from search to shipment', text: 'Vehicle sourcing becomes easier when purchase decisions and transport planning are connected.', image: '/images/service-sourcing.webp' }}
-    scope={{ title: 'Clear support at every decision point.', image: '/images/car.webp', items: ['Vehicle requirements reviewed before the search begins', 'European seller and purchase coordination', 'Inspection and document support where available', 'Shipping options planned after purchase', 'One point of contact from search to handover', 'Storage support when collection dates move'] }}
+    scopeImage='/images/car.webp'
     journey={{ images: ['/images/service-sourcing.webp', '/images/car.webp', '/images/service-vehicle.webp'] }}
   />
 }

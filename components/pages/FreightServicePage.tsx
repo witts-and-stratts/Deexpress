@@ -23,6 +23,7 @@ import {
   SERVICE_PROOF_COPY,
   SERVICE_STORIES,
 } from '@/lib/service-content';
+import { SERVICE_SCOPES } from '@/lib/service-scopes';
 import type { ServiceSlug } from '@/lib/site';
 
 type ResponsiveBackgroundImage =
@@ -47,7 +48,7 @@ type ServicePageProps = {
     text: string;
     image: ResponsiveBackgroundImage;
   };
-  scope: { title: string; image: string; items: string[] };
+  scopeImage: string;
   journey: {
     images: JourneyShowcaseImage[];
     portraitImages?: string[];
@@ -75,7 +76,7 @@ export function FreightServicePage({
   capabilities,
   capabilityIcons = defaultCapabilityIcons,
   efficiency,
-  scope,
+  scopeImage,
   journey,
   work,
   answers,
@@ -85,6 +86,7 @@ export function FreightServicePage({
   const { lang, t } = useLang();
   const proof = SERVICE_PROOF_COPY[lang];
   const story = SERVICE_STORIES[lang][slug];
+  const scope = SERVICE_SCOPES[lang][slug];
   const faqs = answers?.items ?? [
     ...story.faqs,
     ...SERVICE_EXTRA_FAQS[lang][slug],
@@ -167,7 +169,7 @@ export function FreightServicePage({
         <Reveal className='air-freight-page__scope-intro col-span-12 lg:col-span-4'>
           <h2>{scope.title}</h2>
           <div className='air-freight-page__scope-image'>
-            <Image src={scope.image} alt='' fill aria-hidden='true' />
+            <Image src={scopeImage} alt='' fill aria-hidden='true' />
           </div>
         </Reveal>
         <ServiceScopeList
@@ -201,7 +203,7 @@ export function FreightServicePage({
           images={journey.images}
           portraitImages={journey.portraitImages}
           label={`${hero.title} process`}
-          heading={journey.heading ?? 'Quick professional process'}
+          heading={scope.journeyHeading}
           showNumbers={false}
         />
       </section>

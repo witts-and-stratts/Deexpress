@@ -59,22 +59,7 @@ export function PersonalEffectsPage() {
           portrait: '/images/delivery-man-with-packages-portrait.webp',
         },
       }}
-      scope={{
-        title: 'Safe in our hands, whatever you are sending.',
-        image: '/images/personal-showcase-packing.webp',
-        items: [
-          'Laptops, home appliances, clothing, luggage and personal belongings',
-          'Flexible shipment sizes, from a single item to several boxes',
-          'Route planning around your destination, volume and preferred timing',
-          'Air or sea freight options for suitable shipments',
-          'Practical packing guidance before your belongings are collected',
-          'Collection coordination from the agreed European location',
-          'Item-list and export-document guidance for your shipment',
-          'Storage support when collection and departure dates differ',
-          'Clear communication through collection, shipping and arrival',
-          'Destination collection or onward delivery planning where available',
-        ],
-      }}
+      scopeImage='/images/personal-showcase-packing.webp'
       journey={{
         heading: 'Everyday cargo. Happily delivered.',
         images: [

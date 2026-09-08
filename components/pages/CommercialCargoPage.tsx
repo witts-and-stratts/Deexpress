@@ -59,20 +59,7 @@ export function CommercialCargoPage() {
           portrait: '/images/multimodal-logistics-portrait.webp',
         },
       }}
-      scope={{
-        title: 'A practical partner for every commercial cargo movement.',
-        image: '/images/air-freight-hero.webp',
-        items: [
-          'Commercial goods planned around specific delivery requirements',
-          'Palletised, loose, project, oversized and sensitive cargo coordination',
-          'Air, sea, rail and road options considered together',
-          'Export documentation, certification, customs and regulatory coordination',
-          'One point of contact, tracking and timely updates across every handover',
-          'Secure short- and long-term storage, consolidation and container handling',
-          'Last-mile delivery and onward distribution across local and regional networks',
-          'Flexible support for one-off and recurring shipments',
-        ],
-      }}
+      scopeImage='/images/air-freight-hero.webp'
       highlights={[
         {
           value: 4,
